@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{user} \PYG{o}{=} \PYG{n}{User}\PYG{p}{(}\PYG{n+nb}{id}\PYG{o}{=}\PYG{l+m+mi}{123}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{yield from} \PYG{n}{user}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+\end{Verbatim}

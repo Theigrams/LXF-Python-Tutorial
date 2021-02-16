@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{threading}
+
+
+\PYG{n}{local\PYGZus{}school} \PYG{o}{=} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{local}\PYG{p}{()}
+
+\PYG{k}{def} \PYG{n+nf}{process\PYGZus{}student}\PYG{p}{():}
+
+    \PYG{n}{std} \PYG{o}{=} \PYG{n}{local\PYGZus{}school}\PYG{o}{.}\PYG{n}{student}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Hello, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ (in }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{)\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{std}\PYG{p}{,} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{current\PYGZus{}thread}\PYG{p}{()}\PYG{o}{.}\PYG{n}{name}\PYG{p}{))}
+
+\PYG{k}{def} \PYG{n+nf}{process\PYGZus{}thread}\PYG{p}{(}\PYG{n}{name}\PYG{p}{):}
+
+    \PYG{n}{local\PYGZus{}school}\PYG{o}{.}\PYG{n}{student} \PYG{o}{=} \PYG{n}{name}
+    \PYG{n}{process\PYGZus{}student}\PYG{p}{()}
+
+\PYG{n}{t1} \PYG{o}{=} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{Thread}\PYG{p}{(}\PYG{n}{target}\PYG{o}{=} \PYG{n}{process\PYGZus{}thread}\PYG{p}{,} \PYG{n}{args}\PYG{o}{=}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Alice\PYGZsq{}}\PYG{p}{,),} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Thread\PYGZhy{}A\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{t2} \PYG{o}{=} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{Thread}\PYG{p}{(}\PYG{n}{target}\PYG{o}{=} \PYG{n}{process\PYGZus{}thread}\PYG{p}{,} \PYG{n}{args}\PYG{o}{=}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{,),} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Thread\PYGZhy{}B\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{t1}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+\PYG{n}{t2}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+\PYG{n}{t1}\PYG{o}{.}\PYG{n}{join}\PYG{p}{()}
+\PYG{n}{t2}\PYG{o}{.}\PYG{n}{join}\PYG{p}{()}
+\end{Verbatim}

@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{+}\PYG{n}{OK} \PYG{n}{Welcome} \PYG{n}{to} \PYG{n}{coremail} \PYG{n}{Mail} \PYG{n}{Pop3} \PYG{n}{Server} \PYG{p}{(}\PYG{l+m+mi}{163}\PYG{n}{coms}\PYG{p}{[}\PYG{o}{...}\PYG{p}{])}
+\PYG{n}{Messages}\PYG{p}{:} \PYG{l+m+mf}{126.} \PYG{n}{Size}\PYG{p}{:} \PYG{l+m+mi}{27228317}
+
+\PYG{n}{From}\PYG{p}{:} \PYG{n}{Test} \PYG{o}{\PYGZlt{}}\PYG{n}{xxxxxx}\PYG{n+nd}{@qq}\PYG{o}{.}\PYG{n}{com}\PYG{o}{\PYGZgt{}}
+\PYG{n}{To}\PYG{p}{:} \PYG{n}{Python爱好者} \PYG{o}{\PYGZlt{}}\PYG{n}{xxxxxx}\PYG{o}{@}\PYG{l+m+mf}{163.}\PYG{n}{com}\PYG{o}{\PYGZgt{}}
+\PYG{n}{Subject}\PYG{p}{:} \PYG{n}{用POP3收取邮件}
+\PYG{n}{part} \PYG{l+m+mi}{0}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+  \PYG{n}{part} \PYG{l+m+mi}{0}
+  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+    \PYG{n}{Text}\PYG{p}{:} \PYG{n}{Python可以使用POP3收取邮件}\PYG{err}{……}\PYG{o}{...}
+  \PYG{n}{part} \PYG{l+m+mi}{1}
+  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+    \PYG{n}{Text}\PYG{p}{:} \PYG{n}{Python可以}\PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}...\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{使用POP3}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}\PYG{n}{收取邮件}\PYG{err}{……}\PYG{o}{...}
+\PYG{n}{part} \PYG{l+m+mi}{1}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+  \PYG{n}{Attachment}\PYG{p}{:} \PYG{n}{application}\PYG{o}{/}\PYG{n}{octet}\PYG{o}{\PYGZhy{}}\PYG{n}{stream}
+\end{Verbatim}

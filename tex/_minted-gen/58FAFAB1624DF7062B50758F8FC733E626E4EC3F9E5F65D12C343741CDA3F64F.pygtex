@@ -1,0 +1,32 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} -*- coding: utf-8 -*-}
+
+\PYG{k+kn}{import} \PYG{n+nn}{os}\PYG{o}{,} \PYG{n+nn}{sqlite3}
+
+\PYG{n}{db\PYGZus{}file} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{dirname}\PYG{p}{(}\PYG{n+nv+vm}{\PYGZus{}\PYGZus{}file\PYGZus{}\PYGZus{}}\PYG{p}{),} \PYG{l+s+s1}{\PYGZsq{}test.db\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{if} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{isfile}\PYG{p}{(}\PYG{n}{db\PYGZus{}file}\PYG{p}{):}
+    \PYG{n}{os}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{n}{db\PYGZus{}file}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 初始数据:}
+\PYG{n}{conn} \PYG{o}{=} \PYG{n}{sqlite3}\PYG{o}{.}\PYG{n}{connect}\PYG{p}{(}\PYG{n}{db\PYGZus{}file}\PYG{p}{)}
+\PYG{n}{cursor} \PYG{o}{=} \PYG{n}{conn}\PYG{o}{.}\PYG{n}{cursor}\PYG{p}{()}
+\PYG{n}{cursor}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}create table user(id varchar(20) primary key, name varchar(20), score int)\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{cursor}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}insert into user values (\PYGZsq{}A\PYGZhy{}001\PYGZsq{}, \PYGZsq{}Adam\PYGZsq{}, 95)\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{cursor}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}insert into user values (\PYGZsq{}A\PYGZhy{}002\PYGZsq{}, \PYGZsq{}Bart\PYGZsq{}, 62)\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{cursor}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}insert into user values (\PYGZsq{}A\PYGZhy{}003\PYGZsq{}, \PYGZsq{}Lisa\PYGZsq{}, 78)\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{cursor}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\PYG{n}{conn}\PYG{o}{.}\PYG{n}{commit}\PYG{p}{()}
+\PYG{n}{conn}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+
+\PYG{k}{def} \PYG{n+nf}{get\PYGZus{}score\PYGZus{}in}\PYG{p}{(}\PYG{n}{low}\PYG{p}{,} \PYG{n}{high}\PYG{p}{):}
+    \PYG{l+s+s1}{\PYGZsq{} 返回指定分数区间的名字，按分数从低到高排序 \PYGZsq{}}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+    \PYG{k}{pass}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c+c1}{\PYGZsh{} 测试:}
+\PYG{k}{assert} \PYG{n}{get\PYGZus{}score\PYGZus{}in}\PYG{p}{(}\PYG{l+m+mi}{80}\PYG{p}{,} \PYG{l+m+mi}{95}\PYG{p}{)} \PYG{o}{==} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{],} \PYG{n}{get\PYGZus{}score\PYGZus{}in}\PYG{p}{(}\PYG{l+m+mi}{80}\PYG{p}{,} \PYG{l+m+mi}{95}\PYG{p}{)}
+\PYG{k}{assert} \PYG{n}{get\PYGZus{}score\PYGZus{}in}\PYG{p}{(}\PYG{l+m+mi}{60}\PYG{p}{,} \PYG{l+m+mi}{80}\PYG{p}{)} \PYG{o}{==} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Bart\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Lisa\PYGZsq{}}\PYG{p}{],} \PYG{n}{get\PYGZus{}score\PYGZus{}in}\PYG{p}{(}\PYG{l+m+mi}{60}\PYG{p}{,} \PYG{l+m+mi}{80}\PYG{p}{)}
+\PYG{k}{assert} \PYG{n}{get\PYGZus{}score\PYGZus{}in}\PYG{p}{(}\PYG{l+m+mi}{60}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{)} \PYG{o}{==} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Bart\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Lisa\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{],} \PYG{n}{get\PYGZus{}score\PYGZus{}in}\PYG{p}{(}\PYG{l+m+mi}{60}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{)}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Pass\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{person}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{30}\PYG{p}{)}
+\PYG{n}{name}\PYG{p}{:} \PYG{n}{Michael} \PYG{n}{age}\PYG{p}{:} \PYG{l+m+mi}{30} \PYG{n}{other}\PYG{p}{:} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\end{Verbatim}

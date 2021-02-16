@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{tkinter} \PYG{k+kn}{import} \PYG{o}{*}
+\PYG{k+kn}{import} \PYG{n+nn}{tkinter.messagebox} \PYG{k}{as} \PYG{n+nn}{messagebox}
+
+\PYG{k}{class} \PYG{n+nc}{Application}\PYG{p}{(}\PYG{n}{Frame}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{master}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{):}
+        \PYG{n}{Frame}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{master}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{()}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{createWidgets}\PYG{p}{()}
+
+    \PYG{k}{def} \PYG{n+nf}{createWidgets}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nameInput} \PYG{o}{=} \PYG{n}{Entry}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nameInput}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{()}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{alertButton} \PYG{o}{=} \PYG{n}{Button}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{text}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Hello\PYGZsq{}}\PYG{p}{,} \PYG{n}{command}\PYG{o}{=}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{hello}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{alertButton}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{()}
+
+    \PYG{k}{def} \PYG{n+nf}{hello}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{name} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{nameInput}\PYG{o}{.}\PYG{n}{get}\PYG{p}{()} \PYG{o+ow}{or} \PYG{l+s+s1}{\PYGZsq{}world\PYGZsq{}}
+        \PYG{n}{messagebox}\PYG{o}{.}\PYG{n}{showinfo}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Message\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Hello, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{name}\PYG{p}{)}
+
+\PYG{n}{app} \PYG{o}{=} \PYG{n}{Application}\PYG{p}{()}
+
+\PYG{n}{app}\PYG{o}{.}\PYG{n}{master}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Hello World\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{app}\PYG{o}{.}\PYG{n}{mainloop}\PYG{p}{()}
+\end{Verbatim}

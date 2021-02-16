@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{tcplink}\PYG{p}{(}\PYG{n}{sock}\PYG{p}{,} \PYG{n}{addr}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Accept new connection from }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{:}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{addr}\PYG{p}{)}
+    \PYG{n}{sock}\PYG{o}{.}\PYG{n}{send}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}Welcome!\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+        \PYG{n}{data} \PYG{o}{=} \PYG{n}{sock}\PYG{o}{.}\PYG{n}{recv}\PYG{p}{(}\PYG{l+m+mi}{1024}\PYG{p}{)}
+        \PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+        \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{data} \PYG{o+ow}{or} \PYG{n}{data}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}exit\PYGZsq{}}\PYG{p}{:}
+            \PYG{k}{break}
+        \PYG{n}{sock}\PYG{o}{.}\PYG{n}{send}\PYG{p}{((}\PYG{l+s+s1}{\PYGZsq{}Hello, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{!\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{data}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+    \PYG{n}{sock}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Connection from }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{:}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ closed.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{addr}\PYG{p}{)}
+\end{Verbatim}

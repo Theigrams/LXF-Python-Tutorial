@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{io} \PYG{k+kn}{import} \PYG{n}{StringIO}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f} \PYG{o}{=} \PYG{n}{StringIO}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Hello!}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{Hi!}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{Goodbye!\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+\PYG{o}{...}     \PYG{n}{s} \PYG{o}{=} \PYG{n}{f}\PYG{o}{.}\PYG{n}{readline}\PYG{p}{()}
+\PYG{o}{...}     \PYG{k}{if} \PYG{n}{s} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{:}
+\PYG{o}{...}         \PYG{k}{break}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{s}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{())}
+\PYG{o}{...}
+\PYG{n}{Hello}\PYG{err}{!}
+\PYG{n}{Hi}\PYG{err}{!}
+\PYG{n}{Goodbye}\PYG{err}{!}
+\end{Verbatim}

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{lisa} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Lisa\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{99}\PYG{p}{)}
+\PYG{n}{bart} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bart\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{59}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{lisa}\PYG{o}{.}\PYG{n}{name}\PYG{p}{,} \PYG{n}{lisa}\PYG{o}{.}\PYG{n}{get\PYGZus{}grade}\PYG{p}{())}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{bart}\PYG{o}{.}\PYG{n}{name}\PYG{p}{,} \PYG{n}{bart}\PYG{o}{.}\PYG{n}{get\PYGZus{}grade}\PYG{p}{())}
+\end{Verbatim}

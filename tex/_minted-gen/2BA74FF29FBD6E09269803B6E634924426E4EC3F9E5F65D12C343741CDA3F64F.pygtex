@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{datetime}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{t} \PYG{o}{=} \PYG{l+m+mf}{1429417200.0}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{datetime}\PYG{o}{.}\PYG{n}{fromtimestamp}\PYG{p}{(}\PYG{n}{t}\PYG{p}{))}
+\PYG{l+m+mi}{2015}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{04}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{19} \PYG{l+m+mi}{12}\PYG{p}{:}\PYG{l+m+mi}{20}\PYG{p}{:}\PYG{l+m+mi}{00}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{datetime}\PYG{o}{.}\PYG{n}{utcfromtimestamp}\PYG{p}{(}\PYG{n}{t}\PYG{p}{))}
+\PYG{l+m+mi}{2015}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{04}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{19} \PYG{l+m+mi}{04}\PYG{p}{:}\PYG{l+m+mi}{20}\PYG{p}{:}\PYG{l+m+mi}{00}
+\end{Verbatim}

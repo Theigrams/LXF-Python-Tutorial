@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{hasattr}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}power\PYGZsq{}}\PYG{p}{)}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}power\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZlt{}}\PYG{n}{bound} \PYG{n}{method} \PYG{n}{MyObject}\PYG{o}{.}\PYG{n}{power} \PYG{n}{of} \PYG{o}{\PYGZlt{}}\PYG{n}{\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{MyObject} \PYG{n+nb}{object} \PYG{n}{at} \PYG{l+m+mh}{0x10077a6a0}\PYG{o}{\PYGZgt{}\PYGZgt{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{fn} \PYG{o}{=} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}power\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{fn}
+\PYG{o}{\PYGZlt{}}\PYG{n}{bound} \PYG{n}{method} \PYG{n}{MyObject}\PYG{o}{.}\PYG{n}{power} \PYG{n}{of} \PYG{o}{\PYGZlt{}}\PYG{n}{\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{MyObject} \PYG{n+nb}{object} \PYG{n}{at} \PYG{l+m+mh}{0x10077a6a0}\PYG{o}{\PYGZgt{}\PYGZgt{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{fn}\PYG{p}{()}
+\PYG{l+m+mi}{81}
+\end{Verbatim}

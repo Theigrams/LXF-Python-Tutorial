@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nb}{int} \PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{123}\PYG{p}{;}
+\PYG{n}{a} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}ABC\PYGZdq{}}\PYG{p}{;}
+\end{Verbatim}

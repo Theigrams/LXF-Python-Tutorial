@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{enroll}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{gender}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}name:\PYGZsq{}}\PYG{p}{,} \PYG{n}{name}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}gender:\PYGZsq{}}\PYG{p}{,} \PYG{n}{gender}\PYG{p}{)}
+\end{Verbatim}

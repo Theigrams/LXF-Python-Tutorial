@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{mycompany}
+\PYG{err}{├─} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{py}
+\PYG{err}{├─} \PYG{n}{abc}\PYG{o}{.}\PYG{n}{py}
+\PYG{err}{└─} \PYG{n}{xyz}\PYG{o}{.}\PYG{n}{py}
+\end{Verbatim}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{test} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}用户输入的字符串\PYGZsq{}}
+\PYG{k}{if} \PYG{n}{re}\PYG{o}{.}\PYG{n}{match}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}正则表达式\PYGZsq{}}\PYG{p}{,} \PYG{n}{test}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ok\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}failed\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

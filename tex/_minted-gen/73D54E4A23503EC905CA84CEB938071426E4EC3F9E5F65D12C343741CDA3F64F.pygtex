@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Circle} \PYG{o}{=} \PYG{n}{namedtuple}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Circle\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}r\PYGZsq{}}\PYG{p}{])}
+\end{Verbatim}

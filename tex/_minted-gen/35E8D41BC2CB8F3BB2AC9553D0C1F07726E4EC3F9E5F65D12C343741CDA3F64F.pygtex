@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{add\PYGZus{}end}\PYG{p}{(}\PYG{n}{L}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n}{L} \PYG{o+ow}{is} \PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{n}{L} \PYG{o}{=} \PYG{p}{[]}
+    \PYG{n}{L}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}END\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{L}
+\end{Verbatim}

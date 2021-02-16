@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}3 * 5 * 7 * 9 =\PYGZsq{}}\PYG{p}{,} \PYG{n}{prod}\PYG{p}{([}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{]))}
+\PYG{k}{if} \PYG{n}{prod}\PYG{p}{([}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{])} \PYG{o}{==} \PYG{l+m+mi}{945}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试成功!\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

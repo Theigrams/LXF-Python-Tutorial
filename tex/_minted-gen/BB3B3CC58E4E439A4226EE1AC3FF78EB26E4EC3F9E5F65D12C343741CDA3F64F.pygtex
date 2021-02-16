@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cs} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}token\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}12345\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}status\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}working\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r} \PYG{o}{=} \PYG{n}{requests}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{url}\PYG{p}{,} \PYG{n}{cookies}\PYG{o}{=}\PYG{n}{cs}\PYG{p}{)}
+\end{Verbatim}

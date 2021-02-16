@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{p}{(}\PYG{n}{Pdb}\PYG{p}{)} \PYG{n}{p} \PYG{n}{s}
+\PYG{l+s+s1}{\PYGZsq{}0\PYGZsq{}}
+\PYG{p}{(}\PYG{n}{Pdb}\PYG{p}{)} \PYG{n}{p} \PYG{n}{n}
+\PYG{l+m+mi}{0}
+\end{Verbatim}

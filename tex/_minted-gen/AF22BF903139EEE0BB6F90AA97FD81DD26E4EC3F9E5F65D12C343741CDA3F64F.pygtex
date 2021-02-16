@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{p}{[}\PYG{n}{x} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{os}\PYG{o}{.}\PYG{n}{listdir}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{)} \PYG{k}{if} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{isdir}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)]}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}.lein\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}.local\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}.m2\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}.npm\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}.ssh\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}.Trash\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}.vim\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Applications\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Desktop\PYGZsq{}}\PYG{p}{,} \PYG{o}{...}\PYG{p}{]}
+\end{Verbatim}

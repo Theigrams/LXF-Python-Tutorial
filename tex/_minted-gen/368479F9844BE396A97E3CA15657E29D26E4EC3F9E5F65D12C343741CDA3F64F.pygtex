@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{p}{[}\PYG{n}{program}\PYG{p}{:}\PYG{n}{awesome}\PYG{p}{]}
+
+\PYG{n}{command}     \PYG{o}{=} \PYG{o}{/}\PYG{n}{srv}\PYG{o}{/}\PYG{n}{awesome}\PYG{o}{/}\PYG{n}{www}\PYG{o}{/}\PYG{n}{app}\PYG{o}{.}\PYG{n}{py}
+\PYG{n}{directory}   \PYG{o}{=} \PYG{o}{/}\PYG{n}{srv}\PYG{o}{/}\PYG{n}{awesome}\PYG{o}{/}\PYG{n}{www}
+\PYG{n}{user}        \PYG{o}{=} \PYG{n}{www}\PYG{o}{\PYGZhy{}}\PYG{n}{data}
+\PYG{n}{startsecs}   \PYG{o}{=} \PYG{l+m+mi}{3}
+
+\PYG{n}{redirect\PYGZus{}stderr}         \PYG{o}{=} \PYG{n}{true}
+\PYG{n}{stdout\PYGZus{}logfile\PYGZus{}maxbytes} \PYG{o}{=} \PYG{l+m+mi}{50}\PYG{n}{MB}
+\PYG{n}{stdout\PYGZus{}logfile\PYGZus{}backups}  \PYG{o}{=} \PYG{l+m+mi}{10}
+\PYG{n}{stdout\PYGZus{}logfile}          \PYG{o}{=} \PYG{o}{/}\PYG{n}{srv}\PYG{o}{/}\PYG{n}{awesome}\PYG{o}{/}\PYG{n}{log}\PYG{o}{/}\PYG{n}{app}\PYG{o}{.}\PYG{n}{log}
+\end{Verbatim}

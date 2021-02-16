@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{n}{form} \PYG{n}{action}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/api/blogs\PYGZdq{}} \PYG{n}{method}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}post\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n+nb}{input} \PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n+nb}{input} \PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{textarea} \PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{textarea}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{button} \PYG{n+nb}{type}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}submit\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{OK}\PYG{o}{\PYGZlt{}/}\PYG{n}{button}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{form}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

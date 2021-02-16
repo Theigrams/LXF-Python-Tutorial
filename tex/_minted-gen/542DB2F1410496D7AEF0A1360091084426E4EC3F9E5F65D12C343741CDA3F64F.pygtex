@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{python3} \PYG{n}{task\PYGZus{}worker}\PYG{o}{.}\PYG{n}{py}
+\PYG{n}{Connect} \PYG{n}{to} \PYG{n}{server} \PYG{l+m+mf}{127.0}\PYG{o}{.}\PYG{l+m+mf}{0.1}\PYG{o}{...}
+\PYG{n}{run} \PYG{n}{task} \PYG{l+m+mi}{3411} \PYG{o}{*} \PYG{l+m+mf}{3411.}\PYG{o}{..}
+\PYG{n}{run} \PYG{n}{task} \PYG{l+m+mi}{1605} \PYG{o}{*} \PYG{l+m+mf}{1605.}\PYG{o}{..}
+\PYG{n}{run} \PYG{n}{task} \PYG{l+m+mi}{1398} \PYG{o}{*} \PYG{l+m+mf}{1398.}\PYG{o}{..}
+\PYG{n}{run} \PYG{n}{task} \PYG{l+m+mi}{4729} \PYG{o}{*} \PYG{l+m+mf}{4729.}\PYG{o}{..}
+\PYG{n}{run} \PYG{n}{task} \PYG{l+m+mi}{5300} \PYG{o}{*} \PYG{l+m+mf}{5300.}\PYG{o}{..}
+\PYG{n}{run} \PYG{n}{task} \PYG{l+m+mi}{7471} \PYG{o}{*} \PYG{l+m+mf}{7471.}\PYG{o}{..}
+\PYG{n}{run} \PYG{n}{task} \PYG{l+m+mi}{68} \PYG{o}{*} \PYG{l+m+mf}{68.}\PYG{o}{..}
+\PYG{n}{run} \PYG{n}{task} \PYG{l+m+mi}{4219} \PYG{o}{*} \PYG{l+m+mf}{4219.}\PYG{o}{..}
+\PYG{n}{run} \PYG{n}{task} \PYG{l+m+mi}{339} \PYG{o}{*} \PYG{l+m+mf}{339.}\PYG{o}{..}
+\PYG{n}{run} \PYG{n}{task} \PYG{l+m+mi}{7866} \PYG{o}{*} \PYG{l+m+mf}{7866.}\PYG{o}{..}
+\PYG{n}{worker} \PYG{n}{exit}\PYG{o}{.}
+\end{Verbatim}

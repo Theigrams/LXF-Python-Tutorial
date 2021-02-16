@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f} \PYG{o}{=} \PYG{k}{lambda} \PYG{n}{x}\PYG{p}{:} \PYG{n}{x} \PYG{o}{*} \PYG{n}{x}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f}
+\PYG{o}{\PYGZlt{}}\PYG{n}{function} \PYG{o}{\PYGZlt{}}\PYG{k}{lambda}\PYG{o}{\PYGZgt{}} \PYG{n}{at} \PYG{l+m+mh}{0x101c6ef28}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{l+m+mi}{25}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+
+    \PYG{n}{sock}\PYG{p}{,} \PYG{n}{addr} \PYG{o}{=} \PYG{n}{s}\PYG{o}{.}\PYG{n}{accept}\PYG{p}{()}
+
+    \PYG{n}{t} \PYG{o}{=} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{Thread}\PYG{p}{(}\PYG{n}{target}\PYG{o}{=}\PYG{n}{tcplink}\PYG{p}{,} \PYG{n}{args}\PYG{o}{=}\PYG{p}{(}\PYG{n}{sock}\PYG{p}{,} \PYG{n}{addr}\PYG{p}{))}
+    \PYG{n}{t}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+\end{Verbatim}

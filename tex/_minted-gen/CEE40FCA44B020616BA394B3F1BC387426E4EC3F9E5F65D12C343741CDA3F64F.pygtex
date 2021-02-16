@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{os}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{abspath}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{))}
+\end{Verbatim}

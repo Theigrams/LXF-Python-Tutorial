@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{pids}\PYG{p}{()}
+\PYG{p}{[}\PYG{l+m+mi}{3865}\PYG{p}{,} \PYG{l+m+mi}{3864}\PYG{p}{,} \PYG{l+m+mi}{3863}\PYG{p}{,} \PYG{l+m+mi}{3856}\PYG{p}{,} \PYG{l+m+mi}{3855}\PYG{p}{,} \PYG{l+m+mi}{3853}\PYG{p}{,} \PYG{l+m+mi}{3776}\PYG{p}{,} \PYG{o}{...}\PYG{p}{,} \PYG{l+m+mi}{45}\PYG{p}{,} \PYG{l+m+mi}{44}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p} \PYG{o}{=} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{Process}\PYG{p}{(}\PYG{l+m+mi}{3776}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{name}\PYG{p}{()}
+\PYG{l+s+s1}{\PYGZsq{}python3.6\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{exe}\PYG{p}{()}
+\PYG{l+s+s1}{\PYGZsq{}/Users/michael/anaconda3/bin/python3.6\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{cwd}\PYG{p}{()}
+\PYG{l+s+s1}{\PYGZsq{}/Users/michael\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{cmdline}\PYG{p}{()}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}python3\PYGZsq{}}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{ppid}\PYG{p}{()}
+\PYG{l+m+mi}{3765}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{parent}\PYG{p}{()}
+\PYG{o}{\PYGZlt{}}\PYG{n}{psutil}\PYG{o}{.}\PYG{n}{Process}\PYG{p}{(}\PYG{n}{pid}\PYG{o}{=}\PYG{l+m+mi}{3765}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}bash\PYGZsq{}}\PYG{p}{)} \PYG{n}{at} \PYG{l+m+mi}{4503144040}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{children}\PYG{p}{()}
+\PYG{p}{[]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{status}\PYG{p}{()}
+\PYG{l+s+s1}{\PYGZsq{}running\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{username}\PYG{p}{()}
+\PYG{l+s+s1}{\PYGZsq{}michael\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{create\PYGZus{}time}\PYG{p}{()}
+\PYG{l+m+mf}{1511052731.120333}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{terminal}\PYG{p}{()}
+\PYG{l+s+s1}{\PYGZsq{}/dev/ttys002\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{cpu\PYGZus{}times}\PYG{p}{()}
+\PYG{n}{pcputimes}\PYG{p}{(}\PYG{n}{user}\PYG{o}{=}\PYG{l+m+mf}{0.081150144}\PYG{p}{,} \PYG{n}{system}\PYG{o}{=}\PYG{l+m+mf}{0.053269812}\PYG{p}{,} \PYG{n}{children\PYGZus{}user}\PYG{o}{=}\PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{n}{children\PYGZus{}system}\PYG{o}{=}\PYG{l+m+mf}{0.0}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{memory\PYGZus{}info}\PYG{p}{()}
+\PYG{n}{pmem}\PYG{p}{(}\PYG{n}{rss}\PYG{o}{=}\PYG{l+m+mi}{8310784}\PYG{p}{,} \PYG{n}{vms}\PYG{o}{=}\PYG{l+m+mi}{2481725440}\PYG{p}{,} \PYG{n}{pfaults}\PYG{o}{=}\PYG{l+m+mi}{3207}\PYG{p}{,} \PYG{n}{pageins}\PYG{o}{=}\PYG{l+m+mi}{18}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{open\PYGZus{}files}\PYG{p}{()}
+\PYG{p}{[]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{connections}\PYG{p}{()}
+\PYG{p}{[]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{num\PYGZus{}threads}\PYG{p}{()}
+\PYG{l+m+mi}{1}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{threads}\PYG{p}{()}
+\PYG{p}{[}\PYG{n}{pthread}\PYG{p}{(}\PYG{n+nb}{id}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{user\PYGZus{}time}\PYG{o}{=}\PYG{l+m+mf}{0.090318}\PYG{p}{,} \PYG{n}{system\PYGZus{}time}\PYG{o}{=}\PYG{l+m+mf}{0.062736}\PYG{p}{)]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{environ}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}SHELL\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}/bin/bash\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}PATH\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:...\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}PWD\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}/Users/michael\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}LANG\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}zh\PYGZus{}CN.UTF\PYGZhy{}8\PYGZsq{}}\PYG{p}{,} \PYG{o}{...}\PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{terminate}\PYG{p}{()}
+\PYG{n}{Terminated}\PYG{p}{:} \PYG{l+m+mi}{15} \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZhy{}} \PYG{n}{自己把自己结束了}
+\end{Verbatim}

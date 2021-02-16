@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{with} \PYG{n}{create\PYGZus{}query}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{q}\PYG{p}{:}
+    \PYG{n}{q}\PYG{o}{.}\PYG{n}{query}\PYG{p}{()}
+\end{Verbatim}

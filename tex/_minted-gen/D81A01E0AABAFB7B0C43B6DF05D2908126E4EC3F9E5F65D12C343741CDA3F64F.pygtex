@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试:}
+\PYG{k}{assert} \PYG{n}{login}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}michael\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}123456\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{assert} \PYG{n}{login}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}bob\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}abc999\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{assert} \PYG{n}{login}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}alice\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}alice2008\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{assert} \PYG{o+ow}{not} \PYG{n}{login}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}michael\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}1234567\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{assert} \PYG{o+ow}{not} \PYG{n}{login}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}bob\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}123456\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{assert} \PYG{o+ow}{not} \PYG{n}{login}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}alice\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Alice2008\PYGZsq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ok\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

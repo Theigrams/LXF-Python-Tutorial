@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{):}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{psutil}\PYG{o}{.}\PYG{n}{cpu\PYGZus{}percent}\PYG{p}{(}\PYG{n}{interval}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{percpu}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{))}
+\PYG{o}{...}
+\PYG{p}{[}\PYG{l+m+mf}{14.0}\PYG{p}{,} \PYG{l+m+mf}{4.0}\PYG{p}{,} \PYG{l+m+mf}{4.0}\PYG{p}{,} \PYG{l+m+mf}{4.0}\PYG{p}{]}
+\PYG{p}{[}\PYG{l+m+mf}{12.0}\PYG{p}{,} \PYG{l+m+mf}{3.0}\PYG{p}{,} \PYG{l+m+mf}{4.0}\PYG{p}{,} \PYG{l+m+mf}{3.0}\PYG{p}{]}
+\PYG{p}{[}\PYG{l+m+mf}{8.0}\PYG{p}{,} \PYG{l+m+mf}{4.0}\PYG{p}{,} \PYG{l+m+mf}{3.0}\PYG{p}{,} \PYG{l+m+mf}{4.0}\PYG{p}{]}
+\PYG{p}{[}\PYG{l+m+mf}{12.0}\PYG{p}{,} \PYG{l+m+mf}{3.0}\PYG{p}{,} \PYG{l+m+mf}{3.0}\PYG{p}{,} \PYG{l+m+mf}{3.0}\PYG{p}{]}
+\PYG{p}{[}\PYG{l+m+mf}{18.8}\PYG{p}{,} \PYG{l+m+mf}{5.1}\PYG{p}{,} \PYG{l+m+mf}{5.9}\PYG{p}{,} \PYG{l+m+mf}{5.0}\PYG{p}{]}
+\PYG{p}{[}\PYG{l+m+mf}{10.9}\PYG{p}{,} \PYG{l+m+mf}{5.0}\PYG{p}{,} \PYG{l+m+mf}{4.0}\PYG{p}{,} \PYG{l+m+mf}{3.0}\PYG{p}{]}
+\PYG{p}{[}\PYG{l+m+mf}{12.0}\PYG{p}{,} \PYG{l+m+mf}{5.0}\PYG{p}{,} \PYG{l+m+mf}{4.0}\PYG{p}{,} \PYG{l+m+mf}{5.0}\PYG{p}{]}
+\PYG{p}{[}\PYG{l+m+mf}{15.0}\PYG{p}{,} \PYG{l+m+mf}{5.0}\PYG{p}{,} \PYG{l+m+mf}{4.0}\PYG{p}{,} \PYG{l+m+mf}{4.0}\PYG{p}{]}
+\PYG{p}{[}\PYG{l+m+mf}{19.0}\PYG{p}{,} \PYG{l+m+mf}{5.0}\PYG{p}{,} \PYG{l+m+mf}{5.0}\PYG{p}{,} \PYG{l+m+mf}{4.0}\PYG{p}{]}
+\PYG{p}{[}\PYG{l+m+mf}{9.0}\PYG{p}{,} \PYG{l+m+mf}{3.0}\PYG{p}{,} \PYG{l+m+mf}{2.0}\PYG{p}{,} \PYG{l+m+mf}{3.0}\PYG{p}{]}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{proxy\PYGZus{}handler} \PYG{o}{=} \PYG{n}{urllib}\PYG{o}{.}\PYG{n}{request}\PYG{o}{.}\PYG{n}{ProxyHandler}\PYG{p}{(\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}http\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}http://www.example.com:3128/\PYGZsq{}}\PYG{p}{\PYGZcb{})}
+\PYG{n}{proxy\PYGZus{}auth\PYGZus{}handler} \PYG{o}{=} \PYG{n}{urllib}\PYG{o}{.}\PYG{n}{request}\PYG{o}{.}\PYG{n}{ProxyBasicAuthHandler}\PYG{p}{()}
+\PYG{n}{proxy\PYGZus{}auth\PYGZus{}handler}\PYG{o}{.}\PYG{n}{add\PYGZus{}password}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}realm\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}host\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}username\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}password\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{opener} \PYG{o}{=} \PYG{n}{urllib}\PYG{o}{.}\PYG{n}{request}\PYG{o}{.}\PYG{n}{build\PYGZus{}opener}\PYG{p}{(}\PYG{n}{proxy\PYGZus{}handler}\PYG{p}{,} \PYG{n}{proxy\PYGZus{}auth\PYGZus{}handler}\PYG{p}{)}
+\PYG{k}{with} \PYG{n}{opener}\PYG{o}{.}\PYG{n}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}http://www.example.com/login.html\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+    \PYG{k}{pass}
+\end{Verbatim}

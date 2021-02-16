@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+\PYG{k}{def} \PYG{n+nf}{select}\PYG{p}{(}\PYG{n}{sql}\PYG{p}{,} \PYG{n}{args}\PYG{p}{,} \PYG{n}{size}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{):}
+    \PYG{n}{log}\PYG{p}{(}\PYG{n}{sql}\PYG{p}{,} \PYG{n}{args}\PYG{p}{)}
+    \PYG{k}{global} \PYG{n}{\PYGZus{}\PYGZus{}pool}
+    \PYG{k}{with} \PYG{p}{(}\PYG{k}{yield from} \PYG{n}{\PYGZus{}\PYGZus{}pool}\PYG{p}{)} \PYG{k}{as} \PYG{n}{conn}\PYG{p}{:}
+        \PYG{n}{cur} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{conn}\PYG{o}{.}\PYG{n}{cursor}\PYG{p}{(}\PYG{n}{aiomysql}\PYG{o}{.}\PYG{n}{DictCursor}\PYG{p}{)}
+        \PYG{k}{yield from} \PYG{n}{cur}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}\PYG{n}{sql}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}?\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{),} \PYG{n}{args} \PYG{o+ow}{or} \PYG{p}{())}
+        \PYG{k}{if} \PYG{n}{size}\PYG{p}{:}
+            \PYG{n}{rs} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{cur}\PYG{o}{.}\PYG{n}{fetchmany}\PYG{p}{(}\PYG{n}{size}\PYG{p}{)}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n}{rs} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{cur}\PYG{o}{.}\PYG{n}{fetchall}\PYG{p}{()}
+        \PYG{k}{yield from} \PYG{n}{cur}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+        \PYG{n}{logging}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}rows returned: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{rs}\PYG{p}{))}
+        \PYG{k}{return} \PYG{n}{rs}
+\end{Verbatim}

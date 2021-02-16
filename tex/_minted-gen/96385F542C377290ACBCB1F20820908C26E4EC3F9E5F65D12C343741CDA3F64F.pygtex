@@ -1,0 +1,32 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{TestStudent}\PYG{p}{(}\PYG{n}{unittest}\PYG{o}{.}\PYG{n}{TestCase}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf}{test\PYGZus{}80\PYGZus{}to\PYGZus{}100}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{s1} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bart\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{80}\PYG{p}{)}
+        \PYG{n}{s2} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Lisa\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{assertEqual}\PYG{p}{(}\PYG{n}{s1}\PYG{o}{.}\PYG{n}{get\PYGZus{}grade}\PYG{p}{(),} \PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{assertEqual}\PYG{p}{(}\PYG{n}{s2}\PYG{o}{.}\PYG{n}{get\PYGZus{}grade}\PYG{p}{(),} \PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{test\PYGZus{}60\PYGZus{}to\PYGZus{}80}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{s1} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bart\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{60}\PYG{p}{)}
+        \PYG{n}{s2} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Lisa\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{79}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{assertEqual}\PYG{p}{(}\PYG{n}{s1}\PYG{o}{.}\PYG{n}{get\PYGZus{}grade}\PYG{p}{(),} \PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{assertEqual}\PYG{p}{(}\PYG{n}{s2}\PYG{o}{.}\PYG{n}{get\PYGZus{}grade}\PYG{p}{(),} \PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{test\PYGZus{}0\PYGZus{}to\PYGZus{}60}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{s1} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bart\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}
+        \PYG{n}{s2} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Lisa\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{59}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{assertEqual}\PYG{p}{(}\PYG{n}{s1}\PYG{o}{.}\PYG{n}{get\PYGZus{}grade}\PYG{p}{(),} \PYG{l+s+s1}{\PYGZsq{}C\PYGZsq{}}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{assertEqual}\PYG{p}{(}\PYG{n}{s2}\PYG{o}{.}\PYG{n}{get\PYGZus{}grade}\PYG{p}{(),} \PYG{l+s+s1}{\PYGZsq{}C\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{test\PYGZus{}invalid}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{s1} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bart\PYGZsq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}
+        \PYG{n}{s2} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Lisa\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{101}\PYG{p}{)}
+        \PYG{k}{with} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{assertRaises}\PYG{p}{(}\PYG{n+ne}{ValueError}\PYG{p}{):}
+            \PYG{n}{s1}\PYG{o}{.}\PYG{n}{get\PYGZus{}grade}\PYG{p}{()}
+        \PYG{k}{with} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{assertRaises}\PYG{p}{(}\PYG{n+ne}{ValueError}\PYG{p}{):}
+            \PYG{n}{s2}\PYG{o}{.}\PYG{n}{get\PYGZus{}grade}\PYG{p}{()}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+    \PYG{n}{unittest}\PYG{o}{.}\PYG{n}{main}\PYG{p}{()}
+\end{Verbatim}

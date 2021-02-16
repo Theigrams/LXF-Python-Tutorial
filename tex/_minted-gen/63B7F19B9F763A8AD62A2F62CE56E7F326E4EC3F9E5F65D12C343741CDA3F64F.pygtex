@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{rename}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}test.txt\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}test.py\PYGZsq{}}\PYG{p}{)}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{remove}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}test.py\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

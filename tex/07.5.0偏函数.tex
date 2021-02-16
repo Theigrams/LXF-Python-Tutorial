@@ -1,0 +1,113 @@
+\hypertarget{ux504fux51fdux6570}{%
+\subsection{偏函数}\label{ux504fux51fdux6570}}
+
+Python
+的\texttt{functools}模块提供了很多有用的功能，其中一个就是偏函数（Partial
+function）。要注意，这里的偏函数和数学意义上的偏函数不一样。
+
+在介绍函数参数的时候，我们讲到，通过设定参数的默认值，可以降低函数调用的难度。而偏函数也可以做到这一点。举例如下：
+
+\texttt{int()}函数可以把字符串转换为整数，当仅传入字符串时，\texttt{int()}函数默认按十进制转换：
+
+\begin{pythoncode}
+>>> int('12345')
+12345
+\end{pythoncode}
+
+但\texttt{int()}函数还提供额外的\texttt{base}参数，默认值为\texttt{10}。如果传入\texttt{base}参数，就可以做
+N 进制的转换：
+
+\begin{pythoncode}
+>>> int('12345', base=8)
+5349
+>>> int('12345', 16)
+74565
+\end{pythoncode}
+
+假设要转换大量的二进制字符串，每次都传入\texttt{int(x,\ base=2)}非常麻烦，于是，我们想到，可以定义一个\texttt{int2()}的函数，默认把\texttt{base=2}传进去：
+
+\begin{pythoncode}
+def int2(x, base=2):
+    return int(x, base)
+\end{pythoncode}
+
+这样，我们转换二进制就非常方便了：
+
+\begin{pythoncode}
+>>> int2('1000000')
+64
+>>> int2('1010101')
+85
+\end{pythoncode}
+
+\texttt{functools.partial}就是帮助我们创建一个偏函数的，不需要我们自己定义\texttt{int2()}，可以直接使用下面的代码创建一个新的函数\texttt{int2}：
+
+\begin{pythoncode}
+>>> import functools
+>>> int2 = functools.partial(int, base=2)
+>>> int2('1000000')
+64
+>>> int2('1010101')
+85
+\end{pythoncode}
+
+所以，简单总结\texttt{functools.partial}的作用就是，把一个函数的某些参数给固定住（也就是设置默认值），返回一个新的函数，调用这个新函数会更简单。
+
+注意到上面的新的\texttt{int2}函数，仅仅是把\texttt{base}参数重新设定默认值为\texttt{2}，但也可以在函数调用时传入其他值：
+
+\begin{pythoncode}
+>>> int2('1000000', base=10)
+1000000
+\end{pythoncode}
+
+最后，创建偏函数时，实际上可以接收函数对象、\texttt{*args}和\texttt{**kw}这
+3 个参数，当传入：
+
+\begin{pythoncode}
+int2 = functools.partial(int, base=2)
+\end{pythoncode}
+
+实际上固定了 int() 函数的关键字参数\texttt{base}，也就是：
+
+\begin{pythoncode}
+int2('10010')
+\end{pythoncode}
+
+相当于：
+
+\begin{pythoncode}
+kw = { 'base': 2 }
+int('10010', **kw)
+\end{pythoncode}
+
+当传入：
+
+\begin{pythoncode}
+max2 = functools.partial(max, 10)
+\end{pythoncode}
+
+实际上会把\texttt{10}作为\texttt{*args}的一部分自动加到左边，也就是：
+
+\begin{pythoncode}
+max2(5, 6, 7)
+\end{pythoncode}
+
+相当于：
+
+\begin{pythoncode}
+args = (10, 5, 6, 7)
+max(*args)
+\end{pythoncode}
+
+结果为\texttt{10}。
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+当函数的参数个数太多，需要简化时，使用\texttt{functools.partial}可以创建一个新的函数，这个新函数可以固定住原函数的部分参数，从而在调用时更简单。
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/functional/do_partial.py}{do\_partial.py}
+

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{L} \PYG{o}{=} \PYG{p}{[(}\PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{75}\PYG{p}{),} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{92}\PYG{p}{),} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bart\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{66}\PYG{p}{),} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Lisa\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{88}\PYG{p}{)]}
+\end{Verbatim}

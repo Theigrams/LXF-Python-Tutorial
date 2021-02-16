@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xe4\PYGZbs{}xb8\PYGZbs{}xad\PYGZbs{}xff}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{,} \PYG{n}{errors}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}ignore\PYGZsq{}}\PYG{p}{)}
+\PYG{l+s+s1}{\PYGZsq{}中\PYGZsq{}}
+\end{Verbatim}

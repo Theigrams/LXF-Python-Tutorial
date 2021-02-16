@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Student}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{name} \PYG{o}{=} \PYG{n}{name}
+
+\PYG{n}{s} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{s}\PYG{o}{.}\PYG{n}{score} \PYG{o}{=} \PYG{l+m+mi}{90}
+\end{Verbatim}

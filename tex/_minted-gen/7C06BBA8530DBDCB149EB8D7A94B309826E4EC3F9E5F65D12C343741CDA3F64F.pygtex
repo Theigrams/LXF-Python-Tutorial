@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{p}{[}\PYG{n}{PRODUCER}\PYG{p}{]} \PYG{n}{Producing} \PYG{l+m+mf}{1.}\PYG{o}{..}
+\PYG{p}{[}\PYG{n}{CONSUMER}\PYG{p}{]} \PYG{n}{Consuming} \PYG{l+m+mf}{1.}\PYG{o}{..}
+\PYG{p}{[}\PYG{n}{PRODUCER}\PYG{p}{]} \PYG{n}{Consumer} \PYG{k}{return}\PYG{p}{:} \PYG{l+m+mi}{200} \PYG{n}{OK}
+\PYG{p}{[}\PYG{n}{PRODUCER}\PYG{p}{]} \PYG{n}{Producing} \PYG{l+m+mf}{2.}\PYG{o}{..}
+\PYG{p}{[}\PYG{n}{CONSUMER}\PYG{p}{]} \PYG{n}{Consuming} \PYG{l+m+mf}{2.}\PYG{o}{..}
+\PYG{p}{[}\PYG{n}{PRODUCER}\PYG{p}{]} \PYG{n}{Consumer} \PYG{k}{return}\PYG{p}{:} \PYG{l+m+mi}{200} \PYG{n}{OK}
+\PYG{p}{[}\PYG{n}{PRODUCER}\PYG{p}{]} \PYG{n}{Producing} \PYG{l+m+mf}{3.}\PYG{o}{..}
+\PYG{p}{[}\PYG{n}{CONSUMER}\PYG{p}{]} \PYG{n}{Consuming} \PYG{l+m+mf}{3.}\PYG{o}{..}
+\PYG{p}{[}\PYG{n}{PRODUCER}\PYG{p}{]} \PYG{n}{Consumer} \PYG{k}{return}\PYG{p}{:} \PYG{l+m+mi}{200} \PYG{n}{OK}
+\PYG{p}{[}\PYG{n}{PRODUCER}\PYG{p}{]} \PYG{n}{Producing} \PYG{l+m+mf}{4.}\PYG{o}{..}
+\PYG{p}{[}\PYG{n}{CONSUMER}\PYG{p}{]} \PYG{n}{Consuming} \PYG{l+m+mf}{4.}\PYG{o}{..}
+\PYG{p}{[}\PYG{n}{PRODUCER}\PYG{p}{]} \PYG{n}{Consumer} \PYG{k}{return}\PYG{p}{:} \PYG{l+m+mi}{200} \PYG{n}{OK}
+\PYG{p}{[}\PYG{n}{PRODUCER}\PYG{p}{]} \PYG{n}{Producing} \PYG{l+m+mf}{5.}\PYG{o}{..}
+\PYG{p}{[}\PYG{n}{CONSUMER}\PYG{p}{]} \PYG{n}{Consuming} \PYG{l+m+mf}{5.}\PYG{o}{..}
+\PYG{p}{[}\PYG{n}{PRODUCER}\PYG{p}{]} \PYG{n}{Consumer} \PYG{k}{return}\PYG{p}{:} \PYG{l+m+mi}{200} \PYG{n}{OK}
+\end{Verbatim}

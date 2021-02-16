@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{RequestHandler}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{app}\PYG{p}{,} \PYG{n}{fn}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}app} \PYG{o}{=} \PYG{n}{app}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}func} \PYG{o}{=} \PYG{n}{fn}
+        \PYG{o}{...}
+
+    \PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}call\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{request}\PYG{p}{):}
+        \PYG{n}{kw} \PYG{o}{=} \PYG{o}{...} \PYG{n}{获取参数}
+        \PYG{n}{r} \PYG{o}{=} \PYG{k}{yield from} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}func}\PYG{p}{(}\PYG{o}{**}\PYG{n}{kw}\PYG{p}{)}
+        \PYG{k}{return} \PYG{n}{r}
+\end{Verbatim}

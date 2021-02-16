@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{session} \PYG{o}{=} \PYG{n}{DBSession}\PYG{p}{()}
+
+\PYG{n}{user} \PYG{o}{=} \PYG{n}{session}\PYG{o}{.}\PYG{n}{query}\PYG{p}{(}\PYG{n}{User}\PYG{p}{)}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n}{User}\PYG{o}{.}\PYG{n}{id}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}5\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{one}\PYG{p}{()}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}type:\PYGZsq{}}\PYG{p}{,} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{user}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}name:\PYGZsq{}}\PYG{p}{,} \PYG{n}{user}\PYG{o}{.}\PYG{n}{name}\PYG{p}{)}
+
+\PYG{n}{session}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\end{Verbatim}

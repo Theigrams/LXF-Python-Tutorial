@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{collections} \PYG{k+kn}{import} \PYG{n}{ChainMap}
+\PYG{k+kn}{import} \PYG{n+nn}{os}\PYG{o}{,} \PYG{n+nn}{argparse}
+\PYG{n}{defaults} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+    \PYG{l+s+s1}{\PYGZsq{}color\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}red\PYGZsq{}}\PYG{p}{,}
+    \PYG{l+s+s1}{\PYGZsq{}user\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}guest\PYGZsq{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{n}{parser} \PYG{o}{=} \PYG{n}{argparse}\PYG{o}{.}\PYG{n}{ArgumentParser}\PYG{p}{()}
+\PYG{n}{parser}\PYG{o}{.}\PYG{n}{add\PYGZus{}argument}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}u\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}user\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{parser}\PYG{o}{.}\PYG{n}{add\PYGZus{}argument}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}c\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}color\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{namespace} \PYG{o}{=} \PYG{n}{parser}\PYG{o}{.}\PYG{n}{parse\PYGZus{}args}\PYG{p}{()}
+\PYG{n}{command\PYGZus{}line\PYGZus{}args} \PYG{o}{=} \PYG{p}{\PYGZob{}} \PYG{n}{k}\PYG{p}{:} \PYG{n}{v} \PYG{k}{for} \PYG{n}{k}\PYG{p}{,} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb}{vars}\PYG{p}{(}\PYG{n}{namespace}\PYG{p}{)}\PYG{o}{.}\PYG{n}{items}\PYG{p}{()} \PYG{k}{if} \PYG{n}{v} \PYG{p}{\PYGZcb{}}
+\PYG{n}{combined} \PYG{o}{=} \PYG{n}{ChainMap}\PYG{p}{(}\PYG{n}{command\PYGZus{}line\PYGZus{}args}\PYG{p}{,} \PYG{n}{os}\PYG{o}{.}\PYG{n}{environ}\PYG{p}{,} \PYG{n}{defaults}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}color=}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{combined}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}color\PYGZsq{}}\PYG{p}{])}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}user=}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{combined}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}user\PYGZsq{}}\PYG{p}{])}
+\end{Verbatim}

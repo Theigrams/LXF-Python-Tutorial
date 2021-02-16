@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{collections} \PYG{k+kn}{import} \PYG{n}{deque}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{q} \PYG{o}{=} \PYG{n}{deque}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}c\PYGZsq{}}\PYG{p}{])}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{q}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{q}\PYG{o}{.}\PYG{n}{appendleft}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{q}
+\PYG{n}{deque}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}c\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{])}
+\end{Verbatim}

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{python3} \PYG{n}{hello}\PYG{o}{.}\PYG{n}{py}
+\PYG{n}{Hello}\PYG{p}{,} \PYG{n}{world}\PYG{err}{!}
+\PYG{err}{\PYGZdl{}} \PYG{n}{python} \PYG{n}{hello}\PYG{o}{.}\PYG{n}{py} \PYG{n}{Michael}
+\PYG{n}{Hello}\PYG{p}{,} \PYG{n}{Michael}\PYG{err}{!}
+\end{Verbatim}

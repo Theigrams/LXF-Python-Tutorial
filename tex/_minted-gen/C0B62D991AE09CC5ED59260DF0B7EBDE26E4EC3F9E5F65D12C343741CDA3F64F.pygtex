@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{urllib} \PYG{k+kn}{import} \PYG{n}{request}\PYG{p}{,} \PYG{n}{parse}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Login to weibo.cn...\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{email} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Email: \PYGZsq{}}\PYG{p}{)}
+\PYG{n}{passwd} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Password: \PYGZsq{}}\PYG{p}{)}
+\PYG{n}{login\PYGZus{}data} \PYG{o}{=} \PYG{n}{parse}\PYG{o}{.}\PYG{n}{urlencode}\PYG{p}{([}
+    \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}username\PYGZsq{}}\PYG{p}{,} \PYG{n}{email}\PYG{p}{),}
+    \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}password\PYGZsq{}}\PYG{p}{,} \PYG{n}{passwd}\PYG{p}{),}
+    \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}entry\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}mweibo\PYGZsq{}}\PYG{p}{),}
+    \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}client\PYGZus{}id\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{),}
+    \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}savestate\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{),}
+    \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ec\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{),}
+    \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}pagerefer\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}https://passport.weibo.cn/signin/welcome?entry=mweibo\PYGZam{}r=http\PYGZpc{}3A}\PYG{l+s+si}{\PYGZpc{}2F\PYGZpc{}2F}\PYG{l+s+s1}{m.weibo.cn}\PYG{l+s+si}{\PYGZpc{}2F}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{p}{])}
+
+\PYG{n}{req} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{Request}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}https://passport.weibo.cn/sso/login\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{req}\PYG{o}{.}\PYG{n}{add\PYGZus{}header}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Origin\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}https://passport.weibo.cn\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{req}\PYG{o}{.}\PYG{n}{add\PYGZus{}header}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}User\PYGZhy{}Agent\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Mozilla/6.0 (iPhone; CPU iPhone OS 8\PYGZus{}0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/8.0 Mobile/10A5376e Safari/8536.25\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{req}\PYG{o}{.}\PYG{n}{add\PYGZus{}header}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Referer\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}https://passport.weibo.cn/signin/login?entry=mweibo\PYGZam{}res=wel\PYGZam{}wm=3349\PYGZam{}r=http\PYGZpc{}3A}\PYG{l+s+si}{\PYGZpc{}2F\PYGZpc{}2F}\PYG{l+s+s1}{m.weibo.cn}\PYG{l+s+si}{\PYGZpc{}2F}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+
+\PYG{k}{with} \PYG{n}{request}\PYG{o}{.}\PYG{n}{urlopen}\PYG{p}{(}\PYG{n}{req}\PYG{p}{,} \PYG{n}{data}\PYG{o}{=}\PYG{n}{login\PYGZus{}data}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Status:\PYGZsq{}}\PYG{p}{,} \PYG{n}{f}\PYG{o}{.}\PYG{n}{status}\PYG{p}{,} \PYG{n}{f}\PYG{o}{.}\PYG{n}{reason}\PYG{p}{)}
+    \PYG{k}{for} \PYG{n}{k}\PYG{p}{,} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n}{f}\PYG{o}{.}\PYG{n}{getheaders}\PYG{p}{():}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{k}\PYG{p}{,} \PYG{n}{v}\PYG{p}{))}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Data:\PYGZsq{}}\PYG{p}{,} \PYG{n}{f}\PYG{o}{.}\PYG{n}{read}\PYG{p}{()}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+\end{Verbatim}

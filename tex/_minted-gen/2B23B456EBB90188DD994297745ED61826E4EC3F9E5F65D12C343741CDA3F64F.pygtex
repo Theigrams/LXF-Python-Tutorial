@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{consumer}\PYG{p}{():}
+    \PYG{n}{r} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}
+    \PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+        \PYG{n}{n} \PYG{o}{=} \PYG{k}{yield} \PYG{n}{r}
+        \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{n}\PYG{p}{:}
+            \PYG{k}{return}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}[CONSUMER] Consuming }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{n}\PYG{p}{)}
+        \PYG{n}{r} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}200 OK\PYGZsq{}}
+
+\PYG{k}{def} \PYG{n+nf}{produce}\PYG{p}{(}\PYG{n}{c}\PYG{p}{):}
+    \PYG{n}{c}\PYG{o}{.}\PYG{n}{send}\PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{)}
+    \PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{k}{while} \PYG{n}{n} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{5}\PYG{p}{:}
+        \PYG{n}{n} \PYG{o}{=} \PYG{n}{n} \PYG{o}{+} \PYG{l+m+mi}{1}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}[PRODUCER] Producing }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{n}\PYG{p}{)}
+        \PYG{n}{r} \PYG{o}{=} \PYG{n}{c}\PYG{o}{.}\PYG{n}{send}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}[PRODUCER] Consumer return: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{r}\PYG{p}{)}
+    \PYG{n}{c}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{consumer}\PYG{p}{()}
+\PYG{n}{produce}\PYG{p}{(}\PYG{n}{c}\PYG{p}{)}
+\end{Verbatim}

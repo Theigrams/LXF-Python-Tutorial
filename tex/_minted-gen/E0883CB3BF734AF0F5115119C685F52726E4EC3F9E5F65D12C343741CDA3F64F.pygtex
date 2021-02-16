@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{flask} \PYG{k+kn}{import} \PYG{n}{Flask}
+\PYG{k+kn}{from} \PYG{n+nn}{flask} \PYG{k+kn}{import} \PYG{n}{request}
+
+\PYG{n}{app} \PYG{o}{=} \PYG{n}{Flask}\PYG{p}{(}\PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}}\PYG{p}{)}
+
+\PYG{n+nd}{@app}\PYG{o}{.}\PYG{n}{route}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/\PYGZsq{}}\PYG{p}{,} \PYG{n}{methods}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}POST\PYGZsq{}}\PYG{p}{])}
+\PYG{k}{def} \PYG{n+nf}{home}\PYG{p}{():}
+    \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}h1\PYGZgt{}Home\PYGZlt{}/h1\PYGZgt{}\PYGZsq{}}
+
+\PYG{n+nd}{@app}\PYG{o}{.}\PYG{n}{route}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/signin\PYGZsq{}}\PYG{p}{,} \PYG{n}{methods}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{])}
+\PYG{k}{def} \PYG{n+nf}{signin\PYGZus{}form}\PYG{p}{():}
+    \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}\PYGZlt{}form action=\PYGZdq{}/signin\PYGZdq{} method=\PYGZdq{}post\PYGZdq{}\PYGZgt{}}
+\PYG{l+s+s1}{              \PYGZlt{}p\PYGZgt{}\PYGZlt{}input \PYGZgt{}\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+s1}{              \PYGZlt{}p\PYGZgt{}\PYGZlt{}input \PYGZgt{}\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+s1}{              \PYGZlt{}p\PYGZgt{}\PYGZlt{}button type=\PYGZdq{}submit\PYGZdq{}\PYGZgt{}Sign In\PYGZlt{}/button\PYGZgt{}\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+s1}{              \PYGZlt{}/form\PYGZgt{}\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+
+\PYG{n+nd}{@app}\PYG{o}{.}\PYG{n}{route}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/signin\PYGZsq{}}\PYG{p}{,} \PYG{n}{methods}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}POST\PYGZsq{}}\PYG{p}{])}
+\PYG{k}{def} \PYG{n+nf}{signin}\PYG{p}{():}
+    \PYG{c+c1}{\PYGZsh{} 需要从request对象读取表单内容：}
+    \PYG{k}{if} \PYG{n}{request}\PYG{o}{.}\PYG{n}{form}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}username\PYGZsq{}}\PYG{p}{]}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}admin\PYGZsq{}} \PYG{o+ow}{and} \PYG{n}{request}\PYG{o}{.}\PYG{n}{form}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}password\PYGZsq{}}\PYG{p}{]}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}password\PYGZsq{}}\PYG{p}{:}
+        \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}h3\PYGZgt{}Hello, admin!\PYGZlt{}/h3\PYGZgt{}\PYGZsq{}}
+    \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}h3\PYGZgt{}Bad username or password.\PYGZlt{}/h3\PYGZgt{}\PYGZsq{}}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+    \PYG{n}{app}\PYG{o}{.}\PYG{n}{run}\PYG{p}{()}
+\end{Verbatim}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{detectJoystick}\PYG{p}{(}\PYG{n}{joystickNames}\PYG{p}{):}
+    \PYG{k}{for} \PYG{n}{device} \PYG{o+ow}{in} \PYG{n}{listDevices}\PYG{p}{():}
+        \PYG{k}{for} \PYG{n}{joystickName} \PYG{o+ow}{in} \PYG{n}{joystickNames}\PYG{p}{:}
+            \PYG{k}{if} \PYG{n}{joystickName} \PYG{o+ow}{in} \PYG{n}{device}\PYG{o}{.}\PYG{n}{name}\PYG{p}{:}
+
+                \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}/dev/input/}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{device}\PYG{o}{.}\PYG{n}{handler}
+
+    \PYG{k}{return} \PYG{k+kc}{None}
+\end{Verbatim}

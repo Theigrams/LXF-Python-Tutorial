@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{datetime}\PYG{p}{,} \PYG{n}{timedelta}\PYG{p}{,} \PYG{n}{timezone}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{tz\PYGZus{}utc\PYGZus{}8} \PYG{o}{=} \PYG{n}{timezone}\PYG{p}{(}\PYG{n}{timedelta}\PYG{p}{(}\PYG{n}{hours}\PYG{o}{=}\PYG{l+m+mi}{8}\PYG{p}{))}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{now} \PYG{o}{=} \PYG{n}{datetime}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{now}
+\PYG{n}{datetime}\PYG{o}{.}\PYG{n}{datetime}\PYG{p}{(}\PYG{l+m+mi}{2015}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{18}\PYG{p}{,} \PYG{l+m+mi}{17}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{871012}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{dt} \PYG{o}{=} \PYG{n}{now}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{n}{tzinfo}\PYG{o}{=}\PYG{n}{tz\PYGZus{}utc\PYGZus{}8}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{dt}
+\PYG{n}{datetime}\PYG{o}{.}\PYG{n}{datetime}\PYG{p}{(}\PYG{l+m+mi}{2015}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{18}\PYG{p}{,} \PYG{l+m+mi}{17}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{871012}\PYG{p}{,} \PYG{n}{tzinfo}\PYG{o}{=}\PYG{n}{datetime}\PYG{o}{.}\PYG{n}{timezone}\PYG{p}{(}\PYG{n}{datetime}\PYG{o}{.}\PYG{n}{timedelta}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{28800}\PYG{p}{)))}
+\end{Verbatim}

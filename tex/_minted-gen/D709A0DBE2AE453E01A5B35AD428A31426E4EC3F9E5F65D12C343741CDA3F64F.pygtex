@@ -1,0 +1,72 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{err}{!}\PYG{n}{DOCTYPE} \PYG{n}{html}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}}\PYG{n}{html}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}}\PYG{n}{head}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{meta} \PYG{n}{charset}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}utf\PYGZhy{}8\PYGZdq{}} \PYG{o}{/\PYGZgt{}}
+    \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{block} \PYG{n}{meta} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endblock} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{title}\PYG{o}{\PYGZgt{}}\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{block} \PYG{n}{title} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}} \PYG{err}{?} \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endblock} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}} \PYG{o}{\PYGZhy{}} \PYG{n}{Awesome} \PYG{n}{Python} \PYG{n}{Webapp}\PYG{o}{\PYGZlt{}/}\PYG{n}{title}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{link} \PYG{n}{rel}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}stylesheet\PYGZdq{}} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/static/css/uikit.min.css\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{link} \PYG{n}{rel}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}stylesheet\PYGZdq{}} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/static/css/uikit.gradient.min.css\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{link} \PYG{n}{rel}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}stylesheet\PYGZdq{}} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/static/css/awesome.css\PYGZdq{}} \PYG{o}{/\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{script} \PYG{n}{src}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/static/js/jquery.min.js\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{script} \PYG{n}{src}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/static/js/md5.js\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{script} \PYG{n}{src}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/static/js/uikit.min.js\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{script} \PYG{n}{src}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/static/js/awesome.js\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+    \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{block} \PYG{n}{beforehead} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endblock} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{head}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}}\PYG{n}{body}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{nav} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}navbar uk\PYGZhy{}navbar\PYGZhy{}attached uk\PYGZhy{}margin\PYGZhy{}bottom\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}container uk\PYGZhy{}container\PYGZhy{}center\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}navbar\PYGZhy{}brand\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{Awesome}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}}\PYG{n}{ul} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}navbar\PYGZhy{}nav\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{li} \PYG{n}{data}\PYG{o}{\PYGZhy{}}\PYG{n}{url}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}blogs\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}home\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}} \PYG{n}{日志}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{li}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{li}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{a} \PYG{n}{target}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}blank\PYGZdq{}} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}book\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}} \PYG{n}{教程}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{li}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{li}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{a} \PYG{n}{target}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}blank\PYGZdq{}} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}code\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}} \PYG{n}{源码}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{li}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}/}\PYG{n}{ul}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}navbar\PYGZhy{}flip\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{ul} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}navbar\PYGZhy{}nav\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{k}{if} \PYG{n}{user} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{li} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}parent\PYGZdq{}} \PYG{n}{data}\PYG{o}{\PYGZhy{}}\PYG{n}{uk}\PYG{o}{\PYGZhy{}}\PYG{n}{dropdown}\PYG{o}{\PYGZgt{}}
+                        \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}0\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}user\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}} \PYG{p}{\PYGZob{}\PYGZob{}} \PYG{n}{user}\PYG{o}{.}\PYG{n}{name} \PYG{p}{\PYGZcb{}\PYGZcb{}}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}
+                        \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}dropdown uk\PYGZhy{}dropdown\PYGZhy{}navbar\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                            \PYG{o}{\PYGZlt{}}\PYG{n}{ul} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}nav uk\PYGZhy{}nav\PYGZhy{}navbar\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                                \PYG{o}{\PYGZlt{}}\PYG{n}{li}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/signout\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}sign\PYGZhy{}out\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}} \PYG{n}{登出}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{li}\PYG{o}{\PYGZgt{}}
+                            \PYG{o}{\PYGZlt{}/}\PYG{n}{ul}\PYG{o}{\PYGZgt{}}
+                        \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}/}\PYG{n}{li}\PYG{o}{\PYGZgt{}}
+                \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{k}{else} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{li}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/signin\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}sign\PYGZhy{}in\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}} \PYG{n}{登陆}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{li}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{li}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/register\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}edit\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}} \PYG{n}{注册}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{li}\PYG{o}{\PYGZgt{}}
+                \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endif} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+                \PYG{o}{\PYGZlt{}/}\PYG{n}{ul}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}/}\PYG{n}{nav}\PYG{o}{\PYGZgt{}}
+
+    \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}container uk\PYGZhy{}container\PYGZhy{}center\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}grid\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+
+            \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{block} \PYG{n}{content} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+            \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endblock} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+
+        \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+
+    \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}margin\PYGZhy{}large\PYGZhy{}top\PYGZdq{}} \PYG{n}{style}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}background\PYGZhy{}color:\PYGZsh{}eee; border\PYGZhy{}top:1px solid \PYGZsh{}ccc;\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}container uk\PYGZhy{}container\PYGZhy{}center uk\PYGZhy{}text\PYGZhy{}center\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}panel uk\PYGZhy{}margin\PYGZhy{}top uk\PYGZhy{}margin\PYGZhy{}bottom\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{p}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{target}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}blank\PYGZdq{}} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}button uk\PYGZhy{}icon\PYGZhy{}weibo\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{target}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}blank\PYGZdq{}} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}button uk\PYGZhy{}icon\PYGZhy{}github\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{target}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}blank\PYGZdq{}} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}button uk\PYGZhy{}icon\PYGZhy{}linkedin\PYGZhy{}square\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{target}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}blank\PYGZdq{}} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}button uk\PYGZhy{}icon\PYGZhy{}twitter\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}/}\PYG{n}{p}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{p}\PYG{o}{\PYGZgt{}}\PYG{n}{Powered} \PYG{n}{by} \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{Awesome} \PYG{n}{Python} \PYG{n}{Webapp}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}.} \PYG{n}{Copyright} \PYG{err}{©} \PYG{l+m+mf}{2014.} \PYG{p}{[}\PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/manage/\PYGZdq{}} \PYG{n}{target}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}blank\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{Manage}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}\PYG{p}{]}\PYG{o}{\PYGZlt{}/}\PYG{n}{p}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{p}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}http://www.liaoxuefeng.com/\PYGZdq{}} \PYG{n}{target}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}blank\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{www}\PYG{o}{.}\PYG{n}{liaoxuefeng}\PYG{o}{.}\PYG{n}{com}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}.} \PYG{n}{All} \PYG{n}{rights} \PYG{n}{reserved}\PYG{o}{.\PYGZlt{}/}\PYG{n}{p}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{target}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}blank\PYGZdq{}} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}html5\PYGZdq{}} \PYG{n}{style}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}font\PYGZhy{}size:64px; color: \PYGZsh{}444;\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{body}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{html}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

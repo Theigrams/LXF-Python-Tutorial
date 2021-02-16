@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{python3} \PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{n}{version}
+\PYG{n}{Python} \PYG{l+m+mf}{3.7}\PYG{o}{.}\PYG{l+m+mi}{0}
+\end{Verbatim}

@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{def} \PYG{n+nf}{fn}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}world\PYGZsq{}}\PYG{p}{):} \PYG{c+c1}{\PYGZsh{} 先定义函数}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Hello, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{name}\PYG{p}{)}
+\PYG{o}{...}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Hello} \PYG{o}{=} \PYG{n+nb}{type}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Hello\PYGZsq{}}\PYG{p}{,} \PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{,),} \PYG{n+nb}{dict}\PYG{p}{(}\PYG{n}{hello}\PYG{o}{=}\PYG{n}{fn}\PYG{p}{))} \PYG{c+c1}{\PYGZsh{} 创建Hello class}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{h} \PYG{o}{=} \PYG{n}{Hello}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{h}\PYG{o}{.}\PYG{n}{hello}\PYG{p}{()}
+\PYG{n}{Hello}\PYG{p}{,} \PYG{n}{world}\PYG{o}{.}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{Hello}\PYG{p}{))}
+\PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{err}{\PYGZsq{}}\PYG{n+nc}{type}\PYG{l+s+s1}{\PYGZsq{}\PYGZgt{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{h}\PYG{p}{))}
+\PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{err}{\PYGZsq{}}\PYG{n+nc}{\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{Hello}\PYG{l+s+s1}{\PYGZsq{}\PYGZgt{}}
+\end{Verbatim}

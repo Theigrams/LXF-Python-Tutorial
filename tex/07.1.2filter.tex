@@ -1,0 +1,142 @@
+\hypertarget{filter}{%
+\subsection{filter}\label{filter}}
+
+Python 内建的\texttt{filter()}函数用于过滤序列。
+
+和\texttt{map()}类似，\texttt{filter()}也接收一个函数和一个序列。和\texttt{map()}不同的是，\texttt{filter()}把传入的函数依次作用于每个元素，然后根据返回值是\texttt{True}还是\texttt{False}决定保留还是丢弃该元素。
+
+例如，在一个 list 中，删掉偶数，只保留奇数，可以这么写：
+
+\begin{pythoncode}
+def is_odd(n):
+    return n % 2 == 1
+
+list(filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15]))
+\end{pythoncode}
+
+把一个序列中的空字符串删掉，可以这么写：
+
+\begin{pythoncode}
+def not_empty(s):
+    return s and s.strip()
+
+list(filter(not_empty, ['A', '', 'B', None, 'C', '  ']))
+\end{pythoncode}
+
+可见用\texttt{filter()}这个高阶函数，关键在于正确实现一个 ``筛选''
+函数。
+
+注意到\texttt{filter()}函数返回的是一个\texttt{Iterator}，也就是一个惰性序列，所以要强迫\texttt{filter()}完成计算结果，需要用\texttt{list()}函数获得所有结果并返回
+list。
+
+\hypertarget{ux7528-filter-ux6c42ux7d20ux6570}{%
+\subsubsection{用 filter
+求素数}\label{ux7528-filter-ux6c42ux7d20ux6570}}
+
+计算\href{http://baike.baidu.com/view/10626.htm}{素数}的一个方法是\href{http://baike.baidu.com/view/3784258.htm}{埃氏筛法}，它的算法理解起来非常简单：
+
+首先，列出从\texttt{2}开始的所有自然数，构造一个序列：
+
+2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+\ldots{}
+
+取序列的第一个数\texttt{2}，它一定是素数，然后用\texttt{2}把序列的\texttt{2}的倍数筛掉：
+
+3, \textsubscript{4}, 5, \textsubscript{6}, 7, \textsubscript{8}, 9,
+\textsubscript{10}, 11, \textsubscript{12}, 13, \textsubscript{14}, 15,
+\textsubscript{16}, 17, \textsubscript{18}, 19, \textsubscript{20},
+\ldots{}
+
+取新序列的第一个数\texttt{3}，它一定是素数，然后用\texttt{3}把序列的\texttt{3}的倍数筛掉：
+
+5, \textsubscript{6}, 7, \textsubscript{8}, \textsubscript{9},
+\textsubscript{10}, 11, \textsubscript{12}, 13, \textsubscript{14},
+\textsubscript{15}, \textsubscript{16}, 17, \textsubscript{18}, 19,
+\textsubscript{20}, \ldots{}
+
+取新序列的第一个数\texttt{5}，然后用\texttt{5}把序列的\texttt{5}的倍数筛掉：
+
+7, \textsubscript{8}, \textsubscript{9}, \textsubscript{10}, 11,
+\textsubscript{12}, 13, \textsubscript{14}, \textsubscript{15},
+\textsubscript{16}, 17, \textsubscript{18}, 19, \textsubscript{20},
+\ldots{}
+
+不断筛下去，就可以得到所有的素数。
+
+用 Python 来实现这个算法，可以先构造一个从\texttt{3}开始的奇数序列：
+
+\begin{pythoncode}
+def _odd_iter():
+    n = 1
+    while True:
+        n = n + 2
+        yield n
+\end{pythoncode}
+
+注意这是一个生成器，并且是一个无限序列。
+
+然后定义一个筛选函数：
+
+\begin{pythoncode}
+def _not_divisible(n):
+    return lambda x: x % n > 0
+\end{pythoncode}
+
+最后，定义一个生成器，不断返回下一个素数：
+
+\begin{pythoncode}
+def primes():
+    yield 2
+    it = _odd_iter() 
+    while True:
+        n = next(it) 
+        yield n
+        it = filter(_not_divisible(n), it) 
+\end{pythoncode}
+
+这个生成器先返回第一个素数\texttt{2}，然后，利用\texttt{filter()}不断产生筛选后的新的序列。
+
+由于\texttt{primes()}也是一个无限序列，所以调用时需要设置一个退出循环的条件：
+
+\begin{pythoncode}
+for n in primes():
+    if n < 1000:
+        print(n)
+    else:
+        break
+\end{pythoncode}
+
+注意到\texttt{Iterator}是惰性计算的序列，所以我们可以用 Python 表示
+``全体自然数''，``全体素数'' 这样的序列，而代码非常简洁。
+
+\hypertarget{ux7ec3ux4e60}{%
+\subsubsection{练习}\label{ux7ec3ux4e60}}
+
+回数是指从左向右读和从右向左读都是一样的数，例如\texttt{12321}，\texttt{909}。请利用\texttt{filter()}筛选出回数：
+
+\begin{pythoncode}
+# -*- coding: utf-8 -*-
+\end{pythoncode}
+
+\begin{pythoncode}
+# 测试:
+output = filter(is_palindrome, range(1, 1000))
+print('1~1000:', list(output))
+if list(filter(is_palindrome, range(1, 200))) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33, 44, 55, 66, 77, 88, 99, 101, 111, 121, 131, 141, 151, 161, 171, 181, 191]:
+    print('测试成功!')
+else:
+    print('测试失败!')
+\end{pythoncode}
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+\texttt{filter()}的作用是从一个序列中筛出符合条件的元素。由于\texttt{filter()}使用了惰性计算，所以只有在取\texttt{filter()}结果的时候，才会真正筛选并每次返回下一个筛出的元素。
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/functional/do_filter.py}{do\_filter.py}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/functional/prime_numbers.py}{prime\_numbers.py}
+

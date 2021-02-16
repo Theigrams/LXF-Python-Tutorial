@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{urllib} \PYG{k+kn}{import} \PYG{n}{request}
+
+\PYG{k}{with} \PYG{n}{request}\PYG{o}{.}\PYG{n}{urlopen}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}https://api.douban.com/v2/book/2129650\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+    \PYG{n}{data} \PYG{o}{=} \PYG{n}{f}\PYG{o}{.}\PYG{n}{read}\PYG{p}{()}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Status:\PYGZsq{}}\PYG{p}{,} \PYG{n}{f}\PYG{o}{.}\PYG{n}{status}\PYG{p}{,} \PYG{n}{f}\PYG{o}{.}\PYG{n}{reason}\PYG{p}{)}
+    \PYG{k}{for} \PYG{n}{k}\PYG{p}{,} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n}{f}\PYG{o}{.}\PYG{n}{getheaders}\PYG{p}{():}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{k}\PYG{p}{,} \PYG{n}{v}\PYG{p}{))}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Data:\PYGZsq{}}\PYG{p}{,} \PYG{n}{data}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+\end{Verbatim}

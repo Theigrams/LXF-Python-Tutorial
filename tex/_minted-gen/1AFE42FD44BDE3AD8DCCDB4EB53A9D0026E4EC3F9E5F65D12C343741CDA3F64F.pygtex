@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Student}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+    \PYG{o}{...}
+
+    \PYG{k}{def} \PYG{n+nf}{get\PYGZus{}name}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}name}
+
+    \PYG{k}{def} \PYG{n+nf}{get\PYGZus{}score}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}score}
+\end{Verbatim}

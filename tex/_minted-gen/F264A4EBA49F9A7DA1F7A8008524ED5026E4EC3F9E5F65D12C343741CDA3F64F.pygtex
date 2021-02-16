@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{key} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{d}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}a list\PYGZsq{}}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}\PYGZlt{}stdin\PYGZgt{}\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o+ow}{in} \PYG{o}{\PYGZlt{}}\PYG{n}{module}\PYG{o}{\PYGZgt{}}
+\PYG{n+ne}{TypeError}\PYG{p}{:} \PYG{n}{unhashable} \PYG{n+nb}{type}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}list\PYGZsq{}}
+\end{Verbatim}

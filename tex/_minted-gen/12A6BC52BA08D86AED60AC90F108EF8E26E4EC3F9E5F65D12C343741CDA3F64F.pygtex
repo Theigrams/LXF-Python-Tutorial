@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{app} \PYG{o}{=} \PYG{n}{Application}\PYG{p}{()}
+
+\PYG{n}{app}\PYG{o}{.}\PYG{n}{master}\PYG{o}{.}\PYG{n}{title}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Hello World\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{app}\PYG{o}{.}\PYG{n}{mainloop}\PYG{p}{()}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{c} \PYG{o+ow}{in} \PYG{n}{itertools}\PYG{o}{.}\PYG{n}{chain}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ABC\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}XYZ\PYGZsq{}}\PYG{p}{):}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{c}\PYG{p}{)}
+\end{Verbatim}

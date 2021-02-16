@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Hello} \PYG{n}{world}\PYG{err}{!} \PYG{p}{(}\PYG{o}{\PYGZlt{}}\PYG{n}{\PYGZus{}MainThread}\PYG{p}{(}\PYG{n}{MainThread}\PYG{p}{,} \PYG{n}{started} \PYG{l+m+mi}{140735195337472}\PYG{p}{)}\PYG{o}{\PYGZgt{}}\PYG{p}{)}
+\PYG{n}{Hello} \PYG{n}{world}\PYG{err}{!} \PYG{p}{(}\PYG{o}{\PYGZlt{}}\PYG{n}{\PYGZus{}MainThread}\PYG{p}{(}\PYG{n}{MainThread}\PYG{p}{,} \PYG{n}{started} \PYG{l+m+mi}{140735195337472}\PYG{p}{)}\PYG{o}{\PYGZgt{}}\PYG{p}{)}
+\PYG{p}{(}\PYG{n}{暂停约1秒}\PYG{p}{)}
+\PYG{n}{Hello} \PYG{n}{again}\PYG{err}{!} \PYG{p}{(}\PYG{o}{\PYGZlt{}}\PYG{n}{\PYGZus{}MainThread}\PYG{p}{(}\PYG{n}{MainThread}\PYG{p}{,} \PYG{n}{started} \PYG{l+m+mi}{140735195337472}\PYG{p}{)}\PYG{o}{\PYGZgt{}}\PYG{p}{)}
+\PYG{n}{Hello} \PYG{n}{again}\PYG{err}{!} \PYG{p}{(}\PYG{o}{\PYGZlt{}}\PYG{n}{\PYGZus{}MainThread}\PYG{p}{(}\PYG{n}{MainThread}\PYG{p}{,} \PYG{n}{started} \PYG{l+m+mi}{140735195337472}\PYG{p}{)}\PYG{o}{\PYGZgt{}}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{configs} \PYG{o}{=} \PYG{n}{config\PYGZus{}default}\PYG{o}{.}\PYG{n}{configs}
+
+\PYG{k}{try}\PYG{p}{:}
+    \PYG{k+kn}{import} \PYG{n+nn}{config\PYGZus{}override}
+    \PYG{n}{configs} \PYG{o}{=} \PYG{n}{merge}\PYG{p}{(}\PYG{n}{configs}\PYG{p}{,} \PYG{n}{config\PYGZus{}override}\PYG{o}{.}\PYG{n}{configs}\PYG{p}{)}
+\PYG{k}{except} \PYG{n+ne}{ImportError}\PYG{p}{:}
+    \PYG{k}{pass}
+\end{Verbatim}

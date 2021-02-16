@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{L} \PYG{o}{=} \PYG{p}{[]}
+\PYG{n}{L}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}?xml version=\PYGZdq{}1.0\PYGZdq{}?\PYGZgt{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{L}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}root\PYGZgt{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{L}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}some \PYGZam{} data\PYGZsq{}}\PYG{p}{))}
+\PYG{n}{L}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}/root\PYGZgt{}\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+\end{Verbatim}

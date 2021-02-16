@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Dog}\PYG{p}{(}\PYG{n}{Animal}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf}{run}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Dog is running...\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{eat}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Eating meat...\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

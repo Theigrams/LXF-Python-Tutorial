@@ -1,0 +1,44 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+\PYG{k}{def} \PYG{n+nf}{auth\PYGZus{}factory}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{n}{handler}\PYG{p}{):}
+    \PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+    \PYG{k}{def} \PYG{n+nf}{auth}\PYG{p}{(}\PYG{n}{request}\PYG{p}{):}
+        \PYG{n}{logging}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}check user: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{request}\PYG{o}{.}\PYG{n}{method}\PYG{p}{,} \PYG{n}{request}\PYG{o}{.}\PYG{n}{path}\PYG{p}{))}
+        \PYG{n}{request}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}user\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{k+kc}{None}
+        \PYG{n}{cookie\PYGZus{}str} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{cookies}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{COOKIE\PYGZus{}NAME}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{cookie\PYGZus{}str}\PYG{p}{:}
+            \PYG{n}{user} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{cookie2user}\PYG{p}{(}\PYG{n}{cookie\PYGZus{}str}\PYG{p}{)}
+            \PYG{k}{if} \PYG{n}{user}\PYG{p}{:}
+                \PYG{n}{logging}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}set current user: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{user}\PYG{o}{.}\PYG{n}{email}\PYG{p}{)}
+                \PYG{n}{request}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}user\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{n}{user}
+        \PYG{k}{return} \PYG{p}{(}\PYG{k}{yield from} \PYG{n}{handler}\PYG{p}{(}\PYG{n}{request}\PYG{p}{))}
+    \PYG{k}{return} \PYG{n}{auth}
+
+
+\PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+\PYG{k}{def} \PYG{n+nf}{cookie2user}\PYG{p}{(}\PYG{n}{cookie\PYGZus{}str}\PYG{p}{):}
+    \PYG{l+s+sd}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+sd}{    Parse cookie and load user if cookie is valid.}
+\PYG{l+s+sd}{    \PYGZsq{}\PYGZsq{}\PYGZsq{}}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{cookie\PYGZus{}str}\PYG{p}{:}
+        \PYG{k}{return} \PYG{k+kc}{None}
+    \PYG{k}{try}\PYG{p}{:}
+        \PYG{n}{L} \PYG{o}{=} \PYG{n}{cookie\PYGZus{}str}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)} \PYG{o}{!=} \PYG{l+m+mi}{3}\PYG{p}{:}
+            \PYG{k}{return} \PYG{k+kc}{None}
+        \PYG{n}{uid}\PYG{p}{,} \PYG{n}{expires}\PYG{p}{,} \PYG{n}{sha1} \PYG{o}{=} \PYG{n}{L}
+        \PYG{k}{if} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{expires}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{():}
+            \PYG{k}{return} \PYG{k+kc}{None}
+        \PYG{n}{user} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{User}\PYG{o}{.}\PYG{n}{find}\PYG{p}{(}\PYG{n}{uid}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{user} \PYG{o+ow}{is} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{k}{return} \PYG{k+kc}{None}
+        \PYG{n}{s} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZhy{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZhy{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZhy{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{uid}\PYG{p}{,} \PYG{n}{user}\PYG{o}{.}\PYG{n}{passwd}\PYG{p}{,} \PYG{n}{expires}\PYG{p}{,} \PYG{n}{\PYGZus{}COOKIE\PYGZus{}KEY}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{sha1} \PYG{o}{!=} \PYG{n}{hashlib}\PYG{o}{.}\PYG{n}{sha1}\PYG{p}{(}\PYG{n}{s}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}\PYG{o}{.}\PYG{n}{hexdigest}\PYG{p}{():}
+            \PYG{n}{logging}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}invalid sha1\PYGZsq{}}\PYG{p}{)}
+            \PYG{k}{return} \PYG{k+kc}{None}
+        \PYG{n}{user}\PYG{o}{.}\PYG{n}{passwd} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}******\PYGZsq{}}
+        \PYG{k}{return} \PYG{n}{user}
+    \PYG{k}{except} \PYG{n+ne}{Exception} \PYG{k}{as} \PYG{n}{e}\PYG{p}{:}
+        \PYG{n}{logging}\PYG{o}{.}\PYG{n}{exception}\PYG{p}{(}\PYG{n}{e}\PYG{p}{)}
+        \PYG{k}{return} \PYG{k+kc}{None}
+\end{Verbatim}

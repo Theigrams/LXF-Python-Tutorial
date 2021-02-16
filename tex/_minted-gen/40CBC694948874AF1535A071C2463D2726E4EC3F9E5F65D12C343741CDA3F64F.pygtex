@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{sudo} \PYG{n}{python3}
+\PYG{n}{Password}\PYG{p}{:} \PYG{o}{******}
+\PYG{n}{Python} \PYG{l+m+mf}{3.6}\PYG{o}{.}\PYG{l+m+mi}{3} \PYG{o}{...} \PYG{n}{on} \PYG{n}{darwin}
+\PYG{n}{Type} \PYG{l+s+s2}{\PYGZdq{}help\PYGZdq{}}\PYG{p}{,} \PYG{o}{...} \PYG{k}{for} \PYG{n}{more} \PYG{n}{information}\PYG{o}{.}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{psutil}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{test}\PYG{p}{()}
+\PYG{n}{USER}         \PYG{n}{PID} \PYG{o}{\PYGZpc{}}\PYG{n}{MEM}     \PYG{n}{VSZ}     \PYG{n}{RSS} \PYG{n}{TTY}           \PYG{n}{START}    \PYG{n}{TIME}  \PYG{n}{COMMAND}
+\PYG{n}{root}           \PYG{l+m+mi}{0} \PYG{l+m+mf}{24.0} \PYG{l+m+mi}{74270628} \PYG{l+m+mi}{2016380} \PYG{err}{?}             \PYG{n}{Nov18}   \PYG{l+m+mi}{40}\PYG{p}{:}\PYG{l+m+mi}{51}  \PYG{n}{kernel\PYGZus{}task}
+\PYG{n}{root}           \PYG{l+m+mi}{1}  \PYG{l+m+mf}{0.1} \PYG{l+m+mi}{2494140}    \PYG{l+m+mi}{9484} \PYG{err}{?}             \PYG{n}{Nov18}   \PYG{l+m+mi}{01}\PYG{p}{:}\PYG{l+m+mi}{39}  \PYG{n}{launchd}
+\PYG{n}{root}          \PYG{l+m+mi}{44}  \PYG{l+m+mf}{0.4} \PYG{l+m+mi}{2519872}   \PYG{l+m+mi}{36404} \PYG{err}{?}             \PYG{n}{Nov18}   \PYG{l+m+mi}{02}\PYG{p}{:}\PYG{l+m+mi}{02}  \PYG{n}{UserEventAgent}
+\PYG{n}{root}          \PYG{l+m+mi}{45}    \PYG{err}{?} \PYG{l+m+mi}{2474032}    \PYG{l+m+mi}{1516} \PYG{err}{?}             \PYG{n}{Nov18}   \PYG{l+m+mi}{00}\PYG{p}{:}\PYG{l+m+mi}{14}  \PYG{n}{syslogd}
+\PYG{n}{root}          \PYG{l+m+mi}{47}  \PYG{l+m+mf}{0.1} \PYG{l+m+mi}{2504768}    \PYG{l+m+mi}{8912} \PYG{err}{?}             \PYG{n}{Nov18}   \PYG{l+m+mi}{00}\PYG{p}{:}\PYG{l+m+mi}{03}  \PYG{n}{kextd}
+\PYG{n}{root}          \PYG{l+m+mi}{48}  \PYG{l+m+mf}{0.1} \PYG{l+m+mi}{2505544}    \PYG{l+m+mi}{4720} \PYG{err}{?}             \PYG{n}{Nov18}   \PYG{l+m+mi}{00}\PYG{p}{:}\PYG{l+m+mi}{19}  \PYG{n}{fseventsd}
+\PYG{n}{\PYGZus{}appleeven}    \PYG{l+m+mi}{52}  \PYG{l+m+mf}{0.1} \PYG{l+m+mi}{2499748}    \PYG{l+m+mi}{5024} \PYG{err}{?}             \PYG{n}{Nov18}   \PYG{l+m+mi}{00}\PYG{p}{:}\PYG{l+m+mi}{00}  \PYG{n}{appleeventsd}
+\PYG{n}{root}          \PYG{l+m+mi}{53}  \PYG{l+m+mf}{0.1} \PYG{l+m+mi}{2500592}    \PYG{l+m+mi}{6132} \PYG{err}{?}             \PYG{n}{Nov18}   \PYG{l+m+mi}{00}\PYG{p}{:}\PYG{l+m+mi}{02}  \PYG{n}{configd}
+\PYG{o}{...}
+\end{Verbatim}

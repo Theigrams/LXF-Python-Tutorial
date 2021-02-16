@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L2} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L2}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}\PYGZlt{}stdin\PYGZgt{}\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o+ow}{in} \PYG{o}{\PYGZlt{}}\PYG{n}{module}\PYG{o}{\PYGZgt{}}
+\PYG{n+ne}{AttributeError}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}list\PYGZsq{}} \PYG{n+nb}{object} \PYG{n}{has} \PYG{n}{no} \PYG{n}{attribute} \PYG{l+s+s1}{\PYGZsq{}add\PYGZsq{}}
+\end{Verbatim}

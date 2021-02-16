@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Result}\PYG{p}{:} \PYG{l+m+mi}{3411} \PYG{o}{*} \PYG{l+m+mi}{3411} \PYG{o}{=} \PYG{l+m+mi}{11634921}
+\PYG{n}{Result}\PYG{p}{:} \PYG{l+m+mi}{1605} \PYG{o}{*} \PYG{l+m+mi}{1605} \PYG{o}{=} \PYG{l+m+mi}{2576025}
+\PYG{n}{Result}\PYG{p}{:} \PYG{l+m+mi}{1398} \PYG{o}{*} \PYG{l+m+mi}{1398} \PYG{o}{=} \PYG{l+m+mi}{1954404}
+\PYG{n}{Result}\PYG{p}{:} \PYG{l+m+mi}{4729} \PYG{o}{*} \PYG{l+m+mi}{4729} \PYG{o}{=} \PYG{l+m+mi}{22363441}
+\PYG{n}{Result}\PYG{p}{:} \PYG{l+m+mi}{5300} \PYG{o}{*} \PYG{l+m+mi}{5300} \PYG{o}{=} \PYG{l+m+mi}{28090000}
+\PYG{n}{Result}\PYG{p}{:} \PYG{l+m+mi}{7471} \PYG{o}{*} \PYG{l+m+mi}{7471} \PYG{o}{=} \PYG{l+m+mi}{55815841}
+\PYG{n}{Result}\PYG{p}{:} \PYG{l+m+mi}{68} \PYG{o}{*} \PYG{l+m+mi}{68} \PYG{o}{=} \PYG{l+m+mi}{4624}
+\PYG{n}{Result}\PYG{p}{:} \PYG{l+m+mi}{4219} \PYG{o}{*} \PYG{l+m+mi}{4219} \PYG{o}{=} \PYG{l+m+mi}{17799961}
+\PYG{n}{Result}\PYG{p}{:} \PYG{l+m+mi}{339} \PYG{o}{*} \PYG{l+m+mi}{339} \PYG{o}{=} \PYG{l+m+mi}{114921}
+\PYG{n}{Result}\PYG{p}{:} \PYG{l+m+mi}{7866} \PYG{o}{*} \PYG{l+m+mi}{7866} \PYG{o}{=} \PYG{l+m+mi}{61873956}
+\end{Verbatim}

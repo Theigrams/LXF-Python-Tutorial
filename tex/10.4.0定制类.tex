@@ -1,0 +1,421 @@
+\hypertarget{ux5b9aux5236ux7c7b}{%
+\subsection{定制类}\label{ux5b9aux5236ux7c7b}}
+
+看到类似\texttt{\_\_slots\_\_}这种形如\texttt{\_\_xxx\_\_}的变量或者函数名就要注意，这些在
+Python 中是有特殊用途的。
+
+\texttt{\_\_slots\_\_}我们已经知道怎么用了，\texttt{\_\_len\_\_()}方法我们也知道是为了能让
+class 作用于\texttt{len()}函数。
+
+除此之外，Python 的 class
+中还有许多这样有特殊用途的函数，可以帮助我们定制类。
+
+\hypertarget{str}{%
+\subsubsection{\texorpdfstring{\textbf{str}}{str}}\label{str}}
+
+我们先定义一个\texttt{Student}类，打印一个实例：
+
+\begin{pythoncode}
+>>> class Student(object):
+...     def __init__(self, name):
+...         self.name = name
+...
+>>> print(Student('Michael'))
+<__main__.Student object at 0x109afb190>
+\end{pythoncode}
+
+打印出一堆\texttt{\textless{}\_\_main\_\_.Student\ object\ at\ 0x109afb190\textgreater{}}，不好看。
+
+怎么才能打印得好看呢？只需要定义好\texttt{\_\_str\_\_()}方法，返回一个好看的字符串就可以了：
+
+\begin{pythoncode}
+>>> class Student(object):
+...     def __init__(self, name):
+...         self.name = name
+...     def __str__(self):
+...         return 'Student object (name: %s)' % self.name
+...
+>>> print(Student('Michael'))
+Student object (name: Michael)
+\end{pythoncode}
+
+这样打印出来的实例，不但好看，而且容易看出实例内部重要的数据。
+
+但是细心的朋友会发现直接敲变量不用\texttt{print}，打印出来的实例还是不好看：
+
+\begin{pythoncode}
+>>> s = Student('Michael')
+>>> s
+<__main__.Student object at 0x109afb310>
+\end{pythoncode}
+
+这是因为直接显示变量调用的不是\texttt{\_\_str\_\_()}，而是\texttt{\_\_repr\_\_()}，两者的区别是\texttt{\_\_str\_\_()}返回用户看到的字符串，而\texttt{\_\_repr\_\_()}返回程序开发者看到的字符串，也就是说，\texttt{\_\_repr\_\_()}是为调试服务的。
+
+解决办法是再定义一个\texttt{\_\_repr\_\_()}。但是通常\texttt{\_\_str\_\_()}和\texttt{\_\_repr\_\_()}代码都是一样的，所以，有个偷懒的写法：
+
+\begin{pythoncode}
+class Student(object):
+    def __init__(self, name):
+        self.name = name
+    def __str__(self):
+        return 'Student object (name=%s)' % self.name
+    __repr__ = __str__
+\end{pythoncode}
+
+\hypertarget{iter}{%
+\subsubsection{\texorpdfstring{\textbf{iter}}{iter}}\label{iter}}
+
+如果一个类想被用于\texttt{for\ ...\ in}循环，类似 list 或 tuple
+那样，就必须实现一个\texttt{\_\_iter\_\_()}方法，该方法返回一个迭代对象，然后，Python
+的 for
+循环就会不断调用该迭代对象的\texttt{\_\_next\_\_()}方法拿到循环的下一个值，直到遇到\texttt{StopIteration}错误时退出循环。
+
+我们以斐波那契数列为例，写一个 Fib 类，可以作用于 for 循环：
+
+\begin{pythoncode}
+class Fib(object):
+    def __init__(self):
+        self.a, self.b = 0, 1 
+
+    def __iter__(self):
+        return self 
+
+    def __next__(self):
+        self.a, self.b = self.b, self.a + self.b 
+        if self.a > 100000: 
+            raise StopIteration()
+        return self.a 
+\end{pythoncode}
+
+现在，试试把 Fib 实例作用于 for 循环：
+
+\begin{pythoncode}
+>>> for n in Fib():
+...     print(n)
+...
+1
+1
+2
+3
+5
+...
+46368
+75025
+\end{pythoncode}
+
+\hypertarget{getitem}{%
+\subsubsection{\texorpdfstring{\textbf{getitem}}{getitem}}\label{getitem}}
+
+Fib 实例虽然能作用于 for 循环，看起来和 list 有点像，但是，把它当成 list
+来使用还是不行，比如，取第 5 个元素：
+
+\begin{pythoncode}
+>>> Fib()[5]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'Fib' object does not support indexing
+\end{pythoncode}
+
+要表现得像 list
+那样按照下标取出元素，需要实现\texttt{\_\_getitem\_\_()}方法：
+
+\begin{pythoncode}
+class Fib(object):
+    def __getitem__(self, n):
+        a, b = 1, 1
+        for x in range(n):
+            a, b = b, a + b
+        return a
+\end{pythoncode}
+
+现在，就可以按下标访问数列的任意一项了：
+
+\begin{pythoncode}
+>>> f = Fib()
+>>> f[0]
+1
+>>> f[1]
+1
+>>> f[2]
+2
+>>> f[3]
+3
+>>> f[10]
+89
+>>> f[100]
+573147844013817084101
+\end{pythoncode}
+
+但是 list 有个神奇的切片方法：
+
+\begin{pythoncode}
+>>> list(range(100))[5:10]
+[5, 6, 7, 8, 9]
+\end{pythoncode}
+
+对于 Fib 却报错。原因是\texttt{\_\_getitem\_\_()}传入的参数可能是一个
+int，也可能是一个切片对象\texttt{slice}，所以要做判断：
+
+\begin{pythoncode}
+class Fib(object):
+    def __getitem__(self, n):
+        if isinstance(n, int): 
+            a, b = 1, 1
+            for x in range(n):
+                a, b = b, a + b
+            return a
+        if isinstance(n, slice): 
+            start = n.start
+            stop = n.stop
+            if start is None:
+                start = 0
+            a, b = 1, 1
+            L = []
+            for x in range(stop):
+                if x >= start:
+                    L.append(a)
+                a, b = b, a + b
+            return L
+\end{pythoncode}
+
+现在试试 Fib 的切片：
+
+\begin{pythoncode}
+>>> f = Fib()
+>>> f[0:5]
+[1, 1, 2, 3, 5]
+>>> f[:10]
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+\end{pythoncode}
+
+但是没有对 step 参数作处理：
+
+\begin{pythoncode}
+>>> f[:10:2]
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+\end{pythoncode}
+
+也没有对负数作处理，所以，要正确实现一个\texttt{\_\_getitem\_\_()}还是有很多工作要做的。
+
+此外，如果把对象看成\texttt{dict}，\texttt{\_\_getitem\_\_()}的参数也可能是一个可以作
+key 的 object，例如\texttt{str}。
+
+与之对应的是\texttt{\_\_setitem\_\_()}方法，把对象视作 list 或 dict
+来对集合赋值。最后，还有一个\texttt{\_\_delitem\_\_()}方法，用于删除某个元素。
+
+总之，通过上面的方法，我们自己定义的类表现得和 Python 自带的
+list、tuple、dict 没什么区别，这完全归功于动态语言的
+``鸭子类型''，不需要强制继承某个接口。
+
+\hypertarget{getattr}{%
+\subsubsection{\texorpdfstring{\textbf{getattr}}{getattr}}\label{getattr}}
+
+正常情况下，当我们调用类的方法或属性时，如果不存在，就会报错。比如定义\texttt{Student}类：
+
+\begin{pythoncode}
+class Student(object):
+    
+    def __init__(self):
+        self.name = 'Michael'
+\end{pythoncode}
+
+调用\texttt{name}属性，没问题，但是，调用不存在的\texttt{score}属性，就有问题了：
+
+\begin{pythoncode}
+>>> s = Student()
+>>> print(s.name)
+Michael
+>>> print(s.score)
+Traceback (most recent call last):
+  ...
+AttributeError: 'Student' object has no attribute 'score'
+\end{pythoncode}
+
+错误信息很清楚地告诉我们，没有找到\texttt{score}这个 attribute。
+
+要避免这个错误，除了可以加上一个\texttt{score}属性外，Python
+还有另一个机制，那就是写一个\texttt{\_\_getattr\_\_()}方法，动态返回一个属性。修改如下：
+
+\begin{pythoncode}
+class Student(object):
+
+    def __init__(self):
+        self.name = 'Michael'
+
+    def __getattr__(self, attr):
+        if attr=='score':
+            return 99
+\end{pythoncode}
+
+当调用不存在的属性时，比如\texttt{score}，Python
+解释器会试图调用\texttt{\_\_getattr\_\_(self,\ \textquotesingle{}score\textquotesingle{})}来尝试获得属性，这样，我们就有机会返回\texttt{score}的值：
+
+\begin{pythoncode}
+>>> s = Student()
+>>> s.name
+'Michael'
+>>> s.score
+99
+\end{pythoncode}
+
+返回函数也是完全可以的：
+
+\begin{pythoncode}
+class Student(object):
+
+    def __getattr__(self, attr):
+        if attr=='age':
+            return lambda: 25
+\end{pythoncode}
+
+只是调用方式要变为：
+
+\begin{pythoncode}
+>>> s.age()
+25
+\end{pythoncode}
+
+注意，只有在没有找到属性的情况下，才调用\texttt{\_\_getattr\_\_}，已有的属性，比如\texttt{name}，不会在\texttt{\_\_getattr\_\_}中查找。
+
+此外，注意到任意调用如\texttt{s.abc}都会返回\texttt{None}，这是因为我们定义的\texttt{\_\_getattr\_\_}默认返回就是\texttt{None}。要让
+class
+只响应特定的几个属性，我们就要按照约定，抛出\texttt{AttributeError}的错误：
+
+\begin{pythoncode}
+class Student(object):
+
+    def __getattr__(self, attr):
+        if attr=='age':
+            return lambda: 25
+        raise AttributeError('\'Student\' object has no attribute \'%s\'' % attr)
+\end{pythoncode}
+
+这实际上可以把一个类的所有属性和方法调用全部动态化处理了，不需要任何特殊手段。
+
+这种完全动态调用的特性有什么实际作用呢？作用就是，可以针对完全动态的情况作调用。
+
+举个例子：
+
+现在很多网站都搞 REST API，比如新浪微博、豆瓣啥的，调用 API 的 URL
+类似：
+
+\begin{itemize}
+\item
+  http://api.server/user/friends
+\item
+  http://api.server/user/timeline/list
+\end{itemize}
+
+如果要写 SDK，给每个 URL 对应的 API 都写一个方法，那得累死，而且，API
+一旦改动，SDK 也要改。
+
+利用完全动态的\texttt{\_\_getattr\_\_}，我们可以写出一个链式调用：
+
+\begin{pythoncode}
+class Chain(object):
+
+    def __init__(self, path=''):
+        self._path = path
+
+    def __getattr__(self, path):
+        return Chain('%s/%s' % (self._path, path))
+
+    def __str__(self):
+        return self._path
+
+    __repr__ = __str__
+\end{pythoncode}
+
+试试：
+
+\begin{pythoncode}
+>>> Chain().status.user.timeline.list
+'/status/user/timeline/list'
+\end{pythoncode}
+
+这样，无论 API 怎么变，SDK 都可以根据 URL 实现完全动态的调用，而且，不随
+API 的增加而改变！
+
+还有些 REST API 会把参数放到 URL 中，比如 GitHub 的 API：
+
+\begin{pythoncode}
+GET /users/:user/repos
+\end{pythoncode}
+
+调用时，需要把\texttt{:user}替换为实际用户名。如果我们能写出这样的链式调用：
+
+\begin{pythoncode}
+Chain().users('michael').repos
+\end{pythoncode}
+
+就可以非常方便地调用 API 了。有兴趣的童鞋可以试试写出来。
+
+\hypertarget{call}{%
+\subsubsection{\texorpdfstring{\textbf{call}}{call}}\label{call}}
+
+一个对象实例可以有自己的属性和方法，当我们调用实例方法时，我们用\texttt{instance.method()}来调用。能不能直接在实例本身上调用呢？在
+Python 中，答案是肯定的。
+
+任何类，只需要定义一个\texttt{\_\_call\_\_()}方法，就可以直接对实例进行调用。请看示例：
+
+\begin{pythoncode}
+class Student(object):
+    def __init__(self, name):
+        self.name = name
+
+    def __call__(self):
+        print('My name is %s.' % self.name)
+\end{pythoncode}
+
+调用方式如下：
+
+\begin{pythoncode}
+>>> s = Student('Michael')
+>>> s() 
+My name is Michael.
+\end{pythoncode}
+
+\texttt{\_\_call\_\_()}还可以定义参数。对实例进行直接调用就好比对一个函数进行调用一样，所以你完全可以把对象看成函数，把函数看成对象，因为这两者之间本来就没啥根本的区别。
+
+如果你把对象看成函数，那么函数本身其实也可以在运行期动态创建出来，因为类的实例都是运行期创建出来的，这么一来，我们就模糊了对象和函数的界限。
+
+那么，怎么判断一个变量是对象还是函数呢？其实，更多的时候，我们需要判断一个对象是否能被调用，能被调用的对象就是一个\texttt{Callable}对象，比如函数和我们上面定义的带有\texttt{\_\_call\_\_()}的类实例：
+
+\begin{pythoncode}
+>>> callable(Student())
+True
+>>> callable(max)
+True
+>>> callable([1, 2, 3])
+False
+>>> callable(None)
+False
+>>> callable('str')
+False
+\end{pythoncode}
+
+通过\texttt{callable()}函数，我们就可以判断一个对象是否是 ``可调用''
+对象。
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+Python 的 class 允许定义许多定制方法，可以让我们非常方便地生成特定的类。
+
+本节介绍的是最常用的几个定制方法，还有很多可定制的方法，请参考
+\href{http://docs.python.org/3/reference/datamodel.html\#special-method-names}{Python
+的官方文档}。
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/oop_advance/special_str.py}{special\_str.py}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/oop_advance/special_iter.py}{special\_iter.py}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/oop_advance/special_getitem.py}{special\_getitem.py}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/oop_advance/special_getattr.py}{special\_getattr.py}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/oop_advance/special_call.py}{special\_call.py}
+

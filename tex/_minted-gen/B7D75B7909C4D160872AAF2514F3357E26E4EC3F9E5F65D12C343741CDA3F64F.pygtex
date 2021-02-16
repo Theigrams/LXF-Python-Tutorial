@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{sudo} \PYG{n}{apt}\PYG{o}{\PYGZhy{}}\PYG{n}{get} \PYG{n}{install} \PYG{n}{openssh}\PYG{o}{\PYGZhy{}}\PYG{n}{server}
+\end{Verbatim}

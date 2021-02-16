@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{msg} \PYG{o}{=} \PYG{n}{MIMEMultipart}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}alternative\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{msg}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}From\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{o}{...}
+\PYG{n}{msg}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}To\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{o}{...}
+\PYG{n}{msg}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Subject\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{o}{...}
+
+\PYG{n}{msg}\PYG{o}{.}\PYG{n}{attach}\PYG{p}{(}\PYG{n}{MIMEText}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}hello\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}plain\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+\PYG{n}{msg}\PYG{o}{.}\PYG{n}{attach}\PYG{p}{(}\PYG{n}{MIMEText}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}html\PYGZgt{}\PYGZlt{}body\PYGZgt{}\PYGZlt{}h1\PYGZgt{}Hello\PYGZlt{}/h1\PYGZgt{}\PYGZlt{}/body\PYGZgt{}\PYGZlt{}/html\PYGZgt{}\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}html\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+\PYG{c+c1}{\PYGZsh{} 正常发送msg对象...}
+\end{Verbatim}

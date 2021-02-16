@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{multiprocessing} \PYG{k+kn}{import} \PYG{n}{Pool}
+\PYG{k+kn}{import} \PYG{n+nn}{os}\PYG{o}{,} \PYG{n+nn}{time}\PYG{o}{,} \PYG{n+nn}{random}
+
+\PYG{k}{def} \PYG{n+nf}{long\PYGZus{}time\PYGZus{}task}\PYG{p}{(}\PYG{n}{name}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Run task }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{)...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{()))}
+    \PYG{n}{start} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()}
+    \PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{n}{random}\PYG{o}{.}\PYG{n}{random}\PYG{p}{()} \PYG{o}{*} \PYG{l+m+mi}{3}\PYG{p}{)}
+    \PYG{n}{end} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Task }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ runs }\PYG{l+s+si}{\PYGZpc{}0.2f}\PYG{l+s+s1}{ seconds.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{p}{(}\PYG{n}{end} \PYG{o}{\PYGZhy{}} \PYG{n}{start}\PYG{p}{)))}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Parent process }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{())}
+    \PYG{n}{p} \PYG{o}{=} \PYG{n}{Pool}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{):}
+        \PYG{n}{p}\PYG{o}{.}\PYG{n}{apply\PYGZus{}async}\PYG{p}{(}\PYG{n}{long\PYGZus{}time\PYGZus{}task}\PYG{p}{,} \PYG{n}{args}\PYG{o}{=}\PYG{p}{(}\PYG{n}{i}\PYG{p}{,))}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Waiting for all subprocesses done...\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{p}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+    \PYG{n}{p}\PYG{o}{.}\PYG{n}{join}\PYG{p}{()}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}All subprocesses done.\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

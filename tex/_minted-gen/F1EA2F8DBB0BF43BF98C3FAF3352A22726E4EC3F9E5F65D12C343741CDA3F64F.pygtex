@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{10240099}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{b1} \PYG{o}{=} \PYG{p}{(}\PYG{n}{n} \PYG{o}{\PYGZam{}} \PYG{l+m+mh}{0xff000000}\PYG{p}{)} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{24}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{b2} \PYG{o}{=} \PYG{p}{(}\PYG{n}{n} \PYG{o}{\PYGZam{}} \PYG{l+m+mh}{0xff0000}\PYG{p}{)} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{16}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{b3} \PYG{o}{=} \PYG{p}{(}\PYG{n}{n} \PYG{o}{\PYGZam{}} \PYG{l+m+mh}{0xff00}\PYG{p}{)} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{8}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{b4} \PYG{o}{=} \PYG{n}{n} \PYG{o}{\PYGZam{}} \PYG{l+m+mh}{0xff}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{bs} \PYG{o}{=} \PYG{n+nb}{bytes}\PYG{p}{([}\PYG{n}{b1}\PYG{p}{,} \PYG{n}{b2}\PYG{p}{,} \PYG{n}{b3}\PYG{p}{,} \PYG{n}{b4}\PYG{p}{])}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{bs}
+\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}x00\PYGZbs{}x9c}\PYG{l+s+s1}{@c\PYGZsq{}}
+\end{Verbatim}

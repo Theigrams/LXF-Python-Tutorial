@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{utc\PYGZus{}dt} \PYG{o}{=} \PYG{n}{datetime}\PYG{o}{.}\PYG{n}{utcnow}\PYG{p}{()}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{n}{tzinfo}\PYG{o}{=}\PYG{n}{timezone}\PYG{o}{.}\PYG{n}{utc}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{utc\PYGZus{}dt}\PYG{p}{)}
+\PYG{l+m+mi}{2015}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{05}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{18} \PYG{l+m+mi}{09}\PYG{p}{:}\PYG{l+m+mi}{05}\PYG{p}{:}\PYG{l+m+mf}{12.377316}\PYG{o}{+}\PYG{l+m+mi}{00}\PYG{p}{:}\PYG{l+m+mi}{00}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{bj\PYGZus{}dt} \PYG{o}{=} \PYG{n}{utc\PYGZus{}dt}\PYG{o}{.}\PYG{n}{astimezone}\PYG{p}{(}\PYG{n}{timezone}\PYG{p}{(}\PYG{n}{timedelta}\PYG{p}{(}\PYG{n}{hours}\PYG{o}{=}\PYG{l+m+mi}{8}\PYG{p}{)))}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{bj\PYGZus{}dt}\PYG{p}{)}
+\PYG{l+m+mi}{2015}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{05}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{18} \PYG{l+m+mi}{17}\PYG{p}{:}\PYG{l+m+mi}{05}\PYG{p}{:}\PYG{l+m+mf}{12.377316}\PYG{o}{+}\PYG{l+m+mi}{08}\PYG{p}{:}\PYG{l+m+mi}{00}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{tokyo\PYGZus{}dt} \PYG{o}{=} \PYG{n}{utc\PYGZus{}dt}\PYG{o}{.}\PYG{n}{astimezone}\PYG{p}{(}\PYG{n}{timezone}\PYG{p}{(}\PYG{n}{timedelta}\PYG{p}{(}\PYG{n}{hours}\PYG{o}{=}\PYG{l+m+mi}{9}\PYG{p}{)))}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{tokyo\PYGZus{}dt}\PYG{p}{)}
+\PYG{l+m+mi}{2015}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{05}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{18} \PYG{l+m+mi}{18}\PYG{p}{:}\PYG{l+m+mi}{05}\PYG{p}{:}\PYG{l+m+mf}{12.377316}\PYG{o}{+}\PYG{l+m+mi}{09}\PYG{p}{:}\PYG{l+m+mi}{00}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{tokyo\PYGZus{}dt2} \PYG{o}{=} \PYG{n}{bj\PYGZus{}dt}\PYG{o}{.}\PYG{n}{astimezone}\PYG{p}{(}\PYG{n}{timezone}\PYG{p}{(}\PYG{n}{timedelta}\PYG{p}{(}\PYG{n}{hours}\PYG{o}{=}\PYG{l+m+mi}{9}\PYG{p}{)))}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{tokyo\PYGZus{}dt2}\PYG{p}{)}
+\PYG{l+m+mi}{2015}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{05}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{18} \PYG{l+m+mi}{18}\PYG{p}{:}\PYG{l+m+mi}{05}\PYG{p}{:}\PYG{l+m+mf}{12.377316}\PYG{o}{+}\PYG{l+m+mi}{09}\PYG{p}{:}\PYG{l+m+mi}{00}
+\end{Verbatim}

@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{add\PYGZus{}route}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{n}{fn}\PYG{p}{):}
+    \PYG{n}{method} \PYG{o}{=} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n}{fn}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}method\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)}
+    \PYG{n}{path} \PYG{o}{=} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n}{fn}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}route\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{path} \PYG{o+ow}{is} \PYG{k+kc}{None} \PYG{o+ow}{or} \PYG{n}{method} \PYG{o+ow}{is} \PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}@get or @post not defined in }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{fn}\PYG{p}{))}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{iscoroutinefunction}\PYG{p}{(}\PYG{n}{fn}\PYG{p}{)} \PYG{o+ow}{and} \PYG{o+ow}{not} \PYG{n}{inspect}\PYG{o}{.}\PYG{n}{isgeneratorfunction}\PYG{p}{(}\PYG{n}{fn}\PYG{p}{):}
+        \PYG{n}{fn} \PYG{o}{=} \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{coroutine}\PYG{p}{(}\PYG{n}{fn}\PYG{p}{)}
+    \PYG{n}{logging}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}add route }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ =\PYGZgt{} }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{(}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{)\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{method}\PYG{p}{,} \PYG{n}{path}\PYG{p}{,} \PYG{n}{fn}\PYG{o}{.}\PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}, \PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{inspect}\PYG{o}{.}\PYG{n}{signature}\PYG{p}{(}\PYG{n}{fn}\PYG{p}{)}\PYG{o}{.}\PYG{n}{parameters}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{())))}
+    \PYG{n}{app}\PYG{o}{.}\PYG{n}{router}\PYG{o}{.}\PYG{n}{add\PYGZus{}route}\PYG{p}{(}\PYG{n}{method}\PYG{p}{,} \PYG{n}{path}\PYG{p}{,} \PYG{n}{RequestHandler}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{n}{fn}\PYG{p}{))}
+\end{Verbatim}

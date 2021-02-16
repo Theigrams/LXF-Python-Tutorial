@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Mac}\PYG{p}{:}\PYG{o}{\PYGZti{}} \PYG{n}{michael}\PYG{err}{\PYGZdl{}} \PYG{n}{mkdir} \PYG{n}{myproject}
+\PYG{n}{Mac}\PYG{p}{:}\PYG{o}{\PYGZti{}} \PYG{n}{michael}\PYG{err}{\PYGZdl{}} \PYG{n}{cd} \PYG{n}{myproject}\PYG{o}{/}
+\PYG{n}{Mac}\PYG{p}{:}\PYG{n}{myproject} \PYG{n}{michael}\PYG{err}{\PYGZdl{}}
+\end{Verbatim}

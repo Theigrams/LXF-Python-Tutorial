@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{application}\PYG{p}{(}\PYG{n}{environ}\PYG{p}{,} \PYG{n}{start\PYGZus{}response}\PYG{p}{):}
+    \PYG{n}{start\PYGZus{}response}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}200 OK\PYGZsq{}}\PYG{p}{,} \PYG{p}{[(}\PYG{l+s+s1}{\PYGZsq{}Content\PYGZhy{}Type\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}text/html\PYGZsq{}}\PYG{p}{)])}
+    \PYG{n}{body} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}h1\PYGZgt{}Hello, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{!\PYGZlt{}/h1\PYGZgt{}\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{environ}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}PATH\PYGZus{}INFO\PYGZsq{}}\PYG{p}{][}\PYG{l+m+mi}{1}\PYG{p}{:]} \PYG{o+ow}{or} \PYG{l+s+s1}{\PYGZsq{}web\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{return} \PYG{p}{[}\PYG{n}{body}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)]}
+\end{Verbatim}

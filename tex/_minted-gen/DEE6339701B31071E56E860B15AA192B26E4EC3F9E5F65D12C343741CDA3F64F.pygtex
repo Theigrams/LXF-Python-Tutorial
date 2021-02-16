@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{try}\PYG{p}{:}
+    \PYG{n}{f} \PYG{o}{=} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/path/to/file\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}r\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{f}\PYG{o}{.}\PYG{n}{read}\PYG{p}{()}
+\PYG{k}{finally}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n}{f}\PYG{p}{:}
+        \PYG{n}{f}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\end{Verbatim}

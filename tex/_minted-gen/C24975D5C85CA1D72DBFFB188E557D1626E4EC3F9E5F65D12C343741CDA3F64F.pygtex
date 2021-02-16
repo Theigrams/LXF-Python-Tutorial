@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{std1} \PYG{o}{=} \PYG{p}{\PYGZob{}} \PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}score\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{98} \PYG{p}{\PYGZcb{}}
+\PYG{n}{std2} \PYG{o}{=} \PYG{p}{\PYGZob{}} \PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}score\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{81} \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{app} \PYG{o}{=} \PYG{n}{web}\PYG{o}{.}\PYG{n}{Application}\PYG{p}{(}\PYG{n}{loop}\PYG{o}{=}\PYG{n}{loop}\PYG{p}{,} \PYG{n}{middlewares}\PYG{o}{=}\PYG{p}{[}
+    \PYG{n}{logger\PYGZus{}factory}\PYG{p}{,} \PYG{n}{response\PYGZus{}factory}
+\PYG{p}{])}
+\PYG{n}{init\PYGZus{}jinja2}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{n}{filters}\PYG{o}{=}\PYG{n+nb}{dict}\PYG{p}{(}\PYG{n}{datetime}\PYG{o}{=}\PYG{n}{datetime\PYGZus{}filter}\PYG{p}{))}
+\PYG{n}{add\PYGZus{}routes}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}handlers\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{add\PYGZus{}static}\PYG{p}{(}\PYG{n}{app}\PYG{p}{)}
+\end{Verbatim}

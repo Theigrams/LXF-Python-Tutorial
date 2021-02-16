@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{hello} \PYG{k+kn}{import} \PYG{n}{Hello}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{h} \PYG{o}{=} \PYG{n}{Hello}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{h}\PYG{o}{.}\PYG{n}{hello}\PYG{p}{()}
+\PYG{n}{Hello}\PYG{p}{,} \PYG{n}{world}\PYG{o}{.}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{Hello}\PYG{p}{))}
+\PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{err}{\PYGZsq{}}\PYG{n+nc}{type}\PYG{l+s+s1}{\PYGZsq{}\PYGZgt{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{h}\PYG{p}{))}
+\PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{err}{\PYGZsq{}}\PYG{n+nc}{hello}\PYG{o}{.}\PYG{n}{Hello}\PYG{l+s+s1}{\PYGZsq{}\PYGZgt{}}
+\end{Verbatim}

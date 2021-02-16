@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{ch} \PYG{o+ow}{in} \PYG{l+s+s1}{\PYGZsq{}ABC\PYGZsq{}}\PYG{p}{:}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{)}
+\PYG{o}{...}
+\PYG{n}{A}
+\PYG{n}{B}
+\PYG{n}{C}
+\end{Verbatim}

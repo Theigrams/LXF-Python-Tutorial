@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{p}{(}\PYG{n}{Pdb}\PYG{p}{)} \PYG{n}{l}
+  \PYG{l+m+mi}{1}
+  \PYG{l+m+mi}{2}  \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{s} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}0\PYGZsq{}}
+  \PYG{l+m+mi}{3}     \PYG{n}{n} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}
+  \PYG{l+m+mi}{4}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+m+mi}{10} \PYG{o}{/} \PYG{n}{n}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{net\PYGZus{}io\PYGZus{}counters}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} 获取网络读写字节／包的个数}
+\PYG{n}{snetio}\PYG{p}{(}\PYG{n}{bytes\PYGZus{}sent}\PYG{o}{=}\PYG{l+m+mi}{3885744870}\PYG{p}{,} \PYG{n}{bytes\PYGZus{}recv}\PYG{o}{=}\PYG{l+m+mi}{10357676702}\PYG{p}{,} \PYG{n}{packets\PYGZus{}sent}\PYG{o}{=}\PYG{l+m+mi}{10613069}\PYG{p}{,} \PYG{n}{packets\PYGZus{}recv}\PYG{o}{=}\PYG{l+m+mi}{10423357}\PYG{p}{,} \PYG{n}{errin}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{errout}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{dropin}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{dropout}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{net\PYGZus{}if\PYGZus{}addrs}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} 获取网络接口信息}
+\PYG{p}{\PYGZob{}}
+  \PYG{l+s+s1}{\PYGZsq{}lo0\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{n}{snic}\PYG{p}{(}\PYG{n}{family}\PYG{o}{=\PYGZlt{}}\PYG{n}{AddressFamily}\PYG{o}{.}\PYG{n}{AF\PYGZus{}INET}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{n}{address}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}127.0.0.1\PYGZsq{}}\PYG{p}{,} \PYG{n}{netmask}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}255.0.0.0\PYGZsq{}}\PYG{p}{),} \PYG{o}{...}\PYG{p}{],}
+  \PYG{l+s+s1}{\PYGZsq{}en1\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{n}{snic}\PYG{p}{(}\PYG{n}{family}\PYG{o}{=\PYGZlt{}}\PYG{n}{AddressFamily}\PYG{o}{.}\PYG{n}{AF\PYGZus{}INET}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{n}{address}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}10.0.1.80\PYGZsq{}}\PYG{p}{,} \PYG{n}{netmask}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}255.255.255.0\PYGZsq{}}\PYG{p}{),} \PYG{o}{...}\PYG{p}{],}
+  \PYG{l+s+s1}{\PYGZsq{}en0\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{o}{...}\PYG{p}{],}
+  \PYG{l+s+s1}{\PYGZsq{}en2\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{o}{...}\PYG{p}{],}
+  \PYG{l+s+s1}{\PYGZsq{}bridge0\PYGZsq{}}\PYG{p}{:} \PYG{p}{[}\PYG{o}{...}\PYG{p}{]}
+\PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{net\PYGZus{}if\PYGZus{}stats}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} 获取网络接口状态}
+\PYG{p}{\PYGZob{}}
+  \PYG{l+s+s1}{\PYGZsq{}lo0\PYGZsq{}}\PYG{p}{:} \PYG{n}{snicstats}\PYG{p}{(}\PYG{n}{isup}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{duplex}\PYG{o}{=\PYGZlt{}}\PYG{n}{NicDuplex}\PYG{o}{.}\PYG{n}{NIC\PYGZus{}DUPLEX\PYGZus{}UNKNOWN}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{n}{speed}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{mtu}\PYG{o}{=}\PYG{l+m+mi}{16384}\PYG{p}{),}
+  \PYG{l+s+s1}{\PYGZsq{}en0\PYGZsq{}}\PYG{p}{:} \PYG{n}{snicstats}\PYG{p}{(}\PYG{n}{isup}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{duplex}\PYG{o}{=\PYGZlt{}}\PYG{n}{NicDuplex}\PYG{o}{.}\PYG{n}{NIC\PYGZus{}DUPLEX\PYGZus{}UNKNOWN}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{n}{speed}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{mtu}\PYG{o}{=}\PYG{l+m+mi}{1500}\PYG{p}{),}
+  \PYG{l+s+s1}{\PYGZsq{}en1\PYGZsq{}}\PYG{p}{:} \PYG{n}{snicstats}\PYG{p}{(}\PYG{o}{...}\PYG{p}{),}
+  \PYG{l+s+s1}{\PYGZsq{}en2\PYGZsq{}}\PYG{p}{:} \PYG{n}{snicstats}\PYG{p}{(}\PYG{o}{...}\PYG{p}{),}
+  \PYG{l+s+s1}{\PYGZsq{}bridge0\PYGZsq{}}\PYG{p}{:} \PYG{n}{snicstats}\PYG{p}{(}\PYG{o}{...}\PYG{p}{)}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+\PYG{k}{def} \PYG{n+nf}{response\PYGZus{}factory}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{n}{handler}\PYG{p}{):}
+    \PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+    \PYG{k}{def} \PYG{n+nf}{response}\PYG{p}{(}\PYG{n}{request}\PYG{p}{):}
+
+        \PYG{n}{r} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{handler}\PYG{p}{(}\PYG{n}{request}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{r}\PYG{p}{,} \PYG{n}{web}\PYG{o}{.}\PYG{n}{StreamResponse}\PYG{p}{):}
+            \PYG{k}{return} \PYG{n}{r}
+        \PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{r}\PYG{p}{,} \PYG{n+nb}{bytes}\PYG{p}{):}
+            \PYG{n}{resp} \PYG{o}{=} \PYG{n}{web}\PYG{o}{.}\PYG{n}{Response}\PYG{p}{(}\PYG{n}{body}\PYG{o}{=}\PYG{n}{r}\PYG{p}{)}
+            \PYG{n}{resp}\PYG{o}{.}\PYG{n}{content\PYGZus{}type} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}application/octet\PYGZhy{}stream\PYGZsq{}}
+            \PYG{k}{return} \PYG{n}{resp}
+        \PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{r}\PYG{p}{,} \PYG{n+nb}{str}\PYG{p}{):}
+            \PYG{n}{resp} \PYG{o}{=} \PYG{n}{web}\PYG{o}{.}\PYG{n}{Response}\PYG{p}{(}\PYG{n}{body}\PYG{o}{=}\PYG{n}{r}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+            \PYG{n}{resp}\PYG{o}{.}\PYG{n}{content\PYGZus{}type} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}text/html;charset=utf\PYGZhy{}8\PYGZsq{}}
+            \PYG{k}{return} \PYG{n}{resp}
+        \PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{r}\PYG{p}{,} \PYG{n+nb}{dict}\PYG{p}{):}
+            \PYG{o}{...}
+\end{Verbatim}

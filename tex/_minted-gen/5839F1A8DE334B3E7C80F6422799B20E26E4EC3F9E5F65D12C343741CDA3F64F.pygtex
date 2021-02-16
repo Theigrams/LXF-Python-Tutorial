@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r}\PYG{o}{.}\PYG{n}{headers}
+\PYG{p}{\PYGZob{}}\PYG{n}{Content}\PYG{o}{\PYGZhy{}}\PYG{n}{Type}\PYG{l+s+s1}{\PYGZsq{}: \PYGZsq{}}\PYG{n}{text}\PYG{o}{/}\PYG{n}{html}\PYG{p}{;} \PYG{n}{charset}\PYG{o}{=}\PYG{n}{utf}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{8}\PYG{l+s+s1}{\PYGZsq{}, \PYGZsq{}}\PYG{n}{Transfer}\PYG{o}{\PYGZhy{}}\PYG{n}{Encoding}\PYG{l+s+s1}{\PYGZsq{}: \PYGZsq{}}\PYG{n}{chunked}\PYG{l+s+s1}{\PYGZsq{}, \PYGZsq{}}\PYG{n}{Content}\PYG{o}{\PYGZhy{}}\PYG{n}{Encoding}\PYG{l+s+s1}{\PYGZsq{}: \PYGZsq{}}\PYG{n}{gzip}\PYG{l+s+s1}{\PYGZsq{}, ...\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r}\PYG{o}{.}\PYG{n}{headers}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Content\PYGZhy{}Type\PYGZsq{}}\PYG{p}{]}
+\PYG{l+s+s1}{\PYGZsq{}text/html; charset=utf\PYGZhy{}8\PYGZsq{}}
+\end{Verbatim}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s}\PYG{o}{.}\PYG{n}{set\PYGZus{}score}\PYG{p}{(}\PYG{l+m+mi}{60}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s}\PYG{o}{.}\PYG{n}{get\PYGZus{}score}\PYG{p}{()}
+\PYG{l+m+mi}{60}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s}\PYG{o}{.}\PYG{n}{set\PYGZus{}score}\PYG{p}{(}\PYG{l+m+mi}{9999}\PYG{p}{)}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{o}{...}
+\PYG{n+ne}{ValueError}\PYG{p}{:} \PYG{n}{score} \PYG{n}{must} \PYG{n}{between} \PYG{l+m+mi}{0} \PYG{o}{\PYGZti{}} \PYG{l+m+mi}{100}\PYG{err}{!}
+\end{Verbatim}

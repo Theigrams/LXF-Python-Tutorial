@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{s} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}ABC}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{\PYGZhy{}001\PYGZsq{}}
+\end{Verbatim}

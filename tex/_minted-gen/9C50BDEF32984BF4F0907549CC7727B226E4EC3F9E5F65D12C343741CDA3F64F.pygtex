@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{with} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{assertRaises}\PYG{p}{(}\PYG{n+ne}{AttributeError}\PYG{p}{):}
+    \PYG{n}{value} \PYG{o}{=} \PYG{n}{d}\PYG{o}{.}\PYG{n}{empty}
+\end{Verbatim}

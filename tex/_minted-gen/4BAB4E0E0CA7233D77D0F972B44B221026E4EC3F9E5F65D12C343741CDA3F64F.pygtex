@@ -1,0 +1,40 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Dict}\PYG{p}{(}\PYG{n+nb}{dict}\PYG{p}{):}
+    \PYG{l+s+sd}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+sd}{    Simple dict but also support access as x.y style.}
+
+\PYG{l+s+sd}{    \PYGZgt{}\PYGZgt{}\PYGZgt{} d1 = Dict()}
+\PYG{l+s+sd}{    \PYGZgt{}\PYGZgt{}\PYGZgt{} d1[\PYGZsq{}x\PYGZsq{}] = 100}
+\PYG{l+s+sd}{    \PYGZgt{}\PYGZgt{}\PYGZgt{} d1.x}
+\PYG{l+s+sd}{    100}
+\PYG{l+s+sd}{    \PYGZgt{}\PYGZgt{}\PYGZgt{} d1.y = 200}
+\PYG{l+s+sd}{    \PYGZgt{}\PYGZgt{}\PYGZgt{} d1[\PYGZsq{}y\PYGZsq{}]}
+\PYG{l+s+sd}{    200}
+\PYG{l+s+sd}{    \PYGZgt{}\PYGZgt{}\PYGZgt{} d2 = Dict(a=1, b=2, c=\PYGZsq{}3\PYGZsq{})}
+\PYG{l+s+sd}{    \PYGZgt{}\PYGZgt{}\PYGZgt{} d2.c}
+\PYG{l+s+sd}{    \PYGZsq{}3\PYGZsq{}}
+\PYG{l+s+sd}{    \PYGZgt{}\PYGZgt{}\PYGZgt{} d2[\PYGZsq{}empty\PYGZsq{}]}
+\PYG{l+s+sd}{    Traceback (most recent call last):}
+\PYG{l+s+sd}{        ...}
+\PYG{l+s+sd}{    KeyError: \PYGZsq{}empty\PYGZsq{}}
+\PYG{l+s+sd}{    \PYGZgt{}\PYGZgt{}\PYGZgt{} d2.empty}
+\PYG{l+s+sd}{    Traceback (most recent call last):}
+\PYG{l+s+sd}{        ...}
+\PYG{l+s+sd}{    AttributeError: \PYGZsq{}Dict\PYGZsq{} object has no attribute \PYGZsq{}empty\PYGZsq{}}
+\PYG{l+s+sd}{    \PYGZsq{}\PYGZsq{}\PYGZsq{}}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kw}\PYG{p}{):}
+        \PYG{n+nb}{super}\PYG{p}{(}\PYG{n}{Dict}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{o}{**}\PYG{n}{kw}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}getattr\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{):}
+        \PYG{k}{try}\PYG{p}{:}
+            \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]}
+        \PYG{k}{except} \PYG{n+ne}{KeyError}\PYG{p}{:}
+            \PYG{k}{raise} \PYG{n+ne}{AttributeError}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}\PYGZsq{}Dict\PYGZsq{} object has no attribute \PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{\PYGZsq{}\PYGZdq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{key}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}setattr\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{,} \PYG{n}{value}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]} \PYG{o}{=} \PYG{n}{value}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+    \PYG{k+kn}{import} \PYG{n+nn}{doctest}
+    \PYG{n}{doctest}\PYG{o}{.}\PYG{n}{testmod}\PYG{p}{()}
+\end{Verbatim}

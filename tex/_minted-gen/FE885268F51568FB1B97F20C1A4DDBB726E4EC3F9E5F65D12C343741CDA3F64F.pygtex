@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{sqlalchemy} \PYG{k+kn}{import} \PYG{n}{Column}\PYG{p}{,} \PYG{n}{String}\PYG{p}{,} \PYG{n}{create\PYGZus{}engine}
+\PYG{k+kn}{from} \PYG{n+nn}{sqlalchemy.orm} \PYG{k+kn}{import} \PYG{n}{sessionmaker}
+\PYG{k+kn}{from} \PYG{n+nn}{sqlalchemy.ext.declarative} \PYG{k+kn}{import} \PYG{n}{declarative\PYGZus{}base}
+\PYG{n}{Base} \PYG{o}{=} \PYG{n}{declarative\PYGZus{}base}\PYG{p}{()}
+\PYG{k}{class} \PYG{n+nc}{User}\PYG{p}{(}\PYG{n}{Base}\PYG{p}{):}
+
+    \PYG{n}{\PYGZus{}\PYGZus{}tablename\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}user\PYGZsq{}}
+
+
+    \PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{Column}\PYG{p}{(}\PYG{n}{String}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{),} \PYG{n}{primary\PYGZus{}key}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+    \PYG{n}{name} \PYG{o}{=} \PYG{n}{Column}\PYG{p}{(}\PYG{n}{String}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{))}
+\PYG{n}{engine} \PYG{o}{=} \PYG{n}{create\PYGZus{}engine}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}mysql+mysqlconnector://root:password@localhost:3306/test\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{DBSession} \PYG{o}{=} \PYG{n}{sessionmaker}\PYG{p}{(}\PYG{n}{bind}\PYG{o}{=}\PYG{n}{engine}\PYG{p}{)}
+\end{Verbatim}

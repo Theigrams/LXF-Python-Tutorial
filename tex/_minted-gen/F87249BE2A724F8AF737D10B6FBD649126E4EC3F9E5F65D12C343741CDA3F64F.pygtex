@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{o}{./}\PYG{n}{pymonitor}\PYG{o}{.}\PYG{n}{py} \PYG{n}{app}\PYG{o}{.}\PYG{n}{py}
+\PYG{p}{[}\PYG{n}{Monitor}\PYG{p}{]} \PYG{n}{Watching} \PYG{n}{directory} \PYG{o}{/}\PYG{n}{Users}\PYG{o}{/}\PYG{n}{michael}\PYG{o}{/}\PYG{n}{Github}\PYG{o}{/}\PYG{n}{awesome}\PYG{o}{\PYGZhy{}}\PYG{n}{python3}\PYG{o}{\PYGZhy{}}\PYG{n}{webapp}\PYG{o}{/}\PYG{n}{www}\PYG{o}{...}
+\PYG{p}{[}\PYG{n}{Monitor}\PYG{p}{]} \PYG{n}{Start} \PYG{n}{process} \PYG{n}{python} \PYG{n}{app}\PYG{o}{.}\PYG{n}{py}\PYG{o}{...}
+\PYG{o}{...}
+\PYG{n}{INFO}\PYG{p}{:}\PYG{n}{root}\PYG{p}{:}\PYG{n}{application} \PYG{p}{(}\PYG{o}{/}\PYG{n}{Users}\PYG{o}{/}\PYG{n}{michael}\PYG{o}{/}\PYG{n}{Github}\PYG{o}{/}\PYG{n}{awesome}\PYG{o}{\PYGZhy{}}\PYG{n}{python3}\PYG{o}{\PYGZhy{}}\PYG{n}{webapp}\PYG{o}{/}\PYG{n}{www}\PYG{p}{)} \PYG{n}{will} \PYG{n}{start} \PYG{n}{at} \PYG{l+m+mf}{0.0}\PYG{o}{.}\PYG{l+m+mf}{0.0}\PYG{p}{:}\PYG{l+m+mf}{9000.}\PYG{o}{..}
+\PYG{p}{[}\PYG{n}{Monitor}\PYG{p}{]} \PYG{n}{Python} \PYG{n}{source} \PYG{n}{file} \PYG{n}{changed}\PYG{p}{:} \PYG{o}{/}\PYG{n}{Users}\PYG{o}{/}\PYG{n}{michael}\PYG{o}{/}\PYG{n}{Github}\PYG{o}{/}\PYG{n}{awesome}\PYG{o}{\PYGZhy{}}\PYG{n}{python}\PYG{o}{\PYGZhy{}}\PYG{n}{webapp}\PYG{o}{/}\PYG{n}{www}\PYG{o}{/}\PYG{n}{handlers}\PYG{o}{.}\PYG{n}{py}
+\PYG{p}{[}\PYG{n}{Monitor}\PYG{p}{]} \PYG{n}{Kill} \PYG{n}{process} \PYG{p}{[}\PYG{l+m+mi}{2747}\PYG{p}{]}\PYG{o}{...}
+\PYG{p}{[}\PYG{n}{Monitor}\PYG{p}{]} \PYG{n}{Process} \PYG{n}{ended} \PYG{k}{with} \PYG{n}{code} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{9.}
+\PYG{p}{[}\PYG{n}{Monitor}\PYG{p}{]} \PYG{n}{Start} \PYG{n}{process} \PYG{n}{python} \PYG{n}{app}\PYG{o}{.}\PYG{n}{py}\PYG{o}{...}
+\PYG{o}{...}
+\PYG{n}{INFO}\PYG{p}{:}\PYG{n}{root}\PYG{p}{:}\PYG{n}{application} \PYG{p}{(}\PYG{o}{/}\PYG{n}{Users}\PYG{o}{/}\PYG{n}{michael}\PYG{o}{/}\PYG{n}{Github}\PYG{o}{/}\PYG{n}{awesome}\PYG{o}{\PYGZhy{}}\PYG{n}{python3}\PYG{o}{\PYGZhy{}}\PYG{n}{webapp}\PYG{o}{/}\PYG{n}{www}\PYG{p}{)} \PYG{n}{will} \PYG{n}{start} \PYG{n}{at} \PYG{l+m+mf}{0.0}\PYG{o}{.}\PYG{l+m+mf}{0.0}\PYG{p}{:}\PYG{l+m+mf}{9000.}\PYG{o}{..}
+\end{Verbatim}

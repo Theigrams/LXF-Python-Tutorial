@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{log}\PYG{p}{(}\PYG{n}{func}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf}{wrapper}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kw}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}call }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{():\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{func}\PYG{o}{.}\PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}}\PYG{p}{)}
+        \PYG{k}{return} \PYG{n}{func}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kw}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{wrapper}
+\end{Verbatim}

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{k}{while} \PYG{n}{n} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{10}\PYG{p}{:}
+    \PYG{n}{n} \PYG{o}{=} \PYG{n}{n} \PYG{o}{+} \PYG{l+m+mi}{1}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)}
+\end{Verbatim}

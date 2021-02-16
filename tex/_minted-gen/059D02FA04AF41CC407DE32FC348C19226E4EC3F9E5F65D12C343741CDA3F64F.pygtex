@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{try}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}try...\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{r} \PYG{o}{=} \PYG{l+m+mi}{10} \PYG{o}{/} \PYG{n+nb}{int}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}result:\PYGZsq{}}\PYG{p}{,} \PYG{n}{r}\PYG{p}{)}
+\PYG{k}{except} \PYG{n+ne}{ValueError} \PYG{k}{as} \PYG{n}{e}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ValueError:\PYGZsq{}}\PYG{p}{,} \PYG{n}{e}\PYG{p}{)}
+\PYG{k}{except} \PYG{n+ne}{ZeroDivisionError} \PYG{k}{as} \PYG{n}{e}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ZeroDivisionError:\PYGZsq{}}\PYG{p}{,} \PYG{n}{e}\PYG{p}{)}
+\PYG{k}{finally}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}finally...\PYGZsq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}END\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

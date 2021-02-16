@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{dir}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ABC\PYGZsq{}}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}add\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}class\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{,}\PYG{o}{...}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}subclasshook\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}capitalize\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}casefold\PYGZsq{}}\PYG{p}{,}\PYG{o}{...}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}zfill\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

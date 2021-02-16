@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{JAN} \PYG{o}{=} \PYG{l+m+mi}{1}
+\PYG{n}{FEB} \PYG{o}{=} \PYG{l+m+mi}{2}
+\PYG{n}{MAR} \PYG{o}{=} \PYG{l+m+mi}{3}
+\PYG{o}{...}
+\PYG{n}{NOV} \PYG{o}{=} \PYG{l+m+mi}{11}
+\PYG{n}{DEC} \PYG{o}{=} \PYG{l+m+mi}{12}
+\end{Verbatim}

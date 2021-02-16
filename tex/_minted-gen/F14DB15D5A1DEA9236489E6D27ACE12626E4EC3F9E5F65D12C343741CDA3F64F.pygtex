@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试:}
+\PYG{k}{assert} \PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}abcd\PYGZsq{}} \PYG{o}{==} \PYG{n}{safe\PYGZus{}base64\PYGZus{}decode}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}YWJjZA==\PYGZsq{}}\PYG{p}{),} \PYG{n}{safe\PYGZus{}base64\PYGZus{}decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}YWJjZA==\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{assert} \PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}abcd\PYGZsq{}} \PYG{o}{==} \PYG{n}{safe\PYGZus{}base64\PYGZus{}decode}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}YWJjZA\PYGZsq{}}\PYG{p}{),} \PYG{n}{safe\PYGZus{}base64\PYGZus{}decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}YWJjZA\PYGZsq{}}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ok\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

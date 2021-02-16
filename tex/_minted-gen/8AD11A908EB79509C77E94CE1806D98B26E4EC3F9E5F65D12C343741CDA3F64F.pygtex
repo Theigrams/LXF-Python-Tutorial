@@ -1,0 +1,42 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{time}\PYG{o}{,} \PYG{n+nn}{uuid}
+
+\PYG{k+kn}{from} \PYG{n+nn}{orm} \PYG{k+kn}{import} \PYG{n}{Model}\PYG{p}{,} \PYG{n}{StringField}\PYG{p}{,} \PYG{n}{BooleanField}\PYG{p}{,} \PYG{n}{FloatField}\PYG{p}{,} \PYG{n}{TextField}
+
+\PYG{k}{def} \PYG{n+nf}{next\PYGZus{}id}\PYG{p}{():}
+    \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}015d\PYGZpc{}s}\PYG{l+s+s1}{000\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()} \PYG{o}{*} \PYG{l+m+mi}{1000}\PYG{p}{),} \PYG{n}{uuid}\PYG{o}{.}\PYG{n}{uuid4}\PYG{p}{()}\PYG{o}{.}\PYG{n}{hex}\PYG{p}{)}
+
+\PYG{k}{class} \PYG{n+nc}{User}\PYG{p}{(}\PYG{n}{Model}\PYG{p}{):}
+    \PYG{n}{\PYGZus{}\PYGZus{}table\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}users\PYGZsq{}}
+
+    \PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{primary\PYGZus{}key}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{default}\PYG{o}{=}\PYG{n}{next\PYGZus{}id}\PYG{p}{,} \PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(50)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{email} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(50)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{passwd} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(50)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{admin} \PYG{o}{=} \PYG{n}{BooleanField}\PYG{p}{()}
+    \PYG{n}{name} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(50)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{image} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(500)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{created\PYGZus{}at} \PYG{o}{=} \PYG{n}{FloatField}\PYG{p}{(}\PYG{n}{default}\PYG{o}{=}\PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{)}
+
+\PYG{k}{class} \PYG{n+nc}{Blog}\PYG{p}{(}\PYG{n}{Model}\PYG{p}{):}
+    \PYG{n}{\PYGZus{}\PYGZus{}table\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}blogs\PYGZsq{}}
+
+    \PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{primary\PYGZus{}key}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{default}\PYG{o}{=}\PYG{n}{next\PYGZus{}id}\PYG{p}{,} \PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(50)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{user\PYGZus{}id} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(50)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{user\PYGZus{}name} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(50)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{user\PYGZus{}image} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(500)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{name} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(50)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{summary} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(200)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{content} \PYG{o}{=} \PYG{n}{TextField}\PYG{p}{()}
+    \PYG{n}{created\PYGZus{}at} \PYG{o}{=} \PYG{n}{FloatField}\PYG{p}{(}\PYG{n}{default}\PYG{o}{=}\PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{)}
+
+\PYG{k}{class} \PYG{n+nc}{Comment}\PYG{p}{(}\PYG{n}{Model}\PYG{p}{):}
+    \PYG{n}{\PYGZus{}\PYGZus{}table\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}comments\PYGZsq{}}
+
+    \PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{primary\PYGZus{}key}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{default}\PYG{o}{=}\PYG{n}{next\PYGZus{}id}\PYG{p}{,} \PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(50)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{blog\PYGZus{}id} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(50)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{user\PYGZus{}id} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(50)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{user\PYGZus{}name} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(50)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{user\PYGZus{}image} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(500)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{content} \PYG{o}{=} \PYG{n}{TextField}\PYG{p}{()}
+    \PYG{n}{created\PYGZus{}at} \PYG{o}{=} \PYG{n}{FloatField}\PYG{p}{(}\PYG{n}{default}\PYG{o}{=}\PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{)}
+\end{Verbatim}

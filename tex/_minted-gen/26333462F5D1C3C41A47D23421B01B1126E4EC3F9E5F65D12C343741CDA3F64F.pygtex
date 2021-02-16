@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{max2} \PYG{o}{=} \PYG{n}{functools}\PYG{o}{.}\PYG{n}{partial}\PYG{p}{(}\PYG{n+nb}{max}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}
+\end{Verbatim}

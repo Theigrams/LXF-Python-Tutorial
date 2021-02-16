@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{for} \PYG{n}{name}\PYG{p}{,} \PYG{n}{member} \PYG{o+ow}{in} \PYG{n}{Month}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}members\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{items}\PYG{p}{():}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}=\PYGZgt{}\PYGZsq{}}\PYG{p}{,} \PYG{n}{member}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{},\PYGZsq{}}\PYG{p}{,} \PYG{n}{member}\PYG{o}{.}\PYG{n}{value}\PYG{p}{)}
+\end{Verbatim}

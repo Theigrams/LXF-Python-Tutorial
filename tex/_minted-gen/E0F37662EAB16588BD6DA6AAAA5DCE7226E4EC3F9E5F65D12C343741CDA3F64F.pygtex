@@ -1,0 +1,104 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{extends} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}base\PYGZus{}\PYGZus{}.html\PYGZsq{}} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{block} \PYG{n}{title} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}\PYG{n}{编辑日志}\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endblock} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{block} \PYG{n}{beforehead} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+
+\PYG{o}{\PYGZlt{}}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+\PYG{n}{var}
+    \PYG{n}{ID} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZob{}\PYGZob{} id \PYGZcb{}\PYGZcb{}\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{action} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZob{}\PYGZob{} action \PYGZcb{}\PYGZcb{}\PYGZsq{}}\PYG{p}{;}
+\PYG{n}{function} \PYG{n}{initVM}\PYG{p}{(}\PYG{n}{blog}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{var} \PYG{n}{vm} \PYG{o}{=} \PYG{n}{new} \PYG{n}{Vue}\PYG{p}{(\PYGZob{}}
+        \PYG{n}{el}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}vm\PYGZsq{}}\PYG{p}{,}
+        \PYG{n}{data}\PYG{p}{:} \PYG{n}{blog}\PYG{p}{,}
+        \PYG{n}{methods}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+            \PYG{n}{submit}\PYG{p}{:} \PYG{n}{function} \PYG{p}{(}\PYG{n}{event}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{event}\PYG{o}{.}\PYG{n}{preventDefault}\PYG{p}{();}
+                \PYG{n}{var} \PYG{err}{\PYGZdl{}}\PYG{n}{form} \PYG{o}{=} \PYG{err}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}vm\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{find}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}form\PYGZsq{}}\PYG{p}{);}
+                \PYG{err}{\PYGZdl{}}\PYG{n}{form}\PYG{o}{.}\PYG{n}{postJSON}\PYG{p}{(}\PYG{n}{action}\PYG{p}{,} \PYG{n}{this}\PYG{o}{.}\PYG{err}{\PYGZdl{}}\PYG{n}{data}\PYG{p}{,} \PYG{n}{function} \PYG{p}{(}\PYG{n}{err}\PYG{p}{,} \PYG{n}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                    \PYG{k}{if} \PYG{p}{(}\PYG{n}{err}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                        \PYG{err}{\PYGZdl{}}\PYG{n}{form}\PYG{o}{.}\PYG{n}{showFormError}\PYG{p}{(}\PYG{n}{err}\PYG{p}{);}
+                    \PYG{p}{\PYGZcb{}}
+                    \PYG{k}{else} \PYG{p}{\PYGZob{}}
+                        \PYG{k}{return} \PYG{n}{location}\PYG{o}{.}\PYG{n}{assign}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/api/blogs/\PYGZsq{}} \PYG{o}{+} \PYG{n}{r}\PYG{o}{.}\PYG{n}{id}\PYG{p}{);}
+                    \PYG{p}{\PYGZcb{}}
+                \PYG{p}{\PYGZcb{});}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{});}
+    \PYG{err}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}vm\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{show}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\PYG{err}{\PYGZdl{}}\PYG{p}{(}\PYG{n}{function} \PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{ID}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{getJSON}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/api/blogs/\PYGZsq{}} \PYG{o}{+} \PYG{n}{ID}\PYG{p}{,} \PYG{n}{function} \PYG{p}{(}\PYG{n}{err}\PYG{p}{,} \PYG{n}{blog}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{k}{if} \PYG{p}{(}\PYG{n}{err}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{k}{return} \PYG{n}{fatal}\PYG{p}{(}\PYG{n}{err}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{}}
+            \PYG{err}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}loading\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{hide}\PYG{p}{();}
+            \PYG{n}{initVM}\PYG{p}{(}\PYG{n}{blog}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{});}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else} \PYG{p}{\PYGZob{}}
+        \PYG{err}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}loading\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{hide}\PYG{p}{();}
+        \PYG{n}{initVM}\PYG{p}{(\PYGZob{}}
+            \PYG{n}{name}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{summary}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{,}
+            \PYG{n}{content}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}
+        \PYG{p}{\PYGZcb{});}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{});}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endblock} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{block} \PYG{n}{content} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+
+    \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}width\PYGZhy{}1\PYGZhy{}1 uk\PYGZhy{}margin\PYGZhy{}bottom\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}panel uk\PYGZhy{}panel\PYGZhy{}box\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}}\PYG{n}{ul} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}breadcrumb\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{li}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/manage/comments\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{评论}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{li}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{li}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/manage/blogs\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{日志}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{li}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{li}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/manage/users\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{用户}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{li}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}/}\PYG{n}{ul}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+
+    \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n+nb}{id}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}error\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}width\PYGZhy{}1\PYGZhy{}1\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+
+    \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n+nb}{id}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}loading\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}width\PYGZhy{}1\PYGZhy{}1 uk\PYGZhy{}text\PYGZhy{}center\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}}\PYG{n}{span}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}spinner uk\PYGZhy{}icon\PYGZhy{}medium uk\PYGZhy{}icon\PYGZhy{}spin\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}} \PYG{n}{正在加载}\PYG{o}{...\PYGZlt{}/}\PYG{n}{span}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+
+    \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n+nb}{id}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}vm\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}width\PYGZhy{}2\PYGZhy{}3\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}}\PYG{n}{form} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{on}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}submit: submit\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}form uk\PYGZhy{}form\PYGZhy{}stacked\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}alert uk\PYGZhy{}alert\PYGZhy{}danger uk\PYGZhy{}hidden\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}form\PYGZhy{}row\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{label} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}form\PYGZhy{}label\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{标题}\PYG{p}{:}\PYG{o}{\PYGZlt{}/}\PYG{n}{label}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}form\PYGZhy{}controls\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n+nb}{input} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{model}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}} \PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}form\PYGZhy{}row\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{label} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}form\PYGZhy{}label\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{摘要}\PYG{p}{:}\PYG{o}{\PYGZlt{}/}\PYG{n}{label}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}form\PYGZhy{}controls\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{textarea} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{model}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}summary\PYGZdq{}} \PYG{n}{rows}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}4\PYGZdq{}} \PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{textarea}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}form\PYGZhy{}row\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{label} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}form\PYGZhy{}label\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{内容}\PYG{p}{:}\PYG{o}{\PYGZlt{}/}\PYG{n}{label}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}form\PYGZhy{}controls\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{textarea} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{model}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}content\PYGZdq{}} \PYG{n}{rows}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}16\PYGZdq{}} \PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{textarea}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}form\PYGZhy{}row\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{button} \PYG{n+nb}{type}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}submit\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}button uk\PYGZhy{}button\PYGZhy{}primary\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}save\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}} \PYG{n}{保存}\PYG{o}{\PYGZlt{}/}\PYG{n}{button}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/manage/blogs\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}button\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}times\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}} \PYG{n}{取消}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}/}\PYG{n}{form}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endblock} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

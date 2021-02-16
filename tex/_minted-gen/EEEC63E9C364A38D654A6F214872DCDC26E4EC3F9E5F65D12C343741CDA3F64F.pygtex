@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{time}\PYG{o}{,} \PYG{n+nn}{threading}
+\PYG{k}{def} \PYG{n+nf}{loop}\PYG{p}{():}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}thread }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ is running...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{current\PYGZus{}thread}\PYG{p}{()}\PYG{o}{.}\PYG{n}{name}\PYG{p}{)}
+    \PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{k}{while} \PYG{n}{n} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{5}\PYG{p}{:}
+        \PYG{n}{n} \PYG{o}{=} \PYG{n}{n} \PYG{o}{+} \PYG{l+m+mi}{1}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}thread }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ \PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{threading}\PYG{o}{.}\PYG{n}{current\PYGZus{}thread}\PYG{p}{()}\PYG{o}{.}\PYG{n}{name}\PYG{p}{,} \PYG{n}{n}\PYG{p}{))}
+        \PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}thread }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ ended.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{current\PYGZus{}thread}\PYG{p}{()}\PYG{o}{.}\PYG{n}{name}\PYG{p}{)}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}thread }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ is running...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{current\PYGZus{}thread}\PYG{p}{()}\PYG{o}{.}\PYG{n}{name}\PYG{p}{)}
+\PYG{n}{t} \PYG{o}{=} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{Thread}\PYG{p}{(}\PYG{n}{target}\PYG{o}{=}\PYG{n}{loop}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}LoopThread\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{t}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+\PYG{n}{t}\PYG{o}{.}\PYG{n}{join}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}thread }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ ended.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{current\PYGZus{}thread}\PYG{p}{()}\PYG{o}{.}\PYG{n}{name}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{email.mime.text} \PYG{k+kn}{import} \PYG{n}{MIMEText}
+\PYG{n}{msg} \PYG{o}{=} \PYG{n}{MIMEText}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}hello, send by Python...\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}plain\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

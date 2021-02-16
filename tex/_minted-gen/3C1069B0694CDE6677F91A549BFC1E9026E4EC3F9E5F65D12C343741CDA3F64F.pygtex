@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{json}\PYG{o}{.}\PYG{n}{dumps}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,} \PYG{n}{default}\PYG{o}{=}\PYG{k}{lambda} \PYG{n}{obj}\PYG{p}{:} \PYG{n}{obj}\PYG{o}{.}\PYG{n+nv+vm}{\PYGZus{}\PYGZus{}dict\PYGZus{}\PYGZus{}}\PYG{p}{))}
+\end{Verbatim}

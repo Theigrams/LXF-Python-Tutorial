@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{run\PYGZus{}twice}\PYG{p}{(}\PYG{n}{Cat}\PYG{p}{())}
+\PYG{n}{Cat} \PYG{o+ow}{is} \PYG{n}{running}\PYG{o}{...}
+\PYG{n}{Cat} \PYG{o+ow}{is} \PYG{n}{running}\PYG{o}{...}
+\end{Verbatim}

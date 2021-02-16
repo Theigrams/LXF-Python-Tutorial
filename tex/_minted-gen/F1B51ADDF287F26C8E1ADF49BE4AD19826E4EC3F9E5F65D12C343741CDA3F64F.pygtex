@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{cat} \PYG{o}{/}\PYG{n}{proc}\PYG{o}{/}\PYG{n}{bus}\PYG{o}{/}\PYG{n+nb}{input}\PYG{o}{/}\PYG{n}{devices}
+\PYG{n}{I}\PYG{p}{:} \PYG{n}{Bus}\PYG{o}{=}\PYG{l+m+mi}{0000} \PYG{n}{Vendor}\PYG{o}{=}\PYG{l+m+mi}{0000} \PYG{n}{Product}\PYG{o}{=}\PYG{l+m+mi}{0000} \PYG{n}{Version}\PYG{o}{=}\PYG{l+m+mi}{0000}
+\PYG{n}{N}\PYG{p}{:}
+\PYG{n}{P}\PYG{p}{:} \PYG{n}{Phys}\PYG{o}{=}
+\PYG{n}{S}\PYG{p}{:} \PYG{n}{Sysfs}\PYG{o}{=/}\PYG{n}{devices}\PYG{o}{/}\PYG{n}{platform}\PYG{o}{/}\PYG{n}{sound}\PYG{o}{/}\PYG{n+nb}{input}\PYG{o}{/}\PYG{n}{input0}
+\PYG{n}{U}\PYG{p}{:} \PYG{n}{Uniq}\PYG{o}{=}
+\PYG{n}{H}\PYG{p}{:} \PYG{n}{Handlers}\PYG{o}{=}\PYG{n}{kbd} \PYG{n}{event0}
+\PYG{n}{B}\PYG{p}{:} \PYG{n}{PROP}\PYG{o}{=}\PYG{l+m+mi}{0}
+\PYG{n}{B}\PYG{p}{:} \PYG{n}{EV}\PYG{o}{=}\PYG{l+m+mi}{40001}
+\PYG{n}{B}\PYG{p}{:} \PYG{n}{SND}\PYG{o}{=}\PYG{l+m+mi}{6}
+
+\PYG{n}{I}\PYG{p}{:} \PYG{n}{Bus}\PYG{o}{=}\PYG{l+m+mi}{0019} \PYG{n}{Vendor}\PYG{o}{=}\PYG{l+m+mi}{0001} \PYG{n}{Product}\PYG{o}{=}\PYG{l+m+mi}{0001} \PYG{n}{Version}\PYG{o}{=}\PYG{l+m+mi}{0100}
+\PYG{n}{N}\PYG{p}{:}
+\PYG{n}{P}\PYG{p}{:} \PYG{n}{Phys}\PYG{o}{=}\PYG{n}{gpio}\PYG{o}{\PYGZhy{}}\PYG{n}{keys}\PYG{o}{/}\PYG{n}{input0}
+\PYG{n}{S}\PYG{p}{:} \PYG{n}{Sysfs}\PYG{o}{=/}\PYG{n}{devices}\PYG{o}{/}\PYG{n}{platform}\PYG{o}{/}\PYG{n}{gpio\PYGZus{}keys}\PYG{o}{/}\PYG{n+nb}{input}\PYG{o}{/}\PYG{n}{input1}
+\PYG{n}{U}\PYG{p}{:} \PYG{n}{Uniq}\PYG{o}{=}
+\PYG{n}{H}\PYG{p}{:} \PYG{n}{Handlers}\PYG{o}{=}\PYG{n}{kbd} \PYG{n}{event1}
+\PYG{n}{B}\PYG{p}{:} \PYG{n}{PROP}\PYG{o}{=}\PYG{l+m+mi}{0}
+\PYG{n}{B}\PYG{p}{:} \PYG{n}{EV}\PYG{o}{=}\PYG{l+m+mi}{3}
+\PYG{n}{B}\PYG{p}{:} \PYG{n}{KEY}\PYG{o}{=}\PYG{l+m+mi}{1680} \PYG{l+m+mi}{0} \PYG{l+m+mi}{0} \PYG{l+m+mi}{10004000}
+\end{Verbatim}

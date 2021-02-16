@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{random}\PYG{o}{,} \PYG{n+nn}{time}\PYG{o}{,} \PYG{n+nn}{queue}
+\PYG{k+kn}{from} \PYG{n+nn}{multiprocessing.managers} \PYG{k+kn}{import} \PYG{n}{BaseManager}
+\PYG{n}{task\PYGZus{}queue} \PYG{o}{=} \PYG{n}{queue}\PYG{o}{.}\PYG{n}{Queue}\PYG{p}{()}
+
+\PYG{n}{result\PYGZus{}queue} \PYG{o}{=} \PYG{n}{queue}\PYG{o}{.}\PYG{n}{Queue}\PYG{p}{()}
+\PYG{k}{class} \PYG{n+nc}{QueueManager}\PYG{p}{(}\PYG{n}{BaseManager}\PYG{p}{):}
+    \PYG{k}{pass}
+\PYG{n}{QueueManager}\PYG{o}{.}\PYG{n}{register}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}get\PYGZus{}task\PYGZus{}queue\PYGZsq{}}\PYG{p}{,} \PYG{n}{callable}\PYG{o}{=}\PYG{k}{lambda}\PYG{p}{:} \PYG{n}{task\PYGZus{}queue}\PYG{p}{)}
+\PYG{n}{QueueManager}\PYG{o}{.}\PYG{n}{register}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}get\PYGZus{}result\PYGZus{}queue\PYGZsq{}}\PYG{p}{,} \PYG{n}{callable}\PYG{o}{=}\PYG{k}{lambda}\PYG{p}{:} \PYG{n}{result\PYGZus{}queue}\PYG{p}{)}
+
+\PYG{n}{manager} \PYG{o}{=} \PYG{n}{QueueManager}\PYG{p}{(}\PYG{n}{address}\PYG{o}{=}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{5000}\PYG{p}{),} \PYG{n}{authkey}\PYG{o}{=}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}abc\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{manager}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+
+\PYG{n}{task} \PYG{o}{=} \PYG{n}{manager}\PYG{o}{.}\PYG{n}{get\PYGZus{}task\PYGZus{}queue}\PYG{p}{()}
+\PYG{n}{result} \PYG{o}{=} \PYG{n}{manager}\PYG{o}{.}\PYG{n}{get\PYGZus{}result\PYGZus{}queue}\PYG{p}{()}
+
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{):}
+    \PYG{n}{n} \PYG{o}{=} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{10000}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Put task }\PYG{l+s+si}{\PYGZpc{}d}\PYG{l+s+s1}{...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{n}\PYG{p}{)}
+    \PYG{n}{task}\PYG{o}{.}\PYG{n}{put}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Try get results...\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{):}
+    \PYG{n}{r} \PYG{o}{=} \PYG{n}{result}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{timeout}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Result: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{r}\PYG{p}{)}
+
+\PYG{n}{manager}\PYG{o}{.}\PYG{n}{shutdown}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}master exit.\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

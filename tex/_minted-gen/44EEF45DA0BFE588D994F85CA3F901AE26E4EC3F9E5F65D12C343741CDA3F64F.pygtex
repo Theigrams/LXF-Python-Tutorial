@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{t} \PYG{o}{=} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}\PYG{p}{])}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{t}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{][}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}X\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{t}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{][}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}Y\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{t}
+\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}X\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Y\PYGZsq{}}\PYG{p}{])}
+\end{Verbatim}

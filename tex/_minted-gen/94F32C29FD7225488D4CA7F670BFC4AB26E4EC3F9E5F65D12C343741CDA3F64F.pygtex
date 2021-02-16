@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{a} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} a是list类型}
+\PYG{n}{b} \PYG{o}{=} \PYG{n}{Animal}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} b是Animal类型}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{Dog}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} c是Dog类型}
+\end{Verbatim}

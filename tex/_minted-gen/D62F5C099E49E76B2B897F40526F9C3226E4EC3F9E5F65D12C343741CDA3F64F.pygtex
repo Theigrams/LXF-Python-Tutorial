@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{bart}\PYG{o}{.}\PYG{n}{get\PYGZus{}name}\PYG{p}{()}
+\PYG{l+s+s1}{\PYGZsq{}Bart Simpson\PYGZsq{}}
+\end{Verbatim}

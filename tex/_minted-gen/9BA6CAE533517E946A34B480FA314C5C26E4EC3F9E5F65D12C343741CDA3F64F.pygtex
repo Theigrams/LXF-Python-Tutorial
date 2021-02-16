@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 期待输出:}
+\PYG{c+c1}{\PYGZsh{} A --> C}
+\PYG{c+c1}{\PYGZsh{} A --> B}
+\PYG{c+c1}{\PYGZsh{} C --> B}
+\PYG{c+c1}{\PYGZsh{} A --> C}
+\PYG{c+c1}{\PYGZsh{} B --> A}
+\PYG{c+c1}{\PYGZsh{} B --> C}
+\PYG{c+c1}{\PYGZsh{} A --> C}
+\PYG{n}{move}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}C\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

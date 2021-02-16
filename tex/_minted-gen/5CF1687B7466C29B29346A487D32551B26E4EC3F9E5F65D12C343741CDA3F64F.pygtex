@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{nslookup}
+\PYG{n}{Server}\PYG{p}{:}     \PYG{l+m+mf}{192.168}\PYG{o}{.}\PYG{l+m+mf}{19.4}
+\PYG{n}{Address}\PYG{p}{:}    \PYG{l+m+mf}{192.168}\PYG{o}{.}\PYG{l+m+mf}{19.4}
+
+\PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{authoritative} \PYG{n}{answer}\PYG{p}{:}
+\PYG{n}{python}\PYG{o}{.}\PYG{n}{org}  \PYG{n}{mail} \PYG{n}{exchanger} \PYG{o}{=} \PYG{l+m+mi}{50} \PYG{n}{mail}\PYG{o}{.}\PYG{n}{python}\PYG{o}{.}\PYG{n}{org}\PYG{o}{.}
+
+\PYG{n}{Authoritative} \PYG{n}{answers} \PYG{n}{can} \PYG{n}{be} \PYG{n}{found} \PYG{n}{from}\PYG{p}{:}
+\PYG{n}{mail}\PYG{o}{.}\PYG{n}{python}\PYG{o}{.}\PYG{n}{org} \PYG{n}{internet} \PYG{n}{address} \PYG{o}{=} \PYG{l+m+mf}{82.94}\PYG{o}{.}\PYG{l+m+mf}{164.166}
+\PYG{n}{mail}\PYG{o}{.}\PYG{n}{python}\PYG{o}{.}\PYG{n}{org} \PYG{n}{has} \PYG{n}{AAAA} \PYG{n}{address} \PYG{l+m+mi}{2001}\PYG{p}{:}\PYG{l+m+mi}{888}\PYG{p}{:}\PYG{l+m+mi}{2000}\PYG{p}{:}\PYG{n}{d}\PYG{p}{::}\PYG{n}{a6}
+\PYG{n}{Exit} \PYG{n}{code}\PYG{p}{:} \PYG{l+m+mi}{0}
+\end{Verbatim}

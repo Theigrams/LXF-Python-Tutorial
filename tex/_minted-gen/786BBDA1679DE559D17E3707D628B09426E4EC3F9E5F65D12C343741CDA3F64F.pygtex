@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nb}{set} \PYG{n}{q}\PYG{o}{=}\PYG{n}{mx}
+\PYG{n}{python}\PYG{o}{.}\PYG{n}{org}
+\PYG{n}{exit}
+\end{Verbatim}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{...}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{meta} \PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{meta} \PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{link} \PYG{n}{rel}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}apple\PYGZhy{}touch\PYGZhy{}icon\PYGZdq{}} \PYG{n}{sizes}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}57x57\PYGZdq{}} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}http://img4.douban.com/pics/cardkit/launcher/57.png\PYGZdq{}} \PYG{o}{/\PYGZgt{}}
+\PYG{o}{...}
+\end{Verbatim}

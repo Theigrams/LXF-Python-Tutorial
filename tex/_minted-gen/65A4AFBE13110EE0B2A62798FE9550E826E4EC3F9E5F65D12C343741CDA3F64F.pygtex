@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{uname}\PYG{p}{()}
+\PYG{n}{posix}\PYG{o}{.}\PYG{n}{uname\PYGZus{}result}\PYG{p}{(}\PYG{n}{sysname}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Darwin\PYGZsq{}}\PYG{p}{,} \PYG{n}{nodename}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}MichaelMacPro.local\PYGZsq{}}\PYG{p}{,} \PYG{n}{release}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}14.3.0\PYGZsq{}}\PYG{p}{,} \PYG{n}{version}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Darwin Kernel Version 14.3.0: Mon Mar 23 11:59:05 PDT 2015; root:xnu\PYGZhy{}2782.20.48\PYGZti{}5/RELEASE\PYGZus{}X86\PYGZus{}64\PYGZsq{}}\PYG{p}{,} \PYG{n}{machine}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}x86\PYGZus{}64\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

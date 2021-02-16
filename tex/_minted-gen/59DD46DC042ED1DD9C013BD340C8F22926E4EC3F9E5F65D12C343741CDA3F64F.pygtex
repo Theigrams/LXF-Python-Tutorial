@@ -1,0 +1,35 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{html.parser} \PYG{k+kn}{import} \PYG{n}{HTMLParser}
+\PYG{k+kn}{from} \PYG{n+nn}{html.entities} \PYG{k+kn}{import} \PYG{n}{name2codepoint}
+
+\PYG{k}{class} \PYG{n+nc}{MyHTMLParser}\PYG{p}{(}\PYG{n}{HTMLParser}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf}{handle\PYGZus{}starttag}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{tag}\PYG{p}{,} \PYG{n}{attrs}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZgt{}\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{tag}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{handle\PYGZus{}endtag}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{tag}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}/}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZgt{}\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{tag}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{handle\PYGZus{}startendtag}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{tag}\PYG{p}{,} \PYG{n}{attrs}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{/\PYGZgt{}\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{tag}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{handle\PYGZus{}data}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{data}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{data}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{handle\PYGZus{}comment}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{data}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}!\PYGZhy{}\PYGZhy{}\PYGZsq{}}\PYG{p}{,} \PYG{n}{data}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}\PYGZgt{}\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{handle\PYGZus{}entityref}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZam{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{;\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{name}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{handle\PYGZus{}charref}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZam{}\PYGZsh{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{;\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{name}\PYG{p}{)}
+
+\PYG{n}{parser} \PYG{o}{=} \PYG{n}{MyHTMLParser}\PYG{p}{()}
+\PYG{n}{parser}\PYG{o}{.}\PYG{n}{feed}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}\PYGZlt{}html\PYGZgt{}}
+\PYG{l+s+s1}{\PYGZlt{}head\PYGZgt{}\PYGZlt{}/head\PYGZgt{}}
+\PYG{l+s+s1}{\PYGZlt{}body\PYGZgt{}}
+\PYG{l+s+s1}{\PYGZlt{}!\PYGZhy{}\PYGZhy{} test html parser \PYGZhy{}\PYGZhy{}\PYGZgt{}}
+\PYG{l+s+s1}{    \PYGZlt{}p\PYGZgt{}Some \PYGZlt{}a href=}\PYG{l+s+se}{\PYGZbs{}\PYGZdq{}}\PYG{l+s+s1}{\PYGZsh{}}\PYG{l+s+se}{\PYGZbs{}\PYGZdq{}}\PYG{l+s+s1}{\PYGZgt{}html\PYGZlt{}/a\PYGZgt{} HTML tutorial...\PYGZlt{}br\PYGZgt{}END\PYGZlt{}/p\PYGZgt{}}
+\PYG{l+s+s1}{\PYGZlt{}/body\PYGZgt{}\PYGZlt{}/html\PYGZgt{}\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

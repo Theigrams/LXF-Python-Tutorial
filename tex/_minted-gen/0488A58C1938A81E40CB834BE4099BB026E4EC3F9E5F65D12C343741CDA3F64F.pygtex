@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{balance} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{n}{lock} \PYG{o}{=} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{Lock}\PYG{p}{()}
+
+\PYG{k}{def} \PYG{n+nf}{run\PYGZus{}thread}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{100000}\PYG{p}{):}
+
+        \PYG{n}{lock}\PYG{o}{.}\PYG{n}{acquire}\PYG{p}{()}
+        \PYG{k}{try}\PYG{p}{:}
+
+            \PYG{n}{change\PYGZus{}it}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)}
+        \PYG{k}{finally}\PYG{p}{:}
+
+            \PYG{n}{lock}\PYG{o}{.}\PYG{n}{release}\PYG{p}{()}
+\end{Verbatim}

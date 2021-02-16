@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试:}
+\PYG{n}{URL} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}https://query.yahooapis.com/v1/public/yql?q=select\PYGZpc{}20*}\PYG{l+s+si}{\PYGZpc{}20f}\PYG{l+s+s1}{rom\PYGZpc{}20weather.forecast\PYGZpc{}20where\PYGZpc{}20woeid}\PYG{l+s+si}{\PYGZpc{}20\PYGZpc{}}\PYG{l+s+s1}{3D\PYGZpc{}202151330\PYGZam{}format=xml\PYGZsq{}}
+
+\PYG{k}{with} \PYG{n}{request}\PYG{o}{.}\PYG{n}{urlopen}\PYG{p}{(}\PYG{n}{URL}\PYG{p}{,} \PYG{n}{timeout}\PYG{o}{=}\PYG{l+m+mi}{4}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+    \PYG{n}{data} \PYG{o}{=} \PYG{n}{f}\PYG{o}{.}\PYG{n}{read}\PYG{p}{()}
+
+\PYG{n}{result} \PYG{o}{=} \PYG{n}{parseXml}\PYG{p}{(}\PYG{n}{data}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+\PYG{k}{assert} \PYG{n}{result}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}city\PYGZsq{}}\PYG{p}{]} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}Beijing\PYGZsq{}}
+\end{Verbatim}

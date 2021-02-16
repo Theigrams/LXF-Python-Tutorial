@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{math}
+
+\PYG{k}{def} \PYG{n+nf}{move}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{step}\PYG{p}{,} \PYG{n}{angle}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{):}
+    \PYG{n}{nx} \PYG{o}{=} \PYG{n}{x} \PYG{o}{+} \PYG{n}{step} \PYG{o}{*} \PYG{n}{math}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{n}{angle}\PYG{p}{)}
+    \PYG{n}{ny} \PYG{o}{=} \PYG{n}{y} \PYG{o}{\PYGZhy{}} \PYG{n}{step} \PYG{o}{*} \PYG{n}{math}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{n}{angle}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{nx}\PYG{p}{,} \PYG{n}{ny}
+\end{Verbatim}

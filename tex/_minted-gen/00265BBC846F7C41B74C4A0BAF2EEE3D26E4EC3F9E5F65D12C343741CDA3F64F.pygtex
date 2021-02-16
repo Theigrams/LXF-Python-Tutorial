@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试}
+\PYG{k}{if} \PYG{n}{findMinAndMax}\PYG{p}{([])} \PYG{o}{!=} \PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{elif} \PYG{n}{findMinAndMax}\PYG{p}{([}\PYG{l+m+mi}{7}\PYG{p}{])} \PYG{o}{!=} \PYG{p}{(}\PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{elif} \PYG{n}{findMinAndMax}\PYG{p}{([}\PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{])} \PYG{o}{!=} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{elif} \PYG{n}{findMinAndMax}\PYG{p}{([}\PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{])} \PYG{o}{!=} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试成功!\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

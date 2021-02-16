@@ -1,0 +1,100 @@
+\hypertarget{virtualenv}{%
+\subsection{virtualenv}\label{virtualenv}}
+
+在开发 Python 应用程序的时候，系统安装的 Python3
+只有一个版本：3.4。所有第三方的包都会被\texttt{pip}安装到 Python3
+的\texttt{site-packages}目录下。
+
+如果我们要同时开发多个应用程序，那这些应用程序都会共用一个
+Python，就是安装在系统的 Python 3。如果应用 A 需要 jinja 2.7，而应用 B
+需要 jinja 2.6 怎么办？
+
+这种情况下，每个应用可能需要各自拥有一套 ``独立'' 的 Python
+运行环境。virtualenv 就是用来为一个应用创建一套 ``隔离'' 的 Python
+运行环境。
+
+首先，我们用\texttt{pip}安装 virtualenv：
+
+\begin{pythoncode}
+$ pip3 install virtualenv
+\end{pythoncode}
+
+然后，假定我们要开发一个新的项目，需要一套独立的 Python
+运行环境，可以这么做：
+
+第一步，创建目录：
+
+\begin{pythoncode}
+Mac:~ michael$ mkdir myproject
+Mac:~ michael$ cd myproject/
+Mac:myproject michael$
+\end{pythoncode}
+
+第二步，创建一个独立的 Python 运行环境，命名为\texttt{venv}：
+
+\begin{pythoncode}
+Mac:myproject michael$ virtualenv --no-site-packages venv
+Using base prefix '/usr/local/.../Python.framework/Versions/3.4'
+New python executable in venv/bin/python3.4
+Also creating executable in venv/bin/python
+Installing setuptools, pip, wheel...done.
+\end{pythoncode}
+
+命令\texttt{virtualenv}就可以创建一个独立的 Python
+运行环境，我们还加上了参数\texttt{-\/-no-site-packages}，这样，已经安装到系统
+Python
+环境中的所有第三方包都不会复制过来，这样，我们就得到了一个不带任何第三方包的
+``干净'' 的 Python 运行环境。
+
+新建的 Python
+环境被放到当前目录下的\texttt{venv}目录。有了\texttt{venv}这个 Python
+环境，可以用\texttt{source}进入该环境：
+
+\begin{pythoncode}
+Mac:myproject michael$ source venv/bin/activate
+(venv)Mac:myproject michael$
+\end{pythoncode}
+
+注意到命令提示符变了，有个\texttt{(venv)}前缀，表示当前环境是一个名为\texttt{venv}的
+Python 环境。
+
+下面正常安装各种第三方包，并运行\texttt{python}命令：
+
+\begin{pythoncode}
+(venv)Mac:myproject michael$ pip install jinja2
+...
+Successfully installed jinja2-2.7.3 markupsafe-0.23
+(venv)Mac:myproject michael$ python myapp.py
+...
+\end{pythoncode}
+
+在\texttt{venv}环境下，用\texttt{pip}安装的包都被安装到\texttt{venv}这个环境下，系统
+Python
+环境不受任何影响。也就是说，\texttt{venv}环境是专门针对\texttt{myproject}这个应用创建的。
+
+退出当前的\texttt{venv}环境，使用\texttt{deactivate}命令：
+
+\begin{pythoncode}
+(venv)Mac:myproject michael$ deactivate 
+Mac:myproject michael$ 
+\end{pythoncode}
+
+此时就回到了正常的环境，现在\texttt{pip}或\texttt{python}均是在系统
+Python 环境下执行。
+
+完全可以针对每个应用创建独立的 Python 运行环境，这样就可以对每个应用的
+Python 环境进行隔离。
+
+virtualenv 是如何创建 ``独立'' 的 Python
+运行环境的呢？原理很简单，就是把系统 Python 复制一份到 virtualenv
+的环境，用命令\texttt{source\ venv/bin/activate}进入一个 virtualenv
+环境时，virtualenv
+会修改相关环境变量，让命令\texttt{python}和\texttt{pip}均指向当前的
+virtualenv 环境。
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+virtualenv 为应用提供了隔离的 Python
+运行环境，解决了不同应用间多版本的冲突问题。
+

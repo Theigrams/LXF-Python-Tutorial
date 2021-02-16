@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{n}{h1}\PYG{o}{\PYGZgt{}}
+\PYG{n}{hello}
+\PYG{n}{world}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{h1}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

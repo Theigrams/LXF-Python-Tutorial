@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+\PYG{k}{def} \PYG{n+nf}{create\PYGZus{}pool}\PYG{p}{(}\PYG{n}{loop}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kw}\PYG{p}{):}
+    \PYG{n}{logging}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}create database connection pool...\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{global} \PYG{n}{\PYGZus{}\PYGZus{}pool}
+    \PYG{n}{\PYGZus{}\PYGZus{}pool} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{aiomysql}\PYG{o}{.}\PYG{n}{create\PYGZus{}pool}\PYG{p}{(}
+        \PYG{n}{host}\PYG{o}{=}\PYG{n}{kw}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}host\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}localhost\PYGZsq{}}\PYG{p}{),}
+        \PYG{n}{port}\PYG{o}{=}\PYG{n}{kw}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}port\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{3306}\PYG{p}{),}
+        \PYG{n}{user}\PYG{o}{=}\PYG{n}{kw}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}user\PYGZsq{}}\PYG{p}{],}
+        \PYG{n}{password}\PYG{o}{=}\PYG{n}{kw}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}password\PYGZsq{}}\PYG{p}{],}
+        \PYG{n}{db}\PYG{o}{=}\PYG{n}{kw}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}db\PYGZsq{}}\PYG{p}{],}
+        \PYG{n}{charset}\PYG{o}{=}\PYG{n}{kw}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}charset\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}utf8\PYGZsq{}}\PYG{p}{),}
+        \PYG{n}{autocommit}\PYG{o}{=}\PYG{n}{kw}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}autocommit\PYGZsq{}}\PYG{p}{,} \PYG{k+kc}{True}\PYG{p}{),}
+        \PYG{n}{maxsize}\PYG{o}{=}\PYG{n}{kw}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}maxsize\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{),}
+        \PYG{n}{minsize}\PYG{o}{=}\PYG{n}{kw}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}minsize\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{),}
+        \PYG{n}{loop}\PYG{o}{=}\PYG{n}{loop}
+    \PYG{p}{)}
+\end{Verbatim}

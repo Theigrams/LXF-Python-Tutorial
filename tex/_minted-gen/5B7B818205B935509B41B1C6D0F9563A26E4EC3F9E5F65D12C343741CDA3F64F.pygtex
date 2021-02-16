@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{...}
+\PYG{n}{Data}\PYG{p}{:} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}retcode\PYGZdq{}}\PYG{p}{:}\PYG{l+m+mi}{50011015}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}msg\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}u7528\PYGZbs{}u6237\PYGZbs{}u540d\PYGZbs{}u6216\PYGZbs{}u5bc6\PYGZbs{}u7801\PYGZbs{}u9519\PYGZbs{}u8bef}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}data\PYGZdq{}}\PYG{p}{:\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}username\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}example@python.org\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}errline\PYGZdq{}}\PYG{p}{:}\PYG{l+m+mi}{536}\PYG{p}{\PYGZcb{}\PYGZcb{}}
+\end{Verbatim}

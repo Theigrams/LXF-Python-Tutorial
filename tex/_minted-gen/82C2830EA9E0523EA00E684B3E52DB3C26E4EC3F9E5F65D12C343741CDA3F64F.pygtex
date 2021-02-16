@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{int}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}123\PYGZsq{}}\PYG{p}{)}
+\PYG{l+m+mi}{123}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{int}\PYG{p}{(}\PYG{l+m+mf}{12.34}\PYG{p}{)}
+\PYG{l+m+mi}{12}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{float}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}12.34\PYGZsq{}}\PYG{p}{)}
+\PYG{l+m+mf}{12.34}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{str}\PYG{p}{(}\PYG{l+m+mf}{1.23}\PYG{p}{)}
+\PYG{l+s+s1}{\PYGZsq{}1.23\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{str}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)}
+\PYG{l+s+s1}{\PYGZsq{}100\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{bool}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{bool}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\PYG{k+kc}{False}
+\end{Verbatim}

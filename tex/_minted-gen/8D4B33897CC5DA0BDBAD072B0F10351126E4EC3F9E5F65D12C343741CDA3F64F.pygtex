@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{re}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}[\PYGZbs{}s\PYGZbs{},]+\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}a,b, c  d\PYGZsq{}}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}c\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}d\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

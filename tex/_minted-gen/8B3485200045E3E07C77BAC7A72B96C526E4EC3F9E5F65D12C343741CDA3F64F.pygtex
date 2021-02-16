@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{n}{p} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}article\PYGZhy{}meta\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{发表于}\PYG{p}{\PYGZob{}\PYGZob{}} \PYG{n}{blog}\PYG{o}{.}\PYG{n}{created\PYGZus{}at}\PYG{o}{|}\PYG{n}{datetime} \PYG{p}{\PYGZcb{}\PYGZcb{}}\PYG{o}{\PYGZlt{}/}\PYG{n}{p}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

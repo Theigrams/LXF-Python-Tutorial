@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}err.py\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{o+ow}{in} \PYG{n}{foo}
+    \PYG{k}{return} \PYG{l+m+mi}{10} \PYG{o}{/} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}
+\end{Verbatim}

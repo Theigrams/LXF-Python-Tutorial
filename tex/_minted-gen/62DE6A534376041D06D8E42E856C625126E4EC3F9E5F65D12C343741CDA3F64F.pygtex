@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{user}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}id\PYGZsq{}}\PYG{p}{]}
+\PYG{l+m+mi}{123}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{user}\PYG{o}{.}\PYG{n}{id}
+\PYG{l+m+mi}{123}
+\end{Verbatim}

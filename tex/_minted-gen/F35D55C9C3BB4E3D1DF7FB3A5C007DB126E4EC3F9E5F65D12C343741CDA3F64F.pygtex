@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试:}
+\PYG{n}{s} \PYG{o}{=} \PYG{n}{Screen}\PYG{p}{()}
+\PYG{n}{s}\PYG{o}{.}\PYG{n}{width} \PYG{o}{=} \PYG{l+m+mi}{1024}
+\PYG{n}{s}\PYG{o}{.}\PYG{n}{height} \PYG{o}{=} \PYG{l+m+mi}{768}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}resolution =\PYGZsq{}}\PYG{p}{,} \PYG{n}{s}\PYG{o}{.}\PYG{n}{resolution}\PYG{p}{)}
+\PYG{k}{if} \PYG{n}{s}\PYG{o}{.}\PYG{n}{resolution} \PYG{o}{==} \PYG{l+m+mi}{786432}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试通过!\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

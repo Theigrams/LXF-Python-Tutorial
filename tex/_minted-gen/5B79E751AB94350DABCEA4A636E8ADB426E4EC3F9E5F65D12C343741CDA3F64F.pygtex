@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{params} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}key\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}value\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+\PYG{n}{r} \PYG{o}{=} \PYG{n}{requests}\PYG{o}{.}\PYG{n}{post}\PYG{p}{(}\PYG{n}{url}\PYG{p}{,} \PYG{n}{json}\PYG{o}{=}\PYG{n}{params}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} 内部自动序列化为JSON}
+\end{Verbatim}

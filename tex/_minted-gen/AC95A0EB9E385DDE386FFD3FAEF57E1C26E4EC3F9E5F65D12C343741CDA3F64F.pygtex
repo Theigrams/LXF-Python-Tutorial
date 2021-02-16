@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{type}\PYG{p}{(}\PYG{l+m+mi}{123}\PYG{p}{)}
+\PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{err}{\PYGZsq{}}\PYG{n+nc}{int}\PYG{l+s+s1}{\PYGZsq{}\PYGZgt{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{type}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}str\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{err}{\PYGZsq{}}\PYG{n+nc}{str}\PYG{l+s+s1}{\PYGZsq{}\PYGZgt{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{type}\PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{)}
+\PYG{o}{\PYGZlt{}}\PYG{n+nb}{type}\PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{)} \PYG{l+s+s1}{\PYGZsq{}NoneType\PYGZsq{}}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

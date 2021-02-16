@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{add\PYGZus{}route}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{n}{handles}\PYG{o}{.}\PYG{n}{index}\PYG{p}{)}
+\PYG{n}{add\PYGZus{}route}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{n}{handles}\PYG{o}{.}\PYG{n}{blog}\PYG{p}{)}
+\PYG{n}{add\PYGZus{}route}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{n}{handles}\PYG{o}{.}\PYG{n}{create\PYGZus{}comment}\PYG{p}{)}
+\PYG{o}{...}
+\end{Verbatim}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}ABC\PYGZsq{}}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ascii\PYGZsq{}}\PYG{p}{)}
+\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}ABC\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}中文\PYGZsq{}}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)}
+\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xe4\PYGZbs{}xb8\PYGZbs{}xad\PYGZbs{}xe6\PYGZbs{}x96\PYGZbs{}x87}\PYG{l+s+s1}{\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}中文\PYGZsq{}}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ascii\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}\PYGZlt{}stdin\PYGZgt{}\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o+ow}{in} \PYG{o}{\PYGZlt{}}\PYG{n}{module}\PYG{o}{\PYGZgt{}}
+\PYG{n+ne}{UnicodeEncodeError}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}ascii\PYGZsq{}} \PYG{n}{codec} \PYG{n}{can}\PYG{l+s+s1}{\PYGZsq{}t encode characters in position 0\PYGZhy{}1: ordinal not in range(128)}
+\end{Verbatim}

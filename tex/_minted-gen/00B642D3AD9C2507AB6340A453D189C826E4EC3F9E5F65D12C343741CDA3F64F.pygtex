@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{初始值} \PYG{n}{balance} \PYG{o}{=} \PYG{l+m+mi}{0}
+
+\PYG{n}{t1}\PYG{p}{:} \PYG{n}{x1} \PYG{o}{=} \PYG{n}{balance} \PYG{o}{+} \PYG{l+m+mi}{5}
+\PYG{n}{t1}\PYG{p}{:} \PYG{n}{balance} \PYG{o}{=} \PYG{n}{x1}
+\PYG{n}{t1}\PYG{p}{:} \PYG{n}{x1} \PYG{o}{=} \PYG{n}{balance} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{5}
+\PYG{n}{t1}\PYG{p}{:} \PYG{n}{balance} \PYG{o}{=} \PYG{n}{x1}
+
+\PYG{n}{t2}\PYG{p}{:} \PYG{n}{x2} \PYG{o}{=} \PYG{n}{balance} \PYG{o}{+} \PYG{l+m+mi}{8}
+\PYG{n}{t2}\PYG{p}{:} \PYG{n}{balance} \PYG{o}{=} \PYG{n}{x2}
+\PYG{n}{t2}\PYG{p}{:} \PYG{n}{x2} \PYG{o}{=} \PYG{n}{balance} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{8}
+\PYG{n}{t2}\PYG{p}{:} \PYG{n}{balance} \PYG{o}{=} \PYG{n}{x2}
+
+\PYG{n}{结果} \PYG{n}{balance} \PYG{o}{=} \PYG{l+m+mi}{0}
+\end{Verbatim}

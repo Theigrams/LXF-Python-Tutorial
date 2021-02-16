@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{\PYGZus{}RE\PYGZus{}EMAIL} \PYG{o}{=} \PYG{n}{re}\PYG{o}{.}\PYG{n}{compile}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZca{}[a\PYGZhy{}z0\PYGZhy{}9\PYGZbs{}.\PYGZbs{}\PYGZhy{}\PYGZbs{}\PYGZus{}]+\PYGZbs{}@[a\PYGZhy{}z0\PYGZhy{}9\PYGZbs{}\PYGZhy{}\PYGZbs{}\PYGZus{}]+(\PYGZbs{}.[a\PYGZhy{}z0\PYGZhy{}9\PYGZbs{}\PYGZhy{}\PYGZbs{}\PYGZus{}]+)\PYGZob{}1,4\PYGZcb{}\PYGZdl{}\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{\PYGZus{}RE\PYGZus{}SHA1} \PYG{o}{=} \PYG{n}{re}\PYG{o}{.}\PYG{n}{compile}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZca{}[0\PYGZhy{}9a\PYGZhy{}f]}\PYG{l+s+si}{\PYGZob{}40\PYGZcb{}}\PYG{l+s+s1}{\PYGZdl{}\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n+nd}{@post}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/api/users\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{def} \PYG{n+nf}{api\PYGZus{}register\PYGZus{}user}\PYG{p}{(}\PYG{o}{*}\PYG{p}{,} \PYG{n}{email}\PYG{p}{,} \PYG{n}{name}\PYG{p}{,} \PYG{n}{passwd}\PYG{p}{):}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{name} \PYG{o+ow}{or} \PYG{o+ow}{not} \PYG{n}{name}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{():}
+        \PYG{k}{raise} \PYG{n}{APIValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{email} \PYG{o+ow}{or} \PYG{o+ow}{not} \PYG{n}{\PYGZus{}RE\PYGZus{}EMAIL}\PYG{o}{.}\PYG{n}{match}\PYG{p}{(}\PYG{n}{email}\PYG{p}{):}
+        \PYG{k}{raise} \PYG{n}{APIValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}email\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{passwd} \PYG{o+ow}{or} \PYG{o+ow}{not} \PYG{n}{\PYGZus{}RE\PYGZus{}SHA1}\PYG{o}{.}\PYG{n}{match}\PYG{p}{(}\PYG{n}{passwd}\PYG{p}{):}
+        \PYG{k}{raise} \PYG{n}{APIValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}passwd\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{users} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{User}\PYG{o}{.}\PYG{n}{findAll}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}email=?\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{n}{email}\PYG{p}{])}
+    \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{users}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{k}{raise} \PYG{n}{APIError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}register:failed\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}email\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Email is already in use.\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{uid} \PYG{o}{=} \PYG{n}{next\PYGZus{}id}\PYG{p}{()}
+    \PYG{n}{sha1\PYGZus{}passwd} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{:}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{uid}\PYG{p}{,} \PYG{n}{passwd}\PYG{p}{)}
+    \PYG{n}{user} \PYG{o}{=} \PYG{n}{User}\PYG{p}{(}\PYG{n+nb}{id}\PYG{o}{=}\PYG{n}{uid}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{n}{name}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{(),} \PYG{n}{email}\PYG{o}{=}\PYG{n}{email}\PYG{p}{,} \PYG{n}{passwd}\PYG{o}{=}\PYG{n}{hashlib}\PYG{o}{.}\PYG{n}{sha1}\PYG{p}{(}\PYG{n}{sha1\PYGZus{}passwd}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}\PYG{o}{.}\PYG{n}{hexdigest}\PYG{p}{(),} \PYG{n}{image}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}http://www.gravatar.com/avatar/}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{?d=mm\PYGZam{}s=120\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{hashlib}\PYG{o}{.}\PYG{n}{md5}\PYG{p}{(}\PYG{n}{email}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}\PYG{o}{.}\PYG{n}{hexdigest}\PYG{p}{())}
+    \PYG{k}{yield from} \PYG{n}{user}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+
+    \PYG{n}{r} \PYG{o}{=} \PYG{n}{web}\PYG{o}{.}\PYG{n}{Response}\PYG{p}{()}
+    \PYG{n}{r}\PYG{o}{.}\PYG{n}{set\PYGZus{}cookie}\PYG{p}{(}\PYG{n}{COOKIE\PYGZus{}NAME}\PYG{p}{,} \PYG{n}{user2cookie}\PYG{p}{(}\PYG{n}{user}\PYG{p}{,} \PYG{l+m+mi}{86400}\PYG{p}{),} \PYG{n}{max\PYGZus{}age}\PYG{o}{=}\PYG{l+m+mi}{86400}\PYG{p}{,} \PYG{n}{httponly}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+    \PYG{n}{user}\PYG{o}{.}\PYG{n}{passwd} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}******\PYGZsq{}}
+    \PYG{n}{r}\PYG{o}{.}\PYG{n}{content\PYGZus{}type} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}application/json\PYGZsq{}}
+    \PYG{n}{r}\PYG{o}{.}\PYG{n}{body} \PYG{o}{=} \PYG{n}{json}\PYG{o}{.}\PYG{n}{dumps}\PYG{p}{(}\PYG{n}{user}\PYG{p}{,} \PYG{n}{ensure\PYGZus{}ascii}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{r}
+\end{Verbatim}

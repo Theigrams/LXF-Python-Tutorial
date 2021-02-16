@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{key}\PYG{p}{,} \PYG{n}{group} \PYG{o+ow}{in} \PYG{n}{itertools}\PYG{o}{.}\PYG{n}{groupby}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}AaaBBbcCAAa\PYGZsq{}}\PYG{p}{,} \PYG{k}{lambda} \PYG{n}{c}\PYG{p}{:} \PYG{n}{c}\PYG{o}{.}\PYG{n}{upper}\PYG{p}{()):}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{key}\PYG{p}{,} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n}{group}\PYG{p}{))}
+\PYG{o}{...}
+\PYG{n}{A} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{B} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{C} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}c\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}C\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{A} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{struct}\PYG{o}{.}\PYG{n}{unpack}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}ccIIIIIIHH\PYGZsq{}}\PYG{p}{,} \PYG{n}{s}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}\PYG{p}{,} \PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}M\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{691256}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{54}\PYG{p}{,} \PYG{l+m+mi}{40}\PYG{p}{,} \PYG{l+m+mi}{640}\PYG{p}{,} \PYG{l+m+mi}{360}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{24}\PYG{p}{)}
+\end{Verbatim}

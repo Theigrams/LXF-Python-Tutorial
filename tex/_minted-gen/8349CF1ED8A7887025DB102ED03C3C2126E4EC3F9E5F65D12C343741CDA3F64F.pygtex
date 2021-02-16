@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{bart} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bart Simpson\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{59}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{bart}\PYG{o}{.}\PYG{n}{score}
+\PYG{l+m+mi}{59}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{bart}\PYG{o}{.}\PYG{n}{score} \PYG{o}{=} \PYG{l+m+mi}{99}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{bart}\PYG{o}{.}\PYG{n}{score}
+\PYG{l+m+mi}{99}
+\end{Verbatim}

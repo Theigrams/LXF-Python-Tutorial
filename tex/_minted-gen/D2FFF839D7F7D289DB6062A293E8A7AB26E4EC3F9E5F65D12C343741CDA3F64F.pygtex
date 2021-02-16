@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Message}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{MIMEBase}
+   \PYG{o}{+\PYGZhy{}} \PYG{n}{MIMEMultipart}
+   \PYG{o}{+\PYGZhy{}} \PYG{n}{MIMENonMultipart}
+      \PYG{o}{+\PYGZhy{}} \PYG{n}{MIMEMessage}
+      \PYG{o}{+\PYGZhy{}} \PYG{n}{MIMEText}
+      \PYG{o}{+\PYGZhy{}} \PYG{n}{MIMEImage}
+\end{Verbatim}

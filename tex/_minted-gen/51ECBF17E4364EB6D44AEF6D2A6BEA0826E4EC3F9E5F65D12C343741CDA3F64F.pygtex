@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{classmates}\PYG{o}{.}\PYG{n}{pop}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{l+s+s1}{\PYGZsq{}Jack\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{classmates}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Tracy\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

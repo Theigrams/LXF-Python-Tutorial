@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{awesome}\PYG{o}{\PYGZhy{}}\PYG{n}{python3}\PYG{o}{\PYGZhy{}}\PYG{n}{webapp}\PYG{o}{/}  \PYG{o}{\PYGZlt{}}
+\PYG{o}{|}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{backup}\PYG{o}{/}               \PYG{o}{\PYGZlt{}}
+\PYG{o}{|}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{conf}\PYG{o}{/}                 \PYG{o}{\PYGZlt{}}
+\PYG{o}{|}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{dist}\PYG{o}{/}                 \PYG{o}{\PYGZlt{}}
+\PYG{o}{|}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{www}\PYG{o}{/}                  \PYG{o}{\PYGZlt{}}
+\PYG{o}{|}  \PYG{o}{|}
+\PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{static}\PYG{o}{/}            \PYG{o}{\PYGZlt{}}
+\PYG{o}{|}  \PYG{o}{|}
+\PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{templates}\PYG{o}{/}         \PYG{o}{\PYGZlt{}}
+\PYG{o}{|}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{ios}\PYG{o}{/}                  \PYG{o}{\PYGZlt{}}
+\PYG{o}{|}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{LICENSE}               \PYG{o}{\PYGZlt{}}
+\end{Verbatim}

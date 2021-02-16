@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{if} \PYG{n}{age} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{18}\PYG{p}{:}
+    \PYG{k}{pass}
+\end{Verbatim}

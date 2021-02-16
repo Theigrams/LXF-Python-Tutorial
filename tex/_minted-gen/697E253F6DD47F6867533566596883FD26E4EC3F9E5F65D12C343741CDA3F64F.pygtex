@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{School}\PYG{p}{(}\PYG{n}{Base}\PYG{p}{):}
+    \PYG{n}{\PYGZus{}\PYGZus{}tablename\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}school\PYGZsq{}}
+    \PYG{n+nb}{id} \PYG{o}{=} \PYG{o}{...}
+    \PYG{n}{name} \PYG{o}{=} \PYG{o}{...}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{python3}
+\PYG{n}{Python} \PYG{l+m+mf}{3.4}\PYG{o}{.}\PYG{l+m+mi}{3} \PYG{p}{(}\PYG{n}{v3}\PYG{o}{.}\PYG{l+m+mf}{4.3}\PYG{p}{:}\PYG{l+m+mi}{9}\PYG{n}{b73f1c3e601}\PYG{p}{,} \PYG{n}{Feb} \PYG{l+m+mi}{23} \PYG{l+m+mi}{2015}\PYG{p}{,} \PYG{l+m+mi}{02}\PYG{p}{:}\PYG{l+m+mi}{52}\PYG{p}{:}\PYG{l+m+mi}{03}\PYG{p}{)}
+\PYG{p}{[}\PYG{n}{GCC} \PYG{l+m+mf}{4.2}\PYG{o}{.}\PYG{l+m+mi}{1} \PYG{p}{(}\PYG{n}{Apple} \PYG{n}{Inc}\PYG{o}{.} \PYG{n}{build} \PYG{l+m+mi}{5666}\PYG{p}{)} \PYG{p}{(}\PYG{n}{dot} \PYG{l+m+mi}{3}\PYG{p}{)]} \PYG{n}{on} \PYG{n}{darwin}
+\PYG{n}{Type} \PYG{l+s+s2}{\PYGZdq{}help\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}copyright\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}credits\PYGZdq{}} \PYG{o+ow}{or} \PYG{l+s+s2}{\PYGZdq{}license\PYGZdq{}} \PYG{k}{for} \PYG{n}{more} \PYG{n}{information}\PYG{o}{.}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{hello}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}}
+\end{Verbatim}

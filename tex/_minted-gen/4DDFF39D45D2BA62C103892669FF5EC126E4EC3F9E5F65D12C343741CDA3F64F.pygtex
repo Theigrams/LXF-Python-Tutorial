@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试}
+\PYG{n}{bi} \PYG{o}{=} \PYG{n}{bmp\PYGZus{}info}\PYG{p}{(}\PYG{n}{bmp\PYGZus{}data}\PYG{p}{)}
+\PYG{k}{assert} \PYG{n}{bi}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}width\PYGZsq{}}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{28}
+\PYG{k}{assert} \PYG{n}{bi}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}height\PYGZsq{}}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{10}
+\PYG{k}{assert} \PYG{n}{bi}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}color\PYGZsq{}}\PYG{p}{]} \PYG{o}{==} \PYG{l+m+mi}{16}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ok\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s}\PYG{p}{()}
+\PYG{n}{My} \PYG{n}{name} \PYG{o+ow}{is} \PYG{n}{Michael}\PYG{o}{.}
+\end{Verbatim}

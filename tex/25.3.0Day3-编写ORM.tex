@@ -1,0 +1,336 @@
+\hypertarget{day-3---ux7f16ux5199-orm}{%
+\subsection{Day 3 - 编写 ORM}\label{day-3---ux7f16ux5199-orm}}
+
+在一个 Web App
+中，所有数据，包括用户信息、发布的日志、评论等，都存储在数据库中。在
+awesome-python3-webapp 中，我们选择 MySQL 作为数据库。
+
+Web App
+里面有很多地方都要访问数据库。访问数据库需要创建数据库连接、游标对象，然后执行
+SQL
+语句，最后处理异常，清理资源。这些访问数据库的代码如果分散到各个函数中，势必无法维护，也不利于代码复用。
+
+所以，我们要首先把常用的 SELECT、INSERT、UPDATE 和 DELETE
+操作用函数封装起来。
+
+由于 Web 框架使用了基于 asyncio 的
+aiohttp，这是基于协程的异步模型。在协程中，不能调用普通的同步 IO
+操作，因为所有用户都是由一个线程服务的，协程的执行速度必须非常快，才能处理大量用户的请求。而耗时的
+IO 操作不能在协程中以同步的方式调用，否则，等待一个 IO
+操作时，系统无法响应任何其他用户。
+
+这就是异步编程的一个原则：一旦决定使用异步，则系统每一层都必须是异步，``开弓没有回头箭''。
+
+幸运的是\texttt{aiomysql}为 MySQL 数据库提供了异步 IO 的驱动。
+
+\hypertarget{ux521bux5efaux8fdeux63a5ux6c60}{%
+\subsubsection{创建连接池}\label{ux521bux5efaux8fdeux63a5ux6c60}}
+
+我们需要创建一个全局的连接池，每个 HTTP
+请求都可以从连接池中直接获取数据库连接。使用连接池的好处是不必频繁地打开和关闭数据库连接，而是能复用就尽量复用。
+
+连接池由全局变量\texttt{\_\_pool}存储，缺省情况下将编码设置为\texttt{utf8}，自动提交事务：
+
+\begin{pythoncode}
+@asyncio.coroutine
+def create_pool(loop, **kw):
+    logging.info('create database connection pool...')
+    global __pool
+    __pool = yield from aiomysql.create_pool(
+        host=kw.get('host', 'localhost'),
+        port=kw.get('port', 3306),
+        user=kw['user'],
+        password=kw['password'],
+        db=kw['db'],
+        charset=kw.get('charset', 'utf8'),
+        autocommit=kw.get('autocommit', True),
+        maxsize=kw.get('maxsize', 10),
+        minsize=kw.get('minsize', 1),
+        loop=loop
+    )
+\end{pythoncode}
+
+\hypertarget{select}{%
+\subsubsection{Select}\label{select}}
+
+要执行 SELECT 语句，我们用\texttt{select}函数执行，需要传入 SQL 语句和
+SQL 参数：
+
+\begin{pythoncode}
+@asyncio.coroutine
+def select(sql, args, size=None):
+    log(sql, args)
+    global __pool
+    with (yield from __pool) as conn:
+        cur = yield from conn.cursor(aiomysql.DictCursor)
+        yield from cur.execute(sql.replace('?', '%s'), args or ())
+        if size:
+            rs = yield from cur.fetchmany(size)
+        else:
+            rs = yield from cur.fetchall()
+        yield from cur.close()
+        logging.info('rows returned: %s' % len(rs))
+        return rs
+\end{pythoncode}
+
+SQL 语句的占位符是\texttt{?}，而 MySQL
+的占位符是\texttt{\%s}，\texttt{select()}函数在内部自动替换。注意要始终坚持使用带参数的
+SQL，而不是自己拼接 SQL 字符串，这样可以防止 SQL 注入攻击。
+
+注意到\texttt{yield\ from}将调用一个子协程（也就是在一个协程中调用另一个协程）并直接获得子协程的返回结果。
+
+如果传入\texttt{size}参数，就通过\texttt{fetchmany()}获取最多指定数量的记录，否则，通过\texttt{fetchall()}获取所有记录。
+
+\hypertarget{insert-update-delete}{%
+\subsubsection{Insert, Update, Delete}\label{insert-update-delete}}
+
+要执行 INSERT、UPDATE、DELETE
+语句，可以定义一个通用的\texttt{execute()}函数，因为这 3 种 SQL
+的执行都需要相同的参数，以及返回一个整数表示影响的行数：
+
+\begin{pythoncode}
+@asyncio.coroutine
+def execute(sql, args):
+    log(sql)
+    with (yield from __pool) as conn:
+        try:
+            cur = yield from conn.cursor()
+            yield from cur.execute(sql.replace('?', '%s'), args)
+            affected = cur.rowcount
+            yield from cur.close()
+        except BaseException as e:
+            raise
+        return affected
+\end{pythoncode}
+
+\texttt{execute()}函数和\texttt{select()}函数所不同的是，cursor
+对象不返回结果集，而是通过\texttt{rowcount}返回结果数。
+
+\hypertarget{orm}{%
+\subsubsection{ORM}\label{orm}}
+
+有了基本的\texttt{select()}和\texttt{execute()}函数，我们就可以开始编写一个简单的
+ORM 了。
+
+设计 ORM 需要从上层调用者角度来设计。
+
+我们先考虑如何定义一个\texttt{User}对象，然后把数据库表\texttt{users}和它关联起来。
+
+\begin{pythoncode}
+from orm import Model, StringField, IntegerField
+
+class User(Model):
+    __table__ = 'users'
+
+    id = IntegerField(primary_key=True)
+    name = StringField()
+\end{pythoncode}
+
+注意到定义在\texttt{User}类中的\texttt{\_\_table\_\_}、\texttt{id}和\texttt{name}是类的属性，不是实例的属性。所以，在类级别上定义的属性用来描述\texttt{User}对象和表的映射关系，而实例属性必须通过\texttt{\_\_init\_\_()}方法去初始化，所以两者互不干扰：
+
+\begin{pythoncode}
+# 创建实例:
+user = User(id=123, name='Michael')
+# 存入数据库:
+user.insert()
+# 查询所有User对象:
+users = User.findAll()
+\end{pythoncode}
+
+\hypertarget{ux5b9aux4e49-model}{%
+\subsubsection{定义 Model}\label{ux5b9aux4e49-model}}
+
+首先要定义的是所有 ORM 映射的基类\texttt{Model}：
+
+\begin{pythoncode}
+class Model(dict, metaclass=ModelMetaclass):
+
+    def __init__(self, **kw):
+        super(Model, self).__init__(**kw)
+
+    def __getattr__(self, key):
+        try:
+            return self[key]
+        except KeyError:
+            raise AttributeError(r"'Model' object has no attribute '%s'" % key)
+
+    def __setattr__(self, key, value):
+        self[key] = value
+
+    def getValue(self, key):
+        return getattr(self, key, None)
+
+    def getValueOrDefault(self, key):
+        value = getattr(self, key, None)
+        if value is None:
+            field = self.__mappings__[key]
+            if field.default is not None:
+                value = field.default() if callable(field.default) else field.default
+                logging.debug('using default value for %s: %s' % (key, str(value)))
+                setattr(self, key, value)
+        return value
+\end{pythoncode}
+
+\texttt{Model}从\texttt{dict}继承，所以具备所有\texttt{dict}的功能，同时又实现了特殊方法\texttt{\_\_getattr\_\_()}和\texttt{\_\_setattr\_\_()}，因此又可以像引用普通字段那样写：
+
+\begin{pythoncode}
+>>> user['id']
+123
+>>> user.id
+123
+\end{pythoncode}
+
+以及\texttt{Field}和各种\texttt{Field}子类：
+
+\begin{pythoncode}
+class Field(object):
+
+    def __init__(self, name, column_type, primary_key, default):
+        self.name = name
+        self.column_type = column_type
+        self.primary_key = primary_key
+        self.default = default
+
+    def __str__(self):
+        return '<%s, %s:%s>' % (self.__class__.__name__, self.column_type, self.name)
+\end{pythoncode}
+
+映射\texttt{varchar}的\texttt{StringField}：
+
+\begin{pythoncode}
+class StringField(Field):
+
+    def __init__(self, name=None, primary_key=False, default=None, ddl='varchar(100)'):
+        super().__init__(name, ddl, primary_key, default)
+\end{pythoncode}
+
+注意到\texttt{Model}只是一个基类，如何将具体的子类如\texttt{User}的映射信息读取出来呢？答案就是通过
+metaclass：\texttt{ModelMetaclass}：
+
+\begin{pythoncode}
+class ModelMetaclass(type):
+
+    def __new__(cls, name, bases, attrs):
+        
+        if name=='Model':
+            return type.__new__(cls, name, bases, attrs)
+        
+        tableName = attrs.get('__table__', None) or name
+        logging.info('found model: %s (table: %s)' % (name, tableName))
+        
+        mappings = dict()
+        fields = []
+        primaryKey = None
+        for k, v in attrs.items():
+            if isinstance(v, Field):
+                logging.info('  found mapping: %s ==> %s' % (k, v))
+                mappings[k] = v
+                if v.primary_key:
+                    
+                    if primaryKey:
+                        raise RuntimeError('Duplicate primary key for field: %s' % k)
+                    primaryKey = k
+                else:
+                    fields.append(k)
+        if not primaryKey:
+            raise RuntimeError('Primary key not found.')
+        for k in mappings.keys():
+            attrs.pop(k)
+        escaped_fields = list(map(lambda f: '`%s`' % f, fields))
+        attrs['__mappings__'] = mappings 
+        attrs['__table__'] = tableName
+        attrs['__primary_key__'] = primaryKey 
+        attrs['__fields__'] = fields 
+        
+        attrs['__select__'] = 'select `%s`, %s from `%s`' % (primaryKey, ', '.join(escaped_fields), tableName)
+        attrs['__insert__'] = 'insert into `%s` (%s, `%s`) values (%s)' % (tableName, ', '.join(escaped_fields), primaryKey, create_args_string(len(escaped_fields) + 1))
+        attrs['__update__'] = 'update `%s` set %s where `%s`=?' % (tableName, ', '.join(map(lambda f: '`%s`=?' % (mappings.get(f).name or f), fields)), primaryKey)
+        attrs['__delete__'] = 'delete from `%s` where `%s`=?' % (tableName, primaryKey)
+        return type.__new__(cls, name, bases, attrs)
+\end{pythoncode}
+
+这样，任何继承自 Model 的类（比如 User），会自动通过 ModelMetaclass
+扫描映射关系，并存储到自身的类属性如\texttt{\_\_table\_\_}、\texttt{\_\_mappings\_\_}中。
+
+然后，我们往 Model 类添加 class 方法，就可以让所有子类调用 class 方法：
+
+\begin{pythoncode}
+class Model(dict):
+
+    ...
+
+    @classmethod
+    @asyncio.coroutine
+    def find(cls, pk):
+        ' find object by primary key. '
+        rs = yield from select('%s where `%s`=?' % (cls.__select__, cls.__primary_key__), [pk], 1)
+        if len(rs) == 0:
+            return None
+        return cls(**rs[0])
+\end{pythoncode}
+
+User 类现在就可以通过类方法实现主键查找：
+
+\begin{pythoncode}
+user = yield from User.find('123')
+\end{pythoncode}
+
+往 Model 类添加实例方法，就可以让所有子类调用实例方法：
+
+\begin{pythoncode}
+class Model(dict):
+
+    ...
+
+    @asyncio.coroutine
+    def save(self):
+        args = list(map(self.getValueOrDefault, self.__fields__))
+        args.append(self.getValueOrDefault(self.__primary_key__))
+        rows = yield from execute(self.__insert__, args)
+        if rows != 1:
+            logging.warn('failed to insert record: affected rows: %s' % rows)
+\end{pythoncode}
+
+这样，就可以把一个 User 实例存入数据库：
+
+\begin{pythoncode}
+user = User(id=123, name='Michael')
+yield from user.save()
+\end{pythoncode}
+
+最后一步是完善 ORM，对于查找，我们可以实现以下方法：
+
+\begin{itemize}
+\item
+  findAll() - 根据 WHERE 条件查找；
+\item
+  findNumber() - 根据 WHERE
+  条件查找，但返回的是整数，适用于\texttt{select\ count(*)}类型的 SQL。
+\end{itemize}
+
+以及\texttt{update()}和\texttt{remove()}方法。
+
+所有这些方法都必须用\texttt{@asyncio.coroutine}装饰，变成一个协程。
+
+调用时需要特别注意：
+
+\begin{pythoncode}
+user.save()
+\end{pythoncode}
+
+没有任何效果，因为调用\texttt{save()}仅仅是创建了一个协程，并没有执行它。一定要用：
+
+\begin{pythoncode}
+yield from user.save()
+\end{pythoncode}
+
+才真正执行了 INSERT 操作。
+
+最后看看我们实现的 ORM 模块一共多少行代码？累计不到 300 多行。用 Python
+写一个 ORM 是不是很容易呢？
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/awesome-python3-webapp/tree/day-03}{day-03}
+

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{start\PYGZus{}response}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}200 OK\PYGZsq{}}\PYG{p}{,} \PYG{p}{[(}\PYG{l+s+s1}{\PYGZsq{}Content\PYGZhy{}Type\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}text/html\PYGZsq{}}\PYG{p}{)])}
+\end{Verbatim}

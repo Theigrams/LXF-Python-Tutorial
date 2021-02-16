@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{person}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Jack\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{24}\PYG{p}{,} \PYG{n}{job}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Engineer\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{Jack} \PYG{l+m+mi}{24} \PYG{n}{Beijing} \PYG{n}{Engineer}
+\end{Verbatim}

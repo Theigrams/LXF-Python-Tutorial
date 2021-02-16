@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{100}\PYG{o}{+}\PYG{l+m+mi}{200}
+\PYG{l+m+mi}{300}
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{block} \PYG{n}{meta} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}} \PYG{o}{...} \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endblock} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/api/users\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{def} \PYG{n+nf}{api\PYGZus{}get\PYGZus{}users}\PYG{p}{(}\PYG{o}{*}\PYG{p}{,} \PYG{n}{page}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{):}
+    \PYG{n}{page\PYGZus{}index} \PYG{o}{=} \PYG{n}{get\PYGZus{}page\PYGZus{}index}\PYG{p}{(}\PYG{n}{page}\PYG{p}{)}
+    \PYG{n}{num} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{User}\PYG{o}{.}\PYG{n}{findNumber}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}count(id)\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{p} \PYG{o}{=} \PYG{n}{Page}\PYG{p}{(}\PYG{n}{num}\PYG{p}{,} \PYG{n}{page\PYGZus{}index}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{num} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{k}{return} \PYG{n+nb}{dict}\PYG{p}{(}\PYG{n}{page}\PYG{o}{=}\PYG{n}{p}\PYG{p}{,} \PYG{n}{users}\PYG{o}{=}\PYG{p}{())}
+    \PYG{n}{users} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{User}\PYG{o}{.}\PYG{n}{findAll}\PYG{p}{(}\PYG{n}{orderBy}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}created\PYGZus{}at desc\PYGZsq{}}\PYG{p}{,} \PYG{n}{limit}\PYG{o}{=}\PYG{p}{(}\PYG{n}{p}\PYG{o}{.}\PYG{n}{offset}\PYG{p}{,} \PYG{n}{p}\PYG{o}{.}\PYG{n}{limit}\PYG{p}{))}
+    \PYG{k}{for} \PYG{n}{u} \PYG{o+ow}{in} \PYG{n}{users}\PYG{p}{:}
+        \PYG{n}{u}\PYG{o}{.}\PYG{n}{passwd} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}******\PYGZsq{}}
+    \PYG{k}{return} \PYG{n+nb}{dict}\PYG{p}{(}\PYG{n}{page}\PYG{o}{=}\PYG{n}{p}\PYG{p}{,} \PYG{n}{users}\PYG{o}{=}\PYG{n}{users}\PYG{p}{)}
+\end{Verbatim}

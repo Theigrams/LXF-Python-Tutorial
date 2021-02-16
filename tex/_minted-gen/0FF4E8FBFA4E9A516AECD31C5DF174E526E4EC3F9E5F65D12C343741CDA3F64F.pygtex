@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{int2}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{base}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{base}\PYG{p}{)}
+\end{Verbatim}

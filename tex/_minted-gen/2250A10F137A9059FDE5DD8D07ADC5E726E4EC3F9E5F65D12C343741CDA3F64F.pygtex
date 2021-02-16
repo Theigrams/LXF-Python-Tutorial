@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{map}\PYG{p}{(}\PYG{n+nb}{str}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{]))}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}2\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}3\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}4\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}5\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}6\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}7\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}8\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}9\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

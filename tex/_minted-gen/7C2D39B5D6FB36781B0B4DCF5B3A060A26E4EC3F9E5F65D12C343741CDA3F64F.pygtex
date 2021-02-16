@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} -*- coding: utf-8 -*-}
+
+\PYG{k+kn}{import} \PYG{n+nn}{math}
+
+\PYG{k}{def} \PYG{n+nf}{quadratic}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{c}\PYG{p}{):}
+\end{Verbatim}

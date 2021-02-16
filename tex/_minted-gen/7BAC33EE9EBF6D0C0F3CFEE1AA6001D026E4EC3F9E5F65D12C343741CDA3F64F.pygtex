@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{class} \PYG{n+nc}{GraduateStudent}\PYG{p}{(}\PYG{n}{Student}\PYG{p}{):}
+\PYG{o}{...}     \PYG{k}{pass}
+\PYG{o}{...}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{g} \PYG{o}{=} \PYG{n}{GraduateStudent}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{g}\PYG{o}{.}\PYG{n}{score} \PYG{o}{=} \PYG{l+m+mi}{9999}
+\end{Verbatim}

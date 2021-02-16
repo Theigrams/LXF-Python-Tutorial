@@ -1,0 +1,167 @@
+\hypertarget{ux6587ux4ef6ux8bfbux5199}{%
+\subsection{文件读写}\label{ux6587ux4ef6ux8bfbux5199}}
+
+读写文件是最常见的 IO 操作。Python 内置了读写文件的函数，用法和 C
+是兼容的。
+
+读写文件前，我们先必须了解一下，在磁盘上读写文件的功能都是由操作系统提供的，现代操作系统不允许普通的程序直接操作磁盘，所以，读写文件就是请求操作系统打开一个文件对象（通常称为文件描述符），然后，通过操作系统提供的接口从这个文件对象中读取数据（读文件），或者把数据写入这个文件对象（写文件）。
+
+\hypertarget{ux8bfbux6587ux4ef6}{%
+\subsubsection{读文件}\label{ux8bfbux6587ux4ef6}}
+
+要以读文件的模式打开一个文件对象，使用 Python
+内置的\texttt{open()}函数，传入文件名和标示符：
+
+\begin{pythoncode}
+>>> f = open('/Users/michael/test.txt', 'r')
+\end{pythoncode}
+
+标示符'r'表示读，这样，我们就成功地打开了一个文件。
+
+如果文件不存在，\texttt{open()}函数就会抛出一个\texttt{IOError}的错误，并且给出错误码和详细的信息告诉你文件不存在：
+
+\begin{pythoncode}
+>>> f=open('/Users/michael/notfound.txt', 'r')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/michael/notfound.txt'
+\end{pythoncode}
+
+如果文件打开成功，接下来，调用\texttt{read()}方法可以一次读取文件的全部内容，Python
+把内容读到内存，用一个\texttt{str}对象表示：
+
+\begin{pythoncode}
+>>> f.read()
+'Hello, world!'
+\end{pythoncode}
+
+最后一步是调用\texttt{close()}方法关闭文件。文件使用完毕后必须关闭，因为文件对象会占用操作系统的资源，并且操作系统同一时间能打开的文件数量也是有限的：
+
+\begin{pythoncode}
+>>> f.close()
+\end{pythoncode}
+
+由于文件读写时都有可能产生\texttt{IOError}，一旦出错，后面的\texttt{f.close()}就不会调用。所以，为了保证无论是否出错都能正确地关闭文件，我们可以使用\texttt{try\ ...\ finally}来实现：
+
+\begin{pythoncode}
+try:
+    f = open('/path/to/file', 'r')
+    print(f.read())
+finally:
+    if f:
+        f.close()
+\end{pythoncode}
+
+但是每次都这么写实在太繁琐，所以，Python
+引入了\texttt{with}语句来自动帮我们调用\texttt{close()}方法：
+
+\begin{pythoncode}
+with open('/path/to/file', 'r') as f:
+    print(f.read())
+\end{pythoncode}
+
+这和前面的\texttt{try\ ...\ finally}是一样的，但是代码更佳简洁，并且不必调用\texttt{f.close()}方法。
+
+调用\texttt{read()}会一次性读取文件的全部内容，如果文件有
+10G，内存就爆了，所以，要保险起见，可以反复调用\texttt{read(size)}方法，每次最多读取
+size
+个字节的内容。另外，调用\texttt{readline()}可以每次读取一行内容，调用\texttt{readlines()}一次读取所有内容并按行返回\texttt{list}。因此，要根据需要决定怎么调用。
+
+如果文件很小，\texttt{read()}一次性读取最方便；如果不能确定文件大小，反复调用\texttt{read(size)}比较保险；如果是配置文件，调用\texttt{readlines()}最方便：
+
+\begin{pythoncode}
+for line in f.readlines():
+    print(line.strip()) 
+\end{pythoncode}
+
+\hypertarget{file-like-object}{%
+\subsubsection{file-like Object}\label{file-like-object}}
+
+像\texttt{open()}函数返回的这种有个\texttt{read()}方法的对象，在 Python
+中统称为 file-like Object。除了 file
+外，还可以是内存的字节流，网络流，自定义流等等。file-like Object
+不要求从特定类继承，只要写个\texttt{read()}方法就行。
+
+\texttt{StringIO}就是在内存中创建的 file-like Object，常用作临时缓冲。
+
+\hypertarget{ux4e8cux8fdbux5236ux6587ux4ef6}{%
+\subsubsection{二进制文件}\label{ux4e8cux8fdbux5236ux6587ux4ef6}}
+
+前面讲的默认都是读取文本文件，并且是 UTF-8
+编码的文本文件。要读取二进制文件，比如图片、视频等等，用\texttt{\textquotesingle{}rb\textquotesingle{}}模式打开文件即可：
+
+\begin{pythoncode}
+>>> f = open('/Users/michael/test.jpg', 'rb')
+>>> f.read()
+b'\xff\xd8\xff\xe1\x00\x18Exif\x00\x00...' 
+\end{pythoncode}
+
+\hypertarget{ux5b57ux7b26ux7f16ux7801}{%
+\subsubsection{字符编码}\label{ux5b57ux7b26ux7f16ux7801}}
+
+要读取非 UTF-8
+编码的文本文件，需要给\texttt{open()}函数传入\texttt{encoding}参数，例如，读取
+GBK 编码的文件：
+
+\begin{pythoncode}
+>>> f = open('/Users/michael/gbk.txt', 'r', encoding='gbk')
+>>> f.read()
+'测试'
+\end{pythoncode}
+
+遇到有些编码不规范的文件，你可能会遇到\texttt{UnicodeDecodeError}，因为在文本文件中可能夹杂了一些非法编码的字符。遇到这种情况，\texttt{open()}函数还接收一个\texttt{errors}参数，表示如果遇到编码错误后如何处理。最简单的方式是直接忽略：
+
+\begin{pythoncode}
+>>> f = open('/Users/michael/gbk.txt', 'r', encoding='gbk', errors='ignore')
+\end{pythoncode}
+
+\hypertarget{ux5199ux6587ux4ef6}{%
+\subsubsection{写文件}\label{ux5199ux6587ux4ef6}}
+
+写文件和读文件是一样的，唯一区别是调用\texttt{open()}函数时，传入标识符\texttt{\textquotesingle{}w\textquotesingle{}}或者\texttt{\textquotesingle{}wb\textquotesingle{}}表示写文本文件或写二进制文件：
+
+\begin{pythoncode}
+>>> f = open('/Users/michael/test.txt', 'w')
+>>> f.write('Hello, world!')
+>>> f.close()
+\end{pythoncode}
+
+你可以反复调用\texttt{write()}来写入文件，但是务必要调用\texttt{f.close()}来关闭文件。当我们写文件时，操作系统往往不会立刻把数据写入磁盘，而是放到内存缓存起来，空闲的时候再慢慢写入。只有调用\texttt{close()}方法时，操作系统才保证把没有写入的数据全部写入磁盘。忘记调用\texttt{close()}的后果是数据可能只写了一部分到磁盘，剩下的丢失了。所以，还是用\texttt{with}语句来得保险：
+
+\begin{pythoncode}
+with open('/Users/michael/test.txt', 'w') as f:
+    f.write('Hello, world!')
+\end{pythoncode}
+
+要写入特定编码的文本文件，请给\texttt{open()}函数传入\texttt{encoding}参数，将字符串自动转换成指定编码。
+
+细心的童鞋会发现，以\texttt{\textquotesingle{}w\textquotesingle{}}模式写入文件时，如果文件已存在，会直接覆盖（相当于删掉后新写入一个文件）。如果我们希望追加到文件末尾怎么办？可以传入\texttt{\textquotesingle{}a\textquotesingle{}}以追加（append）模式写入。
+
+所有模式的定义及含义可以参考 Python
+的\href{https://docs.python.org/3/library/functions.html\#open}{官方文档}。
+
+\hypertarget{ux7ec3ux4e60}{%
+\subsubsection{练习}\label{ux7ec3ux4e60}}
+
+请将本地一个文本文件读为一个 str 并打印出来：
+
+\begin{pythoncode}
+# -*- coding: utf-8 -*-
+\end{pythoncode}
+
+\begin{pythoncode}
+# 运行代码观察结果
+\end{pythoncode}
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+在 Python
+中，文件读写是通过\texttt{open()}函数打开的文件对象完成的。使用\texttt{with}语句操作文件
+IO 是个好习惯。
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/learn-python3/tree/master/samples/io/with_file.py}{with\_file.py}
+

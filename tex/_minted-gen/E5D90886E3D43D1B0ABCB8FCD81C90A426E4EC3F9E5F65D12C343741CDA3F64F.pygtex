@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nb}{type}\PYG{p}{:} \PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{err}{\PYGZsq{}}\PYG{n+nc}{\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{User}\PYG{l+s+s1}{\PYGZsq{}\PYGZgt{}}
+\PYG{n}{name}\PYG{p}{:} \PYG{n}{Bob}
+\end{Verbatim}

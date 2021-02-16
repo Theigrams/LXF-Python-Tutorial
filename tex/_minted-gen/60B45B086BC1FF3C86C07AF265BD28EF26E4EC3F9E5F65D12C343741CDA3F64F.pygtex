@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{p}\PYG{p}{,} \PYG{n}{Point}\PYG{p}{)}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{p}\PYG{p}{,} \PYG{n+nb}{tuple}\PYG{p}{)}
+\PYG{k+kc}{True}
+\end{Verbatim}

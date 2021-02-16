@@ -1,0 +1,235 @@
+\hypertarget{day-5---ux7f16ux5199-web-ux6846ux67b6}{%
+\subsection{Day 5 - 编写 Web
+框架}\label{day-5---ux7f16ux5199-web-ux6846ux67b6}}
+
+在正式开始 Web 开发前，我们需要编写一个 Web 框架。
+
+\texttt{aiohttp}已经是一个 Web 框架了，为什么我们还需要自己封装一个？
+
+原因是从使用者的角度来说，\texttt{aiohttp}相对比较底层，编写一个 URL
+的处理函数需要这么几步：
+
+第一步，编写一个用\texttt{@asyncio.coroutine}装饰的函数：
+
+\begin{pythoncode}
+@asyncio.coroutine
+def handle_url_xxx(request):
+    pass
+\end{pythoncode}
+
+第二步，传入的参数需要自己从\texttt{request}中获取：
+
+\begin{pythoncode}
+url_param = request.match_info['key']
+query_params = parse_qs(request.query_string)
+\end{pythoncode}
+
+最后，需要自己构造\texttt{Response}对象：
+
+\begin{pythoncode}
+text = render('template', data)
+return web.Response(text.encode('utf-8'))
+\end{pythoncode}
+
+这些重复的工作可以由框架完成。例如，处理带参数的
+URL\texttt{/blog/\{id\}}可以这么写：
+
+\begin{pythoncode}
+@get('/blog/{id}')
+def get_blog(id):
+    pass
+\end{pythoncode}
+
+处理\texttt{query\_string}参数可以通过关键字参数\texttt{**kw}或者命名关键字参数接收：
+
+\begin{pythoncode}
+@get('/api/comments')
+def api_comments(*, page='1'):
+    pass
+\end{pythoncode}
+
+对于函数的返回值，不一定是\texttt{web.Response}对象，可以是\texttt{str}、\texttt{bytes}或\texttt{dict}。
+
+如果希望渲染模板，我们可以这么返回一个\texttt{dict}：
+
+\begin{pythoncode}
+return {
+    '__template__': 'index.html',
+    'data': '...'
+}
+\end{pythoncode}
+
+因此，Web
+框架的设计是完全从使用者出发，目的是让使用者编写尽可能少的代码。
+
+编写简单的函数而非引入\texttt{request}和\texttt{web.Response}还有一个额外的好处，就是可以单独测试，否则，需要模拟一个\texttt{request}才能测试。
+
+\hypertarget{get-ux548c-post}{%
+\subsubsection{@get 和 @post}\label{get-ux548c-post}}
+
+要把一个函数映射为一个 URL 处理函数，我们先定义\texttt{@get()}：
+
+\begin{pythoncode}
+def get(path):
+    '''
+    Define decorator @get('/path')
+    '''
+    def decorator(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kw):
+            return func(*args, **kw)
+        wrapper.__method__ = 'GET'
+        wrapper.__route__ = path
+        return wrapper
+    return decorator
+\end{pythoncode}
+
+这样，一个函数通过\texttt{@get()}的装饰就附带了 URL 信息。
+
+\texttt{@post}与\texttt{@get}定义类似。
+
+\hypertarget{ux5b9aux4e49-requesthandler}{%
+\subsubsection{定义 RequestHandler}\label{ux5b9aux4e49-requesthandler}}
+
+URL
+处理函数不一定是一个\texttt{coroutine}，因此我们用\texttt{RequestHandler()}来封装一个
+URL 处理函数。
+
+\texttt{RequestHandler}是一个类，由于定义了\texttt{\_\_call\_\_()}方法，因此可以将其实例视为函数。
+
+\texttt{RequestHandler}目的就是从 URL
+函数中分析其需要接收的参数，从\texttt{request}中获取必要的参数，调用 URL
+函数，然后把结果转换为\texttt{web.Response}对象，这样，就完全符合\texttt{aiohttp}框架的要求：
+
+\begin{pythoncode}
+class RequestHandler(object):
+
+    def __init__(self, app, fn):
+        self._app = app
+        self._func = fn
+        ...
+
+    @asyncio.coroutine
+    def __call__(self, request):
+        kw = ... 获取参数
+        r = yield from self._func(**kw)
+        return r
+\end{pythoncode}
+
+再编写一个\texttt{add\_route}函数，用来注册一个 URL 处理函数：
+
+\begin{pythoncode}
+def add_route(app, fn):
+    method = getattr(fn, '__method__', None)
+    path = getattr(fn, '__route__', None)
+    if path is None or method is None:
+        raise ValueError('@get or @post not defined in %s.' % str(fn))
+    if not asyncio.iscoroutinefunction(fn) and not inspect.isgeneratorfunction(fn):
+        fn = asyncio.coroutine(fn)
+    logging.info('add route %s %s => %s(%s)' % (method, path, fn.__name__, ', '.join(inspect.signature(fn).parameters.keys())))
+    app.router.add_route(method, path, RequestHandler(app, fn))
+\end{pythoncode}
+
+最后一步，把很多次\texttt{add\_route()}注册的调用：
+
+\begin{pythoncode}
+add_route(app, handles.index)
+add_route(app, handles.blog)
+add_route(app, handles.create_comment)
+...
+\end{pythoncode}
+
+变成自动扫描：
+
+\begin{pythoncode}
+# 自动把handler模块的所有符合条件的函数注册了:
+add_routes(app, 'handlers')
+\end{pythoncode}
+
+\texttt{add\_routes()}定义如下：
+
+\begin{pythoncode}
+def add_routes(app, module_name):
+    n = module_name.rfind('.')
+    if n == (-1):
+        mod = __import__(module_name, globals(), locals())
+    else:
+        name = module_name[n+1:]
+        mod = getattr(__import__(module_name[:n], globals(), locals(), [name]), name)
+    for attr in dir(mod):
+        if attr.startswith('_'):
+            continue
+        fn = getattr(mod, attr)
+        if callable(fn):
+            method = getattr(fn, '__method__', None)
+            path = getattr(fn, '__route__', None)
+            if method and path:
+                add_route(app, fn)
+\end{pythoncode}
+
+最后，在\texttt{app.py}中加入\texttt{middleware}、\texttt{jinja2}模板和自注册的支持：
+
+\begin{pythoncode}
+app = web.Application(loop=loop, middlewares=[
+    logger_factory, response_factory
+])
+init_jinja2(app, filters=dict(datetime=datetime_filter))
+add_routes(app, 'handlers')
+add_static(app)
+\end{pythoncode}
+
+\hypertarget{middleware}{%
+\subsubsection{middleware}\label{middleware}}
+
+\texttt{middleware}是一种拦截器，一个 URL
+在被某个函数处理前，可以经过一系列的\texttt{middleware}的处理。
+
+一个\texttt{middleware}可以改变 URL
+的输入、输出，甚至可以决定不继续处理而直接返回。middleware
+的用处就在于把通用的功能从每个 URL
+处理函数中拿出来，集中放到一个地方。例如，一个记录 URL
+日志的\texttt{logger}可以简单定义如下：
+
+\begin{pythoncode}
+@asyncio.coroutine
+def logger_factory(app, handler):
+    @asyncio.coroutine
+    def logger(request):
+        
+        logging.info('Request: %s %s' % (request.method, request.path))
+        
+        return (yield from handler(request))
+    return logger
+\end{pythoncode}
+
+而\texttt{response}这个\texttt{middleware}把返回值转换为\texttt{web.Response}对象再返回，以保证满足\texttt{aiohttp}的要求：
+
+\begin{pythoncode}
+@asyncio.coroutine
+def response_factory(app, handler):
+    @asyncio.coroutine
+    def response(request):
+        
+        r = yield from handler(request)
+        if isinstance(r, web.StreamResponse):
+            return r
+        if isinstance(r, bytes):
+            resp = web.Response(body=r)
+            resp.content_type = 'application/octet-stream'
+            return resp
+        if isinstance(r, str):
+            resp = web.Response(body=r.encode('utf-8'))
+            resp.content_type = 'text/html;charset=utf-8'
+            return resp
+        if isinstance(r, dict):
+            ...
+\end{pythoncode}
+
+有了这些基础设施，我们就可以专注地往\texttt{handlers}模块不断添加 URL
+处理函数了，可以极大地提高开发效率。
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/awesome-python3-webapp/tree/day-05}{day-05}
+

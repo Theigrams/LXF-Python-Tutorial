@@ -1,0 +1,136 @@
+\hypertarget{ux4f7fux7528-sqlite}{%
+\subsection{使用 SQLite}\label{ux4f7fux7528-sqlite}}
+
+SQLite 是一种嵌入式数据库，它的数据库就是一个文件。由于 SQLite 本身是 C
+写的，而且体积很小，所以，经常被集成到各种应用程序中，甚至在 iOS 和
+Android 的 App 中都可以集成。
+
+Python 就内置了 SQLite3，所以，在 Python 中使用
+SQLite，不需要安装任何东西，直接使用。
+
+在使用 SQLite 前，我们先要搞清楚几个概念：
+
+表是数据库中存放关系数据的集合，一个数据库里面通常都包含多个表，比如学生的表，班级的表，学校的表，等等。表和表之间通过外键关联。
+
+要操作关系数据库，首先需要连接到数据库，一个数据库连接称为\texttt{Connection}；
+
+连接到数据库后，需要打开游标，称之为\texttt{Cursor}，通过\texttt{Cursor}执行
+SQL 语句，然后，获得执行结果。
+
+Python 定义了一套操作数据库的 API 接口，任何数据库要连接到
+Python，只需要提供符合 Python 标准的数据库驱动即可。
+
+由于 SQLite 的驱动内置在 Python 标准库中，所以我们可以直接来操作 SQLite
+数据库。
+
+我们在 Python 交互式命令行实践一下：
+
+\begin{pythoncode}
+>>> import sqlite3
+
+>>> conn = sqlite3.connect('test.db')
+
+>>> cursor = conn.cursor()
+
+>>> cursor.execute('create table user (id varchar(20) primary key, name varchar(20))')
+<sqlite3.Cursor object at 0x10f8aa260>
+
+>>> cursor.execute('insert into user (id, name) values (\'1\', \'Michael\')')
+<sqlite3.Cursor object at 0x10f8aa260>
+
+>>> cursor.rowcount
+1
+
+>>> cursor.close()
+
+>>> conn.commit()
+
+>>> conn.close()
+\end{pythoncode}
+
+我们再试试查询记录：
+
+\begin{pythoncode}
+>>> conn = sqlite3.connect('test.db')
+>>> cursor = conn.cursor()
+
+>>> cursor.execute('select * from user where id=?', ('1',))
+<sqlite3.Cursor object at 0x10f8aa340>
+
+>>> values = cursor.fetchall()
+>>> values
+[('1', 'Michael')]
+>>> cursor.close()
+>>> conn.close()
+\end{pythoncode}
+
+使用 Python 的 DB-API
+时，只要搞清楚\texttt{Connection}和\texttt{Cursor}对象，打开后一定记得关闭，就可以放心地使用。
+
+使用\texttt{Cursor}对象执行\texttt{insert}，\texttt{update}，\texttt{delete}语句时，执行结果由\texttt{rowcount}返回影响的行数，就可以拿到执行结果。
+
+使用\texttt{Cursor}对象执行\texttt{select}语句时，通过\texttt{fetchall()}可以拿到结果集。结果集是一个\texttt{list}，每个元素都是一个\texttt{tuple}，对应一行记录。
+
+如果 SQL
+语句带有参数，那么需要把参数按照位置传递给\texttt{execute()}方法，有几个\texttt{?}占位符就必须对应几个参数，例如：
+
+\begin{pythoncode}
+cursor.execute('select * from user where name=? and pwd=?', ('abc', 'password'))
+\end{pythoncode}
+
+SQLite 支持常见的标准 SQL 语句以及几种常见的数据类型。具体文档请参阅
+SQLite 官方网站。
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+在 Python
+中操作数据库时，要先导入数据库对应的驱动，然后，通过\texttt{Connection}对象和\texttt{Cursor}对象操作数据。
+
+要确保打开的\texttt{Connection}对象和\texttt{Cursor}对象都正确地被关闭，否则，资源就会泄露。
+
+如何才能确保出错的情况下也关闭掉\texttt{Connection}对象和\texttt{Cursor}对象呢？请回忆\texttt{try:...except:...finally:...}的用法。
+
+\hypertarget{ux7ec3ux4e60}{%
+\subsubsection{练习}\label{ux7ec3ux4e60}}
+
+请编写函数，在 Sqlite 中根据分数段查找指定的名字：
+
+\begin{pythoncode}
+# -*- coding: utf-8 -*-
+
+import os, sqlite3
+
+db_file = os.path.join(os.path.dirname(__file__), 'test.db')
+if os.path.isfile(db_file):
+    os.remove(db_file)
+
+# 初始数据:
+conn = sqlite3.connect(db_file)
+cursor = conn.cursor()
+cursor.execute('create table user(id varchar(20) primary key, name varchar(20), score int)')
+cursor.execute(r"insert into user values ('A-001', 'Adam', 95)")
+cursor.execute(r"insert into user values ('A-002', 'Bart', 62)")
+cursor.execute(r"insert into user values ('A-003', 'Lisa', 78)")
+cursor.close()
+conn.commit()
+conn.close()
+
+def get_score_in(low, high):
+    ' 返回指定分数区间的名字，按分数从低到高排序 '
+----
+    pass
+----
+# 测试:
+assert get_score_in(80, 95) == ['Adam'], get_score_in(80, 95)
+assert get_score_in(60, 80) == ['Bart', 'Lisa'], get_score_in(60, 80)
+assert get_score_in(60, 100) == ['Bart', 'Lisa', 'Adam'], get_score_in(60, 100)
+
+print('Pass')
+\end{pythoncode}
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/db/do_sqlite.py}{do\_sqlite.py}
+

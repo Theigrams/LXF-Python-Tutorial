@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Student}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+    \PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}Student\PYGZsq{}}
+\end{Verbatim}

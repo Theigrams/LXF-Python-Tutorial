@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{bart} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{bart}
+\PYG{o}{\PYGZlt{}}\PYG{n}{\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{Student} \PYG{n+nb}{object} \PYG{n}{at} \PYG{l+m+mh}{0x10a67a590}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Student}
+\PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{err}{\PYGZsq{}}\PYG{n+nc}{\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{Student}\PYG{l+s+s1}{\PYGZsq{}\PYGZgt{}}
+\end{Verbatim}

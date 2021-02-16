@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{add}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{f}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{f}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)} \PYG{o}{+} \PYG{n}{f}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)}
+\end{Verbatim}

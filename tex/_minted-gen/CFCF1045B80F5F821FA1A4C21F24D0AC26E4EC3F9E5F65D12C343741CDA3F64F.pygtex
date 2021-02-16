@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{n}{html}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}}\PYG{n}{head}\PYG{o}{\PYGZgt{}}
+  \PYG{o}{\PYGZlt{}}\PYG{n}{title}\PYG{o}{\PYGZgt{}}\PYG{n}{Please} \PYG{n}{Sign} \PYG{n}{In}\PYG{o}{\PYGZlt{}/}\PYG{n}{title}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{head}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}}\PYG{n}{body}\PYG{o}{\PYGZgt{}}
+  \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{k}{if} \PYG{n}{message} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+  \PYG{o}{\PYGZlt{}}\PYG{n}{p} \PYG{n}{style}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}color:red\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{p}{\PYGZob{}\PYGZob{}} \PYG{n}{message} \PYG{p}{\PYGZcb{}\PYGZcb{}}\PYG{o}{\PYGZlt{}/}\PYG{n}{p}\PYG{o}{\PYGZgt{}}
+  \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endif} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+  \PYG{o}{\PYGZlt{}}\PYG{n}{form} \PYG{n}{action}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/signin\PYGZdq{}} \PYG{n}{method}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}post\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{legend}\PYG{o}{\PYGZgt{}}\PYG{n}{Please} \PYG{n}{sign} \PYG{o+ow}{in}\PYG{p}{:}\PYG{o}{\PYGZlt{}/}\PYG{n}{legend}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{p}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n+nb}{input} \PYG{p}{\PYGZob{}\PYGZob{}} \PYG{n}{username} \PYG{p}{\PYGZcb{}\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}\PYGZgt{}\PYGZlt{}/p\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{p}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n+nb}{input} \PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{p}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{p}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{button} \PYG{n+nb}{type}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}submit\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{Sign} \PYG{n}{In}\PYG{o}{\PYGZlt{}/}\PYG{n}{button}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{p}\PYG{o}{\PYGZgt{}}
+  \PYG{o}{\PYGZlt{}/}\PYG{n}{form}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{body}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{html}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{is\PYGZus{}odd}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{n} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{2} \PYG{o}{==} \PYG{l+m+mi}{1}
+
+\PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{filter}\PYG{p}{(}\PYG{n}{is\PYGZus{}odd}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{15}\PYG{p}{]))}
+\end{Verbatim}

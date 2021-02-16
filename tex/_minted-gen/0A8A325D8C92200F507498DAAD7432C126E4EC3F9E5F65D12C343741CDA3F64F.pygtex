@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{for} \PYG{n}{line} \PYG{o+ow}{in} \PYG{n}{f}\PYG{o}{.}\PYG{n}{readlines}\PYG{p}{():}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{line}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{())}
+\end{Verbatim}

@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{add\PYGZus{}routes}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{n}{module\PYGZus{}name}\PYG{p}{):}
+    \PYG{n}{n} \PYG{o}{=} \PYG{n}{module\PYGZus{}name}\PYG{o}{.}\PYG{n}{rfind}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{n} \PYG{o}{==} \PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{):}
+        \PYG{n}{mod} \PYG{o}{=} \PYG{n+nb}{\PYGZus{}\PYGZus{}import\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n}{module\PYGZus{}name}\PYG{p}{,} \PYG{n+nb}{globals}\PYG{p}{(),} \PYG{n+nb}{locals}\PYG{p}{())}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n}{name} \PYG{o}{=} \PYG{n}{module\PYGZus{}name}\PYG{p}{[}\PYG{n}{n}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{:]}
+        \PYG{n}{mod} \PYG{o}{=} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n+nb}{\PYGZus{}\PYGZus{}import\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n}{module\PYGZus{}name}\PYG{p}{[:}\PYG{n}{n}\PYG{p}{],} \PYG{n+nb}{globals}\PYG{p}{(),} \PYG{n+nb}{locals}\PYG{p}{(),} \PYG{p}{[}\PYG{n}{name}\PYG{p}{]),} \PYG{n}{name}\PYG{p}{)}
+    \PYG{k}{for} \PYG{n}{attr} \PYG{o+ow}{in} \PYG{n+nb}{dir}\PYG{p}{(}\PYG{n}{mod}\PYG{p}{):}
+        \PYG{k}{if} \PYG{n}{attr}\PYG{o}{.}\PYG{n}{startswith}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZsq{}}\PYG{p}{):}
+            \PYG{k}{continue}
+        \PYG{n}{fn} \PYG{o}{=} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n}{mod}\PYG{p}{,} \PYG{n}{attr}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{callable}\PYG{p}{(}\PYG{n}{fn}\PYG{p}{):}
+            \PYG{n}{method} \PYG{o}{=} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n}{fn}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}method\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)}
+            \PYG{n}{path} \PYG{o}{=} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n}{fn}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}route\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)}
+            \PYG{k}{if} \PYG{n}{method} \PYG{o+ow}{and} \PYG{n}{path}\PYG{p}{:}
+                \PYG{n}{add\PYGZus{}route}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{n}{fn}\PYG{p}{)}
+\end{Verbatim}

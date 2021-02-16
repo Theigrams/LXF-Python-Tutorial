@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{n+nb}{input} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{model}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}width\PYGZhy{}1\PYGZhy{}1\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

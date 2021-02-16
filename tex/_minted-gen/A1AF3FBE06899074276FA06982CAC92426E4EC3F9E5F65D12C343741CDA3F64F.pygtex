@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} -*- coding: utf-8 -*-}
+\PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{123}
+\PYG{n}{f} \PYG{o}{=} \PYG{l+m+mf}{456.789}
+\PYG{n}{s1} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}Hello, world\PYGZsq{}}
+\PYG{n}{s2} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}Hello, }\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{Adam}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{\PYGZsq{}}
+\PYG{n}{s3} \PYG{o}{=} \PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}Hello, \PYGZdq{}Bart\PYGZdq{}\PYGZsq{}}
+\PYG{n}{s4} \PYG{o}{=} \PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}Hello,}
+\PYG{l+s+s1}{Lisa!\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\end{Verbatim}

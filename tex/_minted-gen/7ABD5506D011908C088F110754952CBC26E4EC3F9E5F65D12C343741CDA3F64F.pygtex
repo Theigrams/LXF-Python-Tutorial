@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}\PYGZbs{}t\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYGZbs{}       \PYGZbs{}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{\PYGZbs{}t}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYGZbs{}\PYGZbs{}\PYGZbs{}\PYG{n}{t}\PYGZbs{}\PYGZbs{}
+\end{Verbatim}

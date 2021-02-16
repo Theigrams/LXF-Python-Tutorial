@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{global\PYGZus{}dict} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{def} \PYG{n+nf}{std\PYGZus{}thread}\PYG{p}{(}\PYG{n}{name}\PYG{p}{):}
+    \PYG{n}{std} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{n}{name}\PYG{p}{)}
+
+    \PYG{n}{global\PYGZus{}dict}\PYG{p}{[}\PYG{n}{threading}\PYG{o}{.}\PYG{n}{current\PYGZus{}thread}\PYG{p}{()]} \PYG{o}{=} \PYG{n}{std}
+    \PYG{n}{do\PYGZus{}task\PYGZus{}1}\PYG{p}{()}
+    \PYG{n}{do\PYGZus{}task\PYGZus{}2}\PYG{p}{()}
+
+\PYG{k}{def} \PYG{n+nf}{do\PYGZus{}task\PYGZus{}1}\PYG{p}{():}
+
+    \PYG{n}{std} \PYG{o}{=} \PYG{n}{global\PYGZus{}dict}\PYG{p}{[}\PYG{n}{threading}\PYG{o}{.}\PYG{n}{current\PYGZus{}thread}\PYG{p}{()]}
+    \PYG{o}{...}
+
+\PYG{k}{def} \PYG{n+nf}{do\PYGZus{}task\PYGZus{}2}\PYG{p}{():}
+
+    \PYG{n}{std} \PYG{o}{=} \PYG{n}{global\PYGZus{}dict}\PYG{p}{[}\PYG{n}{threading}\PYG{o}{.}\PYG{n}{current\PYGZus{}thread}\PYG{p}{()]}
+    \PYG{o}{...}
+\end{Verbatim}

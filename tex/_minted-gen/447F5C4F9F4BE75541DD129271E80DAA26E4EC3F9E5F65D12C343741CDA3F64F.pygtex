@@ -1,0 +1,67 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{\PYGZus{}\PYGZus{}author\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}Michael Liao\PYGZsq{}}
+
+\PYG{k+kn}{import} \PYG{n+nn}{os}\PYG{o}{,} \PYG{n+nn}{sys}\PYG{o}{,} \PYG{n+nn}{time}\PYG{o}{,} \PYG{n+nn}{subprocess}
+
+\PYG{k+kn}{from} \PYG{n+nn}{watchdog.observers} \PYG{k+kn}{import} \PYG{n}{Observer}
+\PYG{k+kn}{from} \PYG{n+nn}{watchdog.events} \PYG{k+kn}{import} \PYG{n}{FileSystemEventHandler}
+
+\PYG{k}{def} \PYG{n+nf}{log}\PYG{p}{(}\PYG{n}{s}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}[Monitor] }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{s}\PYG{p}{)}
+
+\PYG{k}{class} \PYG{n+nc}{MyFileSystemEventHander}\PYG{p}{(}\PYG{n}{FileSystemEventHandler}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{fn}\PYG{p}{):}
+        \PYG{n+nb}{super}\PYG{p}{(}\PYG{n}{MyFileSystemEventHander}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{()}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{restart} \PYG{o}{=} \PYG{n}{fn}
+
+    \PYG{k}{def} \PYG{n+nf}{on\PYGZus{}any\PYGZus{}event}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{event}\PYG{p}{):}
+        \PYG{k}{if} \PYG{n}{event}\PYG{o}{.}\PYG{n}{src\PYGZus{}path}\PYG{o}{.}\PYG{n}{endswith}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}.py\PYGZsq{}}\PYG{p}{):}
+            \PYG{n}{log}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Python source file changed: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{event}\PYG{o}{.}\PYG{n}{src\PYGZus{}path}\PYG{p}{)}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{restart}\PYG{p}{()}
+
+\PYG{n}{command} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}echo\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}ok\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{process} \PYG{o}{=} \PYG{k+kc}{None}
+
+\PYG{k}{def} \PYG{n+nf}{kill\PYGZus{}process}\PYG{p}{():}
+    \PYG{k}{global} \PYG{n}{process}
+    \PYG{k}{if} \PYG{n}{process}\PYG{p}{:}
+        \PYG{n}{log}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Kill process [}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{]...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{process}\PYG{o}{.}\PYG{n}{pid}\PYG{p}{)}
+        \PYG{n}{process}\PYG{o}{.}\PYG{n}{kill}\PYG{p}{()}
+        \PYG{n}{process}\PYG{o}{.}\PYG{n}{wait}\PYG{p}{()}
+        \PYG{n}{log}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Process ended with code }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{process}\PYG{o}{.}\PYG{n}{returncode}\PYG{p}{)}
+        \PYG{n}{process} \PYG{o}{=} \PYG{k+kc}{None}
+
+\PYG{k}{def} \PYG{n+nf}{start\PYGZus{}process}\PYG{p}{():}
+    \PYG{k}{global} \PYG{n}{process}\PYG{p}{,} \PYG{n}{command}
+    \PYG{n}{log}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Start process }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{l+s+s1}{\PYGZsq{} \PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{command}\PYG{p}{))}
+    \PYG{n}{process} \PYG{o}{=} \PYG{n}{subprocess}\PYG{o}{.}\PYG{n}{Popen}\PYG{p}{(}\PYG{n}{command}\PYG{p}{,} \PYG{n}{stdin}\PYG{o}{=}\PYG{n}{sys}\PYG{o}{.}\PYG{n}{stdin}\PYG{p}{,} \PYG{n}{stdout}\PYG{o}{=}\PYG{n}{sys}\PYG{o}{.}\PYG{n}{stdout}\PYG{p}{,} \PYG{n}{stderr}\PYG{o}{=}\PYG{n}{sys}\PYG{o}{.}\PYG{n}{stderr}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{restart\PYGZus{}process}\PYG{p}{():}
+    \PYG{n}{kill\PYGZus{}process}\PYG{p}{()}
+    \PYG{n}{start\PYGZus{}process}\PYG{p}{()}
+
+\PYG{k}{def} \PYG{n+nf}{start\PYGZus{}watch}\PYG{p}{(}\PYG{n}{path}\PYG{p}{,} \PYG{n}{callback}\PYG{p}{):}
+    \PYG{n}{observer} \PYG{o}{=} \PYG{n}{Observer}\PYG{p}{()}
+    \PYG{n}{observer}\PYG{o}{.}\PYG{n}{schedule}\PYG{p}{(}\PYG{n}{MyFileSystemEventHander}\PYG{p}{(}\PYG{n}{restart\PYGZus{}process}\PYG{p}{),} \PYG{n}{path}\PYG{p}{,} \PYG{n}{recursive}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+    \PYG{n}{observer}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+    \PYG{n}{log}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Watching directory }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{path}\PYG{p}{)}
+    \PYG{n}{start\PYGZus{}process}\PYG{p}{()}
+    \PYG{k}{try}\PYG{p}{:}
+        \PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+            \PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{p}{)}
+    \PYG{k}{except} \PYG{n+ne}{KeyboardInterrupt}\PYG{p}{:}
+        \PYG{n}{observer}\PYG{o}{.}\PYG{n}{stop}\PYG{p}{()}
+    \PYG{n}{observer}\PYG{o}{.}\PYG{n}{join}\PYG{p}{()}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+    \PYG{n}{argv} \PYG{o}{=} \PYG{n}{sys}\PYG{o}{.}\PYG{n}{argv}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{:]}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{argv}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Usage: ./pymonitor your\PYGZhy{}script.py\PYGZsq{}}\PYG{p}{)}
+        \PYG{n}{exit}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{argv}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{!=} \PYG{l+s+s1}{\PYGZsq{}python3\PYGZsq{}}\PYG{p}{:}
+        \PYG{n}{argv}\PYG{o}{.}\PYG{n}{insert}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}python3\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{command} \PYG{o}{=} \PYG{n}{argv}
+    \PYG{n}{path} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{abspath}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{start\PYGZus{}watch}\PYG{p}{(}\PYG{n}{path}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)}
+\end{Verbatim}

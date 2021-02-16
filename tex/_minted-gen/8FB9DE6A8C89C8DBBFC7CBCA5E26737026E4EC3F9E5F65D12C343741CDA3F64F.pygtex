@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{s}\PYG{o}{.}\PYG{n}{name}\PYG{p}{)}
+\PYG{n}{Michael}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{s}\PYG{o}{.}\PYG{n}{score}\PYG{p}{)}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{o}{...}
+\PYG{n+ne}{AttributeError}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Student\PYGZsq{}} \PYG{n+nb}{object} \PYG{n}{has} \PYG{n}{no} \PYG{n}{attribute} \PYG{l+s+s1}{\PYGZsq{}score\PYGZsq{}}
+\end{Verbatim}

@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{class} \PYG{n+nc}{MyDog}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+\PYG{o}{...}     \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}len\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+\PYG{o}{...}         \PYG{k}{return} \PYG{l+m+mi}{100}
+\PYG{o}{...}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{dog} \PYG{o}{=} \PYG{n}{MyDog}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{dog}\PYG{p}{)}
+\PYG{l+m+mi}{100}
+\end{Verbatim}

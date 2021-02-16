@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{datetime}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{now} \PYG{o}{=} \PYG{n}{datetime}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{now}\PYG{o}{.}\PYG{n}{strftime}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}a}\PYG{l+s+s1}{, \PYGZpc{}b }\PYG{l+s+si}{\PYGZpc{}d}\PYG{l+s+s1}{ \PYGZpc{}H:\PYGZpc{}M\PYGZsq{}}\PYG{p}{))}
+\PYG{n}{Mon}\PYG{p}{,} \PYG{n}{May} \PYG{l+m+mi}{05} \PYG{l+m+mi}{16}\PYG{p}{:}\PYG{l+m+mi}{28}
+\end{Verbatim}

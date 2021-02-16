@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{server} \PYG{p}{\PYGZob{}}
+    \PYG{n}{listen}      \PYG{l+m+mi}{80}\PYG{p}{;}
+
+    \PYG{n}{root}       \PYG{o}{/}\PYG{n}{srv}\PYG{o}{/}\PYG{n}{awesome}\PYG{o}{/}\PYG{n}{www}\PYG{p}{;}
+    \PYG{n}{access\PYGZus{}log} \PYG{o}{/}\PYG{n}{srv}\PYG{o}{/}\PYG{n}{awesome}\PYG{o}{/}\PYG{n}{log}\PYG{o}{/}\PYG{n}{access\PYGZus{}log}\PYG{p}{;}
+    \PYG{n}{error\PYGZus{}log}  \PYG{o}{/}\PYG{n}{srv}\PYG{o}{/}\PYG{n}{awesome}\PYG{o}{/}\PYG{n}{log}\PYG{o}{/}\PYG{n}{error\PYGZus{}log}\PYG{p}{;}
+
+
+
+
+    \PYG{n}{location} \PYG{o}{/}\PYG{n}{favicon}\PYG{o}{.}\PYG{n}{ico} \PYG{p}{\PYGZob{}}
+        \PYG{n}{root} \PYG{o}{/}\PYG{n}{srv}\PYG{o}{/}\PYG{n}{awesome}\PYG{o}{/}\PYG{n}{www}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+
+    \PYG{n}{location} \PYG{o}{\PYGZti{}} \PYG{o}{\PYGZca{}}\PYGZbs{}\PYG{o}{/}\PYG{n}{static}\PYGZbs{}\PYG{o}{/.*}\PYG{err}{\PYGZdl{}} \PYG{p}{\PYGZob{}}
+        \PYG{n}{root} \PYG{o}{/}\PYG{n}{srv}\PYG{o}{/}\PYG{n}{awesome}\PYG{o}{/}\PYG{n}{www}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+
+    \PYG{n}{location} \PYG{o}{/} \PYG{p}{\PYGZob{}}
+        \PYG{n}{proxy\PYGZus{}pass}       \PYG{n}{http}\PYG{p}{:}
+        \PYG{n}{proxy\PYGZus{}set\PYGZus{}header} \PYG{n}{X}\PYG{o}{\PYGZhy{}}\PYG{n}{Real}\PYG{o}{\PYGZhy{}}\PYG{n}{IP} \PYG{err}{\PYGZdl{}}\PYG{n}{remote\PYGZus{}addr}\PYG{p}{;}
+        \PYG{n}{proxy\PYGZus{}set\PYGZus{}header} \PYG{n}{Host} \PYG{err}{\PYGZdl{}}\PYG{n}{host}\PYG{p}{;}
+        \PYG{n}{proxy\PYGZus{}set\PYGZus{}header} \PYG{n}{X}\PYG{o}{\PYGZhy{}}\PYG{n}{Forwarded}\PYG{o}{\PYGZhy{}}\PYG{n}{For} \PYG{err}{\PYGZdl{}}\PYG{n}{proxy\PYGZus{}add\PYGZus{}x\PYGZus{}forwarded\PYGZus{}for}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

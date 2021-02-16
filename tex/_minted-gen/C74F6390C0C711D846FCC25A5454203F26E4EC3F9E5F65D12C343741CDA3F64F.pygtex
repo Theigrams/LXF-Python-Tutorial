@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Query}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{name} \PYG{o}{=} \PYG{n}{name}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}enter\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Begin\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{return} \PYG{n+nb+bp}{self}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}exit\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{exc\PYGZus{}type}\PYG{p}{,} \PYG{n}{exc\PYGZus{}value}\PYG{p}{,} \PYG{n}{traceback}\PYG{p}{):}
+        \PYG{k}{if} \PYG{n}{exc\PYGZus{}type}\PYG{p}{:}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Error\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}End\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{query}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Query info about }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{name}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{p}{[}\PYG{n}{client}\PYG{p}{]}
+\PYG{n}{default}\PYG{o}{\PYGZhy{}}\PYG{n}{character}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{set} \PYG{o}{=} \PYG{n}{utf8}
+
+\PYG{p}{[}\PYG{n}{mysqld}\PYG{p}{]}
+\PYG{n}{default}\PYG{o}{\PYGZhy{}}\PYG{n}{storage}\PYG{o}{\PYGZhy{}}\PYG{n}{engine} \PYG{o}{=} \PYG{n}{INNODB}
+\PYG{n}{character}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{set}\PYG{o}{\PYGZhy{}}\PYG{n}{server} \PYG{o}{=} \PYG{n}{utf8}
+\PYG{n}{collation}\PYG{o}{\PYGZhy{}}\PYG{n}{server} \PYG{o}{=} \PYG{n}{utf8\PYGZus{}general\PYGZus{}ci}
+\end{Verbatim}

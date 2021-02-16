@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{sys}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{sys}\PYG{o}{.}\PYG{n}{path}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}/Library/Frameworks/Python.framework/Versions/3.6/lib/python36.zip\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6\PYGZsq{}}\PYG{p}{,} \PYG{o}{...}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site\PYGZhy{}packages\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

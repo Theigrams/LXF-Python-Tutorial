@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试:}
+\PYG{n}{bart} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bart\PYGZsq{}}\PYG{p}{,} \PYG{n}{Gender}\PYG{o}{.}\PYG{n}{Male}\PYG{p}{)}
+\PYG{k}{if} \PYG{n}{bart}\PYG{o}{.}\PYG{n}{gender} \PYG{o}{==} \PYG{n}{Gender}\PYG{o}{.}\PYG{n}{Male}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试通过!\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

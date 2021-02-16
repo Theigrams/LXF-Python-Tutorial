@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{base64}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{base64}\PYG{o}{.}\PYG{n}{b64encode}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}binary}\PYG{l+s+se}{\PYGZbs{}x00}\PYG{l+s+s1}{string\PYGZsq{}}\PYG{p}{)}
+\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}YmluYXJ5AHN0cmluZw==\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{base64}\PYG{o}{.}\PYG{n}{b64decode}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}YmluYXJ5AHN0cmluZw==\PYGZsq{}}\PYG{p}{)}
+\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}binary}\PYG{l+s+se}{\PYGZbs{}x00}\PYG{l+s+s1}{string\PYGZsq{}}
+\end{Verbatim}

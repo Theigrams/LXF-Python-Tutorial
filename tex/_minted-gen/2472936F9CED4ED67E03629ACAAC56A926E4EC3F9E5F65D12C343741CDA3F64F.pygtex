@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{sudo} \PYG{n}{supervisorctl} \PYG{n}{reload}
+\PYG{err}{\PYGZdl{}} \PYG{n}{sudo} \PYG{n}{supervisorctl} \PYG{n}{start} \PYG{n}{awesome}
+\PYG{err}{\PYGZdl{}} \PYG{n}{sudo} \PYG{n}{supervisorctl} \PYG{n}{status}
+\PYG{n}{awesome}                \PYG{n}{RUNNING}    \PYG{n}{pid} \PYG{l+m+mi}{1401}\PYG{p}{,} \PYG{n}{uptime} \PYG{l+m+mi}{5}\PYG{p}{:}\PYG{l+m+mi}{01}\PYG{p}{:}\PYG{l+m+mi}{34}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{o}{...}
+\PYG{n+ne}{TypeError}\PYG{p}{:} \PYG{o}{\PYGZlt{}}\PYG{n}{\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{Student} \PYG{n+nb}{object} \PYG{n}{at} \PYG{l+m+mh}{0x10603cc50}\PYG{o}{\PYGZgt{}} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n}{JSON} \PYG{n}{serializable}
+\end{Verbatim}

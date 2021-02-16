@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{try}\PYG{o}{...}
+\PYG{n}{result}\PYG{p}{:} \PYG{l+m+mi}{5}
+\PYG{k}{finally}\PYG{o}{...}
+\PYG{n}{END}
+\end{Verbatim}

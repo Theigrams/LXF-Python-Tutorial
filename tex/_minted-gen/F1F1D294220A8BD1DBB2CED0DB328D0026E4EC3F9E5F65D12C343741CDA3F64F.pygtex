@@ -1,0 +1,35 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n+nb}{id}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}vm\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}width\PYGZhy{}1\PYGZhy{}1\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/manage/blogs/create\PYGZdq{}} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}button uk\PYGZhy{}button\PYGZhy{}primary\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}plus\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}} \PYG{n}{新日志}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}
+
+    \PYG{o}{\PYGZlt{}}\PYG{n}{table} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}table uk\PYGZhy{}table\PYGZhy{}hover\PYGZdq{}}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}}\PYG{n}{thead}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}}\PYG{n}{tr}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{th} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}width\PYGZhy{}5\PYGZhy{}10\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{标题} \PYG{o}{/} \PYG{n}{摘要}\PYG{o}{\PYGZlt{}/}\PYG{n}{th}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{th} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}width\PYGZhy{}2\PYGZhy{}10\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{作者}\PYG{o}{\PYGZlt{}/}\PYG{n}{th}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{th} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}width\PYGZhy{}2\PYGZhy{}10\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{创建时间}\PYG{o}{\PYGZlt{}/}\PYG{n}{th}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{th} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}width\PYGZhy{}1\PYGZhy{}10\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{操作}\PYG{o}{\PYGZlt{}/}\PYG{n}{th}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}/}\PYG{n}{tr}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}/}\PYG{n}{thead}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}}\PYG{n}{tbody}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}}\PYG{n}{tr} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{repeat}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}blog: blogs\PYGZdq{}} \PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{td}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{target}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}blank\PYGZdq{}} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{attr}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}href: \PYGZsq{}/blog/\PYGZsq{}+blog.id\PYGZdq{}} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}blog.name\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}/}\PYG{n}{td}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{td}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{target}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZus{}blank\PYGZdq{}} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{attr}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}href: \PYGZsq{}/user/\PYGZsq{}+blog.user\PYGZus{}id\PYGZdq{}} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}blog.user\PYGZus{}name\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}/}\PYG{n}{td}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{td}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{span} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}blog.created\PYGZus{}at.toDateTime()\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{span}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}/}\PYG{n}{td}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}}\PYG{n}{td}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}0\PYGZdq{}} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{on}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}click: edit\PYGZus{}blog(blog)\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}edit\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}}
+                    \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}0\PYGZdq{}} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{on}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}click: delete\PYGZus{}blog(blog)\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}}\PYG{n}{i} \PYG{n}{class}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}uk\PYGZhy{}icon\PYGZhy{}trash\PYGZhy{}o\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{i}\PYG{o}{\PYGZgt{}}
+                \PYG{o}{\PYGZlt{}/}\PYG{n}{td}\PYG{o}{\PYGZgt{}}
+            \PYG{o}{\PYGZlt{}/}\PYG{n}{tr}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}/}\PYG{n}{tbody}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}/}\PYG{n}{table}\PYG{o}{\PYGZgt{}}
+
+    \PYG{o}{\PYGZlt{}}\PYG{n}{div} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{n}{component}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}pagination\PYGZdq{}} \PYG{n}{v}\PYG{o}{\PYGZhy{}}\PYG{k}{with}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}page\PYGZdq{}}\PYG{o}{\PYGZgt{}\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{div}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

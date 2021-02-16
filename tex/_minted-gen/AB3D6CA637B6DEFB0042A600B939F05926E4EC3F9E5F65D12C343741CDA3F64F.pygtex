@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{int}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}12345\PYGZsq{}}\PYG{p}{,} \PYG{n}{base}\PYG{o}{=}\PYG{l+m+mi}{8}\PYG{p}{)}
+\PYG{l+m+mi}{5349}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{int}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}12345\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{16}\PYG{p}{)}
+\PYG{l+m+mi}{74565}
+\end{Verbatim}

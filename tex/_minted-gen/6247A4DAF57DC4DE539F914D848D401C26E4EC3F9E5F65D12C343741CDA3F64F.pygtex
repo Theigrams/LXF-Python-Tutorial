@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{threading}
+\PYG{k+kn}{import} \PYG{n+nn}{asyncio}
+
+\PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+\PYG{k}{def} \PYG{n+nf}{hello}\PYG{p}{():}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Hello world! (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{)\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{currentThread}\PYG{p}{())}
+    \PYG{k}{yield from} \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Hello again! (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{)\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{currentThread}\PYG{p}{())}
+
+\PYG{n}{loop} \PYG{o}{=} \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{get\PYGZus{}event\PYGZus{}loop}\PYG{p}{()}
+\PYG{n}{tasks} \PYG{o}{=} \PYG{p}{[}\PYG{n}{hello}\PYG{p}{(),} \PYG{n}{hello}\PYG{p}{()]}
+\PYG{n}{loop}\PYG{o}{.}\PYG{n}{run\PYGZus{}until\PYGZus{}complete}\PYG{p}{(}\PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{wait}\PYG{p}{(}\PYG{n}{tasks}\PYG{p}{))}
+\PYG{n}{loop}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\end{Verbatim}

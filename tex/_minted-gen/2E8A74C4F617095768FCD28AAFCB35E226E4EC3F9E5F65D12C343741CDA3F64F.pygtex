@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nb}{list} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{36}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{21}\PYG{p}{]}
+
+\PYG{n}{keys} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{36}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,}  \PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,}  \PYG{l+m+mi}{21}\PYG{p}{]}
+\end{Verbatim}

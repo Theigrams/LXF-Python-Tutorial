@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{python3} \PYG{n}{err}\PYG{o}{.}\PYG{n}{py}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}err.py\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{11}\PYG{p}{,} \PYG{o+ow}{in} \PYG{o}{\PYGZlt{}}\PYG{n}{module}\PYG{o}{\PYGZgt{}}
+    \PYG{n}{main}\PYG{p}{()}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}err.py\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{o+ow}{in} \PYG{n}{main}
+    \PYG{n}{bar}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}0\PYGZsq{}}\PYG{p}{)}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}err.py\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{o+ow}{in} \PYG{n}{bar}
+    \PYG{k}{return} \PYG{n}{foo}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)} \PYG{o}{*} \PYG{l+m+mi}{2}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}err.py\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{o+ow}{in} \PYG{n}{foo}
+    \PYG{k}{return} \PYG{l+m+mi}{10} \PYG{o}{/} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}
+\PYG{n+ne}{ZeroDivisionError}\PYG{p}{:} \PYG{n}{division} \PYG{n}{by} \PYG{n}{zero}
+\end{Verbatim}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{re}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{re\PYGZus{}telephone} \PYG{o}{=} \PYG{n}{re}\PYG{o}{.}\PYG{n}{compile}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZca{}(\PYGZbs{}d}\PYG{l+s+si}{\PYGZob{}3\PYGZcb{}}\PYG{l+s+s1}{)\PYGZhy{}(\PYGZbs{}d\PYGZob{}3,8\PYGZcb{})\PYGZdl{}\PYGZsq{}}\PYG{p}{)}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{re\PYGZus{}telephone}\PYG{o}{.}\PYG{n}{match}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}010\PYGZhy{}12345\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{groups}\PYG{p}{()}
+\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}010\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}12345\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{re\PYGZus{}telephone}\PYG{o}{.}\PYG{n}{match}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}010\PYGZhy{}8086\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{groups}\PYG{p}{()}
+\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}010\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}8086\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

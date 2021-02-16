@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{python3} \PYG{n}{test}\PYG{o}{.}\PYG{n}{py} \PYG{o}{\PYGZhy{}}\PYG{n}{a} \PYG{o}{\PYGZhy{}}\PYG{n}{s} \PYG{l+s+s2}{\PYGZdq{}Hello world\PYGZdq{}}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}test.py\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}s\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Hello world\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

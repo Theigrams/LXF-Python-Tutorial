@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{do\PYGZus{}some\PYGZus{}code}\PYG{p}{()}
+\PYG{n}{f} \PYG{o}{=} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/path/to/file\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}r\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{r} \PYG{o}{=} \PYG{n}{f}\PYG{o}{.}\PYG{n}{read}\PYG{p}{()} \PYG{c+c1}{\PYGZsh{} <== 线程停在此处等待IO操作结果}
+\PYG{c+c1}{\PYGZsh{} IO操作完成后线程才能继续执行:}
+\PYG{n}{do\PYGZus{}some\PYGZus{}code}\PYG{p}{(}\PYG{n}{r}\PYG{p}{)}
+\end{Verbatim}

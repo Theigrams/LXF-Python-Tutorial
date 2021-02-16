@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Fib}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}getitem\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{n}\PYG{p}{):}
+        \PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{n}\PYG{p}{,} \PYG{n+nb}{int}\PYG{p}{):}
+            \PYG{n}{a}\PYG{p}{,} \PYG{n}{b} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}
+            \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+                \PYG{n}{a}\PYG{p}{,} \PYG{n}{b} \PYG{o}{=} \PYG{n}{b}\PYG{p}{,} \PYG{n}{a} \PYG{o}{+} \PYG{n}{b}
+            \PYG{k}{return} \PYG{n}{a}
+        \PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{n}\PYG{p}{,} \PYG{n+nb}{slice}\PYG{p}{):}
+            \PYG{n}{start} \PYG{o}{=} \PYG{n}{n}\PYG{o}{.}\PYG{n}{start}
+            \PYG{n}{stop} \PYG{o}{=} \PYG{n}{n}\PYG{o}{.}\PYG{n}{stop}
+            \PYG{k}{if} \PYG{n}{start} \PYG{o+ow}{is} \PYG{k+kc}{None}\PYG{p}{:}
+                \PYG{n}{start} \PYG{o}{=} \PYG{l+m+mi}{0}
+            \PYG{n}{a}\PYG{p}{,} \PYG{n}{b} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}
+            \PYG{n}{L} \PYG{o}{=} \PYG{p}{[]}
+            \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{stop}\PYG{p}{):}
+                \PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZgt{}=} \PYG{n}{start}\PYG{p}{:}
+                    \PYG{n}{L}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{a}\PYG{p}{)}
+                \PYG{n}{a}\PYG{p}{,} \PYG{n}{b} \PYG{o}{=} \PYG{n}{b}\PYG{p}{,} \PYG{n}{a} \PYG{o}{+} \PYG{n}{b}
+            \PYG{k}{return} \PYG{n}{L}
+\end{Verbatim}

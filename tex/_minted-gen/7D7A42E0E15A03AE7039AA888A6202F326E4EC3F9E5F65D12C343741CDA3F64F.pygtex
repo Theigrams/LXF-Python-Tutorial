@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{header}\PYG{p}{,} \PYG{n}{html} \PYG{o}{=} \PYG{n}{data}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}r\PYGZbs{}n\PYGZbs{}r\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{header}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+
+\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}sina.html\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}wb\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+    \PYG{n}{f}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{html}\PYG{p}{)}
+\end{Verbatim}

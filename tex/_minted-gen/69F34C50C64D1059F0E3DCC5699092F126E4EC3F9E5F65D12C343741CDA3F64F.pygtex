@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+ne}{ZeroDivisionError}\PYG{p}{:} \PYG{n}{integer} \PYG{n}{division} \PYG{o+ow}{or} \PYG{n}{modulo} \PYG{n}{by} \PYG{n}{zero}
+\end{Verbatim}

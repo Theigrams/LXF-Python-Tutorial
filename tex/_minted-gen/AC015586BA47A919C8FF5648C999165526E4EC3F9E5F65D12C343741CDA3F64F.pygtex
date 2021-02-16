@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{struct} \PYG{n}{input\PYGZus{}event} \PYG{p}{\PYGZob{}}
+    \PYG{n}{struct} \PYG{n}{timeval} \PYG{n}{time}\PYG{p}{;}
+    \PYG{n}{unsigned} \PYG{n}{short} \PYG{n+nb}{type}\PYG{p}{;}
+    \PYG{n}{unsigned} \PYG{n}{short} \PYG{n}{code}\PYG{p}{;}
+    \PYG{n}{unsigned} \PYG{n+nb}{int} \PYG{n}{value}\PYG{p}{;}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}

@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{\PYGZus{}REMOTE\PYGZus{}TMP\PYGZus{}TAR} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}/tmp/}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{\PYGZus{}TAR\PYGZus{}FILE}
+\PYG{n}{\PYGZus{}REMOTE\PYGZus{}BASE\PYGZus{}DIR} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}/srv/awesome\PYGZsq{}}
+
+\PYG{k}{def} \PYG{n+nf}{deploy}\PYG{p}{():}
+    \PYG{n}{newdir} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}www\PYGZhy{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{datetime}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()}\PYG{o}{.}\PYG{n}{strftime}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZpc{}y\PYGZhy{}\PYGZpc{}m\PYGZhy{}}\PYG{l+s+si}{\PYGZpc{}d}\PYG{l+s+s1}{\PYGZus{}\PYGZpc{}H.\PYGZpc{}M.\PYGZpc{}S\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{n}{run}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}rm \PYGZhy{}f }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{\PYGZus{}REMOTE\PYGZus{}TMP\PYGZus{}TAR}\PYG{p}{)}
+
+    \PYG{n}{put}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}dist/}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{\PYGZus{}TAR\PYGZus{}FILE}\PYG{p}{,} \PYG{n}{\PYGZus{}REMOTE\PYGZus{}TMP\PYGZus{}TAR}\PYG{p}{)}
+
+    \PYG{k}{with} \PYG{n}{cd}\PYG{p}{(}\PYG{n}{\PYGZus{}REMOTE\PYGZus{}BASE\PYGZus{}DIR}\PYG{p}{):}
+        \PYG{n}{sudo}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}mkdir }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{newdir}\PYG{p}{)}
+
+    \PYG{k}{with} \PYG{n}{cd}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{/}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{\PYGZus{}REMOTE\PYGZus{}BASE\PYGZus{}DIR}\PYG{p}{,} \PYG{n}{newdir}\PYG{p}{)):}
+        \PYG{n}{sudo}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}tar \PYGZhy{}xzvf }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{\PYGZus{}REMOTE\PYGZus{}TMP\PYGZus{}TAR}\PYG{p}{)}
+
+    \PYG{k}{with} \PYG{n}{cd}\PYG{p}{(}\PYG{n}{\PYGZus{}REMOTE\PYGZus{}BASE\PYGZus{}DIR}\PYG{p}{):}
+        \PYG{n}{sudo}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}rm \PYGZhy{}f www\PYGZsq{}}\PYG{p}{)}
+        \PYG{n}{sudo}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ln \PYGZhy{}s }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ www\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{newdir}\PYG{p}{)}
+        \PYG{n}{sudo}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}chown www\PYGZhy{}data:www\PYGZhy{}data www\PYGZsq{}}\PYG{p}{)}
+        \PYG{n}{sudo}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}chown \PYGZhy{}R www\PYGZhy{}data:www\PYGZhy{}data }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{newdir}\PYG{p}{)}
+
+    \PYG{k}{with} \PYG{n}{settings}\PYG{p}{(}\PYG{n}{warn\PYGZus{}only}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{):}
+        \PYG{n}{sudo}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}supervisorctl stop awesome\PYGZsq{}}\PYG{p}{)}
+        \PYG{n}{sudo}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}supervisorctl start awesome\PYGZsq{}}\PYG{p}{)}
+        \PYG{n}{sudo}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/etc/init.d/nginx reload\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

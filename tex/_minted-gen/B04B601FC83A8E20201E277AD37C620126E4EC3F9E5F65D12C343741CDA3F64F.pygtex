@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Student}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+
+    \PYG{n+nd}{@property}
+    \PYG{k}{def} \PYG{n+nf}{birth}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}birth}
+
+    \PYG{n+nd}{@birth}\PYG{o}{.}\PYG{n}{setter}
+    \PYG{k}{def} \PYG{n+nf}{birth}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{value}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}birth} \PYG{o}{=} \PYG{n}{value}
+
+    \PYG{n+nd}{@property}
+    \PYG{k}{def} \PYG{n+nf}{age}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{l+m+mi}{2015} \PYG{o}{\PYGZhy{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}birth}
+\end{Verbatim}

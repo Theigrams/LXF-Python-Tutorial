@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{\PYGZus{}not\PYGZus{}divisible}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+    \PYG{k}{return} \PYG{k}{lambda} \PYG{n}{x}\PYG{p}{:} \PYG{n}{x} \PYG{o}{\PYGZpc{}} \PYG{n}{n} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}
+\end{Verbatim}

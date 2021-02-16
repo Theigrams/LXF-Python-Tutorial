@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{it} \PYG{o}{=} \PYG{n+nb}{iter}\PYG{p}{([}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{])}
+
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+    \PYG{k}{try}\PYG{p}{:}
+
+        \PYG{n}{x} \PYG{o}{=} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{it}\PYG{p}{)}
+    \PYG{k}{except} \PYG{n+ne}{StopIteration}\PYG{p}{:}
+
+        \PYG{k}{break}
+\end{Verbatim}

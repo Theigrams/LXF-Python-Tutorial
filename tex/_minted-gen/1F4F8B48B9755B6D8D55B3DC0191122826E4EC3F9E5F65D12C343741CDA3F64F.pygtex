@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} -*- coding: utf-8 -*-}
+\PYG{k+kn}{import} \PYG{n+nn}{base64}\PYG{o}{,} \PYG{n+nn}{struct}
+\PYG{n}{bmp\PYGZus{}data} \PYG{o}{=} \PYG{n}{base64}\PYG{o}{.}\PYG{n}{b64decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Qk1oAgAAAAAAADYAAAAoAAAAHAAAAAoAAAABABAAAAAAADICAAASCwAAEgsAA\PYGZsq{}} \PYG{o}{+}
+                   \PYG{l+s+s1}{\PYGZsq{}AAAAAAAAAAA/3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3/\PYGZsq{}} \PYG{o}{+}
+                   \PYG{l+s+s1}{\PYGZsq{}/f/9//3//f/9//3//f/9/AHwAfAB8AHwAfAB8AHwAfP9//3//fwB8AHwAfAB8/3//f/9/A\PYGZsq{}} \PYG{o}{+}
+                   \PYG{l+s+s1}{\PYGZsq{}HwAfAB8AHz/f/9//3//f/9//38AfAB8AHwAfAB8AHwAfAB8AHz/f/9//38AfAB8/3//f/9\PYGZsq{}} \PYG{o}{+}
+                   \PYG{l+s+s1}{\PYGZsq{}//3//fwB8AHz/f/9//3//f/9//3//f/9/AHwAfP9//3//f/9/AHwAfP9//3//fwB8AHz/f\PYGZsq{}} \PYG{o}{+}
+                   \PYG{l+s+s1}{\PYGZsq{}/9//3//f/9/AHwAfP9//3//f/9//3//f/9//38AfAB8AHwAfAB8AHwAfP9//3//f/9/AHw\PYGZsq{}} \PYG{o}{+}
+                   \PYG{l+s+s1}{\PYGZsq{}AfP9//3//f/9//38AfAB8/3//f/9//3//f/9//3//fwB8AHwAfAB8AHwAfAB8/3//f/9//\PYGZsq{}} \PYG{o}{+}
+                   \PYG{l+s+s1}{\PYGZsq{}38AfAB8/3//f/9//3//fwB8AHz/f/9//3//f/9//3//f/9/AHwAfP9//3//f/9/AHwAfP9\PYGZsq{}} \PYG{o}{+}
+                   \PYG{l+s+s1}{\PYGZsq{}//3//fwB8AHz/f/9/AHz/f/9/AHwAfP9//38AfP9//3//f/9/AHwAfAB8AHwAfAB8AHwAf\PYGZsq{}} \PYG{o}{+}
+                   \PYG{l+s+s1}{\PYGZsq{}AB8/3//f/9/AHwAfP9//38AfAB8AHwAfAB8AHwAfAB8/3//f/9//38AfAB8AHwAfAB8AHw\PYGZsq{}} \PYG{o}{+}
+                   \PYG{l+s+s1}{\PYGZsq{}AfAB8/3//f/9/AHwAfAB8AHz/fwB8AHwAfAB8AHwAfAB8AHz/f/9//3//f/9//3//f/9//\PYGZsq{}} \PYG{o}{+}
+                   \PYG{l+s+s1}{\PYGZsq{}3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//3//f/9//38AAA==\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

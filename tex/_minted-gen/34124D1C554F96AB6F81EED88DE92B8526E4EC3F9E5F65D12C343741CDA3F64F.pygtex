@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{callable}\PYG{p}{(}\PYG{n}{Student}\PYG{p}{())}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{callable}\PYG{p}{(}\PYG{n+nb}{max}\PYG{p}{)}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{callable}\PYG{p}{([}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{])}
+\PYG{k+kc}{False}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{callable}\PYG{p}{(}\PYG{k+kc}{None}\PYG{p}{)}
+\PYG{k+kc}{False}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{callable}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}str\PYGZsq{}}\PYG{p}{)}
+\PYG{k+kc}{False}
+\end{Verbatim}

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}Hello, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{l+s+s1}{\PYGZsq{}world\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZsq{}Hello, world\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}Hi, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{, you have \PYGZdl{}}\PYG{l+s+si}{\PYGZpc{}d}\PYG{l+s+s1}{.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{1000000}\PYG{p}{)}
+\PYG{l+s+s1}{\PYGZsq{}Hi, Michael, you have \PYGZdl{}1000000.\PYGZsq{}}
+\end{Verbatim}

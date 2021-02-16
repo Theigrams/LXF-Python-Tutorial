@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{my\PYGZus{}abs}\PYG{p}{(}\PYG{n}{x}\PYG{p}{):}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{,} \PYG{n+nb}{float}\PYG{p}{)):}
+        \PYG{k}{raise} \PYG{n+ne}{TypeError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}bad operand type\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{k}{return} \PYG{n}{x}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{k}{return} \PYG{o}{\PYGZhy{}}\PYG{n}{x}
+\end{Verbatim}

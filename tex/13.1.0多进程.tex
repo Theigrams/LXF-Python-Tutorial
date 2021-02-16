@@ -1,0 +1,300 @@
+\hypertarget{ux591aux8fdbux7a0b}{%
+\subsection{多进程}\label{ux591aux8fdbux7a0b}}
+
+要让 Python
+程序实现多进程（multiprocessing），我们先了解操作系统的相关知识。
+
+Unix/Linux
+操作系统提供了一个\texttt{fork()}系统调用，它非常特殊。普通的函数调用，调用一次，返回一次，但是\texttt{fork()}调用一次，返回两次，因为操作系统自动把当前进程（称为父进程）复制了一份（称为子进程），然后，分别在父进程和子进程内返回。
+
+子进程永远返回\texttt{0}，而父进程返回子进程的
+ID。这样做的理由是，一个父进程可以 fork
+出很多子进程，所以，父进程要记下每个子进程的
+ID，而子进程只需要调用\texttt{getppid()}就可以拿到父进程的 ID。
+
+Python
+的\texttt{os}模块封装了常见的系统调用，其中就包括\texttt{fork}，可以在
+Python 程序中轻松创建子进程：
+
+\begin{pythoncode}
+import os
+
+print('Process (%s) start...' % os.getpid())
+
+pid = os.fork()
+if pid == 0:
+    print('I am child process (%s) and my parent is %s.' % (os.getpid(), os.getppid()))
+else:
+    print('I (%s) just created a child process (%s).' % (os.getpid(), pid))
+\end{pythoncode}
+
+运行结果如下：
+
+\begin{pythoncode}
+Process (876) start...
+I (876) just created a child process (877).
+I am child process (877) and my parent is 876.
+\end{pythoncode}
+
+由于 Windows 没有\texttt{fork}调用，上面的代码在 Windows 上无法运行。而
+Mac 系统是基于 BSD（Unix 的一种）内核，所以，在 Mac
+下运行是没有问题的，推荐大家用 Mac 学 Python！
+
+有了\texttt{fork}调用，一个进程在接到新任务时就可以复制出一个子进程来处理新任务，常见的
+Apache 服务器就是由父进程监听端口，每当有新的 http 请求时，就 fork
+出子进程来处理新的 http 请求。
+
+\hypertarget{multiprocessing}{%
+\subsubsection{multiprocessing}\label{multiprocessing}}
+
+如果你打算编写多进程的服务程序，Unix/Linux 无疑是正确的选择。由于
+Windows 没有\texttt{fork}调用，难道在 Windows 上无法用 Python
+编写多进程的程序？
+
+由于 Python
+是跨平台的，自然也应该提供一个跨平台的多进程支持。\texttt{multiprocessing}模块就是跨平台版本的多进程模块。
+
+\texttt{multiprocessing}模块提供了一个\texttt{Process}类来代表一个进程对象，下面的例子演示了启动一个子进程并等待其结束：
+
+\begin{pythoncode}
+from multiprocessing import Process
+import os
+def run_proc(name):
+    print('Run child process %s (%s)...' % (name, os.getpid()))
+
+if __name__=='__main__':
+    print('Parent process %s.' % os.getpid())
+    p = Process(target=run_proc, args=('test',))
+    print('Child process will start.')
+    p.start()
+    p.join()
+    print('Child process end.')
+\end{pythoncode}
+
+执行结果如下：
+
+\begin{pythoncode}
+Parent process 928.
+Child process will start.
+Run child process test (929)...
+Process end.
+\end{pythoncode}
+
+创建子进程时，只需要传入一个执行函数和函数的参数，创建一个\texttt{Process}实例，用\texttt{start()}方法启动，这样创建进程比\texttt{fork()}还要简单。
+
+\texttt{join()}方法可以等待子进程结束后再继续往下运行，通常用于进程间的同步。
+
+\hypertarget{pool}{%
+\subsubsection{Pool}\label{pool}}
+
+如果要启动大量的子进程，可以用进程池的方式批量创建子进程：
+
+\begin{pythoncode}
+from multiprocessing import Pool
+import os, time, random
+
+def long_time_task(name):
+    print('Run task %s (%s)...' % (name, os.getpid()))
+    start = time.time()
+    time.sleep(random.random() * 3)
+    end = time.time()
+    print('Task %s runs %0.2f seconds.' % (name, (end - start)))
+
+if __name__=='__main__':
+    print('Parent process %s.' % os.getpid())
+    p = Pool(4)
+    for i in range(5):
+        p.apply_async(long_time_task, args=(i,))
+    print('Waiting for all subprocesses done...')
+    p.close()
+    p.join()
+    print('All subprocesses done.')
+\end{pythoncode}
+
+执行结果如下：
+
+\begin{pythoncode}
+Parent process 669.
+Waiting for all subprocesses done...
+Run task 0 (671)...
+Run task 1 (672)...
+Run task 2 (673)...
+Run task 3 (674)...
+Task 2 runs 0.14 seconds.
+Run task 4 (673)...
+Task 1 runs 0.27 seconds.
+Task 3 runs 0.86 seconds.
+Task 0 runs 1.41 seconds.
+Task 4 runs 1.91 seconds.
+All subprocesses done.
+\end{pythoncode}
+
+代码解读：
+
+对\texttt{Pool}对象调用\texttt{join()}方法会等待所有子进程执行完毕，调用\texttt{join()}之前必须先调用\texttt{close()}，调用\texttt{close()}之后就不能继续添加新的\texttt{Process}了。
+
+请注意输出的结果，task
+\texttt{0}，\texttt{1}，\texttt{2}，\texttt{3}是立刻执行的，而 task
+\texttt{4}要等待前面某个 task
+完成后才执行，这是因为\texttt{Pool}的默认大小在我的电脑上是
+4，因此，最多同时执行 4
+个进程。这是\texttt{Pool}有意设计的限制，并不是操作系统的限制。如果改成：
+
+\begin{pythoncode}
+p = Pool(5)
+\end{pythoncode}
+
+就可以同时跑 5 个进程。
+
+由于\texttt{Pool}的默认大小是 CPU 的核数，如果你不幸拥有 8 核
+CPU，你要提交至少 9 个子进程才能看到上面的等待效果。
+
+\hypertarget{ux5b50ux8fdbux7a0b}{%
+\subsubsection{子进程}\label{ux5b50ux8fdbux7a0b}}
+
+很多时候，子进程并不是自身，而是一个外部进程。我们创建了子进程后，还需要控制子进程的输入和输出。
+
+\texttt{subprocess}模块可以让我们非常方便地启动一个子进程，然后控制其输入和输出。
+
+下面的例子演示了如何在 Python
+代码中运行命令\texttt{nslookup\ www.python.org}，这和命令行直接运行的效果是一样的：
+
+\begin{pythoncode}
+import subprocess
+
+print('$ nslookup www.python.org')
+r = subprocess.call(['nslookup', 'www.python.org'])
+print('Exit code:', r)
+\end{pythoncode}
+
+运行结果：
+
+\begin{pythoncode}
+$ nslookup www.python.org
+Server:     192.168.19.4
+Address:    192.168.19.4
+
+Non-authoritative answer:
+www.python.org  canonical name = python.map.fastly.net.
+Name:   python.map.fastly.net
+Address: 199.27.79.223
+
+Exit code: 0
+\end{pythoncode}
+
+如果子进程还需要输入，则可以通过\texttt{communicate()}方法输入：
+
+\begin{pythoncode}
+import subprocess
+
+print('$ nslookup')
+p = subprocess.Popen(['nslookup'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+output, err = p.communicate(b'set q=mx\npython.org\nexit\n')
+print(output.decode('utf-8'))
+print('Exit code:', p.returncode)
+\end{pythoncode}
+
+上面的代码相当于在命令行执行命令\texttt{nslookup}，然后手动输入：
+
+\begin{pythoncode}
+set q=mx
+python.org
+exit
+\end{pythoncode}
+
+运行结果如下：
+
+\begin{pythoncode}
+$ nslookup
+Server:     192.168.19.4
+Address:    192.168.19.4
+
+Non-authoritative answer:
+python.org  mail exchanger = 50 mail.python.org.
+
+Authoritative answers can be found from:
+mail.python.org internet address = 82.94.164.166
+mail.python.org has AAAA address 2001:888:2000:d::a6
+Exit code: 0
+\end{pythoncode}
+
+\hypertarget{ux8fdbux7a0bux95f4ux901aux4fe1}{%
+\subsubsection{进程间通信}\label{ux8fdbux7a0bux95f4ux901aux4fe1}}
+
+\texttt{Process}之间肯定是需要通信的，操作系统提供了很多机制来实现进程间的通信。Python
+的\texttt{multiprocessing}模块包装了底层的机制，提供了\texttt{Queue}、\texttt{Pipes}等多种方式来交换数据。
+
+我们以\texttt{Queue}为例，在父进程中创建两个子进程，一个往\texttt{Queue}里写数据，一个从\texttt{Queue}里读数据：
+
+\begin{pythoncode}
+from multiprocessing import Process, Queue
+import os, time, random
+def write(q):
+    print('Process to write: %s' % os.getpid())
+    for value in ['A', 'B', 'C']:
+        print('Put %s to queue...' % value)
+        q.put(value)
+        time.sleep(random.random())
+def read(q):
+    print('Process to read: %s' % os.getpid())
+    while True:
+        value = q.get(True)
+        print('Get %s from queue.' % value)
+
+if __name__=='__main__':
+    
+    q = Queue()
+    pw = Process(target=write, args=(q,))
+    pr = Process(target=read, args=(q,))
+    
+    pw.start()
+    
+    pr.start()
+    
+    pw.join()
+    
+    pr.terminate()
+\end{pythoncode}
+
+运行结果如下：
+
+\begin{pythoncode}
+Process to write: 50563
+Put A to queue...
+Process to read: 50564
+Get A from queue.
+Put B to queue...
+Get B from queue.
+Put C to queue...
+Get C from queue.
+\end{pythoncode}
+
+在 Unix/Linux
+下，\texttt{multiprocessing}模块封装了\texttt{fork()}调用，使我们不需要关注\texttt{fork()}的细节。由于
+Windows 没有\texttt{fork}调用，因此，\texttt{multiprocessing}需要
+``模拟'' 出\texttt{fork}的效果，父进程所有 Python 对象都必须通过 pickle
+序列化再传到子进程去，所以，如果\texttt{multiprocessing}在 Windows
+下调用失败了，要先考虑是不是 pickle 失败了。
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+在 Unix/Linux 下，可以使用\texttt{fork()}调用实现多进程。
+
+要实现跨平台的多进程，可以使用\texttt{multiprocessing}模块。
+
+进程间通信是通过\texttt{Queue}、\texttt{Pipes}等实现的。
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/multitask/do_folk.py}{do\_folk.py}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/multitask/multi_processing.py}{multi\_processing.py}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/multitask/pooled_processing.py}{pooled\_processing.py}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/multitask/do_subprocess.py}{do\_subprocess.py}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/multitask/do_queue.py}{do\_queue.py}
+

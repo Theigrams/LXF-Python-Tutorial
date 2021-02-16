@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} -*- coding: utf-8 -*-}
+\PYG{k+kn}{import} \PYG{n+nn}{hashlib}\PYG{o}{,} \PYG{n+nn}{random}
+
+\PYG{k}{def} \PYG{n+nf}{get\PYGZus{}md5}\PYG{p}{(}\PYG{n}{s}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{hashlib}\PYG{o}{.}\PYG{n}{md5}\PYG{p}{(}\PYG{n}{s}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}\PYG{o}{.}\PYG{n}{hexdigest}\PYG{p}{()}
+
+\PYG{k}{class} \PYG{n+nc}{User}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{username}\PYG{p}{,} \PYG{n}{password}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{username} \PYG{o}{=} \PYG{n}{username}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{salt} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{([}\PYG{n+nb}{chr}\PYG{p}{(}\PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{48}\PYG{p}{,} \PYG{l+m+mi}{122}\PYG{p}{))} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{20}\PYG{p}{)])}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{password} \PYG{o}{=} \PYG{n}{get\PYGZus{}md5}\PYG{p}{(}\PYG{n}{password} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{salt}\PYG{p}{)}
+\end{Verbatim}

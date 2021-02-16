@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{发件人} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{MUA} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{MTA} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{MTA} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{若干个MTA} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{MDA} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{MUA} \PYG{o}{\PYGZlt{}\PYGZhy{}} \PYG{n}{收件人}
+\end{Verbatim}

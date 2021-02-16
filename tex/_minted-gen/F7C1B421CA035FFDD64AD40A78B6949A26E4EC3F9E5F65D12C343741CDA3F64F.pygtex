@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f1}\PYG{p}{()}
+\PYG{l+m+mi}{9}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f2}\PYG{p}{()}
+\PYG{l+m+mi}{9}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f3}\PYG{p}{()}
+\PYG{l+m+mi}{9}
+\end{Verbatim}

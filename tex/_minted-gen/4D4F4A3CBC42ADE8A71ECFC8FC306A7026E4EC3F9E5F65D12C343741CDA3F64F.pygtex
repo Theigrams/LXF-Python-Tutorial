@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{wsgiref.simple\PYGZus{}server} \PYG{k+kn}{import} \PYG{n}{make\PYGZus{}server}
+
+\PYG{k+kn}{from} \PYG{n+nn}{hello} \PYG{k+kn}{import} \PYG{n}{application}
+\PYG{n}{httpd} \PYG{o}{=} \PYG{n}{make\PYGZus{}server}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8000}\PYG{p}{,} \PYG{n}{application}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Serving HTTP on port 8000...\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{httpd}\PYG{o}{.}\PYG{n}{serve\PYGZus{}forever}\PYG{p}{()}
+\end{Verbatim}

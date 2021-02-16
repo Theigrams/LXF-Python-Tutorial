@@ -1,0 +1,44 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{ssh} \PYG{n}{robot}\PYG{n+nd}{@ev3dev}\PYG{o}{.}\PYG{n}{local}
+\PYG{n}{Password}\PYG{p}{:} \PYG{o}{*****}
+\PYG{n}{Linux} \PYG{n}{ev3dev} \PYG{l+m+mf}{4.14}\PYG{o}{.}\PYG{l+m+mi}{96}\PYG{o}{\PYGZhy{}}\PYG{n}{ev3dev}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.3}\PYG{o}{.}\PYG{l+m+mi}{2}\PYG{o}{\PYGZhy{}}\PYG{n}{ev3}
+             \PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}}     \PYG{n}{\PYGZus{}}
+   \PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}}   \PYG{n}{\PYGZus{}}\PYG{o}{|}\PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}} \PYG{o}{/}  \PYG{n}{\PYGZus{}\PYGZus{}}\PYG{o}{|} \PYG{o}{|} \PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}}   \PYG{n}{\PYGZus{}\PYGZus{}}
+  \PYG{o}{/} \PYG{n}{\PYGZus{}} \PYGZbs{} \PYGZbs{} \PYG{o}{/} \PYG{o}{/} \PYG{o}{|}\PYG{n}{\PYGZus{}} \PYGZbs{} \PYG{o}{/} \PYG{n}{\PYGZus{}}\PYG{err}{`} \PYG{o}{|/} \PYG{n}{\PYGZus{}} \PYGZbs{} \PYGZbs{} \PYG{o}{/} \PYG{o}{/}
+ \PYG{o}{|}  \PYG{n}{\PYGZus{}\PYGZus{}}\PYG{o}{/}\PYGZbs{} \PYG{n}{V} \PYG{o}{/} \PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}}\PYG{p}{)} \PYG{o}{|} \PYG{p}{(}\PYG{n}{\PYGZus{}}\PYG{o}{|} \PYG{o}{|}  \PYG{n}{\PYGZus{}\PYGZus{}}\PYG{o}{/}\PYGZbs{} \PYG{n}{V} \PYG{o}{/}
+  \PYGZbs{}\PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}}\PYG{o}{|} \PYGZbs{}\PYG{n}{\PYGZus{}}\PYG{o}{/} \PYG{o}{|}\PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}}\PYG{o}{/} \PYGZbs{}\PYG{n}{\PYGZus{}\PYGZus{}}\PYG{p}{,}\PYG{n}{\PYGZus{}}\PYG{o}{|}\PYGZbs{}\PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}}\PYG{o}{|} \PYGZbs{}\PYG{n}{\PYGZus{}}\PYG{o}{/}
+
+\PYG{n}{Debian} \PYG{n}{stretch} \PYG{n}{on} \PYG{n}{LEGO} \PYG{n}{MINDSTORMS} \PYG{n}{EV3}\PYG{err}{!}
+\PYG{n}{Last} \PYG{n}{login}\PYG{p}{:} \PYG{n}{Mon} \PYG{n}{Mar}  \PYG{l+m+mi}{4} \PYG{l+m+mi}{18}\PYG{p}{:}\PYG{l+m+mi}{05}\PYG{p}{:}\PYG{l+m+mi}{04} \PYG{l+m+mi}{2019} \PYG{k+kn}{from} \PYG{n+nn}{f81e}\PYG{p}{::}\PYG{n}{a7}\PYG{p}{:}\PYG{n}{c54d}\PYG{p}{:}\PYG{l+m+mf}{4e0}\PYG{n}{b}\PYG{p}{:}\PYG{l+m+mi}{3}\PYG{n}{af7}\PYG{o}{\PYGZpc{}}\PYG{n}{bnep0}
+\PYG{n}{robot}\PYG{n+nd}{@ev3dev}\PYG{p}{:}\PYG{o}{\PYGZti{}}\PYG{err}{\PYGZdl{}} \PYG{n}{ls} \PYG{o}{/}\PYG{n}{usr}\PYG{o}{/}\PYG{n}{lib}\PYG{o}{/}\PYG{n}{micropython}\PYG{o}{/}
+\PYG{n}{README}           \PYG{n}{fcntl}\PYG{o}{.}\PYG{n}{mpy}      \PYG{n}{mailbox}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{reprlib}\PYG{o}{.}\PYG{n}{mpy}       \PYG{n}{trace}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{README}\PYG{o}{.}\PYG{n}{rst}       \PYG{n}{ffilib}\PYG{o}{.}\PYG{n}{mpy}     \PYG{n}{mailcap}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{runpy}\PYG{o}{.}\PYG{n}{mpy}         \PYG{n}{traceback}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{\PYGZus{}\PYGZus{}future\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{mpy}   \PYG{n}{fnmatch}\PYG{o}{.}\PYG{n}{mpy}    \PYG{n}{mimetypes}\PYG{o}{.}\PYG{n}{mpy}        \PYG{n}{sched}\PYG{o}{.}\PYG{n}{mpy}         \PYG{n}{tty}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{\PYGZus{}libc}\PYG{o}{.}\PYG{n}{mpy}        \PYG{n}{formatter}\PYG{o}{.}\PYG{n}{mpy}  \PYG{n}{multiprocessing}\PYG{o}{.}\PYG{n}{mpy}  \PYG{n}{sdist\PYGZus{}upip}\PYG{o}{.}\PYG{n}{mpy}    \PYG{n}{types}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{\PYGZus{}markupbase}\PYG{o}{.}\PYG{n}{mpy}  \PYG{n}{fractions}\PYG{o}{.}\PYG{n}{mpy}  \PYG{n}{nntplib}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{select}\PYG{o}{.}\PYG{n}{mpy}        \PYG{n}{typing}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{abc}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{ftplib}\PYG{o}{.}\PYG{n}{mpy}     \PYG{n}{numbers}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{selectors}\PYG{o}{.}\PYG{n}{mpy}     \PYG{n}{uaiohttpclient}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{argparse}\PYG{o}{.}\PYG{n}{mpy}     \PYG{n}{functools}\PYG{o}{.}\PYG{n}{mpy}  \PYG{n}{operator}\PYG{o}{.}\PYG{n}{mpy}         \PYG{n}{shelve}\PYG{o}{.}\PYG{n}{mpy}        \PYG{n}{uasyncio}
+\PYG{n}{base64}\PYG{o}{.}\PYG{n}{mpy}       \PYG{n}{getopt}\PYG{o}{.}\PYG{n}{mpy}     \PYG{n}{optparse}\PYG{o}{.}\PYG{n}{mpy}         \PYG{n}{shlex}\PYG{o}{.}\PYG{n}{mpy}         \PYG{n}{uasyncio}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{binascii}\PYG{o}{.}\PYG{n}{mpy}     \PYG{n}{getpass}\PYG{o}{.}\PYG{n}{mpy}    \PYG{n}{os}                   \PYG{n}{shutil}\PYG{o}{.}\PYG{n}{mpy}        \PYG{n}{ucontextlib}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{binhex}\PYG{o}{.}\PYG{n}{mpy}       \PYG{n}{gettext}\PYG{o}{.}\PYG{n}{mpy}    \PYG{n}{pathlib}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{signal}\PYG{o}{.}\PYG{n}{mpy}        \PYG{n}{ucurses}
+\PYG{n}{bisect}\PYG{o}{.}\PYG{n}{mpy}       \PYG{n}{glob}\PYG{o}{.}\PYG{n}{mpy}       \PYG{n}{pdb}\PYG{o}{.}\PYG{n}{mpy}              \PYG{n}{smtplib}\PYG{o}{.}\PYG{n}{mpy}       \PYG{n}{udnspkt}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{calendar}\PYG{o}{.}\PYG{n}{mpy}     \PYG{n}{gzip}\PYG{o}{.}\PYG{n}{mpy}       \PYG{n}{pickle}\PYG{o}{.}\PYG{n}{mpy}           \PYG{n}{socket}\PYG{o}{.}\PYG{n}{mpy}        \PYG{n}{umqtt}
+\PYG{n}{cgi}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{hashlib}        \PYG{n}{pickletools}\PYG{o}{.}\PYG{n}{mpy}      \PYG{n}{socketserver}\PYG{o}{.}\PYG{n}{mpy}  \PYG{n}{unicodedata}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{cmd}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{heapq}\PYG{o}{.}\PYG{n}{mpy}      \PYG{n}{pkg\PYGZus{}resources}\PYG{o}{.}\PYG{n}{mpy}    \PYG{n}{sqlite3}\PYG{o}{.}\PYG{n}{mpy}       \PYG{n}{unittest}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{code}\PYG{o}{.}\PYG{n}{mpy}         \PYG{n}{hmac}\PYG{o}{.}\PYG{n}{mpy}       \PYG{n}{pkgutil}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{ssl}\PYG{o}{.}\PYG{n}{mpy}           \PYG{n}{upip}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{codecs}\PYG{o}{.}\PYG{n}{mpy}       \PYG{n}{html}           \PYG{n}{platform}\PYG{o}{.}\PYG{n}{mpy}         \PYG{n}{stat}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{upip\PYGZus{}utarfile}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{codeop}\PYG{o}{.}\PYG{n}{mpy}       \PYG{n}{http}           \PYG{n}{poplib}\PYG{o}{.}\PYG{n}{mpy}           \PYG{n}{statistics}\PYG{o}{.}\PYG{n}{mpy}    \PYG{n}{upysh}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{collections}      \PYG{n}{imaplib}\PYG{o}{.}\PYG{n}{mpy}    \PYG{n}{posixpath}\PYG{o}{.}\PYG{n}{mpy}        \PYG{n}{string}\PYG{o}{.}\PYG{n}{mpy}        \PYG{n}{urequests}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{concurrent}       \PYG{n}{imp}\PYG{o}{.}\PYG{n}{mpy}        \PYG{n}{pprint}\PYG{o}{.}\PYG{n}{mpy}           \PYG{n}{stringprep}\PYG{o}{.}\PYG{n}{mpy}    \PYG{n}{urllib}
+\PYG{n}{contextlib}\PYG{o}{.}\PYG{n}{mpy}   \PYG{n}{importlib}\PYG{o}{.}\PYG{n}{mpy}  \PYG{n}{profile}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{struct}\PYG{o}{.}\PYG{n}{mpy}        \PYG{n}{urllib}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{copy}\PYG{o}{.}\PYG{n}{mpy}         \PYG{n}{inspect}\PYG{o}{.}\PYG{n}{mpy}    \PYG{n}{pty}\PYG{o}{.}\PYG{n}{mpy}              \PYG{n}{subprocess}\PYG{o}{.}\PYG{n}{mpy}    \PYG{n}{utarfile}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{csv}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{io}\PYG{o}{.}\PYG{n}{mpy}         \PYG{n}{pwd}\PYG{o}{.}\PYG{n}{mpy}              \PYG{n}{sys}\PYG{o}{.}\PYG{n}{mpy}           \PYG{n}{uu}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{curses}           \PYG{n}{ipaddress}\PYG{o}{.}\PYG{n}{mpy}  \PYG{n}{pyb}\PYG{o}{.}\PYG{n}{mpy}              \PYG{n}{tarfile}\PYG{o}{.}\PYG{n}{mpy}       \PYG{n}{uuid}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{datetime}\PYG{o}{.}\PYG{n}{mpy}     \PYG{n}{itertools}\PYG{o}{.}\PYG{n}{mpy}  \PYG{n}{pystone}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{telnetlib}\PYG{o}{.}\PYG{n}{mpy}     \PYG{n}{venv}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{dbm}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{json}           \PYG{n}{pystone\PYGZus{}lowmem}\PYG{o}{.}\PYG{n}{mpy}   \PYG{n}{tempfile}\PYG{o}{.}\PYG{n}{mpy}      \PYG{n}{warnings}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{decimal}\PYG{o}{.}\PYG{n}{mpy}      \PYG{n}{keyword}\PYG{o}{.}\PYG{n}{mpy}    \PYG{n}{queue}\PYG{o}{.}\PYG{n}{mpy}            \PYG{n}{test}              \PYG{n}{weakref}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{difflib}\PYG{o}{.}\PYG{n}{mpy}      \PYG{n}{linecache}\PYG{o}{.}\PYG{n}{mpy}  \PYG{n}{quopri}\PYG{o}{.}\PYG{n}{mpy}           \PYG{n}{textwrap}\PYG{o}{.}\PYG{n}{mpy}      \PYG{n}{xmltok}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{email}            \PYG{n}{locale}\PYG{o}{.}\PYG{n}{mpy}     \PYG{n}{random}\PYG{o}{.}\PYG{n}{mpy}           \PYG{n}{threading}\PYG{o}{.}\PYG{n}{mpy}     \PYG{n}{zipfile}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{errno}\PYG{o}{.}\PYG{n}{mpy}        \PYG{n}{logging}\PYG{o}{.}\PYG{n}{mpy}    \PYG{n}{re}\PYG{o}{.}\PYG{n}{mpy}               \PYG{n}{time}\PYG{o}{.}\PYG{n}{mpy}          \PYG{n}{zlib}\PYG{o}{.}\PYG{n}{mpy}
+\PYG{n}{ev3dev2}          \PYG{n}{machine}        \PYG{n}{readline}\PYG{o}{.}\PYG{n}{mpy}         \PYG{n}{timeit}\PYG{o}{.}\PYG{n}{mpy}
+\end{Verbatim}

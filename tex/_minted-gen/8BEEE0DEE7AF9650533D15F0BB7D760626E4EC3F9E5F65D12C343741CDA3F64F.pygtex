@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r} \PYG{o}{=} \PYG{n}{requests}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}https://www.douban.com/\PYGZsq{}}\PYG{p}{,} \PYG{n}{headers}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}User\PYGZhy{}Agent\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Mozilla/5.0 (iPhone; CPU iPhone OS 11\PYGZus{}0 like Mac OS X) AppleWebKit\PYGZsq{}}\PYG{p}{\PYGZcb{})}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r}\PYG{o}{.}\PYG{n}{text}
+\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}!DOCTYPE html\PYGZgt{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZlt{}html\PYGZgt{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZlt{}head\PYGZgt{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZlt{}meta charset=\PYGZdq{}UTF\PYGZhy{}8\PYGZdq{}\PYGZgt{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{ \PYGZlt{}title\PYGZgt{}豆瓣(手机版)\PYGZlt{}/title\PYGZgt{}...\PYGZsq{}}
+\end{Verbatim}

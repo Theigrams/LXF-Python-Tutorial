@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{int2}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}10010\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

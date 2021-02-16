@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/api/comments\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{def} \PYG{n+nf}{api\PYGZus{}comments}\PYG{p}{(}\PYG{o}{*}\PYG{p}{,} \PYG{n}{page}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{):}
+    \PYG{k}{pass}
+\end{Verbatim}

@@ -1,0 +1,21 @@
+\hypertarget{ux4f7fux7528-micropython}{%
+\subsection{使用 MicroPython}\label{ux4f7fux7528-micropython}}
+
+\href{https://micropython.org/}{MicroPython} 是 Python
+的一个精简版本，它是为了运行在单片机这样的性能有限的微控制器上，最小体积仅
+256K，运行时仅需 16K 内存。
+
+MicroPython 是基于 Python 3.4
+的语法标准。因为要适应嵌入式微控制器，所以裁剪了大部分标准库，仅保留部分模块如\texttt{math}、\texttt{sys}的部分函数和类。此外，很多标准模块如\texttt{json}、\texttt{re}等在
+MicroPython
+中变成了以\texttt{u}开头的\texttt{ujson}、\texttt{ure}，表示针对
+MicroPython 开发的标准库。
+
+目前，MicroPython 除了可以运行在最初开发的
+\href{https://store.micropython.org/pyb-features}{pyboard}
+微控制器上外，还可以运行在大量基于 ARM 的嵌入式系统，如
+\href{https://www.arduino.cc/}{Arduino}，这样我们就可以通过 Python
+来非常方便地开发自动控制、机器人这样的应用。
+
+本章我们介绍如何使用 MicroPython 开发简单的机器人应用程序。
+

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 创建实例:}
+\PYG{n}{user} \PYG{o}{=} \PYG{n}{User}\PYG{p}{(}\PYG{n+nb}{id}\PYG{o}{=}\PYG{l+m+mi}{123}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} 存入数据库:}
+\PYG{n}{user}\PYG{o}{.}\PYG{n}{insert}\PYG{p}{()}
+\PYG{c+c1}{\PYGZsh{} 查询所有User对象:}
+\PYG{n}{users} \PYG{o}{=} \PYG{n}{User}\PYG{o}{.}\PYG{n}{findAll}\PYG{p}{()}
+\end{Verbatim}

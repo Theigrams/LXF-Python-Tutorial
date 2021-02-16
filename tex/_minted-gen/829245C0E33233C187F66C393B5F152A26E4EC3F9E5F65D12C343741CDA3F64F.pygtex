@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{async} \PYG{k}{def} \PYG{n+nf}{hello}\PYG{p}{():}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Hello world!\PYGZdq{}}\PYG{p}{)}
+    \PYG{n}{r} \PYG{o}{=} \PYG{k}{await} \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Hello again!\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

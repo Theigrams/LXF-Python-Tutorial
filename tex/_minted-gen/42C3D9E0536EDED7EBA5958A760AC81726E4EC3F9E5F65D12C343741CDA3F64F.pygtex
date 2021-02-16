@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{os}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Process (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{) start...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{())}
+
+\PYG{n}{pid} \PYG{o}{=} \PYG{n}{os}\PYG{o}{.}\PYG{n}{fork}\PYG{p}{()}
+\PYG{k}{if} \PYG{n}{pid} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}I am child process (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{) and my parent is }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{(),} \PYG{n}{os}\PYG{o}{.}\PYG{n}{getppid}\PYG{p}{()))}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}I (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{) just created a child process (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{).\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{(),} \PYG{n}{pid}\PYG{p}{))}
+\end{Verbatim}

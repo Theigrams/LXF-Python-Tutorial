@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{n}{html}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}}\PYG{n}{head}\PYG{o}{\PYGZgt{}}
+  \PYG{o}{\PYGZlt{}}\PYG{n}{title}\PYG{o}{\PYGZgt{}}\PYG{n}{Home}\PYG{o}{\PYGZlt{}/}\PYG{n}{title}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{head}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}}\PYG{n}{body}\PYG{o}{\PYGZgt{}}
+  \PYG{o}{\PYGZlt{}}\PYG{n}{h1} \PYG{n}{style}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}font\PYGZhy{}style:italic\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{Home}\PYG{o}{\PYGZlt{}/}\PYG{n}{h1}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{body}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{html}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

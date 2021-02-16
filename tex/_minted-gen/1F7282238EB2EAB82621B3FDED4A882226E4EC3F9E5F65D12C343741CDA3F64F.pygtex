@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{url\PYGZus{}param} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{match\PYGZus{}info}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}key\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{query\PYGZus{}params} \PYG{o}{=} \PYG{n}{parse\PYGZus{}qs}\PYG{p}{(}\PYG{n}{request}\PYG{o}{.}\PYG{n}{query\PYGZus{}string}\PYG{p}{)}
+\end{Verbatim}

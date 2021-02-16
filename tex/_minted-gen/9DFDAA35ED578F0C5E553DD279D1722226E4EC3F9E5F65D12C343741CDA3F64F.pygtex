@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{turtle} \PYG{k+kn}{import} \PYG{o}{*}
+\PYG{n}{width}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
+\PYG{n}{forward}\PYG{p}{(}\PYG{l+m+mi}{200}\PYG{p}{)}
+
+\PYG{n}{right}\PYG{p}{(}\PYG{l+m+mi}{90}\PYG{p}{)}
+\PYG{n}{pencolor}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}red\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{forward}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)}
+\PYG{n}{right}\PYG{p}{(}\PYG{l+m+mi}{90}\PYG{p}{)}
+
+\PYG{n}{pencolor}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}green\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{forward}\PYG{p}{(}\PYG{l+m+mi}{200}\PYG{p}{)}
+\PYG{n}{right}\PYG{p}{(}\PYG{l+m+mi}{90}\PYG{p}{)}
+
+\PYG{n}{pencolor}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}blue\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{forward}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)}
+\PYG{n}{right}\PYG{p}{(}\PYG{l+m+mi}{90}\PYG{p}{)}
+\PYG{n}{done}\PYG{p}{()}
+\end{Verbatim}

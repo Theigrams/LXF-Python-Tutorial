@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}ABC\PYGZsq{}}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()}
+\PYG{l+s+s1}{\PYGZsq{}abc\PYGZsq{}}
+\end{Verbatim}

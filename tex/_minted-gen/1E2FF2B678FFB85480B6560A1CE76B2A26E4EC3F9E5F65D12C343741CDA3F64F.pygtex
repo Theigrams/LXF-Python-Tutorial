@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} -*- coding:utf-8 -*-}
+
+\PYG{k+kn}{import} \PYG{n+nn}{re}
+\PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{datetime}\PYG{p}{,} \PYG{n}{timezone}\PYG{p}{,} \PYG{n}{timedelta}
+\end{Verbatim}

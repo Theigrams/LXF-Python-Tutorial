@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{sorted}\PYG{p}{([}\PYG{l+m+mi}{36}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{21}\PYG{p}{],} \PYG{n}{key}\PYG{o}{=}\PYG{n+nb}{abs}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{12}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{21}\PYG{p}{,} \PYG{l+m+mi}{36}\PYG{p}{]}
+\end{Verbatim}

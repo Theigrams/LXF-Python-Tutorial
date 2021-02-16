@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}ABCDEFG\PYGZsq{}}\PYG{p}{[:}\PYG{l+m+mi}{3}\PYG{p}{]}
+\PYG{l+s+s1}{\PYGZsq{}ABC\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}ABCDEFG\PYGZsq{}}\PYG{p}{[::}\PYG{l+m+mi}{2}\PYG{p}{]}
+\PYG{l+s+s1}{\PYGZsq{}ACEG\PYGZsq{}}
+\end{Verbatim}

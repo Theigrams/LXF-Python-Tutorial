@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} -*- coding: utf-8 -*-}
+
+\PYG{n}{L} \PYG{o}{=} \PYG{p}{[}
+    \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Apple\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Google\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Microsoft\PYGZsq{}}\PYG{p}{],}
+    \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Java\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Python\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Ruby\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}PHP\PYGZsq{}}\PYG{p}{],}
+    \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Bart\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Lisa\PYGZsq{}}\PYG{p}{]}
+\PYG{p}{]}
+\end{Verbatim}

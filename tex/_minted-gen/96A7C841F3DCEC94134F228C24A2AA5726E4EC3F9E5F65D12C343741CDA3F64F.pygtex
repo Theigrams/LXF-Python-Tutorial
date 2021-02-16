@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+\PYG{k}{def} \PYG{n+nf}{execute}\PYG{p}{(}\PYG{n}{sql}\PYG{p}{,} \PYG{n}{args}\PYG{p}{):}
+    \PYG{n}{log}\PYG{p}{(}\PYG{n}{sql}\PYG{p}{)}
+    \PYG{k}{with} \PYG{p}{(}\PYG{k}{yield from} \PYG{n}{\PYGZus{}\PYGZus{}pool}\PYG{p}{)} \PYG{k}{as} \PYG{n}{conn}\PYG{p}{:}
+        \PYG{k}{try}\PYG{p}{:}
+            \PYG{n}{cur} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{conn}\PYG{o}{.}\PYG{n}{cursor}\PYG{p}{()}
+            \PYG{k}{yield from} \PYG{n}{cur}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}\PYG{n}{sql}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}?\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{),} \PYG{n}{args}\PYG{p}{)}
+            \PYG{n}{affected} \PYG{o}{=} \PYG{n}{cur}\PYG{o}{.}\PYG{n}{rowcount}
+            \PYG{k}{yield from} \PYG{n}{cur}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+        \PYG{k}{except} \PYG{n+ne}{BaseException} \PYG{k}{as} \PYG{n}{e}\PYG{p}{:}
+            \PYG{k}{raise}
+        \PYG{k}{return} \PYG{n}{affected}
+\end{Verbatim}

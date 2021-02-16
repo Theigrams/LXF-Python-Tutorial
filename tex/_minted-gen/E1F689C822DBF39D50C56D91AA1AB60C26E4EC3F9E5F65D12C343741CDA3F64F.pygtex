@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@log}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}execute\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{def} \PYG{n+nf}{f}\PYG{p}{():}
+    \PYG{k}{pass}
+\end{Verbatim}

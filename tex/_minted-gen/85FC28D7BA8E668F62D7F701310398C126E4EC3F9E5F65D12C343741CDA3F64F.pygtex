@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{db} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+
+\PYG{k}{def} \PYG{n+nf}{register}\PYG{p}{(}\PYG{n}{username}\PYG{p}{,} \PYG{n}{password}\PYG{p}{):}
+    \PYG{n}{db}\PYG{p}{[}\PYG{n}{username}\PYG{p}{]} \PYG{o}{=} \PYG{n}{get\PYGZus{}md5}\PYG{p}{(}\PYG{n}{password} \PYG{o}{+} \PYG{n}{username} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}the\PYGZhy{}Salt\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

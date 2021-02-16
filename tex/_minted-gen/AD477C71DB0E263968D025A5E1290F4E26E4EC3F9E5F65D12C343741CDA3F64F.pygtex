@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{try}\PYG{p}{:}
+    \PYG{l+m+mi}{10} \PYG{o}{/} \PYG{l+m+mi}{0}
+\PYG{k}{except} \PYG{n+ne}{ZeroDivisionError}\PYG{p}{:}
+    \PYG{k}{raise} \PYG{n+ne}{ValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}input error!\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

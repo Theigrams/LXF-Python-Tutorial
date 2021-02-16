@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{def} \PYG{n+nf}{set\PYGZus{}age}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{age}\PYG{p}{):}
+\PYG{o}{...}     \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{age} \PYG{o}{=} \PYG{n}{age}
+\PYG{o}{...}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{types} \PYG{k+kn}{import} \PYG{n}{MethodType}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s}\PYG{o}{.}\PYG{n}{set\PYGZus{}age} \PYG{o}{=} \PYG{n}{MethodType}\PYG{p}{(}\PYG{n}{set\PYGZus{}age}\PYG{p}{,} \PYG{n}{s}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s}\PYG{o}{.}\PYG{n}{set\PYGZus{}age}\PYG{p}{(}\PYG{l+m+mi}{25}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s}\PYG{o}{.}\PYG{n}{age}
+\PYG{l+m+mi}{25}
+\end{Verbatim}

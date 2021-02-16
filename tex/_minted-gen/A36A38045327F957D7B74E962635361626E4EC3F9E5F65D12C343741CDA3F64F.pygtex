@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s}\PYG{o}{.}\PYG{n}{set\PYGZus{}score}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s}\PYG{o}{.}\PYG{n}{score}
+\PYG{l+m+mi}{100}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s2}\PYG{o}{.}\PYG{n}{set\PYGZus{}score}\PYG{p}{(}\PYG{l+m+mi}{99}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s2}\PYG{o}{.}\PYG{n}{score}
+\PYG{l+m+mi}{99}
+\end{Verbatim}

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{io} \PYG{k+kn}{import} \PYG{n}{BytesIO}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f} \PYG{o}{=} \PYG{n}{BytesIO}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xe4\PYGZbs{}xb8\PYGZbs{}xad\PYGZbs{}xe6\PYGZbs{}x96\PYGZbs{}x87}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f}\PYG{o}{.}\PYG{n}{read}\PYG{p}{()}
+\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xe4\PYGZbs{}xb8\PYGZbs{}xad\PYGZbs{}xe6\PYGZbs{}x96\PYGZbs{}x87}\PYG{l+s+s1}{\PYGZsq{}}
+\end{Verbatim}

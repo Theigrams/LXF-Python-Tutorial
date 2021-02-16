@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{decode\PYGZus{}str}\PYG{p}{(}\PYG{n}{s}\PYG{p}{):}
+    \PYG{n}{value}\PYG{p}{,} \PYG{n}{charset} \PYG{o}{=} \PYG{n}{decode\PYGZus{}header}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)[}\PYG{l+m+mi}{0}\PYG{p}{]}
+    \PYG{k}{if} \PYG{n}{charset}\PYG{p}{:}
+        \PYG{n}{value} \PYG{o}{=} \PYG{n}{value}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{n}{charset}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{value}
+\end{Verbatim}

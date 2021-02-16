@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{pwd}
+\PYG{o}{/}\PYG{n}{etc}\PYG{o}{/}\PYG{n}{nginx}\PYG{o}{/}\PYG{n}{sites}\PYG{o}{\PYGZhy{}}\PYG{n}{enabled}
+\PYG{err}{\PYGZdl{}} \PYG{n}{sudo} \PYG{n}{ln} \PYG{o}{\PYGZhy{}}\PYG{n}{s} \PYG{o}{/}\PYG{n}{etc}\PYG{o}{/}\PYG{n}{nginx}\PYG{o}{/}\PYG{n}{sites}\PYG{o}{\PYGZhy{}}\PYG{n}{available}\PYG{o}{/}\PYG{n}{awesome} \PYG{o}{.}
+\end{Verbatim}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{p}{[}
+    \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{),}
+    \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}2\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{),}
+    \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}3\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{)}
+\PYG{p}{]}
+\end{Verbatim}

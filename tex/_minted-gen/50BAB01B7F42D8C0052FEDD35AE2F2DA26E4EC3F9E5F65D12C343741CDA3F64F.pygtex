@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{┌────────────────────────────────────────────────────────┐}
+\PYG{err}{│}\PYG{n}{Command} \PYG{n}{Prompt} \PYG{o}{\PYGZhy{}} \PYG{n}{python}                           \PYG{o}{\PYGZhy{}} \PYG{err}{□} \PYG{n}{x} \PYG{err}{│}
+\PYG{err}{├────────────────────────────────────────────────────────┤}
+\PYG{err}{│}\PYG{n}{Microsoft} \PYG{n}{Windows} \PYG{p}{[}\PYG{n}{Version} \PYG{l+m+mf}{10.0}\PYG{o}{.}\PYG{l+m+mi}{0}\PYG{p}{]}                      \PYG{err}{│}
+\PYG{err}{│}\PYG{p}{(}\PYG{n}{c}\PYG{p}{)} \PYG{l+m+mi}{2015} \PYG{n}{Microsoft} \PYG{n}{Corporation}\PYG{o}{.} \PYG{n}{All} \PYG{n}{rights} \PYG{n}{reserved}\PYG{o}{.}    \PYG{err}{│}
+\PYG{err}{│}                                                        \PYG{err}{│}
+\PYG{err}{│}\PYG{n}{C}\PYG{p}{:}\PYGZbs{}\PYG{o}{\PYGZgt{}} \PYG{n}{python}                                             \PYG{err}{│}
+\PYG{err}{│}\PYG{n}{Python} \PYG{l+m+mf}{3.6}\PYG{o}{.}\PYG{l+m+mi}{3} \PYG{o}{|}\PYG{n}{Anaconda}\PYG{p}{,} \PYG{n}{Inc}\PYG{o}{.|} \PYG{o}{...} \PYG{n}{on} \PYG{n}{win32}              \PYG{err}{│}
+\PYG{err}{│}\PYG{n}{Type} \PYG{l+s+s2}{\PYGZdq{}help\PYGZdq{}}\PYG{p}{,} \PYG{o}{...} \PYG{k}{for} \PYG{n}{more} \PYG{n}{information}\PYG{o}{.}                  \PYG{err}{│}
+\PYG{err}{│}\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{numpy}                                        \PYG{err}{│}
+\PYG{err}{│}\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{\PYGZus{}}                                                   \PYG{err}{│}
+\PYG{err}{│}                                                        \PYG{err}{│}
+\PYG{err}{│}                                                        \PYG{err}{│}
+\PYG{err}{│}                                                        \PYG{err}{│}
+\PYG{err}{└────────────────────────────────────────────────────────┘}
+\end{Verbatim}

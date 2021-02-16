@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Chain}\PYG{p}{()}\PYG{o}{.}\PYG{n}{status}\PYG{o}{.}\PYG{n}{user}\PYG{o}{.}\PYG{n}{timeline}\PYG{o}{.}\PYG{n}{list}
+\PYG{l+s+s1}{\PYGZsq{}/status/user/timeline/list\PYGZsq{}}
+\end{Verbatim}

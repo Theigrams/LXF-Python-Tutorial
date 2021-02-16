@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{\PYGZus{}odd\PYGZus{}iter}\PYG{p}{():}
+    \PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{1}
+    \PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+        \PYG{n}{n} \PYG{o}{=} \PYG{n}{n} \PYG{o}{+} \PYG{l+m+mi}{2}
+        \PYG{k}{yield} \PYG{n}{n}
+\end{Verbatim}

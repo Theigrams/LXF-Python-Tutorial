@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{n}{html}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}\PYGZpc{}} \PYG{n}{include} \PYG{n}{file}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}inc\PYGZus{}header.html\PYGZdq{}} \PYG{o}{\PYGZpc{}\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}\PYGZpc{}} \PYG{n}{include} \PYG{n}{file}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}index\PYGZus{}body.html\PYGZdq{}} \PYG{o}{\PYGZpc{}\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}\PYGZpc{}} \PYG{n}{include} \PYG{n}{file}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}inc\PYGZus{}footer.html\PYGZdq{}} \PYG{o}{\PYGZpc{}\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{html}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

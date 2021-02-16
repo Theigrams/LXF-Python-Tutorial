@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}line1}
+\PYG{l+s+s1}{line2}
+\PYG{l+s+s1}{line3\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

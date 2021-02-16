@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{datetime}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cday} \PYG{o}{=} \PYG{n}{datetime}\PYG{o}{.}\PYG{n}{strptime}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}2015\PYGZhy{}6\PYGZhy{}1 18:19:59\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZpc{}Y\PYGZhy{}\PYGZpc{}m\PYGZhy{}}\PYG{l+s+si}{\PYGZpc{}d}\PYG{l+s+s1}{ \PYGZpc{}H:\PYGZpc{}M:\PYGZpc{}S\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{cday}\PYG{p}{)}
+\PYG{l+m+mi}{2015}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{06}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{01} \PYG{l+m+mi}{18}\PYG{p}{:}\PYG{l+m+mi}{19}\PYG{p}{:}\PYG{l+m+mi}{59}
+\end{Verbatim}

@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{day1} \PYG{o}{=} \PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Mon}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{day1}\PYG{p}{)}
+\PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Mon}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Tue}\PYG{p}{)}
+\PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Tue}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{Weekday}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Tue\PYGZsq{}}\PYG{p}{])}
+\PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Tue}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Tue}\PYG{o}{.}\PYG{n}{value}\PYG{p}{)}
+\PYG{l+m+mi}{2}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{day1} \PYG{o}{==} \PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Mon}\PYG{p}{)}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{day1} \PYG{o}{==} \PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Tue}\PYG{p}{)}
+\PYG{k+kc}{False}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{Weekday}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{))}
+\PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Mon}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{day1} \PYG{o}{==} \PYG{n}{Weekday}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{))}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Weekday}\PYG{p}{(}\PYG{l+m+mi}{7}\PYG{p}{)}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{o}{...}
+\PYG{n+ne}{ValueError}\PYG{p}{:} \PYG{l+m+mi}{7} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{n}{a} \PYG{n}{valid} \PYG{n}{Weekday}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{name}\PYG{p}{,} \PYG{n}{member} \PYG{o+ow}{in} \PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}members\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{items}\PYG{p}{():}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}=\PYGZgt{}\PYGZsq{}}\PYG{p}{,} \PYG{n}{member}\PYG{p}{)}
+\PYG{o}{...}
+\PYG{n}{Sun} \PYG{o}{=\PYGZgt{}} \PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Sun}
+\PYG{n}{Mon} \PYG{o}{=\PYGZgt{}} \PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Mon}
+\PYG{n}{Tue} \PYG{o}{=\PYGZgt{}} \PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Tue}
+\PYG{n}{Wed} \PYG{o}{=\PYGZgt{}} \PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Wed}
+\PYG{n}{Thu} \PYG{o}{=\PYGZgt{}} \PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Thu}
+\PYG{n}{Fri} \PYG{o}{=\PYGZgt{}} \PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Fri}
+\PYG{n}{Sat} \PYG{o}{=\PYGZgt{}} \PYG{n}{Weekday}\PYG{o}{.}\PYG{n}{Sat}
+\end{Verbatim}

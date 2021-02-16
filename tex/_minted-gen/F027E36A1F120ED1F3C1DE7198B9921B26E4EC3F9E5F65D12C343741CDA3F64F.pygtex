@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试:}
+\PYG{n}{output} \PYG{o}{=} \PYG{n+nb}{filter}\PYG{p}{(}\PYG{n}{is\PYGZus{}palindrome}\PYG{p}{,} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1000}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}1\PYGZti{}1000:\PYGZsq{}}\PYG{p}{,} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n}{output}\PYG{p}{))}
+\PYG{k}{if} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{filter}\PYG{p}{(}\PYG{n}{is\PYGZus{}palindrome}\PYG{p}{,} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{200}\PYG{p}{)))} \PYG{o}{==} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{11}\PYG{p}{,} \PYG{l+m+mi}{22}\PYG{p}{,} \PYG{l+m+mi}{33}\PYG{p}{,} \PYG{l+m+mi}{44}\PYG{p}{,} \PYG{l+m+mi}{55}\PYG{p}{,} \PYG{l+m+mi}{66}\PYG{p}{,} \PYG{l+m+mi}{77}\PYG{p}{,} \PYG{l+m+mi}{88}\PYG{p}{,} \PYG{l+m+mi}{99}\PYG{p}{,} \PYG{l+m+mi}{101}\PYG{p}{,} \PYG{l+m+mi}{111}\PYG{p}{,} \PYG{l+m+mi}{121}\PYG{p}{,} \PYG{l+m+mi}{131}\PYG{p}{,} \PYG{l+m+mi}{141}\PYG{p}{,} \PYG{l+m+mi}{151}\PYG{p}{,} \PYG{l+m+mi}{161}\PYG{p}{,} \PYG{l+m+mi}{171}\PYG{p}{,} \PYG{l+m+mi}{181}\PYG{p}{,} \PYG{l+m+mi}{191}\PYG{p}{]:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试成功!\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

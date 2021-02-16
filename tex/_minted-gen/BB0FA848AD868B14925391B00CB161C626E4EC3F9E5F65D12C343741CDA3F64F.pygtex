@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{I}\PYG{p}{:} \PYG{n}{Bus}\PYG{o}{=}\PYG{l+m+mi}{0005} \PYG{n}{Vendor}\PYG{o}{=}\PYG{l+m+mi}{057}\PYG{n}{e} \PYG{n}{Product}\PYG{o}{=}\PYG{l+m+mi}{2009} \PYG{n}{Version}\PYG{o}{=}\PYG{l+m+mi}{0001}
+\PYG{n}{N}\PYG{p}{:}
+\PYG{n}{P}\PYG{p}{:} \PYG{n}{Phys}\PYG{o}{=}\PYG{l+m+mi}{00}\PYG{p}{:}\PYG{l+m+mi}{17}\PYG{p}{:}\PYG{n}{ec}\PYG{p}{:}\PYG{l+m+mi}{13}\PYG{p}{:}\PYG{n}{d8}\PYG{p}{:}\PYG{l+m+mi}{1}\PYG{n}{d}
+\PYG{n}{S}\PYG{p}{:} \PYG{n}{Sysfs}\PYG{o}{=/}\PYG{n}{devices}\PYG{o}{/}\PYG{n}{platform}\PYG{o}{/}\PYG{n}{soc}\PYG{o}{@}\PYG{l+m+mi}{1}\PYG{n}{c00000}\PYG{o}{/}\PYG{n}{serial8250}\PYG{o}{.}\PYG{l+m+mi}{2}\PYG{o}{/}\PYG{n}{tty}\PYG{o}{/}\PYG{n}{ttyS2}\PYG{o}{/}\PYG{n}{hci0}\PYG{o}{/}\PYG{n}{hci0}\PYG{p}{:}\PYG{l+m+mi}{2}\PYG{o}{/}\PYG{l+m+mi}{0005}\PYG{p}{:}\PYG{l+m+mi}{057}\PYG{n}{E}\PYG{p}{:}\PYG{l+m+mf}{2009.0003}\PYG{o}{/}\PYG{n+nb}{input}\PYG{o}{/}\PYG{n}{input4}
+\PYG{n}{U}\PYG{p}{:} \PYG{n}{Uniq}\PYG{o}{=}\PYG{l+m+mi}{00}\PYG{p}{:}\PYG{l+m+mi}{90}\PYG{p}{:}\PYG{n}{e3}\PYG{p}{:}\PYG{l+m+mi}{9}\PYG{n}{b}\PYG{p}{:}\PYG{n}{ec}\PYG{p}{:}\PYG{n}{e9}
+\PYG{n}{H}\PYG{p}{:} \PYG{n}{Handlers}\PYG{o}{=}\PYG{n}{event2}
+\PYG{n}{B}\PYG{p}{:} \PYG{n}{PROP}\PYG{o}{=}\PYG{l+m+mi}{0}
+\PYG{n}{B}\PYG{p}{:} \PYG{n}{EV}\PYG{o}{=}\PYG{l+m+mi}{10001}\PYG{n}{b}
+\PYG{n}{B}\PYG{p}{:} \PYG{n}{KEY}\PYG{o}{=}\PYG{n}{ffff0000} \PYG{l+m+mi}{0} \PYG{l+m+mi}{0} \PYG{l+m+mi}{0} \PYG{l+m+mi}{0} \PYG{l+m+mi}{0} \PYG{l+m+mi}{0} \PYG{l+m+mi}{0} \PYG{l+m+mi}{0} \PYG{l+m+mi}{0}
+\PYG{n}{B}\PYG{p}{:} \PYG{n}{ABS}\PYG{o}{=}\PYG{l+m+mi}{3001}\PYG{n}{b}
+\PYG{n}{B}\PYG{p}{:} \PYG{n}{MSC}\PYG{o}{=}\PYG{l+m+mi}{10}
+\end{Verbatim}

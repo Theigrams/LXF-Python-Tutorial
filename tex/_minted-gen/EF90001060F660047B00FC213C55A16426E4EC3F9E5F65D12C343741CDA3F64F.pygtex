@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} -*- coding: utf-8 -*-}
+
+\PYG{n}{s1} \PYG{o}{=} \PYG{l+m+mi}{72}
+\PYG{n}{s2} \PYG{o}{=} \PYG{l+m+mi}{85}
+\end{Verbatim}

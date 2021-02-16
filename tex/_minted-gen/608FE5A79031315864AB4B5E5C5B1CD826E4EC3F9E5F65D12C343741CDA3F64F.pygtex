@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试:}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{pi}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{pi}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{pi}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{pi}\PYG{p}{(}\PYG{l+m+mi}{10000}\PYG{p}{))}
+\PYG{k}{assert} \PYG{l+m+mf}{3.04} \PYG{o}{\PYGZlt{}} \PYG{n}{pi}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{3.05}
+\PYG{k}{assert} \PYG{l+m+mf}{3.13} \PYG{o}{\PYGZlt{}} \PYG{n}{pi}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{3.14}
+\PYG{k}{assert} \PYG{l+m+mf}{3.140} \PYG{o}{\PYGZlt{}} \PYG{n}{pi}\PYG{p}{(}\PYG{l+m+mi}{1000}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{3.141}
+\PYG{k}{assert} \PYG{l+m+mf}{3.1414} \PYG{o}{\PYGZlt{}} \PYG{n}{pi}\PYG{p}{(}\PYG{l+m+mi}{10000}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{3.1415}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ok\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

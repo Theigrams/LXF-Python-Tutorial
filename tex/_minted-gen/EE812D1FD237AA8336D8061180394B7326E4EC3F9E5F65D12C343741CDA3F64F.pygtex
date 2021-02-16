@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{student2dict}\PYG{p}{(}\PYG{n}{std}\PYG{p}{):}
+    \PYG{k}{return} \PYG{p}{\PYGZob{}}
+        \PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}\PYG{p}{:} \PYG{n}{std}\PYG{o}{.}\PYG{n}{name}\PYG{p}{,}
+        \PYG{l+s+s1}{\PYGZsq{}age\PYGZsq{}}\PYG{p}{:} \PYG{n}{std}\PYG{o}{.}\PYG{n}{age}\PYG{p}{,}
+        \PYG{l+s+s1}{\PYGZsq{}score\PYGZsq{}}\PYG{p}{:} \PYG{n}{std}\PYG{o}{.}\PYG{n}{score}
+    \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{asyncio}
+
+\PYG{k+kn}{from} \PYG{n+nn}{aiohttp} \PYG{k+kn}{import} \PYG{n}{web}
+
+\PYG{k}{async} \PYG{k}{def} \PYG{n+nf}{index}\PYG{p}{(}\PYG{n}{request}\PYG{p}{):}
+    \PYG{k}{await} \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{web}\PYG{o}{.}\PYG{n}{Response}\PYG{p}{(}\PYG{n}{body}\PYG{o}{=}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}h1\PYGZgt{}Index\PYGZlt{}/h1\PYGZgt{}\PYGZsq{}}\PYG{p}{)}
+
+\PYG{k}{async} \PYG{k}{def} \PYG{n+nf}{hello}\PYG{p}{(}\PYG{n}{request}\PYG{p}{):}
+    \PYG{k}{await} \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mf}{0.5}\PYG{p}{)}
+    \PYG{n}{text} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}h1\PYGZgt{}hello, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{!\PYGZlt{}/h1\PYGZgt{}\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{request}\PYG{o}{.}\PYG{n}{match\PYGZus{}info}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}\PYG{p}{]}
+    \PYG{k}{return} \PYG{n}{web}\PYG{o}{.}\PYG{n}{Response}\PYG{p}{(}\PYG{n}{body}\PYG{o}{=}\PYG{n}{text}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+
+\PYG{k}{async} \PYG{k}{def} \PYG{n+nf}{init}\PYG{p}{(}\PYG{n}{loop}\PYG{p}{):}
+    \PYG{n}{app} \PYG{o}{=} \PYG{n}{web}\PYG{o}{.}\PYG{n}{Application}\PYG{p}{(}\PYG{n}{loop}\PYG{o}{=}\PYG{n}{loop}\PYG{p}{)}
+    \PYG{n}{app}\PYG{o}{.}\PYG{n}{router}\PYG{o}{.}\PYG{n}{add\PYGZus{}route}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}/\PYGZsq{}}\PYG{p}{,} \PYG{n}{index}\PYG{p}{)}
+    \PYG{n}{app}\PYG{o}{.}\PYG{n}{router}\PYG{o}{.}\PYG{n}{add\PYGZus{}route}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}/hello/}\PYG{l+s+si}{\PYGZob{}name\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{n}{hello}\PYG{p}{)}
+    \PYG{n}{srv} \PYG{o}{=} \PYG{k}{await} \PYG{n}{loop}\PYG{o}{.}\PYG{n}{create\PYGZus{}server}\PYG{p}{(}\PYG{n}{app}\PYG{o}{.}\PYG{n}{make\PYGZus{}handler}\PYG{p}{(),} \PYG{l+s+s1}{\PYGZsq{}127.0.0.1\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{8000}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Server started at http://127.0.0.1:8000...\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{srv}
+
+\PYG{n}{loop} \PYG{o}{=} \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{get\PYGZus{}event\PYGZus{}loop}\PYG{p}{()}
+\PYG{n}{loop}\PYG{o}{.}\PYG{n}{run\PYGZus{}until\PYGZus{}complete}\PYG{p}{(}\PYG{n}{init}\PYG{p}{(}\PYG{n}{loop}\PYG{p}{))}
+\PYG{n}{loop}\PYG{o}{.}\PYG{n}{run\PYGZus{}forever}\PYG{p}{()}
+\end{Verbatim}

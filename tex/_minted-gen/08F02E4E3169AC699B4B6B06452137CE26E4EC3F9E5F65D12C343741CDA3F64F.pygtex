@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{x} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{5}
+\PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{6}
+\PYG{n}{f} \PYG{o}{=} \PYG{n+nb}{abs}
+\PYG{n}{f}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)} \PYG{o}{+} \PYG{n}{f}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)} \PYG{o}{==\PYGZgt{}} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{5}\PYG{p}{)} \PYG{o}{+} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{p}{)} \PYG{o}{==\PYGZgt{}} \PYG{l+m+mi}{11}
+\PYG{k}{return} \PYG{l+m+mi}{11}
+\end{Verbatim}

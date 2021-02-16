@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{age} \PYG{o}{=} \PYG{l+m+mi}{3}
+\PYG{k}{if} \PYG{n}{age} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{18}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}your age is\PYGZsq{}}\PYG{p}{,} \PYG{n}{age}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}adult\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}your age is\PYGZsq{}}\PYG{p}{,} \PYG{n}{age}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}teenager\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

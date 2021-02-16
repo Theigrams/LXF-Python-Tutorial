@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{orm} \PYG{k+kn}{import} \PYG{n}{Model}\PYG{p}{,} \PYG{n}{StringField}\PYG{p}{,} \PYG{n}{IntegerField}
+
+\PYG{k}{class} \PYG{n+nc}{User}\PYG{p}{(}\PYG{n}{Model}\PYG{p}{):}
+    \PYG{n}{\PYGZus{}\PYGZus{}table\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}users\PYGZsq{}}
+
+    \PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{IntegerField}\PYG{p}{(}\PYG{n}{primary\PYGZus{}key}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+    \PYG{n}{name} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{()}
+\end{Verbatim}

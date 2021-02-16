@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}err.py\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{11}\PYG{p}{,} \PYG{o+ow}{in} \PYG{o}{\PYGZlt{}}\PYG{n}{module}\PYG{o}{\PYGZgt{}}
+    \PYG{n}{main}\PYG{p}{()}
+\end{Verbatim}

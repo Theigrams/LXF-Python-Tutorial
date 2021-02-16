@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{thread} \PYG{n}{MainThread} \PYG{o+ow}{is} \PYG{n}{running}\PYG{o}{...}
+\PYG{n}{thread} \PYG{n}{LoopThread} \PYG{o+ow}{is} \PYG{n}{running}\PYG{o}{...}
+\PYG{n}{thread} \PYG{n}{LoopThread} \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{1}
+\PYG{n}{thread} \PYG{n}{LoopThread} \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{2}
+\PYG{n}{thread} \PYG{n}{LoopThread} \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{3}
+\PYG{n}{thread} \PYG{n}{LoopThread} \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{4}
+\PYG{n}{thread} \PYG{n}{LoopThread} \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{5}
+\PYG{n}{thread} \PYG{n}{LoopThread} \PYG{n}{ended}\PYG{o}{.}
+\PYG{n}{thread} \PYG{n}{MainThread} \PYG{n}{ended}\PYG{o}{.}
+\end{Verbatim}

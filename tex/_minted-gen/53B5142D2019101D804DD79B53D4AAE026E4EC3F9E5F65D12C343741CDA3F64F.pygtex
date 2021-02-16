@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{enum} \PYG{k+kn}{import} \PYG{n}{Enum}
+
+\PYG{n}{Month} \PYG{o}{=} \PYG{n}{Enum}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Month\PYGZsq{}}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Jan\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Feb\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Mar\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Apr\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}May\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Jun\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Jul\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Aug\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Sep\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Oct\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Nov\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Dec\PYGZsq{}}\PYG{p}{))}
+\end{Verbatim}

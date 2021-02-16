@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{g} \PYG{o}{=} \PYG{n}{fib}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+\PYG{o}{...}     \PYG{k}{try}\PYG{p}{:}
+\PYG{o}{...}         \PYG{n}{x} \PYG{o}{=} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{g}\PYG{p}{)}
+\PYG{o}{...}         \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}g:\PYGZsq{}}\PYG{p}{,} \PYG{n}{x}\PYG{p}{)}
+\PYG{o}{...}     \PYG{k}{except} \PYG{n+ne}{StopIteration} \PYG{k}{as} \PYG{n}{e}\PYG{p}{:}
+\PYG{o}{...}         \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Generator return value:\PYGZsq{}}\PYG{p}{,} \PYG{n}{e}\PYG{o}{.}\PYG{n}{value}\PYG{p}{)}
+\PYG{o}{...}         \PYG{k}{break}
+\PYG{o}{...}
+\PYG{n}{g}\PYG{p}{:} \PYG{l+m+mi}{1}
+\PYG{n}{g}\PYG{p}{:} \PYG{l+m+mi}{1}
+\PYG{n}{g}\PYG{p}{:} \PYG{l+m+mi}{2}
+\PYG{n}{g}\PYG{p}{:} \PYG{l+m+mi}{3}
+\PYG{n}{g}\PYG{p}{:} \PYG{l+m+mi}{5}
+\PYG{n}{g}\PYG{p}{:} \PYG{l+m+mi}{8}
+\PYG{n}{Generator} \PYG{k}{return} \PYG{n}{value}\PYG{p}{:} \PYG{n}{done}
+\end{Verbatim}

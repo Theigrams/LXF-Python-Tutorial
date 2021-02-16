@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{StringField}\PYG{p}{(}\PYG{n}{Field}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{,} \PYG{n}{primary\PYGZus{}key}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{,} \PYG{n}{default}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{,} \PYG{n}{ddl}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}varchar(100)\PYGZsq{}}\PYG{p}{):}
+        \PYG{n+nb}{super}\PYG{p}{()}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{ddl}\PYG{p}{,} \PYG{n}{primary\PYGZus{}key}\PYG{p}{,} \PYG{n}{default}\PYG{p}{)}
+\end{Verbatim}

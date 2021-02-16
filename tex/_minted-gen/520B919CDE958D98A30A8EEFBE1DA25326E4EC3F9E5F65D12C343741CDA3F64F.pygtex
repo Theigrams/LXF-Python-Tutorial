@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{session} \PYG{o}{=} \PYG{n}{DBSession}\PYG{p}{()}
+
+\PYG{n}{new\PYGZus{}user} \PYG{o}{=} \PYG{n}{User}\PYG{p}{(}\PYG{n+nb}{id}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}5\PYGZsq{}}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{session}\PYG{o}{.}\PYG{n}{add}\PYG{p}{(}\PYG{n}{new\PYGZus{}user}\PYG{p}{)}
+
+\PYG{n}{session}\PYG{o}{.}\PYG{n}{commit}\PYG{p}{()}
+
+\PYG{n}{session}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\end{Verbatim}

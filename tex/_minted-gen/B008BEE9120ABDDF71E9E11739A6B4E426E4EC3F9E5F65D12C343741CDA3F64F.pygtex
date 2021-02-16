@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{motor} \PYG{o}{=} \PYG{n}{Motor}\PYG{p}{(}\PYG{n}{Port}\PYG{o}{.}\PYG{n}{B}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} 接在B口}
+\PYG{n}{ultrasonic} \PYG{o}{=} \PYG{n}{UltrasonicSensor}\PYG{p}{(}\PYG{n}{Port}\PYG{o}{.}\PYG{n}{S4}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} 接在4号口}
+\end{Verbatim}

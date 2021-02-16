@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{run\PYGZus{}twice}\PYG{p}{(}\PYG{n}{animal}\PYG{p}{):}
+    \PYG{n}{animal}\PYG{o}{.}\PYG{n}{run}\PYG{p}{()}
+    \PYG{n}{animal}\PYG{o}{.}\PYG{n}{run}\PYG{p}{()}
+\end{Verbatim}

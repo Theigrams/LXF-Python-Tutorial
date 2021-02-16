@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{calc\PYGZus{}sum}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{):}
+    \PYG{n}{ax} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n}{args}\PYG{p}{:}
+        \PYG{n}{ax} \PYG{o}{=} \PYG{n}{ax} \PYG{o}{+} \PYG{n}{n}
+    \PYG{k}{return} \PYG{n}{ax}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{json\PYGZus{}str} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZob{}\PYGZdq{}age\PYGZdq{}: 20, \PYGZdq{}score\PYGZdq{}: 88, \PYGZdq{}name\PYGZdq{}: \PYGZdq{}Bob\PYGZdq{}\PYGZcb{}\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{json}\PYG{o}{.}\PYG{n}{loads}\PYG{p}{(}\PYG{n}{json\PYGZus{}str}\PYG{p}{,} \PYG{n}{object\PYGZus{}hook}\PYG{o}{=}\PYG{n}{dict2student}\PYG{p}{))}
+\PYG{o}{\PYGZlt{}}\PYG{n}{\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{Student} \PYG{n+nb}{object} \PYG{n}{at} \PYG{l+m+mh}{0x10cd3c190}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

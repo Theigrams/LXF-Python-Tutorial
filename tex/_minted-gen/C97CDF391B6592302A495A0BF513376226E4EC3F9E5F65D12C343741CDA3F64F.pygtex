@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{10}
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{x} \PYG{o}{+} \PYG{l+m+mi}{2}
+\end{Verbatim}

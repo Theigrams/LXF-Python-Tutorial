@@ -1,0 +1,41 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{ModelMetaclass}\PYG{p}{(}\PYG{n+nb}{type}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}new\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{cls}\PYG{p}{,} \PYG{n}{name}\PYG{p}{,} \PYG{n}{bases}\PYG{p}{,} \PYG{n}{attrs}\PYG{p}{):}
+
+        \PYG{k}{if} \PYG{n}{name}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}Model\PYGZsq{}}\PYG{p}{:}
+            \PYG{k}{return} \PYG{n+nb}{type}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}new\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{cls}\PYG{p}{,} \PYG{n}{name}\PYG{p}{,} \PYG{n}{bases}\PYG{p}{,} \PYG{n}{attrs}\PYG{p}{)}
+
+        \PYG{n}{tableName} \PYG{o}{=} \PYG{n}{attrs}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}table\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)} \PYG{o+ow}{or} \PYG{n}{name}
+        \PYG{n}{logging}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}found model: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ (table: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{)\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{tableName}\PYG{p}{))}
+
+        \PYG{n}{mappings} \PYG{o}{=} \PYG{n+nb}{dict}\PYG{p}{()}
+        \PYG{n}{fields} \PYG{o}{=} \PYG{p}{[]}
+        \PYG{n}{primaryKey} \PYG{o}{=} \PYG{k+kc}{None}
+        \PYG{k}{for} \PYG{n}{k}\PYG{p}{,} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n}{attrs}\PYG{o}{.}\PYG{n}{items}\PYG{p}{():}
+            \PYG{k}{if} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,} \PYG{n}{Field}\PYG{p}{):}
+                \PYG{n}{logging}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}  found mapping: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ ==\PYGZgt{} }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{k}\PYG{p}{,} \PYG{n}{v}\PYG{p}{))}
+                \PYG{n}{mappings}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]} \PYG{o}{=} \PYG{n}{v}
+                \PYG{k}{if} \PYG{n}{v}\PYG{o}{.}\PYG{n}{primary\PYGZus{}key}\PYG{p}{:}
+
+                    \PYG{k}{if} \PYG{n}{primaryKey}\PYG{p}{:}
+                        \PYG{k}{raise} \PYG{n+ne}{RuntimeError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Duplicate primary key for field: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{k}\PYG{p}{)}
+                    \PYG{n}{primaryKey} \PYG{o}{=} \PYG{n}{k}
+                \PYG{k}{else}\PYG{p}{:}
+                    \PYG{n}{fields}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{k}\PYG{p}{)}
+        \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{primaryKey}\PYG{p}{:}
+            \PYG{k}{raise} \PYG{n+ne}{RuntimeError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Primary key not found.\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{for} \PYG{n}{k} \PYG{o+ow}{in} \PYG{n}{mappings}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{():}
+            \PYG{n}{attrs}\PYG{o}{.}\PYG{n}{pop}\PYG{p}{(}\PYG{n}{k}\PYG{p}{)}
+        \PYG{n}{escaped\PYGZus{}fields} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{map}\PYG{p}{(}\PYG{k}{lambda} \PYG{n}{f}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}`}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{`\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{f}\PYG{p}{,} \PYG{n}{fields}\PYG{p}{))}
+        \PYG{n}{attrs}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}mappings\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{mappings}
+        \PYG{n}{attrs}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}table\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{tableName}
+        \PYG{n}{attrs}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}primary\PYGZus{}key\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{primaryKey}
+        \PYG{n}{attrs}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}fields\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{fields}
+
+        \PYG{n}{attrs}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}select\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}select `}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{`, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ from `}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{`\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{primaryKey}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}, \PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{escaped\PYGZus{}fields}\PYG{p}{),} \PYG{n}{tableName}\PYG{p}{)}
+        \PYG{n}{attrs}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}insert\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}insert into `}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{` (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{, `}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{`) values (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{)\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{tableName}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}, \PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{escaped\PYGZus{}fields}\PYG{p}{),} \PYG{n}{primaryKey}\PYG{p}{,} \PYG{n}{create\PYGZus{}args\PYGZus{}string}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{escaped\PYGZus{}fields}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{))}
+        \PYG{n}{attrs}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}update\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}update `}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{` set }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ where `}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{`=?\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{tableName}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}, \PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n+nb}{map}\PYG{p}{(}\PYG{k}{lambda} \PYG{n}{f}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}`}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{`=?\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{mappings}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}\PYG{o}{.}\PYG{n}{name} \PYG{o+ow}{or} \PYG{n}{f}\PYG{p}{),} \PYG{n}{fields}\PYG{p}{)),} \PYG{n}{primaryKey}\PYG{p}{)}
+        \PYG{n}{attrs}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}delete\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}delete from `}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{` where `}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{`=?\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{tableName}\PYG{p}{,} \PYG{n}{primaryKey}\PYG{p}{)}
+        \PYG{k}{return} \PYG{n+nb}{type}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}new\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{cls}\PYG{p}{,} \PYG{n}{name}\PYG{p}{,} \PYG{n}{bases}\PYG{p}{,} \PYG{n}{attrs}\PYG{p}{)}
+\end{Verbatim}

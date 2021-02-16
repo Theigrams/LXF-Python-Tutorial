@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{try}\PYG{o}{...}
+\PYG{k}{except}\PYG{p}{:} \PYG{n}{division} \PYG{n}{by} \PYG{n}{zero}
+\PYG{k}{finally}\PYG{o}{...}
+\PYG{n}{END}
+\end{Verbatim}

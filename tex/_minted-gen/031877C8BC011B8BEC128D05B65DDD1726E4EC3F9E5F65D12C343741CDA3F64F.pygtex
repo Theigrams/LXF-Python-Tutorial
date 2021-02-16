@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{text} \PYG{o}{=} \PYG{n}{render}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}template\PYGZsq{}}\PYG{p}{,} \PYG{n}{data}\PYG{p}{)}
+\PYG{k}{return} \PYG{n}{web}\PYG{o}{.}\PYG{n}{Response}\PYG{p}{(}\PYG{n}{text}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+\end{Verbatim}

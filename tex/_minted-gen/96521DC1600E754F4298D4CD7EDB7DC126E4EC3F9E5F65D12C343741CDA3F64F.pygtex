@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{subprocess}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZdl{} nslookup www.python.org\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{r} \PYG{o}{=} \PYG{n}{subprocess}\PYG{o}{.}\PYG{n}{call}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}nslookup\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}www.python.org\PYGZsq{}}\PYG{p}{])}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Exit code:\PYGZsq{}}\PYG{p}{,} \PYG{n}{r}\PYG{p}{)}
+\end{Verbatim}

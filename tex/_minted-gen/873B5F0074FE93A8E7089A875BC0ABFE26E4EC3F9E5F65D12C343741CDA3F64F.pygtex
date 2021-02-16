@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{functools}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{int2} \PYG{o}{=} \PYG{n}{functools}\PYG{o}{.}\PYG{n}{partial}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{,} \PYG{n}{base}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{int2}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}1000000\PYGZsq{}}\PYG{p}{)}
+\PYG{l+m+mi}{64}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{int2}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}1010101\PYGZsq{}}\PYG{p}{)}
+\PYG{l+m+mi}{85}
+\end{Verbatim}

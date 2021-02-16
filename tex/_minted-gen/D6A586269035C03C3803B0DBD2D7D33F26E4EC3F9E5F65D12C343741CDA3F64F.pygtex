@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{person}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Jack\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{24}\PYG{p}{,} \PYG{n}{city}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Beijing\PYGZsq{}}\PYG{p}{,} \PYG{n}{addr}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Chaoyang\PYGZsq{}}\PYG{p}{,} \PYG{n}{zipcode}\PYG{o}{=}\PYG{l+m+mi}{123456}\PYG{p}{)}
+\end{Verbatim}

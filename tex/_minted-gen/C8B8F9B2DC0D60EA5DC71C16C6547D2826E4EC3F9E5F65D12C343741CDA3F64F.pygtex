@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+    \PYG{n}{var} \PYG{n}{blog} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+        \PYG{n}{name}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}hello\PYGZsq{}}\PYG{p}{,}
+        \PYG{n}{summary}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}this is summary\PYGZsq{}}\PYG{p}{,}
+        \PYG{n}{content}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}this is content...\PYGZsq{}}
+    \PYG{p}{\PYGZcb{};}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

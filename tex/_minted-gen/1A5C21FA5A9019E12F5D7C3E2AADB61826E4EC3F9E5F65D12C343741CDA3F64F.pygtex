@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试:}
+\PYG{k}{if} \PYG{n}{Student}\PYG{o}{.}\PYG{n}{count} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n}{bart} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bart\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{Student}\PYG{o}{.}\PYG{n}{count} \PYG{o}{!=} \PYG{l+m+mi}{1}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n}{lisa} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bart\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{Student}\PYG{o}{.}\PYG{n}{count} \PYG{o}{!=} \PYG{l+m+mi}{2}\PYG{p}{:}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Students:\PYGZsq{}}\PYG{p}{,} \PYG{n}{Student}\PYG{o}{.}\PYG{n}{count}\PYG{p}{)}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试通过!\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

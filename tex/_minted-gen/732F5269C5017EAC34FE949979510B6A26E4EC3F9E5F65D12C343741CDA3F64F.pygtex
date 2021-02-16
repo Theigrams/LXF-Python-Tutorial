@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{environ}
+\PYG{n}{environ}\PYG{p}{(\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}VERSIONER\PYGZus{}PYTHON\PYGZus{}PREFER\PYGZus{}32\PYGZus{}BIT\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}no\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}TERM\PYGZus{}PROGRAM\PYGZus{}VERSION\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}326\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}LOGNAME\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}michael\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}USER\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}michael\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}PATH\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/mysql/bin\PYGZsq{}}\PYG{p}{,} \PYG{o}{...}\PYG{p}{\PYGZcb{})}
+\end{Verbatim}

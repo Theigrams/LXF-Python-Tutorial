@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{net\PYGZus{}connections}\PYG{p}{()}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{o}{...}
+\PYG{n+ne}{PermissionError}\PYG{p}{:} \PYG{p}{[}\PYG{n}{Errno} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{n}{Operation} \PYG{o+ow}{not} \PYG{n}{permitted}
+
+\PYG{n}{During} \PYG{n}{handling} \PYG{n}{of} \PYG{n}{the} \PYG{n}{above} \PYG{n}{exception}\PYG{p}{,} \PYG{n}{another} \PYG{n}{exception} \PYG{n}{occurred}\PYG{p}{:}
+
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{o}{...}
+\PYG{n}{psutil}\PYG{o}{.}\PYG{n}{AccessDenied}\PYG{p}{:} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{AccessDenied} \PYG{p}{(}\PYG{n}{pid}\PYG{o}{=}\PYG{l+m+mi}{3847}\PYG{p}{)}
+\end{Verbatim}

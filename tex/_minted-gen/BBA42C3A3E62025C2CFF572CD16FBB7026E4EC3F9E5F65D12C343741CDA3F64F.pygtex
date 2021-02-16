@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{logging}
+\PYG{n}{logging}\PYG{o}{.}\PYG{n}{basicConfig}\PYG{p}{(}\PYG{n}{level}\PYG{o}{=}\PYG{n}{logging}\PYG{o}{.}\PYG{n}{INFO}\PYG{p}{)}
+\end{Verbatim}

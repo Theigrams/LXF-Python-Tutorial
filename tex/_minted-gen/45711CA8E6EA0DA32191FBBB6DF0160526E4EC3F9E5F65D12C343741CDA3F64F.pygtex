@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{awesome}\PYG{o}{\PYGZhy{}}\PYG{n}{python}\PYG{o}{\PYGZhy{}}\PYG{n}{webapp}\PYG{o}{/}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{fabfile}\PYG{o}{.}\PYG{n}{py}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{www}\PYG{o}{/}
+\PYG{o}{+\PYGZhy{}} \PYG{o}{...}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Hello\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}World\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{18}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Apple\PYGZsq{}}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{p}{[}\PYG{n}{s}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()} \PYG{k}{for} \PYG{n}{s} \PYG{o+ow}{in} \PYG{n}{L}\PYG{p}{]}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}\PYGZlt{}stdin\PYGZgt{}\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o+ow}{in} \PYG{o}{\PYGZlt{}}\PYG{n}{module}\PYG{o}{\PYGZgt{}}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}\PYGZlt{}stdin\PYGZgt{}\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o+ow}{in} \PYG{o}{\PYGZlt{}}\PYG{n}{listcomp}\PYG{o}{\PYGZgt{}}
+\PYG{n+ne}{AttributeError}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}int\PYGZsq{}} \PYG{n+nb}{object} \PYG{n}{has} \PYG{n}{no} \PYG{n}{attribute} \PYG{l+s+s1}{\PYGZsq{}lower\PYGZsq{}}
+\end{Verbatim}

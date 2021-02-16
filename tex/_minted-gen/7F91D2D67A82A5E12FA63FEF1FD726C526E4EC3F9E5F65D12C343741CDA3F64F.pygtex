@@ -1,0 +1,59 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{turtle} \PYG{k+kn}{import} \PYG{o}{*}
+\PYG{n}{colormode}\PYG{p}{(}\PYG{l+m+mi}{255}\PYG{p}{)}
+
+\PYG{n}{lt}\PYG{p}{(}\PYG{l+m+mi}{90}\PYG{p}{)}
+
+\PYG{n}{lv} \PYG{o}{=} \PYG{l+m+mi}{14}
+\PYG{n}{l} \PYG{o}{=} \PYG{l+m+mi}{120}
+\PYG{n}{s} \PYG{o}{=} \PYG{l+m+mi}{45}
+
+\PYG{n}{width}\PYG{p}{(}\PYG{n}{lv}\PYG{p}{)}
+\PYG{n}{r} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{n}{g} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{n}{b} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{n}{pencolor}\PYG{p}{(}\PYG{n}{r}\PYG{p}{,} \PYG{n}{g}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)}
+
+\PYG{n}{penup}\PYG{p}{()}
+\PYG{n}{bk}\PYG{p}{(}\PYG{n}{l}\PYG{p}{)}
+\PYG{n}{pendown}\PYG{p}{()}
+\PYG{n}{fd}\PYG{p}{(}\PYG{n}{l}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{draw\PYGZus{}tree}\PYG{p}{(}\PYG{n}{l}\PYG{p}{,} \PYG{n}{level}\PYG{p}{):}
+    \PYG{k}{global} \PYG{n}{r}\PYG{p}{,} \PYG{n}{g}\PYG{p}{,} \PYG{n}{b}
+
+    \PYG{n}{w} \PYG{o}{=} \PYG{n}{width}\PYG{p}{()}
+
+
+    \PYG{n}{width}\PYG{p}{(}\PYG{n}{w} \PYG{o}{*} \PYG{l+m+mf}{3.0} \PYG{o}{/} \PYG{l+m+mf}{4.0}\PYG{p}{)}
+
+    \PYG{n}{r} \PYG{o}{=} \PYG{n}{r} \PYG{o}{+} \PYG{l+m+mi}{1}
+    \PYG{n}{g} \PYG{o}{=} \PYG{n}{g} \PYG{o}{+} \PYG{l+m+mi}{2}
+    \PYG{n}{b} \PYG{o}{=} \PYG{n}{b} \PYG{o}{+} \PYG{l+m+mi}{3}
+    \PYG{n}{pencolor}\PYG{p}{(}\PYG{n}{r} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{200}\PYG{p}{,} \PYG{n}{g} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{200}\PYG{p}{,} \PYG{n}{b} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{200}\PYG{p}{)}
+
+    \PYG{n}{l} \PYG{o}{=} \PYG{l+m+mf}{3.0} \PYG{o}{/} \PYG{l+m+mf}{4.0} \PYG{o}{*} \PYG{n}{l}
+
+    \PYG{n}{lt}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}
+    \PYG{n}{fd}\PYG{p}{(}\PYG{n}{l}\PYG{p}{)}
+
+    \PYG{k}{if} \PYG{n}{level} \PYG{o}{\PYGZlt{}} \PYG{n}{lv}\PYG{p}{:}
+        \PYG{n}{draw\PYGZus{}tree}\PYG{p}{(}\PYG{n}{l}\PYG{p}{,} \PYG{n}{level} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n}{bk}\PYG{p}{(}\PYG{n}{l}\PYG{p}{)}
+    \PYG{n}{rt}\PYG{p}{(}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{s}\PYG{p}{)}
+    \PYG{n}{fd}\PYG{p}{(}\PYG{n}{l}\PYG{p}{)}
+
+    \PYG{k}{if} \PYG{n}{level} \PYG{o}{\PYGZlt{}} \PYG{n}{lv}\PYG{p}{:}
+        \PYG{n}{draw\PYGZus{}tree}\PYG{p}{(}\PYG{n}{l}\PYG{p}{,} \PYG{n}{level} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{n}{bk}\PYG{p}{(}\PYG{n}{l}\PYG{p}{)}
+    \PYG{n}{lt}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}
+
+
+    \PYG{n}{width}\PYG{p}{(}\PYG{n}{w}\PYG{p}{)}
+
+\PYG{n}{speed}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}fastest\PYGZdq{}}\PYG{p}{)}
+
+\PYG{n}{draw\PYGZus{}tree}\PYG{p}{(}\PYG{n}{l}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)}
+
+\PYG{n}{done}\PYG{p}{()}
+\end{Verbatim}

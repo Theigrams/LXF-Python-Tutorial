@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{re}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{re}\PYG{o}{.}\PYG{n}{match}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZca{}\PYGZbs{}d}\PYG{l+s+si}{\PYGZob{}3\PYGZcb{}}\PYG{l+s+s1}{\PYGZbs{}\PYGZhy{}\PYGZbs{}d\PYGZob{}3,8\PYGZcb{}\PYGZdl{}\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}010\PYGZhy{}12345\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZlt{}}\PYG{n}{\PYGZus{}sre}\PYG{o}{.}\PYG{n}{SRE\PYGZus{}Match} \PYG{n+nb}{object}\PYG{p}{;} \PYG{n}{span}\PYG{o}{=}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{),} \PYG{n}{match}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}010\PYGZhy{}12345\PYGZsq{}}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{re}\PYG{o}{.}\PYG{n}{match}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZca{}\PYGZbs{}d}\PYG{l+s+si}{\PYGZob{}3\PYGZcb{}}\PYG{l+s+s1}{\PYGZbs{}\PYGZhy{}\PYGZbs{}d\PYGZob{}3,8\PYGZcb{}\PYGZdl{}\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}010 12345\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}}
+\end{Verbatim}

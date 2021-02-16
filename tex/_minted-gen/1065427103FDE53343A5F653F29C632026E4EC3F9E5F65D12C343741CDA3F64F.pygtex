@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+\PYG{k}{def} \PYG{n+nf}{logger\PYGZus{}factory}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{n}{handler}\PYG{p}{):}
+    \PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+    \PYG{k}{def} \PYG{n+nf}{logger}\PYG{p}{(}\PYG{n}{request}\PYG{p}{):}
+
+        \PYG{n}{logging}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Request: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{request}\PYG{o}{.}\PYG{n}{method}\PYG{p}{,} \PYG{n}{request}\PYG{o}{.}\PYG{n}{path}\PYG{p}{))}
+
+        \PYG{k}{return} \PYG{p}{(}\PYG{k}{yield from} \PYG{n}{handler}\PYG{p}{(}\PYG{n}{request}\PYG{p}{))}
+    \PYG{k}{return} \PYG{n}{logger}
+\end{Verbatim}

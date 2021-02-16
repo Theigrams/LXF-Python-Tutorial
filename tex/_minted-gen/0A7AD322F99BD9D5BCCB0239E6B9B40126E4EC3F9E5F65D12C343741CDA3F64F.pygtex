@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pickle}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{d} \PYG{o}{=} \PYG{n+nb}{dict}\PYG{p}{(}\PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{,} \PYG{n}{age}\PYG{o}{=}\PYG{l+m+mi}{20}\PYG{p}{,} \PYG{n}{score}\PYG{o}{=}\PYG{l+m+mi}{88}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{pickle}\PYG{o}{.}\PYG{n}{dumps}\PYG{p}{(}\PYG{n}{d}\PYG{p}{)}
+\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}x80\PYGZbs{}x03}\PYG{l+s+s1}{\PYGZcb{}q}\PYG{l+s+se}{\PYGZbs{}x00}\PYG{l+s+s1}{(X}\PYG{l+s+se}{\PYGZbs{}x03\PYGZbs{}x00\PYGZbs{}x00\PYGZbs{}x00}\PYG{l+s+s1}{ageq}\PYG{l+s+se}{\PYGZbs{}x01}\PYG{l+s+s1}{K}\PYG{l+s+se}{\PYGZbs{}x14}\PYG{l+s+s1}{X}\PYG{l+s+se}{\PYGZbs{}x05\PYGZbs{}x00\PYGZbs{}x00\PYGZbs{}x00}\PYG{l+s+s1}{scoreq}\PYG{l+s+se}{\PYGZbs{}x02}\PYG{l+s+s1}{KXX}\PYG{l+s+se}{\PYGZbs{}x04\PYGZbs{}x00\PYGZbs{}x00\PYGZbs{}x00}\PYG{l+s+s1}{nameq}\PYG{l+s+se}{\PYGZbs{}x03}\PYG{l+s+s1}{X}\PYG{l+s+se}{\PYGZbs{}x03\PYGZbs{}x00\PYGZbs{}x00\PYGZbs{}x00}\PYG{l+s+s1}{Bobq}\PYG{l+s+se}{\PYGZbs{}x04}\PYG{l+s+s1}{u.\PYGZsq{}}
+\end{Verbatim}

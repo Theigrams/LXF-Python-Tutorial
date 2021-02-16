@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{p}{[}\PYG{n}{m} \PYG{o}{+} \PYG{n}{n} \PYG{k}{for} \PYG{n}{m} \PYG{o+ow}{in} \PYG{l+s+s1}{\PYGZsq{}ABC\PYGZsq{}} \PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{l+s+s1}{\PYGZsq{}XYZ\PYGZsq{}}\PYG{p}{]}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}AX\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}AY\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}AZ\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}BX\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}BY\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}BZ\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}CX\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}CY\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}CZ\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

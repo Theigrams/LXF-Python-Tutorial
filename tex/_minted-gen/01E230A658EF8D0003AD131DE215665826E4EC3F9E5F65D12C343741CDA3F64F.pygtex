@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{struct}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{struct}\PYG{o}{.}\PYG{n}{pack}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZgt{}I\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{10240099}\PYG{p}{)}
+\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}x00\PYGZbs{}x9c}\PYG{l+s+s1}{@c\PYGZsq{}}
+\end{Verbatim}

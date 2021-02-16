@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 自动把handler模块的所有符合条件的函数注册了:}
+\PYG{n}{add\PYGZus{}routes}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}handlers\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Status}\PYG{p}{:} \PYG{l+m+mi}{200} \PYG{n}{OK}
+\PYG{n}{Server}\PYG{p}{:} \PYG{n}{nginx}
+\PYG{n}{Date}\PYG{p}{:} \PYG{n}{Tue}\PYG{p}{,} \PYG{l+m+mi}{26} \PYG{n}{May} \PYG{l+m+mi}{2015} \PYG{l+m+mi}{10}\PYG{p}{:}\PYG{l+m+mi}{02}\PYG{p}{:}\PYG{l+m+mi}{27} \PYG{n}{GMT}
+\PYG{n}{Content}\PYG{o}{\PYGZhy{}}\PYG{n}{Type}\PYG{p}{:} \PYG{n}{application}\PYG{o}{/}\PYG{n}{json}\PYG{p}{;} \PYG{n}{charset}\PYG{o}{=}\PYG{n}{utf}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{8}
+\PYG{n}{Content}\PYG{o}{\PYGZhy{}}\PYG{n}{Length}\PYG{p}{:} \PYG{l+m+mi}{2049}
+\PYG{n}{Connection}\PYG{p}{:} \PYG{n}{close}
+\PYG{n}{Expires}\PYG{p}{:} \PYG{n}{Sun}\PYG{p}{,} \PYG{l+m+mi}{1} \PYG{n}{Jan} \PYG{l+m+mi}{2006} \PYG{l+m+mi}{01}\PYG{p}{:}\PYG{l+m+mi}{00}\PYG{p}{:}\PYG{l+m+mi}{00} \PYG{n}{GMT}
+\PYG{n}{Pragma}\PYG{p}{:} \PYG{n}{no}\PYG{o}{\PYGZhy{}}\PYG{n}{cache}
+\PYG{n}{Cache}\PYG{o}{\PYGZhy{}}\PYG{n}{Control}\PYG{p}{:} \PYG{n}{must}\PYG{o}{\PYGZhy{}}\PYG{n}{revalidate}\PYG{p}{,} \PYG{n}{no}\PYG{o}{\PYGZhy{}}\PYG{n}{cache}\PYG{p}{,} \PYG{n}{private}
+\PYG{n}{X}\PYG{o}{\PYGZhy{}}\PYG{n}{DAE}\PYG{o}{\PYGZhy{}}\PYG{n}{Node}\PYG{p}{:} \PYG{n}{pidl1}
+\PYG{n}{Data}\PYG{p}{:} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}rating\PYGZdq{}}\PYG{p}{:\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}max\PYGZdq{}}\PYG{p}{:}\PYG{l+m+mi}{10}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}numRaters\PYGZdq{}}\PYG{p}{:}\PYG{l+m+mi}{16}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}average\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}7.4\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}min\PYGZdq{}}\PYG{p}{:}\PYG{l+m+mi}{0}\PYG{p}{\PYGZcb{},}\PYG{l+s+s2}{\PYGZdq{}subtitle\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}author\PYGZdq{}}\PYG{p}{:[}\PYG{l+s+s2}{\PYGZdq{}廖雪峰编著\PYGZdq{}}\PYG{p}{],}\PYG{l+s+s2}{\PYGZdq{}pubdate\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}2007\PYGZhy{}6\PYGZdq{}}\PYG{p}{,}\PYG{o}{...}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

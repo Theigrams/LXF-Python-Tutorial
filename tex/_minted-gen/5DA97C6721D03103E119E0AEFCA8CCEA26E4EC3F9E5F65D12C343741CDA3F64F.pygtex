@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r} \PYG{o}{=} \PYG{l+m+mf}{2.5}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s} \PYG{o}{=} \PYG{l+m+mf}{3.14} \PYG{o}{*} \PYG{n}{r} \PYG{o}{**} \PYG{l+m+mi}{2}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+sa}{f}\PYG{l+s+s1}{\PYGZsq{}The area of a circle with radius }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{r}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{ is }\PYG{l+s+si}{\PYGZob{}}\PYG{n}{s}\PYG{l+s+si}{:}\PYG{l+s+s1}{.2f}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{The} \PYG{n}{area} \PYG{n}{of} \PYG{n}{a} \PYG{n}{circle} \PYG{k}{with} \PYG{n}{radius} \PYG{l+m+mf}{2.5} \PYG{o+ow}{is} \PYG{l+m+mf}{19.62}
+\end{Verbatim}

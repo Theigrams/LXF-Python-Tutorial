@@ -1,0 +1,93 @@
+\hypertarget{udp-ux7f16ux7a0b}{%
+\subsection{UDP 编程}\label{udp-ux7f16ux7a0b}}
+
+TCP 是建立可靠连接，并且通信双方都可以以流的形式发送数据。相对 TCP，UDP
+则是面向无连接的协议。
+
+使用 UDP 协议时，不需要建立连接，只需要知道对方的 IP
+地址和端口号，就可以直接发数据包。但是，能不能到达就不知道了。
+
+虽然用 UDP 传输数据不可靠，但它的优点是和 TCP
+比，速度快，对于不要求可靠到达的数据，就可以使用 UDP 协议。
+
+我们来看看如何通过 UDP 协议传输数据。和 TCP 类似，使用 UDP
+的通信双方也分为客户端和服务器。服务器首先需要绑定端口：
+
+\begin{pythoncode}
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+s.bind(('127.0.0.1', 9999))
+\end{pythoncode}
+
+创建 Socket 时，\texttt{SOCK\_DGRAM}指定了这个 Socket 的类型是
+UDP。绑定端口和 TCP
+一样，但是不需要调用\texttt{listen()}方法，而是直接接收来自任何客户端的数据：
+
+\begin{pythoncode}
+print('Bind UDP on 9999...')
+while True:
+    
+    data, addr = s.recvfrom(1024)
+    print('Received from %s:%s.' % addr)
+    s.sendto(b'Hello, %s!' % data, addr)
+\end{pythoncode}
+
+\texttt{recvfrom()}方法返回数据和客户端的地址与端口，这样，服务器收到数据后，直接调用\texttt{sendto()}就可以把数据用
+UDP 发给客户端。
+
+注意这里省掉了多线程，因为这个例子很简单。
+
+客户端使用 UDP 时，首先仍然创建基于 UDP 的
+Socket，然后，不需要调用\texttt{connect()}，直接通过\texttt{sendto()}给服务器发数据：
+
+\begin{pythoncode}
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+for data in [b'Michael', b'Tracy', b'Sarah']:
+    
+    s.sendto(data, ('127.0.0.1', 9999))
+    
+    print(s.recv(1024).decode('utf-8'))
+s.close()
+\end{pythoncode}
+
+从服务器接收数据仍然调用\texttt{recv()}方法。
+
+仍然用两个命令行分别启动服务器和客户端测试，结果如下：
+
+\begin{pythoncode}
+┌────────────────────────────────────────────────────────┐
+│Command Prompt                                    - □ x │
+├────────────────────────────────────────────────────────┤
+│$ python udp_server.py                                  │
+│Bind UDP on 9999...                                     │
+│Received from 127.0.0.1:63823...                        │
+│Received from 127.0.0.1:63823...                        │
+│Received from 127.0.0.1:63823...                        │
+│       ┌────────────────────────────────────────────────┴───────┐
+│       │Command Prompt                                    - □ x │
+│       ├────────────────────────────────────────────────────────┤
+│       │$ python udp_client.py                                  │
+│       │Welcome!                                                │
+│       │Hello, Michael!                                         │
+└───────┤Hello, Tracy!                                           │
+        │Hello, Sarah!                                           │
+        │$                                                       │
+        │                                                        │
+        │                                                        │
+        └────────────────────────────────────────────────────────┘
+\end{pythoncode}
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+UDP 的使用与 TCP 类似，但是不需要建立连接。此外，服务器绑定 UDP 端口和
+TCP 端口互不冲突，也就是说，UDP 的 9999 端口与 TCP 的 9999
+端口可以各自绑定。
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/socket/udp_server.py}{udp\_server.py}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/socket/udp_client.py}{udp\_client.py}
+

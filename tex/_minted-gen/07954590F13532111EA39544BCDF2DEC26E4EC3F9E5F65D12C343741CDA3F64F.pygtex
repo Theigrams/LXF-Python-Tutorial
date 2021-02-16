@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{conn} \PYG{o}{=} \PYG{n}{sqlite3}\PYG{o}{.}\PYG{n}{connect}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}test.db\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cursor} \PYG{o}{=} \PYG{n}{conn}\PYG{o}{.}\PYG{n}{cursor}\PYG{p}{()}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cursor}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}select * from user where id=?\PYGZsq{}}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{,))}
+\PYG{o}{\PYGZlt{}}\PYG{n}{sqlite3}\PYG{o}{.}\PYG{n}{Cursor} \PYG{n+nb}{object} \PYG{n}{at} \PYG{l+m+mh}{0x10f8aa340}\PYG{o}{\PYGZgt{}}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{values} \PYG{o}{=} \PYG{n}{cursor}\PYG{o}{.}\PYG{n}{fetchall}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{values}
+\PYG{p}{[(}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{)]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cursor}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{conn}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\end{Verbatim}

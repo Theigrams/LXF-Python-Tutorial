@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{s} \PYG{o}{=} \PYG{n}{socket}\PYG{o}{.}\PYG{n}{socket}\PYG{p}{(}\PYG{n}{socket}\PYG{o}{.}\PYG{n}{AF\PYGZus{}INET}\PYG{p}{,} \PYG{n}{socket}\PYG{o}{.}\PYG{n}{SOCK\PYGZus{}DGRAM}\PYG{p}{)}
+\PYG{k}{for} \PYG{n}{data} \PYG{o+ow}{in} \PYG{p}{[}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{,} \PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}Tracy\PYGZsq{}}\PYG{p}{,} \PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}Sarah\PYGZsq{}}\PYG{p}{]:}
+
+    \PYG{n}{s}\PYG{o}{.}\PYG{n}{sendto}\PYG{p}{(}\PYG{n}{data}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}127.0.0.1\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{9999}\PYG{p}{))}
+
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{s}\PYG{o}{.}\PYG{n}{recv}\PYG{p}{(}\PYG{l+m+mi}{1024}\PYG{p}{)}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+\PYG{n}{s}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{person}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{age}\PYG{p}{,} \PYG{o}{*}\PYG{p}{,} \PYG{n}{city}\PYG{p}{,} \PYG{n}{job}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{age}\PYG{p}{,} \PYG{n}{city}\PYG{p}{,} \PYG{n}{job}\PYG{p}{)}
+\end{Verbatim}

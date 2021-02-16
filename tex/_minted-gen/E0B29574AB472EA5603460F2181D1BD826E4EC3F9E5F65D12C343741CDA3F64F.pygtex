@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Field}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{p}{,} \PYG{n}{column\PYGZus{}type}\PYG{p}{,} \PYG{n}{primary\PYGZus{}key}\PYG{p}{,} \PYG{n}{default}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{name} \PYG{o}{=} \PYG{n}{name}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{column\PYGZus{}type} \PYG{o}{=} \PYG{n}{column\PYGZus{}type}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{primary\PYGZus{}key} \PYG{o}{=} \PYG{n}{primary\PYGZus{}key}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{default} \PYG{o}{=} \PYG{n}{default}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{:}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZgt{}\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n+nv+vm}{\PYGZus{}\PYGZus{}class\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{column\PYGZus{}type}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{name}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{s}\PYG{o}{.}\PYG{n}{send}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}GET / HTTP/1.1}\PYG{l+s+se}{\PYGZbs{}r\PYGZbs{}n}\PYG{l+s+s1}{Host: www.sina.com.cn}\PYG{l+s+se}{\PYGZbs{}r\PYGZbs{}n}\PYG{l+s+s1}{Connection: close}\PYG{l+s+se}{\PYGZbs{}r\PYGZbs{}n\PYGZbs{}r\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

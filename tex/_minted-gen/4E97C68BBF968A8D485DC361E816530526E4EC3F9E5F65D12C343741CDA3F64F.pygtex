@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Animal} \PYG{o+ow}{is} \PYG{n}{running}\PYG{o}{...}
+\PYG{n}{Animal} \PYG{o+ow}{is} \PYG{n}{running}\PYG{o}{...}
+\end{Verbatim}

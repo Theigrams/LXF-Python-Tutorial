@@ -1,0 +1,47 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{drop} \PYG{n}{database} \PYG{k}{if} \PYG{n}{exists} \PYG{n}{awesome}\PYG{p}{;}
+
+\PYG{n}{create} \PYG{n}{database} \PYG{n}{awesome}\PYG{p}{;}
+
+\PYG{n}{use} \PYG{n}{awesome}\PYG{p}{;}
+
+\PYG{n}{grant} \PYG{n}{select}\PYG{p}{,} \PYG{n}{insert}\PYG{p}{,} \PYG{n}{update}\PYG{p}{,} \PYG{n}{delete} \PYG{n}{on} \PYG{n}{awesome}\PYG{o}{.*} \PYG{n}{to} \PYG{l+s+s1}{\PYGZsq{}www\PYGZhy{}data\PYGZsq{}}\PYG{o}{@}\PYG{l+s+s1}{\PYGZsq{}localhost\PYGZsq{}} \PYG{n}{identified} \PYG{n}{by} \PYG{l+s+s1}{\PYGZsq{}www\PYGZhy{}data\PYGZsq{}}\PYG{p}{;}
+
+\PYG{n}{create} \PYG{n}{table} \PYG{n}{users} \PYG{p}{(}
+    \PYG{err}{`}\PYG{n+nb}{id}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{email}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{passwd}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{admin}\PYG{err}{`} \PYG{n+nb}{bool} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{name}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{image}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{500}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{created\PYGZus{}at}\PYG{err}{`} \PYG{n}{real} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{n}{unique} \PYG{n}{key} \PYG{err}{`}\PYG{n}{idx\PYGZus{}email}\PYG{err}{`} \PYG{p}{(}\PYG{err}{`}\PYG{n}{email}\PYG{err}{`}\PYG{p}{),}
+    \PYG{n}{key} \PYG{err}{`}\PYG{n}{idx\PYGZus{}created\PYGZus{}at}\PYG{err}{`} \PYG{p}{(}\PYG{err}{`}\PYG{n}{created\PYGZus{}at}\PYG{err}{`}\PYG{p}{),}
+    \PYG{n}{primary} \PYG{n}{key} \PYG{p}{(}\PYG{err}{`}\PYG{n+nb}{id}\PYG{err}{`}\PYG{p}{)}
+\PYG{p}{)} \PYG{n}{engine}\PYG{o}{=}\PYG{n}{innodb} \PYG{n}{default} \PYG{n}{charset}\PYG{o}{=}\PYG{n}{utf8}\PYG{p}{;}
+
+\PYG{n}{create} \PYG{n}{table} \PYG{n}{blogs} \PYG{p}{(}
+    \PYG{err}{`}\PYG{n+nb}{id}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{user\PYGZus{}id}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{user\PYGZus{}name}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{user\PYGZus{}image}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{500}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{name}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{summary}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{200}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{content}\PYG{err}{`} \PYG{n}{mediumtext} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{created\PYGZus{}at}\PYG{err}{`} \PYG{n}{real} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{n}{key} \PYG{err}{`}\PYG{n}{idx\PYGZus{}created\PYGZus{}at}\PYG{err}{`} \PYG{p}{(}\PYG{err}{`}\PYG{n}{created\PYGZus{}at}\PYG{err}{`}\PYG{p}{),}
+    \PYG{n}{primary} \PYG{n}{key} \PYG{p}{(}\PYG{err}{`}\PYG{n+nb}{id}\PYG{err}{`}\PYG{p}{)}
+\PYG{p}{)} \PYG{n}{engine}\PYG{o}{=}\PYG{n}{innodb} \PYG{n}{default} \PYG{n}{charset}\PYG{o}{=}\PYG{n}{utf8}\PYG{p}{;}
+
+\PYG{n}{create} \PYG{n}{table} \PYG{n}{comments} \PYG{p}{(}
+    \PYG{err}{`}\PYG{n+nb}{id}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{blog\PYGZus{}id}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{user\PYGZus{}id}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{user\PYGZus{}name}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{50}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{user\PYGZus{}image}\PYG{err}{`} \PYG{n}{varchar}\PYG{p}{(}\PYG{l+m+mi}{500}\PYG{p}{)} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{content}\PYG{err}{`} \PYG{n}{mediumtext} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{err}{`}\PYG{n}{created\PYGZus{}at}\PYG{err}{`} \PYG{n}{real} \PYG{o+ow}{not} \PYG{n}{null}\PYG{p}{,}
+    \PYG{n}{key} \PYG{err}{`}\PYG{n}{idx\PYGZus{}created\PYGZus{}at}\PYG{err}{`} \PYG{p}{(}\PYG{err}{`}\PYG{n}{created\PYGZus{}at}\PYG{err}{`}\PYG{p}{),}
+    \PYG{n}{primary} \PYG{n}{key} \PYG{p}{(}\PYG{err}{`}\PYG{n+nb}{id}\PYG{err}{`}\PYG{p}{)}
+\PYG{p}{)} \PYG{n}{engine}\PYG{o}{=}\PYG{n}{innodb} \PYG{n}{default} \PYG{n}{charset}\PYG{o}{=}\PYG{n}{utf8}\PYG{p}{;}
+\end{Verbatim}

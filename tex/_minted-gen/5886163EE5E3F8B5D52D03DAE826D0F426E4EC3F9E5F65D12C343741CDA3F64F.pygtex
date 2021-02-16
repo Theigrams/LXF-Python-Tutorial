@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Process} \PYG{n}{to} \PYG{n}{write}\PYG{p}{:} \PYG{l+m+mi}{50563}
+\PYG{n}{Put} \PYG{n}{A} \PYG{n}{to} \PYG{n}{queue}\PYG{o}{...}
+\PYG{n}{Process} \PYG{n}{to} \PYG{n}{read}\PYG{p}{:} \PYG{l+m+mi}{50564}
+\PYG{n}{Get} \PYG{n}{A} \PYG{k+kn}{from} \PYG{n+nn}{queue.}
+\PYG{n}{Put} \PYG{n}{B} \PYG{n}{to} \PYG{n}{queue}\PYG{o}{...}
+\PYG{n}{Get} \PYG{n}{B} \PYG{k+kn}{from} \PYG{n+nn}{queue.}
+\PYG{n}{Put} \PYG{n}{C} \PYG{n}{to} \PYG{n}{queue}\PYG{o}{...}
+\PYG{n}{Get} \PYG{n}{C} \PYG{k+kn}{from} \PYG{n+nn}{queue.}
+\end{Verbatim}

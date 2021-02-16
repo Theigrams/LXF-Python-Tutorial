@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{n}{html}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{head}\PYG{o}{\PYGZgt{}}
+        \PYG{o}{\PYGZlt{}}\PYG{n}{title}\PYG{o}{\PYGZgt{}}\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{block} \PYG{n}{title}\PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}} \PYG{n}{这里定义了一个名为title的block} \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endblock} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}\PYG{o}{\PYGZlt{}/}\PYG{n}{title}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}/}\PYG{n}{head}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{body}\PYG{o}{\PYGZgt{}}
+        \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{block} \PYG{n}{content} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}} \PYG{n}{这里定义了一个名为content的block} \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endblock} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+    \PYG{o}{\PYGZlt{}/}\PYG{n}{body}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{html}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

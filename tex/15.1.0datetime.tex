@@ -1,0 +1,273 @@
+\hypertarget{datetime}{%
+\subsection{datetime}\label{datetime}}
+
+datetime 是 Python 处理日期和时间的标准库。
+
+\hypertarget{ux83b7ux53d6ux5f53ux524dux65e5ux671fux548cux65f6ux95f4}{%
+\subsubsection{获取当前日期和时间}\label{ux83b7ux53d6ux5f53ux524dux65e5ux671fux548cux65f6ux95f4}}
+
+我们先看如何获取当前日期和时间：
+
+\begin{pythoncode}
+>>> from datetime import datetime
+>>> now = datetime.now() 
+>>> print(now)
+2015-05-18 16:28:07.198690
+>>> print(type(now))
+<class 'datetime.datetime'>
+\end{pythoncode}
+
+注意到\texttt{datetime}是模块，\texttt{datetime}模块还包含一个\texttt{datetime}类，通过\texttt{from\ datetime\ import\ datetime}导入的才是\texttt{datetime}这个类。
+
+如果仅导入\texttt{import\ datetime}，则必须引用全名\texttt{datetime.datetime}。
+
+\texttt{datetime.now()}返回当前日期和时间，其类型是\texttt{datetime}。
+
+\hypertarget{ux83b7ux53d6ux6307ux5b9aux65e5ux671fux548cux65f6ux95f4}{%
+\subsubsection{获取指定日期和时间}\label{ux83b7ux53d6ux6307ux5b9aux65e5ux671fux548cux65f6ux95f4}}
+
+要指定某个日期和时间，我们直接用参数构造一个\texttt{datetime}：
+
+\begin{pythoncode}
+>>> from datetime import datetime
+>>> dt = datetime(2015, 4, 19, 12, 20) 
+>>> print(dt)
+2015-04-19 12:20:00
+\end{pythoncode}
+
+\hypertarget{datetime-ux8f6cux6362ux4e3a-timestamp}{%
+\subsubsection{datetime 转换为
+timestamp}\label{datetime-ux8f6cux6362ux4e3a-timestamp}}
+
+在计算机中，时间实际上是用数字表示的。我们把 1970 年 1 月 1 日 00:00:00
+UTC+00:00 时区的时刻称为 epoch time，记为\texttt{0}（1970 年以前的时间
+timestamp 为负数），当前时间就是相对于 epoch time 的秒数，称为
+timestamp。
+
+你可以认为：
+
+\begin{pythoncode}
+timestamp = 0 = 1970-1-1 00:00:00 UTC+0:00
+\end{pythoncode}
+
+对应的北京时间是：
+
+\begin{pythoncode}
+timestamp = 0 = 1970-1-1 08:00:00 UTC+8:00
+\end{pythoncode}
+
+可见 timestamp 的值与时区毫无关系，因为 timestamp 一旦确定，其 UTC
+时间就确定了，转换到任意时区的时间也是完全确定的，这就是为什么计算机存储的当前时间是以
+timestamp 表示的，因为全球各地的计算机在任意时刻的 timestamp
+都是完全相同的（假定时间已校准）。
+
+把一个\texttt{datetime}类型转换为 timestamp
+只需要简单调用\texttt{timestamp()}方法：
+
+\begin{pythoncode}
+>>> from datetime import datetime
+>>> dt = datetime(2015, 4, 19, 12, 20) 
+>>> dt.timestamp() 
+1429417200.0
+\end{pythoncode}
+
+注意 Python 的 timestamp 是一个浮点数，整数位表示秒。
+
+某些编程语言（如 Java 和 JavaScript）的 timestamp
+使用整数表示毫秒数，这种情况下只需要把 timestamp 除以 1000 就得到 Python
+的浮点表示方法。
+
+\hypertarget{timestamp-ux8f6cux6362ux4e3a-datetime}{%
+\subsubsection{timestamp 转换为
+datetime}\label{timestamp-ux8f6cux6362ux4e3a-datetime}}
+
+要把 timestamp
+转换为\texttt{datetime}，使用\texttt{datetime}提供的\texttt{fromtimestamp()}方法：
+
+\begin{pythoncode}
+>>> from datetime import datetime
+>>> t = 1429417200.0
+>>> print(datetime.fromtimestamp(t))
+2015-04-19 12:20:00
+\end{pythoncode}
+
+注意到 timestamp 是一个浮点数，它没有时区的概念，而 datetime
+是有时区的。上述转换是在 timestamp 和本地时间做转换。
+
+本地时间是指当前操作系统设定的时区。例如北京时区是东 8 区，则本地时间：
+
+\begin{pythoncode}
+2015-04-19 12:20:00
+\end{pythoncode}
+
+实际上就是 UTC+8:00 时区的时间：
+
+\begin{pythoncode}
+2015-04-19 12:20:00 UTC+8:00
+\end{pythoncode}
+
+而此刻的格林威治标准时间与北京时间差了 8 小时，也就是 UTC+0:00
+时区的时间应该是：
+
+\begin{pythoncode}
+2015-04-19 04:20:00 UTC+0:00
+\end{pythoncode}
+
+timestamp 也可以直接被转换到 UTC 标准时区的时间：
+
+\begin{pythoncode}
+>>> from datetime import datetime
+>>> t = 1429417200.0
+>>> print(datetime.fromtimestamp(t)) 
+2015-04-19 12:20:00
+>>> print(datetime.utcfromtimestamp(t)) 
+2015-04-19 04:20:00
+\end{pythoncode}
+
+\hypertarget{str-ux8f6cux6362ux4e3a-datetime}{%
+\subsubsection{str 转换为
+datetime}\label{str-ux8f6cux6362ux4e3a-datetime}}
+
+很多时候，用户输入的日期和时间是字符串，要处理日期和时间，首先必须把 str
+转换为
+datetime。转换方法是通过\texttt{datetime.strptime()}实现，需要一个日期和时间的格式化字符串：
+
+\begin{pythoncode}
+>>> from datetime import datetime
+>>> cday = datetime.strptime('2015-6-1 18:19:59', '%Y-%m-%d %H:%M:%S')
+>>> print(cday)
+2015-06-01 18:19:59
+\end{pythoncode}
+
+字符串\texttt{\textquotesingle{}\%Y-\%m-\%d\ \%H:\%M:\%S\textquotesingle{}}规定了日期和时间部分的格式。详细的说明请参考
+\href{https://docs.python.org/3/library/datetime.html\#strftime-strptime-behavior}{Python
+文档}。
+
+注意转换后的 datetime 是没有时区信息的。
+
+\hypertarget{datetime-ux8f6cux6362ux4e3a-str}{%
+\subsubsection{datetime 转换为
+str}\label{datetime-ux8f6cux6362ux4e3a-str}}
+
+如果已经有了 datetime 对象，要把它格式化为字符串显示给用户，就需要转换为
+str，转换方法是通过\texttt{strftime()}实现的，同样需要一个日期和时间的格式化字符串：
+
+\begin{pythoncode}
+>>> from datetime import datetime
+>>> now = datetime.now()
+>>> print(now.strftime('%a, %b %d %H:%M'))
+Mon, May 05 16:28
+\end{pythoncode}
+
+\hypertarget{datetime-ux52a0ux51cf}{%
+\subsubsection{datetime 加减}\label{datetime-ux52a0ux51cf}}
+
+对日期和时间进行加减实际上就是把 datetime 往后或往前计算，得到新的
+datetime。加减可以直接用\texttt{+}和\texttt{-}运算符，不过需要导入\texttt{timedelta}这个类：
+
+\begin{pythoncode}
+>>> from datetime import datetime, timedelta
+>>> now = datetime.now()
+>>> now
+datetime.datetime(2015, 5, 18, 16, 57, 3, 540997)
+>>> now + timedelta(hours=10)
+datetime.datetime(2015, 5, 19, 2, 57, 3, 540997)
+>>> now - timedelta(days=1)
+datetime.datetime(2015, 5, 17, 16, 57, 3, 540997)
+>>> now + timedelta(days=2, hours=12)
+datetime.datetime(2015, 5, 21, 4, 57, 3, 540997)
+\end{pythoncode}
+
+可见，使用\texttt{timedelta}你可以很容易地算出前几天和后几天的时刻。
+
+\hypertarget{ux672cux5730ux65f6ux95f4ux8f6cux6362ux4e3a-utc-ux65f6ux95f4}{%
+\subsubsection{本地时间转换为 UTC
+时间}\label{ux672cux5730ux65f6ux95f4ux8f6cux6362ux4e3a-utc-ux65f6ux95f4}}
+
+本地时间是指系统设定时区的时间，例如北京时间是 UTC+8:00 时区的时间，而
+UTC 时间指 UTC+0:00 时区的时间。
+
+一个\texttt{datetime}类型有一个时区属性\texttt{tzinfo}，但是默认为\texttt{None}，所以无法区分这个\texttt{datetime}到底是哪个时区，除非强行给\texttt{datetime}设置一个时区：
+
+\begin{pythoncode}
+>>> from datetime import datetime, timedelta, timezone
+>>> tz_utc_8 = timezone(timedelta(hours=8)) 
+>>> now = datetime.now()
+>>> now
+datetime.datetime(2015, 5, 18, 17, 2, 10, 871012)
+>>> dt = now.replace(tzinfo=tz_utc_8) 
+>>> dt
+datetime.datetime(2015, 5, 18, 17, 2, 10, 871012, tzinfo=datetime.timezone(datetime.timedelta(0, 28800)))
+\end{pythoncode}
+
+如果系统时区恰好是
+UTC+8:00，那么上述代码就是正确的，否则，不能强制设置为 UTC+8:00 时区。
+
+\hypertarget{ux65f6ux533aux8f6cux6362}{%
+\subsubsection{时区转换}\label{ux65f6ux533aux8f6cux6362}}
+
+我们可以先通过\texttt{utcnow()}拿到当前的 UTC
+时间，再转换为任意时区的时间：
+
+\begin{pythoncode}
+>>> utc_dt = datetime.utcnow().replace(tzinfo=timezone.utc)
+>>> print(utc_dt)
+2015-05-18 09:05:12.377316+00:00
+
+>>> bj_dt = utc_dt.astimezone(timezone(timedelta(hours=8)))
+>>> print(bj_dt)
+2015-05-18 17:05:12.377316+08:00
+
+>>> tokyo_dt = utc_dt.astimezone(timezone(timedelta(hours=9)))
+>>> print(tokyo_dt)
+2015-05-18 18:05:12.377316+09:00
+
+>>> tokyo_dt2 = bj_dt.astimezone(timezone(timedelta(hours=9)))
+>>> print(tokyo_dt2)
+2015-05-18 18:05:12.377316+09:00
+\end{pythoncode}
+
+时区转换的关键在于，拿到一个\texttt{datetime}时，要获知其正确的时区，然后强制设置时区，作为基准时间。
+
+利用带时区的\texttt{datetime}，通过\texttt{astimezone()}方法，可以转换到任意时区。
+
+注：不是必须从 UTC+0:00
+时区转换到其他时区，任何带时区的\texttt{datetime}都可以正确转换，例如上述\texttt{bj\_dt}到\texttt{tokyo\_dt}的转换。
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+\texttt{datetime}表示的时间需要时区信息才能确定一个特定的时间，否则只能视为本地时间。
+
+如果要存储\texttt{datetime}，最佳方法是将其转换为 timestamp 再存储，因为
+timestamp 的值与时区完全无关。
+
+\hypertarget{ux7ec3ux4e60}{%
+\subsubsection{练习}\label{ux7ec3ux4e60}}
+
+假设你获取了用户输入的日期和时间如\texttt{2015-1-21\ 9:01:30}，以及一个时区信息如\texttt{UTC+5:00}，均是\texttt{str}，请编写一个函数将其转换为
+timestamp：
+
+\begin{pythoncode}
+# -*- coding:utf-8 -*-
+
+import re
+from datetime import datetime, timezone, timedelta
+\end{pythoncode}
+
+\begin{pythoncode}
+# 测试:
+t1 = to_timestamp('2015-6-1 08:10:30', 'UTC+7:00')
+assert t1 == 1433121030.0, t1
+
+t2 = to_timestamp('2015-5-31 16:10:30', 'UTC-09:00')
+assert t2 == 1433121030.0, t2
+
+print('ok')
+\end{pythoncode}
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/commonlib/use_datetime.py}{use\_datetime.py}
+

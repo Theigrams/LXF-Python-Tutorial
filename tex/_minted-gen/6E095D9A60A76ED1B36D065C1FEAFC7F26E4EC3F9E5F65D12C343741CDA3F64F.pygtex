@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{fact}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{l+m+mi}{1}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{fact}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{l+m+mi}{120}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{fact}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)}
+\PYG{l+m+mi}{93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000}
+\end{Verbatim}

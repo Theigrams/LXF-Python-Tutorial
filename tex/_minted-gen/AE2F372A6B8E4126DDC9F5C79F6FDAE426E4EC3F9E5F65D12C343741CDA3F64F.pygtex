@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}I}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{m ok.\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{I}\PYG{l+s+s1}{\PYGZsq{}m ok.}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}I}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{m learning}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{Python.\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{I}\PYG{l+s+s1}{\PYGZsq{}m learning}
+\PYG{n}{Python}\PYG{o}{.}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}\PYGZbs{}\PYGZbs{}n\PYGZbs{}\PYGZbs{}}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYGZbs{}
+\PYGZbs{}
+\end{Verbatim}

@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{xml.parsers.expat} \PYG{k+kn}{import} \PYG{n}{ParserCreate}
+
+\PYG{k}{class} \PYG{n+nc}{DefaultSaxHandler}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf}{start\PYGZus{}element}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{p}{,} \PYG{n}{attrs}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}sax:start\PYGZus{}element: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{, attrs: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{attrs}\PYG{p}{)))}
+
+    \PYG{k}{def} \PYG{n+nf}{end\PYGZus{}element}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{name}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}sax:end\PYGZus{}element: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{name}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{char\PYGZus{}data}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{text}\PYG{p}{):}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}sax:char\PYGZus{}data: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{text}\PYG{p}{)}
+
+\PYG{n}{xml} \PYG{o}{=} \PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}\PYGZlt{}?xml version=\PYGZdq{}1.0\PYGZdq{}?\PYGZgt{}}
+\PYG{l+s+s1}{\PYGZlt{}ol\PYGZgt{}}
+\PYG{l+s+s1}{    \PYGZlt{}li\PYGZgt{}\PYGZlt{}a href=\PYGZdq{}/python\PYGZdq{}\PYGZgt{}Python\PYGZlt{}/a\PYGZgt{}\PYGZlt{}/li\PYGZgt{}}
+\PYG{l+s+s1}{    \PYGZlt{}li\PYGZgt{}\PYGZlt{}a href=\PYGZdq{}/ruby\PYGZdq{}\PYGZgt{}Ruby\PYGZlt{}/a\PYGZgt{}\PYGZlt{}/li\PYGZgt{}}
+\PYG{l+s+s1}{\PYGZlt{}/ol\PYGZgt{}}
+\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+
+\PYG{n}{handler} \PYG{o}{=} \PYG{n}{DefaultSaxHandler}\PYG{p}{()}
+\PYG{n}{parser} \PYG{o}{=} \PYG{n}{ParserCreate}\PYG{p}{()}
+\PYG{n}{parser}\PYG{o}{.}\PYG{n}{StartElementHandler} \PYG{o}{=} \PYG{n}{handler}\PYG{o}{.}\PYG{n}{start\PYGZus{}element}
+\PYG{n}{parser}\PYG{o}{.}\PYG{n}{EndElementHandler} \PYG{o}{=} \PYG{n}{handler}\PYG{o}{.}\PYG{n}{end\PYGZus{}element}
+\PYG{n}{parser}\PYG{o}{.}\PYG{n}{CharacterDataHandler} \PYG{o}{=} \PYG{n}{handler}\PYG{o}{.}\PYG{n}{char\PYGZus{}data}
+\PYG{n}{parser}\PYG{o}{.}\PYG{n}{Parse}\PYG{p}{(}\PYG{n}{xml}\PYG{p}{)}
+\end{Verbatim}

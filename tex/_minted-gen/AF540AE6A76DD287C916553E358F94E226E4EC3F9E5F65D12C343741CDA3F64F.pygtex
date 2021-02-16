@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+                \PYG{err}{┌───────────────┐}
+                \PYG{err}{│}    \PYG{n+nb}{object}     \PYG{err}{│}
+                \PYG{err}{└───────────────┘}
+                        \PYG{err}{│}
+           \PYG{err}{┌────────────┴────────────┐}
+           \PYG{err}{│}                         \PYG{err}{│}
+           \PYG{err}{▼}                         \PYG{err}{▼}
+    \PYG{err}{┌─────────────┐}           \PYG{err}{┌─────────────┐}
+    \PYG{err}{│}   \PYG{n}{Animal}    \PYG{err}{│}           \PYG{err}{│}    \PYG{n}{Plant}    \PYG{err}{│}
+    \PYG{err}{└─────────────┘}           \PYG{err}{└─────────────┘}
+           \PYG{err}{│}                         \PYG{err}{│}
+     \PYG{err}{┌─────┴──────┐}            \PYG{err}{┌─────┴──────┐}
+     \PYG{err}{│}            \PYG{err}{│}            \PYG{err}{│}            \PYG{err}{│}
+     \PYG{err}{▼}            \PYG{err}{▼}            \PYG{err}{▼}            \PYG{err}{▼}
+\PYG{err}{┌─────────┐}  \PYG{err}{┌─────────┐}  \PYG{err}{┌─────────┐}  \PYG{err}{┌─────────┐}
+\PYG{err}{│}   \PYG{n}{Dog}   \PYG{err}{│}  \PYG{err}{│}   \PYG{n}{Cat}   \PYG{err}{│}  \PYG{err}{│}  \PYG{n}{Tree}   \PYG{err}{│}  \PYG{err}{│} \PYG{n}{Flower}  \PYG{err}{│}
+\PYG{err}{└─────────┘}  \PYG{err}{└─────────┘}  \PYG{err}{└─────────┘}  \PYG{err}{└─────────┘}
+\end{Verbatim}

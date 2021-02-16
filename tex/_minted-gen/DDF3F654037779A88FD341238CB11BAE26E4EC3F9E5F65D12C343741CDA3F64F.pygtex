@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{listDevices}\PYG{p}{():}
+    \PYG{n}{devices} \PYG{o}{=} \PYG{p}{[]}
+    \PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/proc/bus/input/devices\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}r\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+        \PYG{n}{device} \PYG{o}{=} \PYG{k+kc}{None}
+        \PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+            \PYG{n}{s} \PYG{o}{=} \PYG{n}{f}\PYG{o}{.}\PYG{n}{readline}\PYG{p}{()}
+            \PYG{k}{if} \PYG{n}{s} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{:}
+                \PYG{k}{break}
+            \PYG{n}{s} \PYG{o}{=} \PYG{n}{s}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()}
+            \PYG{k}{if} \PYG{n}{s} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{:}
+                \PYG{n}{devices}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{device}\PYG{p}{)}
+                \PYG{n}{device} \PYG{o}{=} \PYG{k+kc}{None}
+            \PYG{k}{else}\PYG{p}{:}
+                \PYG{k}{if} \PYG{n}{device} \PYG{o+ow}{is} \PYG{k+kc}{None}\PYG{p}{:}
+                    \PYG{n}{device} \PYG{o}{=} \PYG{n}{InputDevice}\PYG{p}{()}
+                \PYG{k}{if} \PYG{n}{s}\PYG{o}{.}\PYG{n}{startswith}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}N: Name=\PYGZsq{}}\PYG{p}{):}
+                    \PYG{n}{device}\PYG{o}{.}\PYG{n}{setName}\PYG{p}{(}\PYG{n}{s}\PYG{p}{[}\PYG{l+m+mi}{8}\PYG{p}{:])}
+                \PYG{k}{elif} \PYG{n}{s}\PYG{o}{.}\PYG{n}{startswith}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}H: Handlers=\PYGZsq{}}\PYG{p}{):}
+                    \PYG{n}{device}\PYG{o}{.}\PYG{n}{setHandler}\PYG{p}{(}\PYG{n}{s}\PYG{p}{[}\PYG{l+m+mi}{12}\PYG{p}{:])}
+    \PYG{k}{return} \PYG{n}{devices}
+\end{Verbatim}

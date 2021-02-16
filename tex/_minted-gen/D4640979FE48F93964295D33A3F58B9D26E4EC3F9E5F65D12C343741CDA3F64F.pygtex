@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{cpu\PYGZus{}times}\PYG{p}{()}
+\PYG{n}{scputimes}\PYG{p}{(}\PYG{n}{user}\PYG{o}{=}\PYG{l+m+mf}{10963.31}\PYG{p}{,} \PYG{n}{nice}\PYG{o}{=}\PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{n}{system}\PYG{o}{=}\PYG{l+m+mf}{5138.67}\PYG{p}{,} \PYG{n}{idle}\PYG{o}{=}\PYG{l+m+mf}{356102.45}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{reduce}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,} \PYG{p}{[}\PYG{n}{x1}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{,} \PYG{n}{x3}\PYG{p}{,} \PYG{n}{x4}\PYG{p}{])} \PYG{o}{=} \PYG{n}{f}\PYG{p}{(}\PYG{n}{f}\PYG{p}{(}\PYG{n}{f}\PYG{p}{(}\PYG{n}{x1}\PYG{p}{,} \PYG{n}{x2}\PYG{p}{),} \PYG{n}{x3}\PYG{p}{),} \PYG{n}{x4}\PYG{p}{)}
+\end{Verbatim}

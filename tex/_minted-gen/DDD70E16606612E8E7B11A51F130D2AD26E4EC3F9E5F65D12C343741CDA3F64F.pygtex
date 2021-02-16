@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{configs} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+    \PYG{l+s+s1}{\PYGZsq{}db\PYGZsq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+        \PYG{l+s+s1}{\PYGZsq{}host\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}127.0.0.1\PYGZsq{}}\PYG{p}{,}
+        \PYG{l+s+s1}{\PYGZsq{}port\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{3306}\PYG{p}{,}
+        \PYG{l+s+s1}{\PYGZsq{}user\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}www\PYGZhy{}data\PYGZsq{}}\PYG{p}{,}
+        \PYG{l+s+s1}{\PYGZsq{}password\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}www\PYGZhy{}data\PYGZsq{}}\PYG{p}{,}
+        \PYG{l+s+s1}{\PYGZsq{}database\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}awesome\PYGZsq{}}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{l+s+s1}{\PYGZsq{}session\PYGZsq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+        \PYG{l+s+s1}{\PYGZsq{}secret\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}AwEsOmE\PYGZsq{}}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

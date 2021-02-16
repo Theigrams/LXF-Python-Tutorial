@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}Hello, }\PYG{l+s+si}{\PYGZob{}0\PYGZcb{}}\PYG{l+s+s1}{, 成绩提升了 }\PYG{l+s+si}{\PYGZob{}1:.1f\PYGZcb{}}\PYG{l+s+s1}{\PYGZpc{}\PYGZsq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}小明\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mf}{17.125}\PYG{p}{)}
+\PYG{l+s+s1}{\PYGZsq{}Hello, 小明, 成绩提升了 17.1\PYGZpc{}\PYGZsq{}}
+\end{Verbatim}

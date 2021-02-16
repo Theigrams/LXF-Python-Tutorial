@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}asp\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}php\PYGZsq{}}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}python\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}java\PYGZsq{}}\PYG{p}{,} \PYG{n}{p}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}scheme\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

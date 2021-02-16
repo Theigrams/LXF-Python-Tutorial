@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{application}\PYG{p}{(}\PYG{n}{environ}\PYG{p}{,} \PYG{n}{start\PYGZus{}response}\PYG{p}{):}
+    \PYG{n}{method} \PYG{o}{=} \PYG{n}{environ}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}REQUEST\PYGZus{}METHOD\PYGZsq{}}\PYG{p}{]}
+    \PYG{n}{path} \PYG{o}{=} \PYG{n}{environ}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}PATH\PYGZus{}INFO\PYGZsq{}}\PYG{p}{]}
+    \PYG{k}{if} \PYG{n}{method}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}} \PYG{o+ow}{and} \PYG{n}{path}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}/\PYGZsq{}}\PYG{p}{:}
+        \PYG{k}{return} \PYG{n}{handle\PYGZus{}home}\PYG{p}{(}\PYG{n}{environ}\PYG{p}{,} \PYG{n}{start\PYGZus{}response}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{method}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}POST\PYGZsq{}} \PYG{o+ow}{and} \PYG{n}{path}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}/signin\PYGZsq{}}\PYG{p}{:}
+        \PYG{k}{return} \PYG{n}{handle\PYGZus{}signin}\PYG{p}{(}\PYG{n}{environ}\PYG{p}{,} \PYG{n}{start\PYGZus{}response}\PYG{p}{)}
+    \PYG{o}{...}
+\end{Verbatim}

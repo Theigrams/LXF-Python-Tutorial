@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+\PYG{k}{def} \PYG{n+nf}{auth\PYGZus{}factory}\PYG{p}{(}\PYG{n}{app}\PYG{p}{,} \PYG{n}{handler}\PYG{p}{):}
+    \PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+    \PYG{k}{def} \PYG{n+nf}{auth}\PYG{p}{(}\PYG{n}{request}\PYG{p}{):}
+        \PYG{n}{logging}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}check user: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{request}\PYG{o}{.}\PYG{n}{method}\PYG{p}{,} \PYG{n}{request}\PYG{o}{.}\PYG{n}{path}\PYG{p}{))}
+        \PYG{n}{request}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}user\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{k+kc}{None}
+        \PYG{n}{cookie\PYGZus{}str} \PYG{o}{=} \PYG{n}{request}\PYG{o}{.}\PYG{n}{cookies}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{COOKIE\PYGZus{}NAME}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{cookie\PYGZus{}str}\PYG{p}{:}
+            \PYG{n}{user} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{cookie2user}\PYG{p}{(}\PYG{n}{cookie\PYGZus{}str}\PYG{p}{)}
+            \PYG{k}{if} \PYG{n}{user}\PYG{p}{:}
+                \PYG{n}{logging}\PYG{o}{.}\PYG{n}{info}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}set current user: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{user}\PYG{o}{.}\PYG{n}{email}\PYG{p}{)}
+                \PYG{n}{request}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}user\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{n}{user}
+        \PYG{k}{if} \PYG{n}{request}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{startswith}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/manage/\PYGZsq{}}\PYG{p}{)} \PYG{o+ow}{and} \PYG{p}{(}\PYG{n}{request}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}user\PYGZus{}\PYGZus{}} \PYG{o+ow}{is} \PYG{k+kc}{None} \PYG{o+ow}{or} \PYG{o+ow}{not} \PYG{n}{request}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}user\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{admin}\PYG{p}{):}
+            \PYG{k}{return} \PYG{n}{web}\PYG{o}{.}\PYG{n}{HTTPFound}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/signin\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{return} \PYG{p}{(}\PYG{k}{yield from} \PYG{n}{handler}\PYG{p}{(}\PYG{n}{request}\PYG{p}{))}
+    \PYG{k}{return} \PYG{n}{auth}
+\end{Verbatim}

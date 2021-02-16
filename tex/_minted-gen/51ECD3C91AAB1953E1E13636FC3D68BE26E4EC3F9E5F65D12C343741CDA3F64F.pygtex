@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{guess\PYGZus{}charset}\PYG{p}{(}\PYG{n}{msg}\PYG{p}{):}
+    \PYG{n}{charset} \PYG{o}{=} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{get\PYGZus{}charset}\PYG{p}{()}
+    \PYG{k}{if} \PYG{n}{charset} \PYG{o+ow}{is} \PYG{k+kc}{None}\PYG{p}{:}
+        \PYG{n}{content\PYGZus{}type} \PYG{o}{=} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Content\PYGZhy{}Type\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()}
+        \PYG{n}{pos} \PYG{o}{=} \PYG{n}{content\PYGZus{}type}\PYG{o}{.}\PYG{n}{find}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}charset=\PYGZsq{}}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{pos} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0}\PYG{p}{:}
+            \PYG{n}{charset} \PYG{o}{=} \PYG{n}{content\PYGZus{}type}\PYG{p}{[}\PYG{n}{pos} \PYG{o}{+} \PYG{l+m+mi}{8}\PYG{p}{:]}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()}
+    \PYG{k}{return} \PYG{n}{charset}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{g} \PYG{o}{=} \PYG{n}{fib}\PYG{p}{(}\PYG{l+m+mi}{6}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{g}
+\PYG{o}{\PYGZlt{}}\PYG{n}{generator} \PYG{n+nb}{object} \PYG{n}{fib} \PYG{n}{at} \PYG{l+m+mh}{0x1022ef948}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+                \PYG{err}{┌───────────────┐}
+                \PYG{err}{│}    \PYG{n}{Animal}     \PYG{err}{│}
+                \PYG{err}{└───────────────┘}
+                        \PYG{err}{│}
+           \PYG{err}{┌────────────┴────────────┐}
+           \PYG{err}{│}                         \PYG{err}{│}
+           \PYG{err}{▼}                         \PYG{err}{▼}
+    \PYG{err}{┌─────────────┐}           \PYG{err}{┌─────────────┐}
+    \PYG{err}{│}   \PYG{n}{Mammal}    \PYG{err}{│}           \PYG{err}{│}    \PYG{n}{Bird}     \PYG{err}{│}
+    \PYG{err}{└─────────────┘}           \PYG{err}{└─────────────┘}
+           \PYG{err}{│}                         \PYG{err}{│}
+     \PYG{err}{┌─────┴──────┐}            \PYG{err}{┌─────┴──────┐}
+     \PYG{err}{│}            \PYG{err}{│}            \PYG{err}{│}            \PYG{err}{│}
+     \PYG{err}{▼}            \PYG{err}{▼}            \PYG{err}{▼}            \PYG{err}{▼}
+\PYG{err}{┌─────────┐}  \PYG{err}{┌─────────┐}  \PYG{err}{┌─────────┐}  \PYG{err}{┌─────────┐}
+\PYG{err}{│}  \PYG{n}{MRun}   \PYG{err}{│}  \PYG{err}{│}  \PYG{n}{MFly}   \PYG{err}{│}  \PYG{err}{│}  \PYG{n}{BRun}   \PYG{err}{│}  \PYG{err}{│}  \PYG{n}{BFly}   \PYG{err}{│}
+\PYG{err}{└─────────┘}  \PYG{err}{└─────────┘}  \PYG{err}{└─────────┘}  \PYG{err}{└─────────┘}
+     \PYG{err}{│}            \PYG{err}{│}            \PYG{err}{│}            \PYG{err}{│}
+     \PYG{err}{│}            \PYG{err}{│}            \PYG{err}{│}            \PYG{err}{│}
+     \PYG{err}{▼}            \PYG{err}{▼}            \PYG{err}{▼}            \PYG{err}{▼}
+\PYG{err}{┌─────────┐}  \PYG{err}{┌─────────┐}  \PYG{err}{┌─────────┐}  \PYG{err}{┌─────────┐}
+\PYG{err}{│}   \PYG{n}{Dog}   \PYG{err}{│}  \PYG{err}{│}   \PYG{n}{Bat}   \PYG{err}{│}  \PYG{err}{│} \PYG{n}{Ostrich} \PYG{err}{│}  \PYG{err}{│} \PYG{n}{Parrot}  \PYG{err}{│}
+\PYG{err}{└─────────┘}  \PYG{err}{└─────────┘}  \PYG{err}{└─────────┘}  \PYG{err}{└─────────┘}
+\end{Verbatim}

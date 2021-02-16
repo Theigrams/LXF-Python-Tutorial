@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f1}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{n}{b} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{n}{c} \PYG{o}{=} \PYG{l+m+mi}{0} \PYG{n}{args} \PYG{o}{=} \PYG{p}{()} \PYG{n}{kw} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f1}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{c}\PYG{o}{=}\PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{n}{b} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{n}{c} \PYG{o}{=} \PYG{l+m+mi}{3} \PYG{n}{args} \PYG{o}{=} \PYG{p}{()} \PYG{n}{kw} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f1}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{n}{b} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{n}{c} \PYG{o}{=} \PYG{l+m+mi}{3} \PYG{n}{args} \PYG{o}{=} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{)} \PYG{n}{kw} \PYG{o}{=} \PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f1}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{,} \PYG{n}{x}\PYG{o}{=}\PYG{l+m+mi}{99}\PYG{p}{)}
+\PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{n}{b} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{n}{c} \PYG{o}{=} \PYG{l+m+mi}{3} \PYG{n}{args} \PYG{o}{=} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{)} \PYG{n}{kw} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{99}\PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f2}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{d}\PYG{o}{=}\PYG{l+m+mi}{99}\PYG{p}{,} \PYG{n}{ext}\PYG{o}{=}\PYG{k+kc}{None}\PYG{p}{)}
+\PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{n}{b} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{n}{c} \PYG{o}{=} \PYG{l+m+mi}{0} \PYG{n}{d} \PYG{o}{=} \PYG{l+m+mi}{99} \PYG{n}{kw} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}ext\PYGZsq{}}\PYG{p}{:} \PYG{k+kc}{None}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

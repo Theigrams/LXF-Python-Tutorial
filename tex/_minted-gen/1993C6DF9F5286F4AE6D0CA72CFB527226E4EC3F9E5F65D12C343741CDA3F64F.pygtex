@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{multiprocessing} \PYG{k+kn}{import} \PYG{n}{Process}\PYG{p}{,} \PYG{n}{Queue}
+\PYG{k+kn}{import} \PYG{n+nn}{os}\PYG{o}{,} \PYG{n+nn}{time}\PYG{o}{,} \PYG{n+nn}{random}
+\PYG{k}{def} \PYG{n+nf}{write}\PYG{p}{(}\PYG{n}{q}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Process to write: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{())}
+    \PYG{k}{for} \PYG{n}{value} \PYG{o+ow}{in} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}C\PYGZsq{}}\PYG{p}{]:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Put }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ to queue...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{value}\PYG{p}{)}
+        \PYG{n}{q}\PYG{o}{.}\PYG{n}{put}\PYG{p}{(}\PYG{n}{value}\PYG{p}{)}
+        \PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{n}{random}\PYG{o}{.}\PYG{n}{random}\PYG{p}{())}
+\PYG{k}{def} \PYG{n+nf}{read}\PYG{p}{(}\PYG{n}{q}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Process to read: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{())}
+    \PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+        \PYG{n}{value} \PYG{o}{=} \PYG{n}{q}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{k+kc}{True}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Get }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ from queue.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{value}\PYG{p}{)}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+
+    \PYG{n}{q} \PYG{o}{=} \PYG{n}{Queue}\PYG{p}{()}
+    \PYG{n}{pw} \PYG{o}{=} \PYG{n}{Process}\PYG{p}{(}\PYG{n}{target}\PYG{o}{=}\PYG{n}{write}\PYG{p}{,} \PYG{n}{args}\PYG{o}{=}\PYG{p}{(}\PYG{n}{q}\PYG{p}{,))}
+    \PYG{n}{pr} \PYG{o}{=} \PYG{n}{Process}\PYG{p}{(}\PYG{n}{target}\PYG{o}{=}\PYG{n}{read}\PYG{p}{,} \PYG{n}{args}\PYG{o}{=}\PYG{p}{(}\PYG{n}{q}\PYG{p}{,))}
+
+    \PYG{n}{pw}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+
+    \PYG{n}{pr}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+
+    \PYG{n}{pw}\PYG{o}{.}\PYG{n}{join}\PYG{p}{()}
+
+    \PYG{n}{pr}\PYG{o}{.}\PYG{n}{terminate}\PYG{p}{()}
+\end{Verbatim}

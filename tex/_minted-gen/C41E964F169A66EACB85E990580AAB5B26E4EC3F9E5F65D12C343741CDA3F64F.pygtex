@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{mysql} \PYG{o}{\PYGZhy{}}\PYG{n}{u} \PYG{n}{root} \PYG{o}{\PYGZhy{}}\PYG{n}{p} \PYG{o}{\PYGZlt{}} \PYG{n}{schema}\PYG{o}{.}\PYG{n}{sql}
+\end{Verbatim}

@@ -1,0 +1,40 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+\PYG{n}{function} \PYG{n}{initVM}\PYG{p}{(}\PYG{n}{data}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{var} \PYG{n}{vm} \PYG{o}{=} \PYG{n}{new} \PYG{n}{Vue}\PYG{p}{(\PYGZob{}}
+        \PYG{n}{el}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}vm\PYGZsq{}}\PYG{p}{,}
+        \PYG{n}{data}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+            \PYG{n}{blogs}\PYG{p}{:} \PYG{n}{data}\PYG{o}{.}\PYG{n}{blogs}\PYG{p}{,}
+            \PYG{n}{page}\PYG{p}{:} \PYG{n}{data}\PYG{o}{.}\PYG{n}{page}
+        \PYG{p}{\PYGZcb{},}
+        \PYG{n}{methods}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+            \PYG{n}{edit\PYGZus{}blog}\PYG{p}{:} \PYG{n}{function} \PYG{p}{(}\PYG{n}{blog}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{n}{location}\PYG{o}{.}\PYG{n}{assign}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/manage/blogs/edit?id=\PYGZsq{}} \PYG{o}{+} \PYG{n}{blog}\PYG{o}{.}\PYG{n}{id}\PYG{p}{);}
+            \PYG{p}{\PYGZcb{},}
+            \PYG{n}{delete\PYGZus{}blog}\PYG{p}{:} \PYG{n}{function} \PYG{p}{(}\PYG{n}{blog}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                \PYG{k}{if} \PYG{p}{(}\PYG{n}{confirm}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}确认要删除“\PYGZsq{}} \PYG{o}{+} \PYG{n}{blog}\PYG{o}{.}\PYG{n}{name} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}”？删除后不可恢复！\PYGZsq{}}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+                    \PYG{n}{postJSON}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/api/blogs/\PYGZsq{}} \PYG{o}{+} \PYG{n}{blog}\PYG{o}{.}\PYG{n}{id} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}/delete\PYGZsq{}}\PYG{p}{,} \PYG{n}{function} \PYG{p}{(}\PYG{n}{err}\PYG{p}{,} \PYG{n}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                        \PYG{k}{if} \PYG{p}{(}\PYG{n}{err}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+                            \PYG{k}{return} \PYG{n}{alert}\PYG{p}{(}\PYG{n}{err}\PYG{o}{.}\PYG{n}{message} \PYG{o}{||} \PYG{n}{err}\PYG{o}{.}\PYG{n}{error} \PYG{o}{||} \PYG{n}{err}\PYG{p}{);}
+                        \PYG{p}{\PYGZcb{}}
+                        \PYG{n}{refresh}\PYG{p}{();}
+                    \PYG{p}{\PYGZcb{});}
+                \PYG{p}{\PYGZcb{}}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{});}
+    \PYG{err}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}vm\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{show}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\PYG{err}{\PYGZdl{}}\PYG{p}{(}\PYG{n}{function}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{n}{getJSON}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/api/blogs\PYGZsq{}}\PYG{p}{,} \PYG{p}{\PYGZob{}}
+        \PYG{n}{page}\PYG{p}{:} \PYG{p}{\PYGZob{}\PYGZob{}} \PYG{n}{page\PYGZus{}index} \PYG{p}{\PYGZcb{}\PYGZcb{}}
+    \PYG{p}{\PYGZcb{},} \PYG{n}{function} \PYG{p}{(}\PYG{n}{err}\PYG{p}{,} \PYG{n}{results}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{err}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{k}{return} \PYG{n}{fatal}\PYG{p}{(}\PYG{n}{err}\PYG{p}{);}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{err}{\PYGZdl{}}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}loading\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{hide}\PYG{p}{();}
+        \PYG{n}{initVM}\PYG{p}{(}\PYG{n}{results}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{});}
+\PYG{p}{\PYGZcb{});}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

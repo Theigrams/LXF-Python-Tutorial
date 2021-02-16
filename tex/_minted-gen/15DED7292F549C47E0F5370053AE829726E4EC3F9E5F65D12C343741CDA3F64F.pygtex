@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{re}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{m} \PYG{o}{=} \PYG{n}{re}\PYG{o}{.}\PYG{n}{search}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}(?\PYGZlt{}=abc)def\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}abcdef\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{m}\PYG{o}{.}\PYG{n}{group}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{l+s+s1}{\PYGZsq{}def\PYGZsq{}}
+\end{Verbatim}

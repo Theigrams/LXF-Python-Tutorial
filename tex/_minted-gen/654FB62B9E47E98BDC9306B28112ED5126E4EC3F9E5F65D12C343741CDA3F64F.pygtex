@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{args} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{kw} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}d\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{99}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f1}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kw}\PYG{p}{)}
+\PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{n}{b} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{n}{c} \PYG{o}{=} \PYG{l+m+mi}{3} \PYG{n}{args} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,)} \PYG{n}{kw} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}d\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{99}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{args} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{kw} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}d\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{88}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f2}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kw}\PYG{p}{)}
+\PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{n}{b} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{n}{c} \PYG{o}{=} \PYG{l+m+mi}{3} \PYG{n}{d} \PYG{o}{=} \PYG{l+m+mi}{88} \PYG{n}{kw} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{┌────────────────────────────────────────────────────────┐}
+\PYG{err}{│}\PYG{n}{Command} \PYG{n}{Prompt} \PYG{o}{\PYGZhy{}} \PYG{n}{python}                           \PYG{o}{\PYGZhy{}} \PYG{err}{□} \PYG{n}{x} \PYG{err}{│}
+\PYG{err}{├────────────────────────────────────────────────────────┤}
+\PYG{err}{│}\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{def} \PYG{n+nf}{my\PYGZus{}abs}\PYG{p}{(}\PYG{n}{x}\PYG{p}{):}                                      \PYG{err}{│}
+\PYG{err}{│}\PYG{o}{...}     \PYG{k}{if} \PYG{n}{x} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0}\PYG{p}{:}                                      \PYG{err}{│}
+\PYG{err}{│}\PYG{o}{...}         \PYG{k}{return} \PYG{n}{x}                                    \PYG{err}{│}
+\PYG{err}{│}\PYG{o}{...}     \PYG{k}{else}\PYG{p}{:}                                           \PYG{err}{│}
+\PYG{err}{│}\PYG{o}{...}         \PYG{k}{return} \PYG{o}{\PYGZhy{}}\PYG{n}{x}                                   \PYG{err}{│}
+\PYG{err}{│}\PYG{o}{...}                                                     \PYG{err}{│}
+\PYG{err}{│}\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{my\PYGZus{}abs}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{9}\PYG{p}{)}                                          \PYG{err}{│}
+\PYG{err}{│}\PYG{l+m+mi}{9}                                                       \PYG{err}{│}
+\PYG{err}{│}\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{\PYGZus{}}                                                   \PYG{err}{│}
+\PYG{err}{│}                                                        \PYG{err}{│}
+\PYG{err}{│}                                                        \PYG{err}{│}
+\PYG{err}{└────────────────────────────────────────────────────────┘}
+\end{Verbatim}

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{not\PYGZus{}empty}\PYG{p}{(}\PYG{n}{s}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{s} \PYG{o+ow}{and} \PYG{n}{s}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()}
+
+\PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{filter}\PYG{p}{(}\PYG{n}{not\PYGZus{}empty}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}C\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}  \PYGZsq{}}\PYG{p}{]))}
+\end{Verbatim}

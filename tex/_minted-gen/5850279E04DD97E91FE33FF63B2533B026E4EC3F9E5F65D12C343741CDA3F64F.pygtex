@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Page}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{item\PYGZus{}count}\PYG{p}{,} \PYG{n}{page\PYGZus{}index}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{page\PYGZus{}size}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{item\PYGZus{}count} \PYG{o}{=} \PYG{n}{item\PYGZus{}count}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}size} \PYG{o}{=} \PYG{n}{page\PYGZus{}size}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}count} \PYG{o}{=} \PYG{n}{item\PYGZus{}count} \PYG{o}{//} \PYG{n}{page\PYGZus{}size} \PYG{o}{+} \PYG{p}{(}\PYG{l+m+mi}{1} \PYG{k}{if} \PYG{n}{item\PYGZus{}count} \PYG{o}{\PYGZpc{}} \PYG{n}{page\PYGZus{}size} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0} \PYG{k}{else} \PYG{l+m+mi}{0}\PYG{p}{)}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{item\PYGZus{}count} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{)} \PYG{o+ow}{or} \PYG{p}{(}\PYG{n}{page\PYGZus{}index} \PYG{o}{\PYGZgt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}count}\PYG{p}{):}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{offset} \PYG{o}{=} \PYG{l+m+mi}{0}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{limit} \PYG{o}{=} \PYG{l+m+mi}{0}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}index} \PYG{o}{=} \PYG{l+m+mi}{1}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}index} \PYG{o}{=} \PYG{n}{page\PYGZus{}index}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{offset} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}size} \PYG{o}{*} \PYG{p}{(}\PYG{n}{page\PYGZus{}index} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)}
+            \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{limit} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}size}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{has\PYGZus{}next} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}index} \PYG{o}{\PYGZlt{}} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}count}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{has\PYGZus{}previous} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}index} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{1}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}item\PYGZus{}count: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{, page\PYGZus{}count: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{, page\PYGZus{}index: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{, page\PYGZus{}size: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{, offset: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{, limit: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{item\PYGZus{}count}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}count}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}index}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{page\PYGZus{}size}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{offset}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{limit}\PYG{p}{)}
+
+    \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}repr\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}str\PYGZus{}\PYGZus{}}
+\end{Verbatim}

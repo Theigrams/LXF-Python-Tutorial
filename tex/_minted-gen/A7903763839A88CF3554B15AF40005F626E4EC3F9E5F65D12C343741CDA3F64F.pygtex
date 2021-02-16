@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{extends} \PYG{l+s+s1}{\PYGZsq{}base.html\PYGZsq{}} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{block} \PYG{n}{title} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}} \PYG{n}{A} \PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endblock} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{block} \PYG{n}{content} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{h1}\PYG{o}{\PYGZgt{}}\PYG{n}{Chapter} \PYG{n}{A}\PYG{o}{\PYGZlt{}/}\PYG{n}{h1}\PYG{o}{\PYGZgt{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{p}\PYG{o}{\PYGZgt{}}\PYG{n}{blablabla}\PYG{o}{...\PYGZlt{}/}\PYG{n}{p}\PYG{o}{\PYGZgt{}}
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endblock} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

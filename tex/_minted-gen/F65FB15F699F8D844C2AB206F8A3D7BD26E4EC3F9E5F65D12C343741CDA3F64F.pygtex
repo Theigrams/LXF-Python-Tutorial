@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{enroll}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Sarah\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}F\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{name}\PYG{p}{:} \PYG{n}{Sarah}
+\PYG{n}{gender}\PYG{p}{:} \PYG{n}{F}
+\PYG{n}{age}\PYG{p}{:} \PYG{l+m+mi}{6}
+\PYG{n}{city}\PYG{p}{:} \PYG{n}{Beijing}
+\end{Verbatim}

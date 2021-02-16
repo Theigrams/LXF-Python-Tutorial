@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Hello\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}World\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}IBM\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Apple\PYGZsq{}}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{p}{[}\PYG{n}{s}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()} \PYG{k}{for} \PYG{n}{s} \PYG{o+ow}{in} \PYG{n}{L}\PYG{p}{]}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}hello\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}world\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}ibm\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}apple\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

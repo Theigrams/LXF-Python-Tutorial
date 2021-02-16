@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{t} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}19:05:30\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{m} \PYG{o}{=} \PYG{n}{re}\PYG{o}{.}\PYG{n}{match}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZca{}(0[0\PYGZhy{}9]|1[0\PYGZhy{}9]|2[0\PYGZhy{}3]|[0\PYGZhy{}9])\PYGZbs{}:(0[0\PYGZhy{}9]|1[0\PYGZhy{}9]|2[0\PYGZhy{}9]|3[0\PYGZhy{}9]|4[0\PYGZhy{}9]|5[0\PYGZhy{}9]|[0\PYGZhy{}9])\PYGZbs{}:(0[0\PYGZhy{}9]|1[0\PYGZhy{}9]|2[0\PYGZhy{}9]|3[0\PYGZhy{}9]|4[0\PYGZhy{}9]|5[0\PYGZhy{}9]|[0\PYGZhy{}9])\PYGZdl{}\PYGZsq{}}\PYG{p}{,} \PYG{n}{t}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{m}\PYG{o}{.}\PYG{n}{groups}\PYG{p}{()}
+\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}19\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}05\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}30\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

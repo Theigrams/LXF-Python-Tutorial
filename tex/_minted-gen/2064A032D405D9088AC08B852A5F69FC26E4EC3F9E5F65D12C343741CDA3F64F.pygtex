@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{s} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}birth: \PYGZsq{}}\PYG{p}{)}
+\PYG{n}{birth} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}
+\PYG{k}{if} \PYG{n}{birth} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{2000}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}00前\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}00后\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

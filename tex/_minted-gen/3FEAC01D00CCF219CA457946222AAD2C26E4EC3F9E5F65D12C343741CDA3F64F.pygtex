@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{class} \PYG{n+nc}{MyObject}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+\PYG{o}{...}     \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+\PYG{o}{...}         \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{9}
+\PYG{o}{...}     \PYG{k}{def} \PYG{n+nf}{power}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+\PYG{o}{...}         \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{x} \PYG{o}{*} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{x}
+\PYG{o}{...}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{obj} \PYG{o}{=} \PYG{n}{MyObject}\PYG{p}{()}
+\end{Verbatim}

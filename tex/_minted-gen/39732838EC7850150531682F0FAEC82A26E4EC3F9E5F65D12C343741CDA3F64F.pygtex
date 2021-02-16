@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{threading}\PYG{o}{,} \PYG{n+nn}{multiprocessing}
+
+\PYG{k}{def} \PYG{n+nf}{loop}\PYG{p}{():}
+    \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+        \PYG{n}{x} \PYG{o}{=} \PYG{n}{x} \PYG{o}{\PYGZca{}} \PYG{l+m+mi}{1}
+
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{multiprocessing}\PYG{o}{.}\PYG{n}{cpu\PYGZus{}count}\PYG{p}{()):}
+    \PYG{n}{t} \PYG{o}{=} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{Thread}\PYG{p}{(}\PYG{n}{target}\PYG{o}{=}\PYG{n}{loop}\PYG{p}{)}
+    \PYG{n}{t}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+\end{Verbatim}

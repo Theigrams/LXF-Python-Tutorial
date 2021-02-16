@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{smtp\PYGZus{}server} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}smtp.gmail.com\PYGZsq{}}
+\PYG{n}{smtp\PYGZus{}port} \PYG{o}{=} \PYG{l+m+mi}{587}
+\PYG{n}{server} \PYG{o}{=} \PYG{n}{smtplib}\PYG{o}{.}\PYG{n}{SMTP}\PYG{p}{(}\PYG{n}{smtp\PYGZus{}server}\PYG{p}{,} \PYG{n}{smtp\PYGZus{}port}\PYG{p}{)}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{starttls}\PYG{p}{()}
+
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{set\PYGZus{}debuglevel}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{o}{...}
+\end{Verbatim}

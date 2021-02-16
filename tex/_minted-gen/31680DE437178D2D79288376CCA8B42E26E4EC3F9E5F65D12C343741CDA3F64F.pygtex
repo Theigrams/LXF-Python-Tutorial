@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{json}\PYG{o}{.}\PYG{n}{dumps}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,} \PYG{n}{default}\PYG{o}{=}\PYG{n}{student2dict}\PYG{p}{))}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}age\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{20}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Bob\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}score\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{88}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

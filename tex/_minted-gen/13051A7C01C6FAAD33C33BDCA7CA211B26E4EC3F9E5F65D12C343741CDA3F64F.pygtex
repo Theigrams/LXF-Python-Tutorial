@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Student}\PYG{p}{(}\PYG{n+nb}{object}\PYG{p}{):}
+    \PYG{o}{...}
+
+    \PYG{k}{def} \PYG{n+nf}{get\PYGZus{}grade}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{score} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{90}\PYG{p}{:}
+            \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}
+        \PYG{k}{elif} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{score} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{60}\PYG{p}{:}
+            \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}C\PYGZsq{}}
+\end{Verbatim}

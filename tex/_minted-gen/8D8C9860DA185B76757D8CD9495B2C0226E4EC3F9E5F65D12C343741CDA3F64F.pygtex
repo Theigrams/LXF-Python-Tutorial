@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{hasattr}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{)}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{obj}\PYG{o}{.}\PYG{n}{x}
+\PYG{l+m+mi}{9}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{hasattr}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{)}
+\PYG{k+kc}{False}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{setattr}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{19}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{hasattr}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{)}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n}{obj}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{)}
+\PYG{l+m+mi}{19}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{obj}\PYG{o}{.}\PYG{n}{y}
+\PYG{l+m+mi}{19}
+\end{Verbatim}

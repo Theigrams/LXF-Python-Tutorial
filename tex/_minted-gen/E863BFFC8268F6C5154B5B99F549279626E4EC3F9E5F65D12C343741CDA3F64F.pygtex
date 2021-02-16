@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{loop} \PYG{o}{=} \PYG{n}{get\PYGZus{}event\PYGZus{}loop}\PYG{p}{()}
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+    \PYG{n}{event} \PYG{o}{=} \PYG{n}{loop}\PYG{o}{.}\PYG{n}{get\PYGZus{}event}\PYG{p}{()}
+    \PYG{n}{process\PYGZus{}event}\PYG{p}{(}\PYG{n}{event}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s}\PYG{o}{.}\PYG{n}{name} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s}\PYG{o}{.}\PYG{n}{age} \PYG{o}{=} \PYG{l+m+mi}{25}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s}\PYG{o}{.}\PYG{n}{score} \PYG{o}{=} \PYG{l+m+mi}{99}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}\PYGZlt{}stdin\PYGZgt{}\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o+ow}{in} \PYG{o}{\PYGZlt{}}\PYG{n}{module}\PYG{o}{\PYGZgt{}}
+\PYG{n+ne}{AttributeError}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Student\PYGZsq{}} \PYG{n+nb}{object} \PYG{n}{has} \PYG{n}{no} \PYG{n}{attribute} \PYG{l+s+s1}{\PYGZsq{}score\PYGZsq{}}
+\end{Verbatim}

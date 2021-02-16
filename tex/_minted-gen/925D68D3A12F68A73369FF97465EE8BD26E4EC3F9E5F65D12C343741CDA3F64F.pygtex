@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{print\PYGZus{}score}\PYG{p}{(}\PYG{n}{std}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{std}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}\PYG{p}{],} \PYG{n}{std}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}score\PYGZsq{}}\PYG{p}{]))}
+\end{Verbatim}

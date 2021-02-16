@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{from\PYGZus{}addr} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}From: \PYGZsq{}}\PYG{p}{)}
+\PYG{n}{password} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Password: \PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{to\PYGZus{}addr} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}To: \PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{smtp\PYGZus{}server} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}SMTP server: \PYGZsq{}}\PYG{p}{)}
+
+\PYG{k+kn}{import} \PYG{n+nn}{smtplib}
+\PYG{n}{server} \PYG{o}{=} \PYG{n}{smtplib}\PYG{o}{.}\PYG{n}{SMTP}\PYG{p}{(}\PYG{n}{smtp\PYGZus{}server}\PYG{p}{,} \PYG{l+m+mi}{25}\PYG{p}{)}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{set\PYGZus{}debuglevel}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{login}\PYG{p}{(}\PYG{n}{from\PYGZus{}addr}\PYG{p}{,} \PYG{n}{password}\PYG{p}{)}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{sendmail}\PYG{p}{(}\PYG{n}{from\PYGZus{}addr}\PYG{p}{,} \PYG{p}{[}\PYG{n}{to\PYGZus{}addr}\PYG{p}{],} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{as\PYGZus{}string}\PYG{p}{())}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{quit}\PYG{p}{()}
+\end{Verbatim}

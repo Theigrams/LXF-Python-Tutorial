@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{msg}\PYG{o}{.}\PYG{n}{attach}\PYG{p}{(}\PYG{n}{MIMEText}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}html\PYGZgt{}\PYGZlt{}body\PYGZgt{}\PYGZlt{}h1\PYGZgt{}Hello\PYGZlt{}/h1\PYGZgt{}\PYGZsq{}} \PYG{o}{+}
+    \PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}p\PYGZgt{}\PYGZlt{}img src=\PYGZdq{}cid:0\PYGZdq{}\PYGZgt{}\PYGZlt{}/p\PYGZgt{}\PYGZsq{}} \PYG{o}{+}
+    \PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}/body\PYGZgt{}\PYGZlt{}/html\PYGZgt{}\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}html\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+\end{Verbatim}

@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{socket}
+\PYG{n}{s} \PYG{o}{=} \PYG{n}{socket}\PYG{o}{.}\PYG{n}{socket}\PYG{p}{(}\PYG{n}{socket}\PYG{o}{.}\PYG{n}{AF\PYGZus{}INET}\PYG{p}{,} \PYG{n}{socket}\PYG{o}{.}\PYG{n}{SOCK\PYGZus{}STREAM}\PYG{p}{)}
+
+\PYG{n}{s}\PYG{o}{.}\PYG{n}{connect}\PYG{p}{((}\PYG{l+s+s1}{\PYGZsq{}www.sina.com.cn\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{80}\PYG{p}{))}
+\end{Verbatim}

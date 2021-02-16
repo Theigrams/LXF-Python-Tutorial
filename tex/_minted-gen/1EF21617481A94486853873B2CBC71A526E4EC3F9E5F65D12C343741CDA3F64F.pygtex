@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+                                             \PYG{err}{│}
+\PYG{err}{┌─────────────────────────────────────────┐}     \PYG{err}{┌──────────────────────────────────────┐}
+\PYG{err}{│}\PYG{n}{task\PYGZus{}master}\PYG{o}{.}\PYG{n}{py}                           \PYG{err}{│}  \PYG{err}{│}  \PYG{err}{│}\PYG{n}{task\PYGZus{}worker}\PYG{o}{.}\PYG{n}{py}                        \PYG{err}{│}
+\PYG{err}{│}                                         \PYG{err}{│}     \PYG{err}{│}                                      \PYG{err}{│}
+\PYG{err}{│}  \PYG{n}{task} \PYG{o}{=} \PYG{n}{manager}\PYG{o}{.}\PYG{n}{get\PYGZus{}task\PYGZus{}queue}\PYG{p}{()}        \PYG{err}{│}  \PYG{err}{│}  \PYG{err}{│}  \PYG{n}{task} \PYG{o}{=} \PYG{n}{manager}\PYG{o}{.}\PYG{n}{get\PYGZus{}task\PYGZus{}queue}\PYG{p}{()}     \PYG{err}{│}
+\PYG{err}{│}  \PYG{n}{result} \PYG{o}{=} \PYG{n}{manager}\PYG{o}{.}\PYG{n}{get\PYGZus{}result\PYGZus{}queue}\PYG{p}{()}    \PYG{err}{│}     \PYG{err}{│}  \PYG{n}{result} \PYG{o}{=} \PYG{n}{manager}\PYG{o}{.}\PYG{n}{get\PYGZus{}result\PYGZus{}queue}\PYG{p}{()} \PYG{err}{│}
+\PYG{err}{│}              \PYG{err}{│}                          \PYG{err}{│}  \PYG{err}{│}  \PYG{err}{│}              \PYG{err}{│}                       \PYG{err}{│}
+\PYG{err}{│}              \PYG{err}{│}                          \PYG{err}{│}     \PYG{err}{│}              \PYG{err}{│}                       \PYG{err}{│}
+\PYG{err}{│}              \PYG{err}{▼}                          \PYG{err}{│}  \PYG{err}{│}  \PYG{err}{│}              \PYG{err}{│}                       \PYG{err}{│}
+\PYG{err}{│}  \PYG{err}{┌─────────────────────────────────┐}    \PYG{err}{│}     \PYG{err}{│}              \PYG{err}{│}                       \PYG{err}{│}
+\PYG{err}{│}  \PYG{err}{│}\PYG{n}{QueueManager}                     \PYG{err}{│}    \PYG{err}{│}  \PYG{err}{│}  \PYG{err}{│}              \PYG{err}{│}                       \PYG{err}{│}
+\PYG{err}{│}  \PYG{err}{│} \PYG{err}{┌────────────┐} \PYG{err}{┌──────────────┐} \PYG{err}{│}    \PYG{err}{│}     \PYG{err}{│}              \PYG{err}{│}                       \PYG{err}{│}
+\PYG{err}{│}  \PYG{err}{│} \PYG{err}{│} \PYG{n}{task\PYGZus{}queue} \PYG{err}{│} \PYG{err}{│} \PYG{n}{result\PYGZus{}queue} \PYG{err}{│} \PYG{err}{│}\PYG{o}{\PYGZlt{}}\PYG{err}{───┼──┼──┼──────────────┘}                       \PYG{err}{│}
+\PYG{err}{│}  \PYG{err}{│} \PYG{err}{└────────────┘} \PYG{err}{└──────────────┘} \PYG{err}{│}    \PYG{err}{│}     \PYG{err}{│}                                      \PYG{err}{│}
+\PYG{err}{│}  \PYG{err}{└─────────────────────────────────┘}    \PYG{err}{│}  \PYG{err}{│}  \PYG{err}{│}                                      \PYG{err}{│}
+\PYG{err}{└─────────────────────────────────────────┘}     \PYG{err}{└──────────────────────────────────────┘}
+                                             \PYG{err}{│}
+
+                                          \PYG{n}{Network}
+\end{Verbatim}

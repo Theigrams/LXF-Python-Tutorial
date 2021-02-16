@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{json}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{d} \PYG{o}{=} \PYG{n+nb}{dict}\PYG{p}{(}\PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{,} \PYG{n}{age}\PYG{o}{=}\PYG{l+m+mi}{20}\PYG{p}{,} \PYG{n}{score}\PYG{o}{=}\PYG{l+m+mi}{88}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{json}\PYG{o}{.}\PYG{n}{dumps}\PYG{p}{(}\PYG{n}{d}\PYG{p}{)}
+\PYG{l+s+s1}{\PYGZsq{}\PYGZob{}\PYGZdq{}age\PYGZdq{}: 20, \PYGZdq{}score\PYGZdq{}: 88, \PYGZdq{}name\PYGZdq{}: \PYGZdq{}Bob\PYGZdq{}\PYGZcb{}\PYGZsq{}}
+\end{Verbatim}

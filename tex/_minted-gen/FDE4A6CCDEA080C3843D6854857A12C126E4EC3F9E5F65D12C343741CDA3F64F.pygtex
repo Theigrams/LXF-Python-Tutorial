@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{requests}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r} \PYG{o}{=} \PYG{n}{requests}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}https://www.douban.com/\PYGZsq{}}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} 豆瓣首页}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r}\PYG{o}{.}\PYG{n}{status\PYGZus{}code}
+\PYG{l+m+mi}{200}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r}\PYG{o}{.}\PYG{n}{text}
+\PYG{n}{r}\PYG{o}{.}\PYG{n}{text}
+\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}!DOCTYPE HTML\PYGZgt{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZlt{}html\PYGZgt{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZlt{}head\PYGZgt{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZlt{}meta 提供图书、电影、音乐唱片的推荐、评论和...\PYGZsq{}}
+\end{Verbatim}

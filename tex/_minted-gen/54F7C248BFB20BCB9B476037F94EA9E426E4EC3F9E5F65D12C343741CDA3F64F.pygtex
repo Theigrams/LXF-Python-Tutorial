@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{/}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{srv}\PYG{o}{/}
+   \PYG{o}{+\PYGZhy{}} \PYG{n}{awesome}\PYG{o}{/}       \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZhy{}} \PYG{n}{Web} \PYG{n}{App根目录}
+      \PYG{o}{+\PYGZhy{}} \PYG{n}{www}\PYG{o}{/}        \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZhy{}} \PYG{n}{存放Python源码}
+      \PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{static}\PYG{o}{/}  \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZhy{}} \PYG{n}{存放静态资源文件}
+      \PYG{o}{+\PYGZhy{}} \PYG{n}{log}\PYG{o}{/}        \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZhy{}} \PYG{n}{存放log}
+\end{Verbatim}

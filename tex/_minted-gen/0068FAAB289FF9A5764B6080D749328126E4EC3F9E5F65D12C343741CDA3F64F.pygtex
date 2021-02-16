@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试}
+\PYG{n}{URL} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}https://query.yahooapis.com/v1/public/yql?q=select\PYGZpc{}20*}\PYG{l+s+si}{\PYGZpc{}20f}\PYG{l+s+s1}{rom\PYGZpc{}20weather.forecast\PYGZpc{}20where\PYGZpc{}20woeid}\PYG{l+s+si}{\PYGZpc{}20\PYGZpc{}}\PYG{l+s+s1}{3D\PYGZpc{}202151330\PYGZam{}format=json\PYGZsq{}}
+\PYG{n}{data} \PYG{o}{=} \PYG{n}{fetch\PYGZus{}data}\PYG{p}{(}\PYG{n}{URL}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{data}\PYG{p}{)}
+\PYG{k}{assert} \PYG{n}{data}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}query\PYGZsq{}}\PYG{p}{][}\PYG{l+s+s1}{\PYGZsq{}results\PYGZsq{}}\PYG{p}{][}\PYG{l+s+s1}{\PYGZsq{}channel\PYGZsq{}}\PYG{p}{][}\PYG{l+s+s1}{\PYGZsq{}location\PYGZsq{}}\PYG{p}{][}\PYG{l+s+s1}{\PYGZsq{}city\PYGZsq{}}\PYG{p}{]} \PYG{o}{==} \PYG{l+s+s1}{\PYGZsq{}Beijing\PYGZsq{}}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ok\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

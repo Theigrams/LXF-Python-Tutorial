@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r} \PYG{o}{=} \PYG{n}{requests}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}https://query.yahooapis.com/v1/public/yql?q=select\PYGZpc{}20*}\PYG{l+s+si}{\PYGZpc{}20f}\PYG{l+s+s1}{rom\PYGZpc{}20weather.forecast\PYGZpc{}20where\PYGZpc{}20woeid}\PYG{l+s+si}{\PYGZpc{}20\PYGZpc{}}\PYG{l+s+s1}{3D\PYGZpc{}202151330\PYGZam{}format=json\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r}\PYG{o}{.}\PYG{n}{json}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}query\PYGZsq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}count\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}created\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}2017\PYGZhy{}11\PYGZhy{}17T07:14:12Z\PYGZsq{}}\PYG{p}{,} \PYG{o}{...}
+\end{Verbatim}

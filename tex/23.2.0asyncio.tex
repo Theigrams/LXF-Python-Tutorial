@@ -1,0 +1,134 @@
+\hypertarget{asyncio}{%
+\subsection{asyncio}\label{asyncio}}
+
+\texttt{asyncio}是 Python 3.4 版本引入的标准库，直接内置了对异步 IO
+的支持。
+
+\texttt{asyncio}的编程模型就是一个消息循环。我们从\texttt{asyncio}模块中直接获取一个\texttt{EventLoop}的引用，然后把需要执行的协程扔到\texttt{EventLoop}中执行，就实现了异步
+IO。
+
+用\texttt{asyncio}实现\texttt{Hello\ world}代码如下：
+
+\begin{pythoncode}
+import asyncio
+
+@asyncio.coroutine
+def hello():
+    print("Hello world!")
+    
+    r = yield from asyncio.sleep(1)
+    print("Hello again!")
+loop = asyncio.get_event_loop()
+
+loop.run_until_complete(hello())
+loop.close()
+\end{pythoncode}
+
+\texttt{@asyncio.coroutine}把一个 generator 标记为 coroutine
+类型，然后，我们就把这个\texttt{coroutine}扔到\texttt{EventLoop}中执行。
+
+\texttt{hello()}会首先打印出\texttt{Hello\ world!}，然后，\texttt{yield\ from}语法可以让我们方便地调用另一个\texttt{generator}。由于\texttt{asyncio.sleep()}也是一个\texttt{coroutine}，所以线程不会等待\texttt{asyncio.sleep()}，而是直接中断并执行下一个消息循环。当\texttt{asyncio.sleep()}返回时，线程就可以从\texttt{yield\ from}拿到返回值（此处是\texttt{None}），然后接着执行下一行语句。
+
+把\texttt{asyncio.sleep(1)}看成是一个耗时 1 秒的 IO
+操作，在此期间，主线程并未等待，而是去执行\texttt{EventLoop}中其他可以执行的\texttt{coroutine}了，因此可以实现并发执行。
+
+我们用 Task 封装两个\texttt{coroutine}试试：
+
+\begin{pythoncode}
+import threading
+import asyncio
+
+@asyncio.coroutine
+def hello():
+    print('Hello world! (%s)' % threading.currentThread())
+    yield from asyncio.sleep(1)
+    print('Hello again! (%s)' % threading.currentThread())
+
+loop = asyncio.get_event_loop()
+tasks = [hello(), hello()]
+loop.run_until_complete(asyncio.wait(tasks))
+loop.close()
+\end{pythoncode}
+
+观察执行过程：
+
+\begin{pythoncode}
+Hello world! (<_MainThread(MainThread, started 140735195337472)>)
+Hello world! (<_MainThread(MainThread, started 140735195337472)>)
+(暂停约1秒)
+Hello again! (<_MainThread(MainThread, started 140735195337472)>)
+Hello again! (<_MainThread(MainThread, started 140735195337472)>)
+\end{pythoncode}
+
+由打印的当前线程名称可以看出，两个\texttt{coroutine}是由同一个线程并发执行的。
+
+如果把\texttt{asyncio.sleep()}换成真正的 IO
+操作，则多个\texttt{coroutine}就可以由一个线程并发执行。
+
+我们用\texttt{asyncio}的异步网络连接来获取 sina、sohu 和 163
+的网站首页：
+
+\begin{pythoncode}
+import asyncio
+
+@asyncio.coroutine
+def wget(host):
+    print('wget %s...' % host)
+    connect = asyncio.open_connection(host, 80)
+    reader, writer = yield from connect
+    header = 'GET / HTTP/1.0\r\nHost: %s\r\n\r\n' % host
+    writer.write(header.encode('utf-8'))
+    yield from writer.drain()
+    while True:
+        line = yield from reader.readline()
+        if line == b'\r\n':
+            break
+        print('%s header > %s' % (host, line.decode('utf-8').rstrip()))
+    
+    writer.close()
+
+loop = asyncio.get_event_loop()
+tasks = [wget(host) for host in ['www.sina.com.cn', 'www.sohu.com', 'www.163.com']]
+loop.run_until_complete(asyncio.wait(tasks))
+loop.close()
+\end{pythoncode}
+
+执行结果如下：
+
+\begin{pythoncode}
+wget www.sohu.com...
+wget www.sina.com.cn...
+wget www.163.com...
+(等待一段时间)
+(打印出sohu的header)
+www.sohu.com header > HTTP/1.1 200 OK
+www.sohu.com header > Content-Type: text/html
+...
+(打印出sina的header)
+www.sina.com.cn header > HTTP/1.1 200 OK
+www.sina.com.cn header > Date: Wed, 20 May 2015 04:56:33 GMT
+...
+(打印出163的header)
+www.163.com header > HTTP/1.0 302 Moved Temporarily
+www.163.com header > Server: Cdn Cache Server V2.0
+...
+\end{pythoncode}
+
+可见 3 个连接由一个线程通过\texttt{coroutine}并发完成。
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+\texttt{asyncio}提供了完善的异步 IO 支持；
+
+异步操作需要在\texttt{coroutine}中通过\texttt{yield\ from}完成；
+
+多个\texttt{coroutine}可以封装成一组 Task 然后并发执行。
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/async/async_hello.py}{async\_hello.py}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/async/async_wget.py}{async\_wget.py}
+

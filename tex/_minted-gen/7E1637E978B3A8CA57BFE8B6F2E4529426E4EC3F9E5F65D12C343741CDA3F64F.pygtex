@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{setSpeed}\PYG{p}{(}\PYG{n}{acc}\PYG{p}{):}
+    \PYG{k}{global} \PYG{n}{speed}
+    \PYG{k}{if} \PYG{n}{acc} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{n}{speed} \PYG{o}{=} \PYG{n+nb}{max}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{speed} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n}{acc} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{n}{speed} \PYG{o}{=} \PYG{n+nb}{min}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{n}{speed} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n}{speed} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{k}{if} \PYG{n}{speed} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{n}{motor}\PYG{o}{.}\PYG{n}{run}\PYG{p}{(}\PYG{n}{speed} \PYG{o}{*} \PYG{l+m+mi}{90}\PYG{p}{)}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n}{motor}\PYG{o}{.}\PYG{n}{stop}\PYG{p}{()}
+\end{Verbatim}

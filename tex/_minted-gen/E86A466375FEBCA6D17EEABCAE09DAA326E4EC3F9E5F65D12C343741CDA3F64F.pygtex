@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{re}\PYG{o}{.}\PYG{n}{match}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s1}{\PYGZsq{}\PYGZca{}(\PYGZbs{}d+?)(0*)\PYGZdl{}\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}102300\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{groups}\PYG{p}{()}
+\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}1023\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}00\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

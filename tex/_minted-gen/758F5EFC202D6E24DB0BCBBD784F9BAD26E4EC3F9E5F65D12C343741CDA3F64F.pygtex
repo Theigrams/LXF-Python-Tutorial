@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{virtual\PYGZus{}memory}\PYG{p}{()}
+\PYG{n}{svmem}\PYG{p}{(}\PYG{n}{total}\PYG{o}{=}\PYG{l+m+mi}{8589934592}\PYG{p}{,} \PYG{n}{available}\PYG{o}{=}\PYG{l+m+mi}{2866520064}\PYG{p}{,} \PYG{n}{percent}\PYG{o}{=}\PYG{l+m+mf}{66.6}\PYG{p}{,} \PYG{n}{used}\PYG{o}{=}\PYG{l+m+mi}{7201386496}\PYG{p}{,} \PYG{n}{free}\PYG{o}{=}\PYG{l+m+mi}{216178688}\PYG{p}{,} \PYG{n}{active}\PYG{o}{=}\PYG{l+m+mi}{3342192640}\PYG{p}{,} \PYG{n}{inactive}\PYG{o}{=}\PYG{l+m+mi}{2650341376}\PYG{p}{,} \PYG{n}{wired}\PYG{o}{=}\PYG{l+m+mi}{1208852480}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{swap\PYGZus{}memory}\PYG{p}{()}
+\PYG{n}{sswap}\PYG{p}{(}\PYG{n}{total}\PYG{o}{=}\PYG{l+m+mi}{1073741824}\PYG{p}{,} \PYG{n}{used}\PYG{o}{=}\PYG{l+m+mi}{150732800}\PYG{p}{,} \PYG{n}{free}\PYG{o}{=}\PYG{l+m+mi}{923009024}\PYG{p}{,} \PYG{n}{percent}\PYG{o}{=}\PYG{l+m+mf}{14.0}\PYG{p}{,} \PYG{n}{sin}\PYG{o}{=}\PYG{l+m+mi}{10705981440}\PYG{p}{,} \PYG{n}{sout}\PYG{o}{=}\PYG{l+m+mi}{40353792}\PYG{p}{)}
+\end{Verbatim}

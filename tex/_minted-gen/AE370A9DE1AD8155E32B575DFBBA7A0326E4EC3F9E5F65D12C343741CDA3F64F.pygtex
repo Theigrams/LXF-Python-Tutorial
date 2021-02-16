@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{GET} \PYG{o}{/}\PYG{n}{path} \PYG{n}{HTTP}\PYG{o}{/}\PYG{l+m+mf}{1.1}
+\PYG{n}{Header1}\PYG{p}{:} \PYG{n}{Value1}
+\PYG{n}{Header2}\PYG{p}{:} \PYG{n}{Value2}
+\PYG{n}{Header3}\PYG{p}{:} \PYG{n}{Value3}
+\end{Verbatim}

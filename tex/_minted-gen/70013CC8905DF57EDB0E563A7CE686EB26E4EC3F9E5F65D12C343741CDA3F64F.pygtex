@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{names} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Tracy\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{scores} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{95}\PYG{p}{,} \PYG{l+m+mi}{75}\PYG{p}{,} \PYG{l+m+mi}{85}\PYG{p}{]}
+\end{Verbatim}

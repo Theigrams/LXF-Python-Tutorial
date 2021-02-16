@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{┌────────────────────────────────────────────────────────┐}
+\PYG{err}{│}\PYG{n}{Command} \PYG{n}{Prompt}                                    \PYG{o}{\PYGZhy{}} \PYG{err}{□} \PYG{n}{x} \PYG{err}{│}
+\PYG{err}{├────────────────────────────────────────────────────────┤}
+\PYG{err}{│\PYGZdl{}} \PYG{n}{python} \PYG{n}{echo\PYGZus{}server}\PYG{o}{.}\PYG{n}{py}                                 \PYG{err}{│}
+\PYG{err}{│}\PYG{n}{Waiting} \PYG{k}{for} \PYG{n}{connection}\PYG{o}{...}                               \PYG{err}{│}
+\PYG{err}{│}\PYG{n}{Accept} \PYG{n}{new} \PYG{n}{connection} \PYG{k+kn}{from} \PYG{l+m+mf}{127.0}\PYG{o}{.}\PYG{l+m+mf}{0.1}\PYG{p}{:}\PYG{l+m+mf}{64398.}\PYG{o}{..}           \PYG{err}{│}
+\PYG{err}{│}\PYG{n}{Connection} \PYG{k+kn}{from} \PYG{l+m+mf}{127.0}\PYG{o}{.}\PYG{l+m+mf}{0.1}\PYG{p}{:}\PYG{l+m+mi}{64398} \PYG{n}{closed}\PYG{o}{.}                 \PYG{err}{│}
+\PYG{err}{│}                                                        \PYG{err}{│}
+\PYG{err}{│}       \PYG{err}{┌────────────────────────────────────────────────┴───────┐}
+\PYG{err}{│}       \PYG{err}{│}\PYG{n}{Command} \PYG{n}{Prompt}                                    \PYG{o}{\PYGZhy{}} \PYG{err}{□} \PYG{n}{x} \PYG{err}{│}
+\PYG{err}{│}       \PYG{err}{├────────────────────────────────────────────────────────┤}
+\PYG{err}{│}       \PYG{err}{│\PYGZdl{}} \PYG{n}{python} \PYG{n}{echo\PYGZus{}client}\PYG{o}{.}\PYG{n}{py}                                 \PYG{err}{│}
+\PYG{err}{│}       \PYG{err}{│}\PYG{n}{Welcome}\PYG{err}{!}                                                \PYG{err}{│}
+\PYG{err}{│}       \PYG{err}{│}\PYG{n}{Hello}\PYG{p}{,} \PYG{n}{Michael}\PYG{err}{!}                                         \PYG{err}{│}
+\PYG{err}{└───────┤}\PYG{n}{Hello}\PYG{p}{,} \PYG{n}{Tracy}\PYG{err}{!}                                           \PYG{err}{│}
+        \PYG{err}{│}\PYG{n}{Hello}\PYG{p}{,} \PYG{n}{Sarah}\PYG{err}{!}                                           \PYG{err}{│}
+        \PYG{err}{│\PYGZdl{}}                                                       \PYG{err}{│}
+        \PYG{err}{│}                                                        \PYG{err}{│}
+        \PYG{err}{│}                                                        \PYG{err}{│}
+        \PYG{err}{└────────────────────────────────────────────────────────┘}
+\end{Verbatim}

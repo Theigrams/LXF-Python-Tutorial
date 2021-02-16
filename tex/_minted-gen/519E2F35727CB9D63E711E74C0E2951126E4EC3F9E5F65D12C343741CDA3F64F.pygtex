@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{wget} \PYG{n}{www}\PYG{o}{.}\PYG{n}{sohu}\PYG{o}{.}\PYG{n}{com}\PYG{o}{...}
+\PYG{n}{wget} \PYG{n}{www}\PYG{o}{.}\PYG{n}{sina}\PYG{o}{.}\PYG{n}{com}\PYG{o}{.}\PYG{n}{cn}\PYG{o}{...}
+\PYG{n}{wget} \PYG{n}{www}\PYG{o}{.}\PYG{l+m+mf}{163.}\PYG{n}{com}\PYG{o}{...}
+\PYG{p}{(}\PYG{n}{等待一段时间}\PYG{p}{)}
+\PYG{p}{(}\PYG{n}{打印出sohu的header}\PYG{p}{)}
+\PYG{n}{www}\PYG{o}{.}\PYG{n}{sohu}\PYG{o}{.}\PYG{n}{com} \PYG{n}{header} \PYG{o}{\PYGZgt{}} \PYG{n}{HTTP}\PYG{o}{/}\PYG{l+m+mf}{1.1} \PYG{l+m+mi}{200} \PYG{n}{OK}
+\PYG{n}{www}\PYG{o}{.}\PYG{n}{sohu}\PYG{o}{.}\PYG{n}{com} \PYG{n}{header} \PYG{o}{\PYGZgt{}} \PYG{n}{Content}\PYG{o}{\PYGZhy{}}\PYG{n}{Type}\PYG{p}{:} \PYG{n}{text}\PYG{o}{/}\PYG{n}{html}
+\PYG{o}{...}
+\PYG{p}{(}\PYG{n}{打印出sina的header}\PYG{p}{)}
+\PYG{n}{www}\PYG{o}{.}\PYG{n}{sina}\PYG{o}{.}\PYG{n}{com}\PYG{o}{.}\PYG{n}{cn} \PYG{n}{header} \PYG{o}{\PYGZgt{}} \PYG{n}{HTTP}\PYG{o}{/}\PYG{l+m+mf}{1.1} \PYG{l+m+mi}{200} \PYG{n}{OK}
+\PYG{n}{www}\PYG{o}{.}\PYG{n}{sina}\PYG{o}{.}\PYG{n}{com}\PYG{o}{.}\PYG{n}{cn} \PYG{n}{header} \PYG{o}{\PYGZgt{}} \PYG{n}{Date}\PYG{p}{:} \PYG{n}{Wed}\PYG{p}{,} \PYG{l+m+mi}{20} \PYG{n}{May} \PYG{l+m+mi}{2015} \PYG{l+m+mi}{04}\PYG{p}{:}\PYG{l+m+mi}{56}\PYG{p}{:}\PYG{l+m+mi}{33} \PYG{n}{GMT}
+\PYG{o}{...}
+\PYG{p}{(}\PYG{n}{打印出163的header}\PYG{p}{)}
+\PYG{n}{www}\PYG{o}{.}\PYG{l+m+mf}{163.}\PYG{n}{com} \PYG{n}{header} \PYG{o}{\PYGZgt{}} \PYG{n}{HTTP}\PYG{o}{/}\PYG{l+m+mf}{1.0} \PYG{l+m+mi}{302} \PYG{n}{Moved} \PYG{n}{Temporarily}
+\PYG{n}{www}\PYG{o}{.}\PYG{l+m+mf}{163.}\PYG{n}{com} \PYG{n}{header} \PYG{o}{\PYGZgt{}} \PYG{n}{Server}\PYG{p}{:} \PYG{n}{Cdn} \PYG{n}{Cache} \PYG{n}{Server} \PYG{n}{V2}\PYG{o}{.}\PYG{l+m+mi}{0}
+\PYG{o}{...}
+\end{Verbatim}

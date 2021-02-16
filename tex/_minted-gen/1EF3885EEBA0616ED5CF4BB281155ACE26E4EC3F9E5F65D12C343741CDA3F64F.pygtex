@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{python3} \PYG{n}{task\PYGZus{}master}\PYG{o}{.}\PYG{n}{py}
+\PYG{n}{Put} \PYG{n}{task} \PYG{l+m+mf}{3411.}\PYG{o}{..}
+\PYG{n}{Put} \PYG{n}{task} \PYG{l+m+mf}{1605.}\PYG{o}{..}
+\PYG{n}{Put} \PYG{n}{task} \PYG{l+m+mf}{1398.}\PYG{o}{..}
+\PYG{n}{Put} \PYG{n}{task} \PYG{l+m+mf}{4729.}\PYG{o}{..}
+\PYG{n}{Put} \PYG{n}{task} \PYG{l+m+mf}{5300.}\PYG{o}{..}
+\PYG{n}{Put} \PYG{n}{task} \PYG{l+m+mf}{7471.}\PYG{o}{..}
+\PYG{n}{Put} \PYG{n}{task} \PYG{l+m+mf}{68.}\PYG{o}{..}
+\PYG{n}{Put} \PYG{n}{task} \PYG{l+m+mf}{4219.}\PYG{o}{..}
+\PYG{n}{Put} \PYG{n}{task} \PYG{l+m+mf}{339.}\PYG{o}{..}
+\PYG{n}{Put} \PYG{n}{task} \PYG{l+m+mf}{7866.}\PYG{o}{..}
+\PYG{n}{Try} \PYG{n}{get} \PYG{n}{results}\PYG{o}{...}
+\end{Verbatim}

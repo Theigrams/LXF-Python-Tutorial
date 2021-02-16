@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} -*- coding:utf-8 -*-}
+
+\PYG{k+kn}{from} \PYG{n+nn}{xml.parsers.expat} \PYG{k+kn}{import} \PYG{n}{ParserCreate}
+\PYG{k+kn}{from} \PYG{n+nn}{urllib} \PYG{k+kn}{import} \PYG{n}{request}
+\end{Verbatim}

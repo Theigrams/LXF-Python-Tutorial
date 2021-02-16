@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{User}\PYG{p}{(}\PYG{n}{Model}\PYG{p}{):}
+
+    \PYG{n+nb}{id} \PYG{o}{=} \PYG{n}{IntegerField}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}id\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{name} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}username\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{email} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}email\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{password} \PYG{o}{=} \PYG{n}{StringField}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}password\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{u} \PYG{o}{=} \PYG{n}{User}\PYG{p}{(}\PYG{n+nb}{id}\PYG{o}{=}\PYG{l+m+mi}{12345}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{,} \PYG{n}{email}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}test@orm.org\PYGZsq{}}\PYG{p}{,} \PYG{n}{password}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}my\PYGZhy{}pwd\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{u}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+\end{Verbatim}

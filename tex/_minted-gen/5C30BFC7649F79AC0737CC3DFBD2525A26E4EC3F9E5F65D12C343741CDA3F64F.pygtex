@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+      \PYG{l+m+mi}{0}
+      \PYG{err}{▲}
+      \PYG{err}{│}
+\PYG{l+m+mi}{0} \PYG{o}{\PYGZlt{}}\PYG{err}{───┼───}\PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{65535}
+      \PYG{err}{│}
+      \PYG{err}{▼}
+    \PYG{l+m+mi}{65535}
+\end{Verbatim}

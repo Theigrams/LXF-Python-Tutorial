@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n}{page\PYGZus{}list} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{a} \PYG{n}{href}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}/page/\PYGZob{}\PYGZob{} i \PYGZcb{}\PYGZcb{}\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{p}{\PYGZob{}\PYGZob{}} \PYG{n}{i} \PYG{p}{\PYGZcb{}\PYGZcb{}}\PYG{o}{\PYGZlt{}/}\PYG{n}{a}\PYG{o}{\PYGZgt{}}
+\PYG{p}{\PYGZob{}}\PYG{o}{\PYGZpc{}} \PYG{n}{endfor} \PYG{o}{\PYGZpc{}}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

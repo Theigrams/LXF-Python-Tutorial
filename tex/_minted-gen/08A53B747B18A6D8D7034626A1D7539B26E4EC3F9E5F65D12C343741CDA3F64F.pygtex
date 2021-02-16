@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{abs}\PYG{p}{(}\PYG{n}{n}\PYG{p}{):}
+    \PYG{l+s+sd}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+sd}{    Function to get absolute value of number.}
+
+\PYG{l+s+sd}{    Example:}
+
+\PYG{l+s+sd}{    \PYGZgt{}\PYGZgt{}\PYGZgt{} abs(1)}
+\PYG{l+s+sd}{    1}
+\PYG{l+s+sd}{    \PYGZgt{}\PYGZgt{}\PYGZgt{} abs(\PYGZhy{}1)}
+\PYG{l+s+sd}{    1}
+\PYG{l+s+sd}{    \PYGZgt{}\PYGZgt{}\PYGZgt{} abs(0)}
+\PYG{l+s+sd}{    0}
+\PYG{l+s+sd}{    \PYGZsq{}\PYGZsq{}\PYGZsq{}}
+    \PYG{k}{return} \PYG{n}{n} \PYG{k}{if} \PYG{n}{n} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0} \PYG{k}{else} \PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{n}{n}\PYG{p}{)}
+\end{Verbatim}

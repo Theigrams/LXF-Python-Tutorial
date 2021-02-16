@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{python} \PYG{n}{err}\PYG{o}{.}\PYG{n}{py}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{o}{...}
+\PYG{n+ne}{AssertionError}\PYG{p}{:} \PYG{n}{n} \PYG{o+ow}{is} \PYG{n}{zero}\PYG{err}{!}
+\end{Verbatim}

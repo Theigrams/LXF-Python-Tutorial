@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{pybricks} \PYG{k+kn}{import} \PYG{n}{ev3brick} \PYG{k}{as} \PYG{n}{brick}
+\PYG{k+kn}{from} \PYG{n+nn}{pybricks.ev3devices} \PYG{k+kn}{import} \PYG{p}{(}\PYG{n}{Motor}\PYG{p}{,} \PYG{n}{TouchSensor}\PYG{p}{,} \PYG{n}{ColorSensor}\PYG{p}{,} \PYG{n}{InfraredSensor}\PYG{p}{,} \PYG{n}{UltrasonicSensor}\PYG{p}{,} \PYG{n}{GyroSensor}\PYG{p}{)}
+\PYG{k+kn}{from} \PYG{n+nn}{pybricks.parameters} \PYG{k+kn}{import} \PYG{p}{(}\PYG{n}{Port}\PYG{p}{,} \PYG{n}{Stop}\PYG{p}{,} \PYG{n}{Direction}\PYG{p}{,} \PYG{n}{Button}\PYG{p}{,} \PYG{n}{Color}\PYG{p}{,} \PYG{n}{SoundFile}\PYG{p}{,} \PYG{n}{ImageFile}\PYG{p}{,} \PYG{n}{Align}\PYG{p}{)}
+\PYG{k+kn}{from} \PYG{n+nn}{pybricks.tools} \PYG{k+kn}{import} \PYG{n+nb}{print}\PYG{p}{,} \PYG{n}{wait}\PYG{p}{,} \PYG{n}{StopWatch}
+\PYG{k+kn}{from} \PYG{n+nn}{pybricks.robotics} \PYG{k+kn}{import} \PYG{n}{DriveBase}
+\PYG{n}{brick}\PYG{o}{.}\PYG{n}{sound}\PYG{o}{.}\PYG{n}{beep}\PYG{p}{()}
+\end{Verbatim}

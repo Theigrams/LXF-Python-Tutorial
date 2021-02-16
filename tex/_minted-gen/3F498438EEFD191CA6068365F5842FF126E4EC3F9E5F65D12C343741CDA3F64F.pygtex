@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{if} \PYG{o}{\PYGZlt{}}\PYG{n}{条件判断1}\PYG{o}{\PYGZgt{}}\PYG{p}{:}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{执行1}\PYG{o}{\PYGZgt{}}
+\PYG{k}{elif} \PYG{o}{\PYGZlt{}}\PYG{n}{条件判断2}\PYG{o}{\PYGZgt{}}\PYG{p}{:}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{执行2}\PYG{o}{\PYGZgt{}}
+\PYG{k}{elif} \PYG{o}{\PYGZlt{}}\PYG{n}{条件判断3}\PYG{o}{\PYGZgt{}}\PYG{p}{:}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{执行3}\PYG{o}{\PYGZgt{}}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{o}{\PYGZlt{}}\PYG{n}{执行4}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

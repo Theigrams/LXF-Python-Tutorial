@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+   \PYG{err}{┌──────┐}                   \PYG{err}{┌──────┐}
+  \PYG{err}{┌┴─────┐│}                  \PYG{err}{┌┴─────┐│}
+\PYG{err}{┌─┴──────┴┴──────────────────┴──────┴┴─┐}
+\PYG{err}{│}               \PYG{err}{┌─┐} \PYG{err}{┌─┐}         \PYG{err}{┌─┐}    \PYG{err}{│}
+\PYG{err}{│}   \PYG{err}{┌─┐}         \PYG{err}{└─┘} \PYG{err}{└─┘}      \PYG{err}{┌─┐│}\PYG{n}{X}\PYG{err}{│}    \PYG{err}{│}
+\PYG{err}{│} \PYG{err}{┌─┘} \PYG{err}{└─┐}        \PYG{o}{\PYGZhy{}}   \PYG{o}{+}       \PYG{err}{│}\PYG{n}{Y}\PYG{err}{│└─┘┌─┐} \PYG{err}{│}
+\PYG{err}{│} \PYG{err}{└─┐} \PYG{err}{┌─┘}       \PYG{err}{┌─┐} \PYG{err}{┌─┐}      \PYG{err}{└─┘┌─┐│}\PYG{n}{A}\PYG{err}{│} \PYG{err}{│}
+\PYG{err}{│}   \PYG{err}{└─┘}         \PYG{err}{└─┘} \PYG{err}{└─┘}         \PYG{err}{│}\PYG{n}{B}\PYG{err}{│└─┘} \PYG{err}{│}
+\PYG{err}{│}         \PYG{err}{┌─┐}    \PYG{n}{S}   \PYG{n}{H}    \PYG{err}{┌─┐}   \PYG{err}{└─┘}    \PYG{err}{│}
+\PYG{err}{│}       \PYG{err}{┌─┘} \PYG{err}{└─┐}         \PYG{err}{┌─┘} \PYG{err}{└─┐}        \PYG{err}{│}
+\PYG{err}{│}       \PYG{err}{└─┐} \PYG{err}{┌─┘}         \PYG{err}{└─┐} \PYG{err}{┌─┘}        \PYG{err}{│}
+\PYG{err}{│}         \PYG{err}{└─┘}             \PYG{err}{└─┘}          \PYG{err}{│}
+\PYG{err}{│}       \PYG{err}{────────────────────────}       \PYG{err}{│}
+\PYG{err}{│}      \PYG{o}{/}                        \PYGZbs{}      \PYG{err}{│}
+\PYG{err}{│}     \PYG{o}{/}                          \PYGZbs{}     \PYG{err}{│}
+\PYG{err}{└────}\PYG{o}{/}                            \PYGZbs{}\PYG{err}{────┘}
+\end{Verbatim}

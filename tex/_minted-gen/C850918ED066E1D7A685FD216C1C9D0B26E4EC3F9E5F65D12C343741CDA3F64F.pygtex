@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{hashlib}
+
+\PYG{n}{md5} \PYG{o}{=} \PYG{n}{hashlib}\PYG{o}{.}\PYG{n}{md5}\PYG{p}{()}
+\PYG{n}{md5}\PYG{o}{.}\PYG{n}{update}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}how to use md5 in python hashlib?\PYGZsq{}}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{md5}\PYG{o}{.}\PYG{n}{hexdigest}\PYG{p}{())}
+\end{Verbatim}

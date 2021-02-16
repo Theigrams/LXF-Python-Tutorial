@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Status}\PYG{p}{:} \PYG{l+m+mi}{200} \PYG{n}{OK}
+\PYG{n}{Server}\PYG{p}{:} \PYG{n}{nginx}\PYG{o}{/}\PYG{l+m+mf}{1.2}\PYG{o}{.}\PYG{l+m+mi}{0}
+\PYG{o}{...}
+\PYG{n}{Set}\PYG{o}{\PYGZhy{}}\PYG{n}{Cookie}\PYG{p}{:} \PYG{n}{SSOLoginState}\PYG{o}{=}\PYG{l+m+mi}{1432620126}\PYG{p}{;} \PYG{n}{path}\PYG{o}{=/}\PYG{p}{;} \PYG{n}{domain}\PYG{o}{=}\PYG{n}{weibo}\PYG{o}{.}\PYG{n}{cn}
+\PYG{o}{...}
+\PYG{n}{Data}\PYG{p}{:} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}retcode\PYGZdq{}}\PYG{p}{:}\PYG{l+m+mi}{20000000}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}msg\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}data\PYGZdq{}}\PYG{p}{:\PYGZob{}}\PYG{o}{...}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}uid\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}1658384301\PYGZdq{}}\PYG{p}{\PYGZcb{}\PYGZcb{}}
+\end{Verbatim}

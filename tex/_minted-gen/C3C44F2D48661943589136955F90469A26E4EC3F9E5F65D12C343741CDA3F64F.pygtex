@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试:}
+\PYG{n}{L1} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}adam\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}LISA\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}barT\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{L2} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{map}\PYG{p}{(}\PYG{n}{normalize}\PYG{p}{,} \PYG{n}{L1}\PYG{p}{))}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{L2}\PYG{p}{)}
+\end{Verbatim}

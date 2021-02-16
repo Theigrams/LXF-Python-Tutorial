@@ -1,0 +1,206 @@
+\hypertarget{ux591aux91cdux7ee7ux627f}{%
+\subsection{多重继承}\label{ux591aux91cdux7ee7ux627f}}
+
+继承是面向对象编程的一个重要的方式，因为通过继承，子类就可以扩展父类的功能。
+
+回忆一下\texttt{Animal}类层次的设计，假设我们要实现以下 4 种动物：
+
+\begin{itemize}
+\item
+  Dog - 狗狗；
+\item
+  Bat - 蝙蝠；
+\item
+  Parrot - 鹦鹉；
+\item
+  Ostrich - 鸵鸟。
+\end{itemize}
+
+如果按照哺乳动物和鸟类归类，我们可以设计出这样的类的层次：
+
+\begin{pythoncode}
+                ┌───────────────┐
+                │    Animal     │
+                └───────────────┘
+                        │
+           ┌────────────┴────────────┐
+           │                         │
+           ▼                         ▼
+    ┌─────────────┐           ┌─────────────┐
+    │   Mammal    │           │    Bird     │
+    └─────────────┘           └─────────────┘
+           │                         │
+     ┌─────┴──────┐            ┌─────┴──────┐
+     │            │            │            │
+     ▼            ▼            ▼            ▼
+┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐
+│   Dog   │  │   Bat   │  │ Parrot  │  │ Ostrich │
+└─────────┘  └─────────┘  └─────────┘  └─────────┘
+\end{pythoncode}
+
+但是如果按照 ``能跑'' 和``能飞''来归类，我们就应该设计出这样的类的层次：
+
+\begin{pythoncode}
+                ┌───────────────┐
+                │    Animal     │
+                └───────────────┘
+                        │
+           ┌────────────┴────────────┐
+           │                         │
+           ▼                         ▼
+    ┌─────────────┐           ┌─────────────┐
+    │  Runnable   │           │   Flyable   │
+    └─────────────┘           └─────────────┘
+           │                         │
+     ┌─────┴──────┐            ┌─────┴──────┐
+     │            │            │            │
+     ▼            ▼            ▼            ▼
+┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐
+│   Dog   │  │ Ostrich │  │ Parrot  │  │   Bat   │
+└─────────┘  └─────────┘  └─────────┘  └─────────┘
+\end{pythoncode}
+
+如果要把上面的两种分类都包含进来，我们就得设计更多的层次：
+
+\begin{itemize}
+\item
+  哺乳类：能跑的哺乳类，能飞的哺乳类；
+\item
+  鸟类：能跑的鸟类，能飞的鸟类。
+\end{itemize}
+
+这么一来，类的层次就复杂了：
+
+\begin{pythoncode}
+                ┌───────────────┐
+                │    Animal     │
+                └───────────────┘
+                        │
+           ┌────────────┴────────────┐
+           │                         │
+           ▼                         ▼
+    ┌─────────────┐           ┌─────────────┐
+    │   Mammal    │           │    Bird     │
+    └─────────────┘           └─────────────┘
+           │                         │
+     ┌─────┴──────┐            ┌─────┴──────┐
+     │            │            │            │
+     ▼            ▼            ▼            ▼
+┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐
+│  MRun   │  │  MFly   │  │  BRun   │  │  BFly   │
+└─────────┘  └─────────┘  └─────────┘  └─────────┘
+     │            │            │            │
+     │            │            │            │
+     ▼            ▼            ▼            ▼
+┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐
+│   Dog   │  │   Bat   │  │ Ostrich │  │ Parrot  │
+└─────────┘  └─────────┘  └─────────┘  └─────────┘
+\end{pythoncode}
+
+如果要再增加 ``宠物类''
+和``非宠物类''，这么搞下去，类的数量会呈指数增长，很明显这样设计是不行的。
+
+正确的做法是采用多重继承。首先，主要的类层次仍按照哺乳类和鸟类设计：
+
+\begin{pythoncode}
+class Animal(object):
+    pass
+class Mammal(Animal):
+    pass
+
+class Bird(Animal):
+    pass
+class Dog(Mammal):
+    pass
+
+class Bat(Mammal):
+    pass
+
+class Parrot(Bird):
+    pass
+
+class Ostrich(Bird):
+    pass
+\end{pythoncode}
+
+现在，我们要给动物再加上\texttt{Runnable}和\texttt{Flyable}的功能，只需要先定义好\texttt{Runnable}和\texttt{Flyable}的类：
+
+\begin{pythoncode}
+class Runnable(object):
+    def run(self):
+        print('Running...')
+
+class Flyable(object):
+    def fly(self):
+        print('Flying...')
+\end{pythoncode}
+
+对于需要\texttt{Runnable}功能的动物，就多继承一个\texttt{Runnable}，例如\texttt{Dog}：
+
+\begin{pythoncode}
+class Dog(Mammal, Runnable):
+    pass
+\end{pythoncode}
+
+对于需要\texttt{Flyable}功能的动物，就多继承一个\texttt{Flyable}，例如\texttt{Bat}：
+
+\begin{pythoncode}
+class Bat(Mammal, Flyable):
+    pass
+\end{pythoncode}
+
+通过多重继承，一个子类就可以同时获得多个父类的所有功能。
+
+\hypertarget{mixin}{%
+\subsubsection{MixIn}\label{mixin}}
+
+在设计类的继承关系时，通常，主线都是单一继承下来的，例如，\texttt{Ostrich}继承自\texttt{Bird}。但是，如果需要
+``混入''
+额外的功能，通过多重继承就可以实现，比如，让\texttt{Ostrich}除了继承自\texttt{Bird}外，再同时继承\texttt{Runnable}。这种设计通常称之为
+MixIn。
+
+为了更好地看出继承关系，我们把\texttt{Runnable}和\texttt{Flyable}改为\texttt{RunnableMixIn}和\texttt{FlyableMixIn}。类似的，你还可以定义出肉食动物\texttt{CarnivorousMixIn}和植食动物\texttt{HerbivoresMixIn}，让某个动物同时拥有好几个
+MixIn：
+
+\begin{pythoncode}
+class Dog(Mammal, RunnableMixIn, CarnivorousMixIn):
+    pass
+\end{pythoncode}
+
+MixIn
+的目的就是给一个类增加多个功能，这样，在设计类的时候，我们优先考虑通过多重继承来组合多个
+MixIn 的功能，而不是设计多层次的复杂的继承关系。
+
+Python 自带的很多库也使用了 MixIn。举个例子，Python
+自带了\texttt{TCPServer}和\texttt{UDPServer}这两类网络服务，而要同时服务多个用户就必须使用多进程或多线程模型，这两种模型由\texttt{ForkingMixIn}和\texttt{ThreadingMixIn}提供。通过组合，我们就可以创造出合适的服务来。
+
+比如，编写一个多进程模式的 TCP 服务，定义如下：
+
+\begin{pythoncode}
+class MyTCPServer(TCPServer, ForkingMixIn):
+    pass
+\end{pythoncode}
+
+编写一个多线程模式的 UDP 服务，定义如下：
+
+\begin{pythoncode}
+class MyUDPServer(UDPServer, ThreadingMixIn):
+    pass
+\end{pythoncode}
+
+如果你打算搞一个更先进的协程模型，可以编写一个\texttt{CoroutineMixIn}：
+
+\begin{pythoncode}
+class MyTCPServer(TCPServer, CoroutineMixIn):
+    pass
+\end{pythoncode}
+
+这样一来，我们不需要复杂而庞大的继承链，只要选择组合不同的类的功能，就可以快速构造出所需的子类。
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+由于 Python 允许使用多重继承，因此，MixIn 就是一种常见的设计。
+
+只允许单一继承的语言（如 Java）不能使用 MixIn 的设计。
+

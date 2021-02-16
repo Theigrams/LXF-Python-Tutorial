@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{collections.abc} \PYG{k+kn}{import} \PYG{n}{Iterator}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{isinstance}\PYG{p}{((}\PYG{n}{x} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)),} \PYG{n}{Iterator}\PYG{p}{)}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{isinstance}\PYG{p}{([],} \PYG{n}{Iterator}\PYG{p}{)}
+\PYG{k+kc}{False}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{isinstance}\PYG{p}{(\PYGZob{}\PYGZcb{},} \PYG{n}{Iterator}\PYG{p}{)}
+\PYG{k+kc}{False}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}abc\PYGZsq{}}\PYG{p}{,} \PYG{n}{Iterator}\PYG{p}{)}
+\PYG{k+kc}{False}
+\end{Verbatim}

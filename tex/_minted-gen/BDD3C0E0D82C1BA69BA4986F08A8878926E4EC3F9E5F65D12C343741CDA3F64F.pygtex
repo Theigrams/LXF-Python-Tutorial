@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} indent用于缩进显示:}
+\PYG{k}{def} \PYG{n+nf}{print\PYGZus{}info}\PYG{p}{(}\PYG{n}{msg}\PYG{p}{,} \PYG{n}{indent}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n}{indent} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{k}{for} \PYG{n}{header} \PYG{o+ow}{in} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}From\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}To\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Subject\PYGZsq{}}\PYG{p}{]:}
+            \PYG{n}{value} \PYG{o}{=} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{header}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{)}
+            \PYG{k}{if} \PYG{n}{value}\PYG{p}{:}
+                \PYG{k}{if} \PYG{n}{header}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}Subject\PYGZsq{}}\PYG{p}{:}
+                    \PYG{n}{value} \PYG{o}{=} \PYG{n}{decode\PYGZus{}str}\PYG{p}{(}\PYG{n}{value}\PYG{p}{)}
+                \PYG{k}{else}\PYG{p}{:}
+                    \PYG{n}{hdr}\PYG{p}{,} \PYG{n}{addr} \PYG{o}{=} \PYG{n}{parseaddr}\PYG{p}{(}\PYG{n}{value}\PYG{p}{)}
+                    \PYG{n}{name} \PYG{o}{=} \PYG{n}{decode\PYGZus{}str}\PYG{p}{(}\PYG{n}{hdr}\PYG{p}{)}
+                    \PYG{n}{value} \PYG{o}{=} \PYG{l+s+sa}{u}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ \PYGZlt{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZgt{}\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{addr}\PYG{p}{)}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s\PYGZpc{}s}\PYG{l+s+s1}{: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}  \PYGZsq{}} \PYG{o}{*} \PYG{n}{indent}\PYG{p}{,} \PYG{n}{header}\PYG{p}{,} \PYG{n}{value}\PYG{p}{))}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{msg}\PYG{o}{.}\PYG{n}{is\PYGZus{}multipart}\PYG{p}{()):}
+        \PYG{n}{parts} \PYG{o}{=} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{get\PYGZus{}payload}\PYG{p}{()}
+        \PYG{k}{for} \PYG{n}{n}\PYG{p}{,} \PYG{n}{part} \PYG{o+ow}{in} \PYG{n+nb}{enumerate}\PYG{p}{(}\PYG{n}{parts}\PYG{p}{):}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{part }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}  \PYGZsq{}} \PYG{o}{*} \PYG{n}{indent}\PYG{p}{,} \PYG{n}{n}\PYG{p}{))}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}  \PYGZsq{}} \PYG{o}{*} \PYG{n}{indent}\PYG{p}{))}
+            \PYG{n}{print\PYGZus{}info}\PYG{p}{(}\PYG{n}{part}\PYG{p}{,} \PYG{n}{indent} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n}{content\PYGZus{}type} \PYG{o}{=} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{get\PYGZus{}content\PYGZus{}type}\PYG{p}{()}
+        \PYG{k}{if} \PYG{n}{content\PYGZus{}type}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}text/plain\PYGZsq{}} \PYG{o+ow}{or} \PYG{n}{content\PYGZus{}type}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}text/html\PYGZsq{}}\PYG{p}{:}
+            \PYG{n}{content} \PYG{o}{=} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{get\PYGZus{}payload}\PYG{p}{(}\PYG{n}{decode}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+            \PYG{n}{charset} \PYG{o}{=} \PYG{n}{guess\PYGZus{}charset}\PYG{p}{(}\PYG{n}{msg}\PYG{p}{)}
+            \PYG{k}{if} \PYG{n}{charset}\PYG{p}{:}
+                \PYG{n}{content} \PYG{o}{=} \PYG{n}{content}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{n}{charset}\PYG{p}{)}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{Text: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}  \PYGZsq{}} \PYG{o}{*} \PYG{n}{indent}\PYG{p}{,} \PYG{n}{content} \PYG{o}{+} \PYG{l+s+s1}{\PYGZsq{}...\PYGZsq{}}\PYG{p}{))}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{Attachment: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}  \PYGZsq{}} \PYG{o}{*} \PYG{n}{indent}\PYG{p}{,} \PYG{n}{content\PYGZus{}type}\PYG{p}{))}
+\end{Verbatim}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Mac}\PYG{p}{:}\PYG{n}{myproject} \PYG{n}{michael}\PYG{err}{\PYGZdl{}} \PYG{n}{virtualenv} \PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{n}{no}\PYG{o}{\PYGZhy{}}\PYG{n}{site}\PYG{o}{\PYGZhy{}}\PYG{n}{packages} \PYG{n}{venv}
+\PYG{n}{Using} \PYG{n}{base} \PYG{n}{prefix} \PYG{l+s+s1}{\PYGZsq{}/usr/local/.../Python.framework/Versions/3.4\PYGZsq{}}
+\PYG{n}{New} \PYG{n}{python} \PYG{n}{executable} \PYG{o+ow}{in} \PYG{n}{venv}\PYG{o}{/}\PYG{n+nb}{bin}\PYG{o}{/}\PYG{n}{python3}\PYG{o}{.}\PYG{l+m+mi}{4}
+\PYG{n}{Also} \PYG{n}{creating} \PYG{n}{executable} \PYG{o+ow}{in} \PYG{n}{venv}\PYG{o}{/}\PYG{n+nb}{bin}\PYG{o}{/}\PYG{n}{python}
+\PYG{n}{Installing} \PYG{n}{setuptools}\PYG{p}{,} \PYG{n}{pip}\PYG{p}{,} \PYG{n}{wheel}\PYG{o}{...}\PYG{n}{done}\PYG{o}{.}
+\end{Verbatim}

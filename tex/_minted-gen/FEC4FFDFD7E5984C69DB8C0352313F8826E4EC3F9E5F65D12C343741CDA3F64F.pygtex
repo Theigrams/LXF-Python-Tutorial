@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{base64}\PYG{o}{.}\PYG{n}{b64encode}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}i}\PYG{l+s+se}{\PYGZbs{}xb7\PYGZbs{}x1d\PYGZbs{}xfb\PYGZbs{}xef\PYGZbs{}xff}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}abcd++//\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{base64}\PYG{o}{.}\PYG{n}{urlsafe\PYGZus{}b64encode}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}i}\PYG{l+s+se}{\PYGZbs{}xb7\PYGZbs{}x1d\PYGZbs{}xfb\PYGZbs{}xef\PYGZbs{}xff}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}abcd\PYGZhy{}\PYGZhy{}\PYGZus{}\PYGZus{}\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{base64}\PYG{o}{.}\PYG{n}{urlsafe\PYGZus{}b64decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}abcd\PYGZhy{}\PYGZhy{}\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{)}
+\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}i}\PYG{l+s+se}{\PYGZbs{}xb7\PYGZbs{}x1d\PYGZbs{}xfb\PYGZbs{}xef\PYGZbs{}xff}\PYG{l+s+s1}{\PYGZsq{}}
+\end{Verbatim}

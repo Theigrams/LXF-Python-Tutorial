@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{email} \PYG{k+kn}{import} \PYG{n}{encoders}
+\PYG{k+kn}{from} \PYG{n+nn}{email.header} \PYG{k+kn}{import} \PYG{n}{Header}
+\PYG{k+kn}{from} \PYG{n+nn}{email.mime.text} \PYG{k+kn}{import} \PYG{n}{MIMEText}
+\PYG{k+kn}{from} \PYG{n+nn}{email.utils} \PYG{k+kn}{import} \PYG{n}{parseaddr}\PYG{p}{,} \PYG{n}{formataddr}
+
+\PYG{k+kn}{import} \PYG{n+nn}{smtplib}
+
+\PYG{k}{def} \PYG{n+nf}{\PYGZus{}format\PYGZus{}addr}\PYG{p}{(}\PYG{n}{s}\PYG{p}{):}
+    \PYG{n}{name}\PYG{p}{,} \PYG{n}{addr} \PYG{o}{=} \PYG{n}{parseaddr}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{formataddr}\PYG{p}{((}\PYG{n}{Header}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(),} \PYG{n}{addr}\PYG{p}{))}
+
+\PYG{n}{from\PYGZus{}addr} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}From: \PYGZsq{}}\PYG{p}{)}
+\PYG{n}{password} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Password: \PYGZsq{}}\PYG{p}{)}
+\PYG{n}{to\PYGZus{}addr} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}To: \PYGZsq{}}\PYG{p}{)}
+\PYG{n}{smtp\PYGZus{}server} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}SMTP server: \PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{msg} \PYG{o}{=} \PYG{n}{MIMEText}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}hello, send by Python...\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}plain\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{msg}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}From\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{\PYGZus{}format\PYGZus{}addr}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Python爱好者 \PYGZlt{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZgt{}\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{from\PYGZus{}addr}\PYG{p}{)}
+\PYG{n}{msg}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}To\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{\PYGZus{}format\PYGZus{}addr}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}管理员 \PYGZlt{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZgt{}\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{to\PYGZus{}addr}\PYG{p}{)}
+\PYG{n}{msg}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Subject\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{Header}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}来自SMTP的问候……\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{()}
+
+\PYG{n}{server} \PYG{o}{=} \PYG{n}{smtplib}\PYG{o}{.}\PYG{n}{SMTP}\PYG{p}{(}\PYG{n}{smtp\PYGZus{}server}\PYG{p}{,} \PYG{l+m+mi}{25}\PYG{p}{)}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{set\PYGZus{}debuglevel}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{login}\PYG{p}{(}\PYG{n}{from\PYGZus{}addr}\PYG{p}{,} \PYG{n}{password}\PYG{p}{)}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{sendmail}\PYG{p}{(}\PYG{n}{from\PYGZus{}addr}\PYG{p}{,} \PYG{p}{[}\PYG{n}{to\PYGZus{}addr}\PYG{p}{],} \PYG{n}{msg}\PYG{o}{.}\PYG{n}{as\PYGZus{}string}\PYG{p}{())}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{quit}\PYG{p}{()}
+\end{Verbatim}

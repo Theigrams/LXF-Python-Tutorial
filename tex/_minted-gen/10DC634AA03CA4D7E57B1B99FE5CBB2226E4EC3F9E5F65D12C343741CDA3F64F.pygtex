@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{with} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{assertRaises}\PYG{p}{(}\PYG{n+ne}{KeyError}\PYG{p}{):}
+    \PYG{n}{value} \PYG{o}{=} \PYG{n}{d}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}empty\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

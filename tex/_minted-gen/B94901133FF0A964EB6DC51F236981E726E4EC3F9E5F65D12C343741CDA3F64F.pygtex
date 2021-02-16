@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@post}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/api/blogs\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{def} \PYG{n+nf}{api\PYGZus{}create\PYGZus{}blog}\PYG{p}{(}\PYG{n}{request}\PYG{p}{,} \PYG{o}{*}\PYG{p}{,} \PYG{n}{name}\PYG{p}{,} \PYG{n}{summary}\PYG{p}{,} \PYG{n}{content}\PYG{p}{):}
+    \PYG{n}{check\PYGZus{}admin}\PYG{p}{(}\PYG{n}{request}\PYG{p}{)}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{name} \PYG{o+ow}{or} \PYG{o+ow}{not} \PYG{n}{name}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{():}
+        \PYG{k}{raise} \PYG{n}{APIValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}name\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}name cannot be empty.\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{summary} \PYG{o+ow}{or} \PYG{o+ow}{not} \PYG{n}{summary}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{():}
+        \PYG{k}{raise} \PYG{n}{APIValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}summary\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}summary cannot be empty.\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n}{content} \PYG{o+ow}{or} \PYG{o+ow}{not} \PYG{n}{content}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{():}
+        \PYG{k}{raise} \PYG{n}{APIValueError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}content\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}content cannot be empty.\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{blog} \PYG{o}{=} \PYG{n}{Blog}\PYG{p}{(}\PYG{n}{user\PYGZus{}id}\PYG{o}{=}\PYG{n}{request}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}user\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{id}\PYG{p}{,} \PYG{n}{user\PYGZus{}name}\PYG{o}{=}\PYG{n}{request}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}user\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{name}\PYG{p}{,} \PYG{n}{user\PYGZus{}image}\PYG{o}{=}\PYG{n}{request}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}user\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{image}\PYG{p}{,} \PYG{n}{name}\PYG{o}{=}\PYG{n}{name}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{(),} \PYG{n}{summary}\PYG{o}{=}\PYG{n}{summary}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{(),} \PYG{n}{content}\PYG{o}{=}\PYG{n}{content}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{())}
+    \PYG{k}{yield from} \PYG{n}{blog}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+    \PYG{k}{return} \PYG{n}{blog}
+\end{Verbatim}

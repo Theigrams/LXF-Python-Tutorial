@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{buffer} \PYG{o}{=} \PYG{p}{[]}
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+
+    \PYG{n}{d} \PYG{o}{=} \PYG{n}{s}\PYG{o}{.}\PYG{n}{recv}\PYG{p}{(}\PYG{l+m+mi}{1024}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{d}\PYG{p}{:}
+        \PYG{n}{buffer}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{d}\PYG{p}{)}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{k}{break}
+\PYG{n}{data} \PYG{o}{=} \PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{buffer}\PYG{p}{)}
+\end{Verbatim}

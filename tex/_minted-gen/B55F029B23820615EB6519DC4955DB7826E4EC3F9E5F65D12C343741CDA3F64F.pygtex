@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Robot}\PYG{p}{():}
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{leftMotor}\PYG{p}{,} \PYG{n}{rightMotor}\PYG{p}{,} \PYG{n}{diameter}\PYG{p}{,} \PYG{n}{axle}\PYG{p}{,} \PYG{n}{maxSpeed}\PYG{o}{=}\PYG{l+m+mi}{300}\PYG{p}{,} \PYG{n}{maxSteering}\PYG{o}{=}\PYG{l+m+mi}{180}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{driver} \PYG{o}{=} \PYG{n}{Driver}\PYG{p}{(}\PYG{n}{leftMotor}\PYG{p}{,} \PYG{n}{rightMotor}\PYG{p}{,} \PYG{n}{diameter}\PYG{p}{,} \PYG{n}{axle}\PYG{p}{)}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{speedStep} \PYG{o}{=} \PYG{l+m+mi}{32767} \PYG{o}{//} \PYG{n}{maxSpeed}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{steeringStep} \PYG{o}{=} \PYG{l+m+mi}{32767} \PYG{o}{//} \PYG{n}{maxSteering}
+        \PYG{o}{...}
+
+    \PYG{k}{def} \PYG{n+nf}{drive}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{):}
+        \PYG{n}{speed} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{n}{y} \PYG{o}{//} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{speedStep}
+        \PYG{n}{steering} \PYG{o}{=} \PYG{n}{x} \PYG{o}{//} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{steeringStep}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{driver}\PYG{o}{.}\PYG{n}{drive}\PYG{p}{(}\PYG{n}{speed}\PYG{p}{,} \PYG{n}{steering}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@contextmanager}
+\PYG{k}{def} \PYG{n+nf}{closing}\PYG{p}{(}\PYG{n}{thing}\PYG{p}{):}
+    \PYG{k}{try}\PYG{p}{:}
+        \PYG{k}{yield} \PYG{n}{thing}
+    \PYG{k}{finally}\PYG{p}{:}
+        \PYG{n}{thing}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\end{Verbatim}

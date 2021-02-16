@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{enroll}\PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{gender}\PYG{p}{,} \PYG{n}{age}\PYG{o}{=}\PYG{l+m+mi}{6}\PYG{p}{,} \PYG{n}{city}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Beijing\PYGZsq{}}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}name:\PYGZsq{}}\PYG{p}{,} \PYG{n}{name}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}gender:\PYGZsq{}}\PYG{p}{,} \PYG{n}{gender}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}age:\PYGZsq{}}\PYG{p}{,} \PYG{n}{age}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}city:\PYGZsq{}}\PYG{p}{,} \PYG{n}{city}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r}\PYG{o}{.}\PYG{n}{cookies}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}ts\PYGZsq{}}\PYG{p}{]}
+\PYG{l+s+s1}{\PYGZsq{}example\PYGZus{}cookie\PYGZus{}12345\PYGZsq{}}
+\end{Verbatim}

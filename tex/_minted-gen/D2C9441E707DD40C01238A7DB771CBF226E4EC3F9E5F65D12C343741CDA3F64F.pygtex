@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{FooError}\PYG{p}{(}\PYG{n+ne}{ValueError}\PYG{p}{):}
+    \PYG{k}{pass}
+
+\PYG{k}{def} \PYG{n+nf}{foo}\PYG{p}{(}\PYG{n}{s}\PYG{p}{):}
+    \PYG{n}{n} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{n}\PYG{o}{==}\PYG{l+m+mi}{0}\PYG{p}{:}
+        \PYG{k}{raise} \PYG{n}{FooError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}invalid value: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{s}\PYG{p}{)}
+    \PYG{k}{return} \PYG{l+m+mi}{10} \PYG{o}{/} \PYG{n}{n}
+
+\PYG{n}{foo}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}0\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

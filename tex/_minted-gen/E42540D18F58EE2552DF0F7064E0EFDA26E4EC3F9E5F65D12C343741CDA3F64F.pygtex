@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Apple\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{123}\PYG{p}{,} \PYG{k+kc}{True}\PYG{p}{]}
+\end{Verbatim}

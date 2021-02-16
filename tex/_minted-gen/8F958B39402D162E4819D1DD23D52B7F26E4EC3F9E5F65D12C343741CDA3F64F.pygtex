@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{os}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{p}{[}\PYG{n}{d} \PYG{k}{for} \PYG{n}{d} \PYG{o+ow}{in} \PYG{n}{os}\PYG{o}{.}\PYG{n}{listdir}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{)]}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}.emacs.d\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}.ssh\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}.Trash\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Adlm\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Applications\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Desktop\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Documents\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Downloads\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Library\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Movies\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Music\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Pictures\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Public\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}VirtualBox VMs\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Workspace\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}XCode\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

@@ -1,0 +1,132 @@
+\hypertarget{ux4f7fux7528-mysql}{%
+\subsection{使用 MySQL}\label{ux4f7fux7528-mysql}}
+
+MySQL 是 Web 世界中使用最广泛的数据库服务器。SQLite
+的特点是轻量级、可嵌入，但不能承受高并发访问，适合桌面和移动应用。而
+MySQL
+是为服务器端设计的数据库，能承受高并发访问，同时占用的内存也远远大于
+SQLite。
+
+此外，MySQL 内部有多种数据库引擎，最常用的引擎是支持数据库事务的
+InnoDB。
+
+\hypertarget{ux5b89ux88c5-mysql}{%
+\subsubsection{安装 MySQL}\label{ux5b89ux88c5-mysql}}
+
+可以直接从 MySQL 官方网站下载最新的
+\href{http://dev.mysql.com/downloads/mysql/5.6.html}{Community Server
+5.6.x} 版本。MySQL 是跨平台的，选择对应的平台下载安装文件，安装即可。
+
+安装时，MySQL
+会提示输入\texttt{root}用户的口令，请务必记清楚。如果怕记不住，就把口令设置为\texttt{password}。
+
+在 Windows 上，安装时请选择\texttt{UTF-8}编码，以便正确地处理中文。
+
+在 Mac 或 Linux 上，需要编辑 MySQL
+的配置文件，把数据库默认的编码全部改为 UTF-8。MySQL
+的配置文件默认存放在\texttt{/etc/my.cnf}或者\texttt{/etc/mysql/my.cnf}：
+
+\begin{pythoncode}
+[client]
+default-character-set = utf8
+
+[mysqld]
+default-storage-engine = INNODB
+character-set-server = utf8
+collation-server = utf8_general_ci
+\end{pythoncode}
+
+重启 MySQL 后，可以通过 MySQL 的客户端命令行检查编码：
+
+\begin{pythoncode}
+$ mysql -u root -p
+Enter password: 
+Welcome to the MySQL monitor...
+...
+
+mysql> show variables like '%char%';
++
+| Variable_name            | Value                                                  |
++
+| character_set_client     | utf8                                                   |
+| character_set_connection | utf8                                                   |
+| character_set_database   | utf8                                                   |
+| character_set_filesystem | binary                                                 |
+| character_set_results    | utf8                                                   |
+| character_set_server     | utf8                                                   |
+| character_set_system     | utf8                                                   |
+| character_sets_dir       | /usr/local/mysql-5.1.65-osx10.6-x86_64/share/charsets/ |
++
+8 rows in set (0.00 sec)
+\end{pythoncode}
+
+看到\texttt{utf8}字样就表示编码设置正确。
+
+\emph{注}：如果 MySQL
+的版本≥5.5.3，可以把编码设置为\texttt{utf8mb4}，\texttt{utf8mb4}和\texttt{utf8}完全兼容，但它支持最新的
+Unicode 标准，可以显示 emoji 字符。
+
+\hypertarget{ux5b89ux88c5-mysql-ux9a71ux52a8}{%
+\subsubsection{安装 MySQL 驱动}\label{ux5b89ux88c5-mysql-ux9a71ux52a8}}
+
+由于 MySQL 服务器以独立的进程运行，并通过网络对外服务，所以，需要支持
+Python 的 MySQL 驱动来连接到 MySQL 服务器。MySQL 官方提供了
+mysql-connector-python 驱动，但是安装的时候需要给 pip
+命令加上参数\texttt{-\/-allow-external}：
+
+\begin{pythoncode}
+$ pip install mysql-connector-python --allow-external mysql-connector-python
+\end{pythoncode}
+
+如果上面的命令安装失败，可以试试另一个驱动：
+
+\begin{pythoncode}
+$ pip install mysql-connector
+\end{pythoncode}
+
+我们演示如何连接到 MySQL 服务器的 test 数据库：
+
+\begin{pythoncode}
+>>> import mysql.connector
+
+>>> conn = mysql.connector.connect(user='root', password='password', database='test')
+>>> cursor = conn.cursor()
+
+>>> cursor.execute('create table user (id varchar(20) primary key, name varchar(20))')
+
+>>> cursor.execute('insert into user (id, name) values (%s, %s)', ['1', 'Michael'])
+>>> cursor.rowcount
+1
+
+>>> conn.commit()
+>>> cursor.close()
+
+>>> cursor = conn.cursor()
+>>> cursor.execute('select * from user where id = %s', ('1',))
+>>> values = cursor.fetchall()
+>>> values
+[('1', 'Michael')]
+
+>>> cursor.close()
+True
+>>> conn.close()
+\end{pythoncode}
+
+由于 Python 的 DB-API 定义都是通用的，所以，操作 MySQL 的数据库代码和
+SQLite 类似。
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+\begin{itemize}
+\item
+  执行 INSERT 等操作后要调用\texttt{commit()}提交事务；
+\item
+  MySQL 的 SQL 占位符是\texttt{\%s}。
+\end{itemize}
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/db/do_mysql.py}{do\_mysql.py}
+

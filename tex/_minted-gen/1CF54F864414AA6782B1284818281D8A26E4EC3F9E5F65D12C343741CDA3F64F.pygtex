@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{static}\PYG{o}{/}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{css}\PYG{o}{/}
+\PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{addons}\PYG{o}{/}
+\PYG{o}{|}  \PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{uikit}\PYG{o}{.}\PYG{n}{addons}\PYG{o}{.}\PYG{n}{min}\PYG{o}{.}\PYG{n}{css}
+\PYG{o}{|}  \PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{uikit}\PYG{o}{.}\PYG{n}{almost}\PYG{o}{\PYGZhy{}}\PYG{n}{flat}\PYG{o}{.}\PYG{n}{addons}\PYG{o}{.}\PYG{n}{min}\PYG{o}{.}\PYG{n}{css}
+\PYG{o}{|}  \PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{uikit}\PYG{o}{.}\PYG{n}{gradient}\PYG{o}{.}\PYG{n}{addons}\PYG{o}{.}\PYG{n}{min}\PYG{o}{.}\PYG{n}{css}
+\PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{awesome}\PYG{o}{.}\PYG{n}{css}
+\PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{uikit}\PYG{o}{.}\PYG{n}{almost}\PYG{o}{\PYGZhy{}}\PYG{n}{flat}\PYG{o}{.}\PYG{n}{addons}\PYG{o}{.}\PYG{n}{min}\PYG{o}{.}\PYG{n}{css}
+\PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{uikit}\PYG{o}{.}\PYG{n}{gradient}\PYG{o}{.}\PYG{n}{addons}\PYG{o}{.}\PYG{n}{min}\PYG{o}{.}\PYG{n}{css}
+\PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{uikit}\PYG{o}{.}\PYG{n}{min}\PYG{o}{.}\PYG{n}{css}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{fonts}\PYG{o}{/}
+\PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{fontawesome}\PYG{o}{\PYGZhy{}}\PYG{n}{webfont}\PYG{o}{.}\PYG{n}{eot}
+\PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{fontawesome}\PYG{o}{\PYGZhy{}}\PYG{n}{webfont}\PYG{o}{.}\PYG{n}{ttf}
+\PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{fontawesome}\PYG{o}{\PYGZhy{}}\PYG{n}{webfont}\PYG{o}{.}\PYG{n}{woff}
+\PYG{o}{|}  \PYG{o}{+\PYGZhy{}} \PYG{n}{FontAwesome}\PYG{o}{.}\PYG{n}{otf}
+\PYG{o}{+\PYGZhy{}} \PYG{n}{js}\PYG{o}{/}
+   \PYG{o}{+\PYGZhy{}} \PYG{n}{awesome}\PYG{o}{.}\PYG{n}{js}
+   \PYG{o}{+\PYGZhy{}} \PYG{n}{html5}\PYG{o}{.}\PYG{n}{js}
+   \PYG{o}{+\PYGZhy{}} \PYG{n}{jquery}\PYG{o}{.}\PYG{n}{min}\PYG{o}{.}\PYG{n}{js}
+   \PYG{o}{+\PYGZhy{}} \PYG{n}{uikit}\PYG{o}{.}\PYG{n}{min}\PYG{o}{.}\PYG{n}{js}
+\end{Verbatim}

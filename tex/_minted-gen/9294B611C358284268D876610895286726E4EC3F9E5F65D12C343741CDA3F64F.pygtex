@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{l+s+s2}{\PYGZdq{}用户id\PYGZdq{}} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}过期时间\PYGZdq{}} \PYG{o}{+} \PYG{n}{SHA1}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}用户id\PYGZdq{}} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}用户口令\PYGZdq{}} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}过期时间\PYGZdq{}} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{}SecretKey\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{enum} \PYG{k+kn}{import} \PYG{n}{Enum}\PYG{p}{,} \PYG{n}{unique}
+
+\PYG{n+nd}{@unique}
+\PYG{k}{class} \PYG{n+nc}{Weekday}\PYG{p}{(}\PYG{n}{Enum}\PYG{p}{):}
+    \PYG{n}{Sun} \PYG{o}{=} \PYG{l+m+mi}{0}
+    \PYG{n}{Mon} \PYG{o}{=} \PYG{l+m+mi}{1}
+    \PYG{n}{Tue} \PYG{o}{=} \PYG{l+m+mi}{2}
+    \PYG{n}{Wed} \PYG{o}{=} \PYG{l+m+mi}{3}
+    \PYG{n}{Thu} \PYG{o}{=} \PYG{l+m+mi}{4}
+    \PYG{n}{Fri} \PYG{o}{=} \PYG{l+m+mi}{5}
+    \PYG{n}{Sat} \PYG{o}{=} \PYG{l+m+mi}{6}
+\end{Verbatim}

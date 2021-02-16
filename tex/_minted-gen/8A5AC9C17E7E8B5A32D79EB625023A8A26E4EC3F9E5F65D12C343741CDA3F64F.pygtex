@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{┌────────────────────────────────────────────────────────┐}
+\PYG{err}{│}\PYG{n}{Command} \PYG{n}{Prompt} \PYG{o}{\PYGZhy{}} \PYG{n}{python}                           \PYG{n}{\PYGZus{}} \PYG{err}{□} \PYG{n}{x} \PYG{err}{│}
+\PYG{err}{├────────────────────────────────────────────────────────┤}
+\PYG{err}{│}\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}\PYGZsq{}line1                                      │}
+\PYG{l+s+s1}{│... line2                                               │}
+\PYG{l+s+s1}{│... line3\PYGZsq{}\PYGZsq{}\PYGZsq{}}\PYG{p}{)}                                           \PYG{err}{│}
+\PYG{err}{│}\PYG{n}{line1}                                                   \PYG{err}{│}
+\PYG{err}{│}\PYG{n}{line2}                                                   \PYG{err}{│}
+\PYG{err}{│}\PYG{n}{line3}                                                   \PYG{err}{│}
+\PYG{err}{│}                                                        \PYG{err}{│}
+\PYG{err}{│}\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{\PYGZus{}}                                                   \PYG{err}{│}
+\PYG{err}{│}                                                        \PYG{err}{│}
+\PYG{err}{│}                                                        \PYG{err}{│}
+\PYG{err}{│}                                                        \PYG{err}{│}
+\PYG{err}{└────────────────────────────────────────────────────────┘}
+\end{Verbatim}

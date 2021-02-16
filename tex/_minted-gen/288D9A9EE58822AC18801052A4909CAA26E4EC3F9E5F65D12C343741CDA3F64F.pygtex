@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{itertools}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{natuals} \PYG{o}{=} \PYG{n}{itertools}\PYG{o}{.}\PYG{n}{count}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n}{natuals}\PYG{p}{:}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)}
+\PYG{o}{...}
+\PYG{l+m+mi}{1}
+\PYG{l+m+mi}{2}
+\PYG{l+m+mi}{3}
+\PYG{o}{...}
+\end{Verbatim}

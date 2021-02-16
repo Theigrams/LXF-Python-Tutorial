@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{mysql} \PYG{o}{\PYGZhy{}}\PYG{n}{u} \PYG{n}{root} \PYG{o}{\PYGZhy{}}\PYG{n}{p}
+\PYG{n}{Enter} \PYG{n}{password}\PYG{p}{:}
+\PYG{n}{Welcome} \PYG{n}{to} \PYG{n}{the} \PYG{n}{MySQL} \PYG{n}{monitor}\PYG{o}{...}
+\PYG{o}{...}
+
+\PYG{n}{mysql}\PYG{o}{\PYGZgt{}} \PYG{n}{show} \PYG{n}{variables} \PYG{n}{like} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}c}\PYG{l+s+s1}{har\PYGZpc{}\PYGZsq{}}\PYG{p}{;}
+\PYG{o}{+}
+\PYG{o}{|} \PYG{n}{Variable\PYGZus{}name}            \PYG{o}{|} \PYG{n}{Value}                                                  \PYG{o}{|}
+\PYG{o}{+}
+\PYG{o}{|} \PYG{n}{character\PYGZus{}set\PYGZus{}client}     \PYG{o}{|} \PYG{n}{utf8}                                                   \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{character\PYGZus{}set\PYGZus{}connection} \PYG{o}{|} \PYG{n}{utf8}                                                   \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{character\PYGZus{}set\PYGZus{}database}   \PYG{o}{|} \PYG{n}{utf8}                                                   \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{character\PYGZus{}set\PYGZus{}filesystem} \PYG{o}{|} \PYG{n}{binary}                                                 \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{character\PYGZus{}set\PYGZus{}results}    \PYG{o}{|} \PYG{n}{utf8}                                                   \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{character\PYGZus{}set\PYGZus{}server}     \PYG{o}{|} \PYG{n}{utf8}                                                   \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{character\PYGZus{}set\PYGZus{}system}     \PYG{o}{|} \PYG{n}{utf8}                                                   \PYG{o}{|}
+\PYG{o}{|} \PYG{n}{character\PYGZus{}sets\PYGZus{}dir}       \PYG{o}{|} \PYG{o}{/}\PYG{n}{usr}\PYG{o}{/}\PYG{n}{local}\PYG{o}{/}\PYG{n}{mysql}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.1}\PYG{o}{.}\PYG{l+m+mi}{65}\PYG{o}{\PYGZhy{}}\PYG{n}{osx10}\PYG{o}{.}\PYG{l+m+mi}{6}\PYG{o}{\PYGZhy{}}\PYG{n}{x86\PYGZus{}64}\PYG{o}{/}\PYG{n}{share}\PYG{o}{/}\PYG{n}{charsets}\PYG{o}{/} \PYG{o}{|}
+\PYG{o}{+}
+\PYG{l+m+mi}{8} \PYG{n}{rows} \PYG{o+ow}{in} \PYG{n+nb}{set} \PYG{p}{(}\PYG{l+m+mf}{0.00} \PYG{n}{sec}\PYG{p}{)}
+\end{Verbatim}

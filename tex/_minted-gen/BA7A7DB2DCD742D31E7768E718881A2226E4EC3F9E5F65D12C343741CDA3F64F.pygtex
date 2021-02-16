@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nb}{object} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{Animal} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{Dog} \PYG{o}{\PYGZhy{}\PYGZgt{}} \PYG{n}{Husky}
+\end{Verbatim}

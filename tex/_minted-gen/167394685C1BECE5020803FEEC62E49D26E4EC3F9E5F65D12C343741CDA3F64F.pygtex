@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{sudo} \PYG{o}{/}\PYG{n}{etc}\PYG{o}{/}\PYG{n}{init}\PYG{o}{.}\PYG{n}{d}\PYG{o}{/}\PYG{n}{nginx} \PYG{n}{reload}
+\end{Verbatim}

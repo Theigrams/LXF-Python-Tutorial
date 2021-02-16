@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+                \PYG{err}{┌───────────────┐}
+                \PYG{err}{│}    \PYG{n}{Animal}     \PYG{err}{│}
+                \PYG{err}{└───────────────┘}
+                        \PYG{err}{│}
+           \PYG{err}{┌────────────┴────────────┐}
+           \PYG{err}{│}                         \PYG{err}{│}
+           \PYG{err}{▼}                         \PYG{err}{▼}
+    \PYG{err}{┌─────────────┐}           \PYG{err}{┌─────────────┐}
+    \PYG{err}{│}  \PYG{n}{Runnable}   \PYG{err}{│}           \PYG{err}{│}   \PYG{n}{Flyable}   \PYG{err}{│}
+    \PYG{err}{└─────────────┘}           \PYG{err}{└─────────────┘}
+           \PYG{err}{│}                         \PYG{err}{│}
+     \PYG{err}{┌─────┴──────┐}            \PYG{err}{┌─────┴──────┐}
+     \PYG{err}{│}            \PYG{err}{│}            \PYG{err}{│}            \PYG{err}{│}
+     \PYG{err}{▼}            \PYG{err}{▼}            \PYG{err}{▼}            \PYG{err}{▼}
+\PYG{err}{┌─────────┐}  \PYG{err}{┌─────────┐}  \PYG{err}{┌─────────┐}  \PYG{err}{┌─────────┐}
+\PYG{err}{│}   \PYG{n}{Dog}   \PYG{err}{│}  \PYG{err}{│} \PYG{n}{Ostrich} \PYG{err}{│}  \PYG{err}{│} \PYG{n}{Parrot}  \PYG{err}{│}  \PYG{err}{│}   \PYG{n}{Bat}   \PYG{err}{│}
+\PYG{err}{└─────────┘}  \PYG{err}{└─────────┘}  \PYG{err}{└─────────┘}  \PYG{err}{└─────────┘}
+\end{Verbatim}

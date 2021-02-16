@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{eventFile} \PYG{o}{=} \PYG{n}{detectJoystick}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}Controller\PYGZsq{}}\PYG{p}{])}
+\PYG{k}{if} \PYG{n}{eventFile}\PYG{p}{:}
+    \PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{eventFile}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}rb\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{infile}\PYG{p}{:}
+        \PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+\end{Verbatim}

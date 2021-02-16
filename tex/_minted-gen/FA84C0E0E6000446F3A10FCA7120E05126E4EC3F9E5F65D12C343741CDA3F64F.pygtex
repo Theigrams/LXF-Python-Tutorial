@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试}
+\PYG{n+nd}{@metric}
+\PYG{k}{def} \PYG{n+nf}{fast}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{):}
+    \PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mf}{0.0012}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{x} \PYG{o}{+} \PYG{n}{y}\PYG{p}{;}
+
+\PYG{n+nd}{@metric}
+\PYG{k}{def} \PYG{n+nf}{slow}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{n}{z}\PYG{p}{):}
+    \PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mf}{0.1234}\PYG{p}{)}
+    \PYG{k}{return} \PYG{n}{x} \PYG{o}{*} \PYG{n}{y} \PYG{o}{*} \PYG{n}{z}\PYG{p}{;}
+
+\PYG{n}{f} \PYG{o}{=} \PYG{n}{fast}\PYG{p}{(}\PYG{l+m+mi}{11}\PYG{p}{,} \PYG{l+m+mi}{22}\PYG{p}{)}
+\PYG{n}{s} \PYG{o}{=} \PYG{n}{slow}\PYG{p}{(}\PYG{l+m+mi}{11}\PYG{p}{,} \PYG{l+m+mi}{22}\PYG{p}{,} \PYG{l+m+mi}{33}\PYG{p}{)}
+\PYG{k}{if} \PYG{n}{f} \PYG{o}{!=} \PYG{l+m+mi}{33}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{elif} \PYG{n}{s} \PYG{o}{!=} \PYG{l+m+mi}{7986}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

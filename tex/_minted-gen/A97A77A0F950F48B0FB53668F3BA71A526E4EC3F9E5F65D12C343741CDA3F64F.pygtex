@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{C}\PYG{p}{:}\PYGZbs{}\PYG{n}{Users}\PYGZbs{}\PYG{n}{IEUser}\PYG{o}{\PYGZgt{}} \PYG{n}{python} \PYG{n}{hello}\PYG{o}{.}\PYG{n}{py}
+\PYG{n}{python}\PYG{p}{:} \PYG{n}{can}\PYG{l+s+s1}{\PYGZsq{}t open file \PYGZsq{}}\PYG{n}{hello}\PYG{o}{.}\PYG{n}{py}\PYG{l+s+s1}{\PYGZsq{}: [Errno 2] No such file or directory}
+\end{Verbatim}

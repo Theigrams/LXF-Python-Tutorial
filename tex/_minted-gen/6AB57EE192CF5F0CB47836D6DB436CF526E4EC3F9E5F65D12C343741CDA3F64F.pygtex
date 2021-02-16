@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+    \PYG{k}{if} \PYG{o+ow}{not} \PYG{n+nb}{any}\PYG{p}{(}\PYG{n}{brick}\PYG{o}{.}\PYG{n}{buttons}\PYG{p}{()):}
+        \PYG{n}{wait}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{k}{if} \PYG{n}{Button}\PYG{o}{.}\PYG{n}{LEFT} \PYG{o+ow}{in} \PYG{n}{brick}\PYG{o}{.}\PYG{n}{buttons}\PYG{p}{():}
+            \PYG{n}{setSpeed}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}
+        \PYG{k}{elif} \PYG{n}{Button}\PYG{o}{.}\PYG{n}{RIGHT} \PYG{o+ow}{in} \PYG{n}{brick}\PYG{o}{.}\PYG{n}{buttons}\PYG{p}{():}
+            \PYG{n}{setSpeed}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+        \PYG{k}{elif} \PYG{n}{Button}\PYG{o}{.}\PYG{n}{CENTER} \PYG{o+ow}{in} \PYG{n}{brick}\PYG{o}{.}\PYG{n}{buttons}\PYG{p}{():}
+            \PYG{n}{setSpeed}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+        \PYG{k}{elif} \PYG{n}{Button}\PYG{o}{.}\PYG{n}{UP} \PYG{o+ow}{in} \PYG{n}{brick}\PYG{o}{.}\PYG{n}{buttons}\PYG{p}{():}
+            \PYG{n}{setSpeed}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+            \PYG{k}{break}
+        \PYG{n}{wait}\PYG{p}{(}\PYG{l+m+mi}{500}\PYG{p}{)}
+    \PYG{k}{if} \PYG{n}{ultrasonic}\PYG{o}{.}\PYG{n}{distance}\PYG{p}{()} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{200}\PYG{p}{:}
+        \PYG{n}{setSpeed}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+\end{Verbatim}

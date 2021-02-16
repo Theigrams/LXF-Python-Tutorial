@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{\PYGZus{}TAR\PYGZus{}FILE} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}dist\PYGZhy{}awesome.tar.gz\PYGZsq{}}
+
+\PYG{k}{def} \PYG{n+nf}{build}\PYG{p}{():}
+    \PYG{n}{includes} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}static\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}templates\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}transwarp\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}favicon.ico\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}*.py\PYGZsq{}}\PYG{p}{]}
+    \PYG{n}{excludes} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}test\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}.*\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}*.pyc\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}*.pyo\PYGZsq{}}\PYG{p}{]}
+    \PYG{n}{local}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}rm \PYGZhy{}f dist/}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{\PYGZus{}TAR\PYGZus{}FILE}\PYG{p}{)}
+    \PYG{k}{with} \PYG{n}{lcd}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{abspath}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{),} \PYG{l+s+s1}{\PYGZsq{}www\PYGZsq{}}\PYG{p}{)):}
+        \PYG{n}{cmd} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}tar\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}dereference\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}czvf\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}../dist/}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{\PYGZus{}TAR\PYGZus{}FILE}\PYG{p}{]}
+        \PYG{n}{cmd}\PYG{o}{.}\PYG{n}{extend}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}\PYGZhy{}exclude=}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{ex} \PYG{k}{for} \PYG{n}{ex} \PYG{o+ow}{in} \PYG{n}{excludes}\PYG{p}{])}
+        \PYG{n}{cmd}\PYG{o}{.}\PYG{n}{extend}\PYG{p}{(}\PYG{n}{includes}\PYG{p}{)}
+        \PYG{n}{local}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{} \PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{cmd}\PYG{p}{))}
+\end{Verbatim}

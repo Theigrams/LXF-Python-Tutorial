@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Bat}\PYG{p}{(}\PYG{n}{Mammal}\PYG{p}{,} \PYG{n}{Flyable}\PYG{p}{):}
+    \PYG{k}{pass}
+\end{Verbatim}

@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{mysql.connector}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{conn} \PYG{o}{=} \PYG{n}{mysql}\PYG{o}{.}\PYG{n}{connector}\PYG{o}{.}\PYG{n}{connect}\PYG{p}{(}\PYG{n}{user}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}root\PYGZsq{}}\PYG{p}{,} \PYG{n}{password}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}password\PYGZsq{}}\PYG{p}{,} \PYG{n}{database}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}test\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cursor} \PYG{o}{=} \PYG{n}{conn}\PYG{o}{.}\PYG{n}{cursor}\PYG{p}{()}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cursor}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}create table user (id varchar(20) primary key, name varchar(20))\PYGZsq{}}\PYG{p}{)}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cursor}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}insert into user (id, name) values (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{)\PYGZsq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{])}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cursor}\PYG{o}{.}\PYG{n}{rowcount}
+\PYG{l+m+mi}{1}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{conn}\PYG{o}{.}\PYG{n}{commit}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cursor}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cursor} \PYG{o}{=} \PYG{n}{conn}\PYG{o}{.}\PYG{n}{cursor}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cursor}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}select * from user where id = }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{,))}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{values} \PYG{o}{=} \PYG{n}{cursor}\PYG{o}{.}\PYG{n}{fetchall}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{values}
+\PYG{p}{[(}\PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{)]}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cursor}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{conn}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\end{Verbatim}

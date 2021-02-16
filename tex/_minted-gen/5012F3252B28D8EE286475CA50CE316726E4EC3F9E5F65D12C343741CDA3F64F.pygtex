@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{return} \PYG{p}{\PYGZob{}}
+    \PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}template\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}index.html\PYGZsq{}}\PYG{p}{,}
+    \PYG{l+s+s1}{\PYGZsq{}data\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}...\PYGZsq{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

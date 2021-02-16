@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{l+s+s1}{\PYGZsq{}数据库类型+数据库驱动名称://用户名:口令@机器地址:端口号/数据库名\PYGZsq{}}
+\end{Verbatim}

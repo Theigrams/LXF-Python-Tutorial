@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{p}{[}
+    \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}Michael\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}score\PYGZdq{}}\PYG{p}{:}\PYG{l+m+mi}{99}\PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}Bob\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}score\PYGZdq{}}\PYG{p}{:}\PYG{l+m+mi}{85}\PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}Bart\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}score\PYGZdq{}}\PYG{p}{:}\PYG{l+m+mi}{59}\PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:}\PYG{l+s+s2}{\PYGZdq{}Lisa\PYGZdq{}}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}score\PYGZdq{}}\PYG{p}{:}\PYG{l+m+mi}{87}\PYG{p}{\PYGZcb{}}
+\PYG{p}{]}
+\end{Verbatim}

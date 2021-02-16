@@ -1,0 +1,41 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{poplib}
+
+\PYG{c+c1}{\PYGZsh{} 输入邮件地址, 口令和POP3服务器地址:}
+\PYG{n}{email} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Email: \PYGZsq{}}\PYG{p}{)}
+\PYG{n}{password} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Password: \PYGZsq{}}\PYG{p}{)}
+\PYG{n}{pop3\PYGZus{}server} \PYG{o}{=} \PYG{n+nb}{input}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}POP3 server: \PYGZsq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 连接到POP3服务器:}
+\PYG{n}{server} \PYG{o}{=} \PYG{n}{poplib}\PYG{o}{.}\PYG{n}{POP3}\PYG{p}{(}\PYG{n}{pop3\PYGZus{}server}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} 可以打开或关闭调试信息:}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{set\PYGZus{}debuglevel}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} 可选:打印POP3服务器的欢迎文字:}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{server}\PYG{o}{.}\PYG{n}{getwelcome}\PYG{p}{()}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+
+\PYG{c+c1}{\PYGZsh{} 身份认证:}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{user}\PYG{p}{(}\PYG{n}{email}\PYG{p}{)}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{pass\PYGZus{}}\PYG{p}{(}\PYG{n}{password}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} stat()返回邮件数量和占用空间:}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Messages: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{. Size: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{server}\PYG{o}{.}\PYG{n}{stat}\PYG{p}{())}
+\PYG{c+c1}{\PYGZsh{} list()返回所有邮件的编号:}
+\PYG{n}{resp}\PYG{p}{,} \PYG{n}{mails}\PYG{p}{,} \PYG{n}{octets} \PYG{o}{=} \PYG{n}{server}\PYG{o}{.}\PYG{n}{list}\PYG{p}{()}
+\PYG{c+c1}{\PYGZsh{} 可以查看返回的列表类似[b'1 82923', b'2 2184', ...]}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{mails}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 获取最新一封邮件, 注意索引号从1开始:}
+\PYG{n}{index} \PYG{o}{=} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{mails}\PYG{p}{)}
+\PYG{n}{resp}\PYG{p}{,} \PYG{n}{lines}\PYG{p}{,} \PYG{n}{octets} \PYG{o}{=} \PYG{n}{server}\PYG{o}{.}\PYG{n}{retr}\PYG{p}{(}\PYG{n}{index}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} lines存储了邮件的原始文本的每一行,}
+\PYG{c+c1}{\PYGZsh{} 可以获得整个邮件的原始文本:}
+\PYG{n}{msg\PYGZus{}content} \PYG{o}{=} \PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}r\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{lines}\PYG{p}{)}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} 稍后解析出邮件:}
+\PYG{n}{msg} \PYG{o}{=} \PYG{n}{Parser}\PYG{p}{()}\PYG{o}{.}\PYG{n}{parsestr}\PYG{p}{(}\PYG{n}{msg\PYGZus{}content}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} 可以根据邮件索引号直接从服务器删除邮件:}
+\PYG{c+c1}{\PYGZsh{} server.dele(index)}
+\PYG{c+c1}{\PYGZsh{} 关闭连接:}
+\PYG{n}{server}\PYG{o}{.}\PYG{n}{quit}\PYG{p}{()}
+\end{Verbatim}

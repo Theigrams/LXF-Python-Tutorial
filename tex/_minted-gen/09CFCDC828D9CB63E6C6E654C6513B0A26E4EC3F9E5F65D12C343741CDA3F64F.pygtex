@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{asyncio}
+
+\PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+\PYG{k}{def} \PYG{n+nf}{wget}\PYG{p}{(}\PYG{n}{host}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}wget }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{host}\PYG{p}{)}
+    \PYG{n}{connect} \PYG{o}{=} \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{open\PYGZus{}connection}\PYG{p}{(}\PYG{n}{host}\PYG{p}{,} \PYG{l+m+mi}{80}\PYG{p}{)}
+    \PYG{n}{reader}\PYG{p}{,} \PYG{n}{writer} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{connect}
+    \PYG{n}{header} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}GET / HTTP/1.0}\PYG{l+s+se}{\PYGZbs{}r\PYGZbs{}n}\PYG{l+s+s1}{Host: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+se}{\PYGZbs{}r\PYGZbs{}n\PYGZbs{}r\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{host}
+    \PYG{n}{writer}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{header}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+    \PYG{k}{yield from} \PYG{n}{writer}\PYG{o}{.}\PYG{n}{drain}\PYG{p}{()}
+    \PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+        \PYG{n}{line} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{reader}\PYG{o}{.}\PYG{n}{readline}\PYG{p}{()}
+        \PYG{k}{if} \PYG{n}{line} \PYG{o}{==} \PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}r\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{:}
+            \PYG{k}{break}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ header \PYGZgt{} }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{host}\PYG{p}{,} \PYG{n}{line}\PYG{o}{.}\PYG{n}{decode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{rstrip}\PYG{p}{()))}
+
+    \PYG{n}{writer}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+
+\PYG{n}{loop} \PYG{o}{=} \PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{get\PYGZus{}event\PYGZus{}loop}\PYG{p}{()}
+\PYG{n}{tasks} \PYG{o}{=} \PYG{p}{[}\PYG{n}{wget}\PYG{p}{(}\PYG{n}{host}\PYG{p}{)} \PYG{k}{for} \PYG{n}{host} \PYG{o+ow}{in} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}www.sina.com.cn\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}www.sohu.com\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}www.163.com\PYGZsq{}}\PYG{p}{]]}
+\PYG{n}{loop}\PYG{o}{.}\PYG{n}{run\PYGZus{}until\PYGZus{}complete}\PYG{p}{(}\PYG{n}{asyncio}\PYG{o}{.}\PYG{n}{wait}\PYG{p}{(}\PYG{n}{tasks}\PYG{p}{))}
+\PYG{n}{loop}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\end{Verbatim}

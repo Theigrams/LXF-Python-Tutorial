@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{person}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{35}\PYG{p}{,} \PYG{n}{city}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Beijing\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{name}\PYG{p}{:} \PYG{n}{Bob} \PYG{n}{age}\PYG{p}{:} \PYG{l+m+mi}{35} \PYG{n}{other}\PYG{p}{:} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}city\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Beijing\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{person}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{45}\PYG{p}{,} \PYG{n}{gender}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}M\PYGZsq{}}\PYG{p}{,} \PYG{n}{job}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Engineer\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{name}\PYG{p}{:} \PYG{n}{Adam} \PYG{n}{age}\PYG{p}{:} \PYG{l+m+mi}{45} \PYG{n}{other}\PYG{p}{:} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}gender\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}M\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}job\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Engineer\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

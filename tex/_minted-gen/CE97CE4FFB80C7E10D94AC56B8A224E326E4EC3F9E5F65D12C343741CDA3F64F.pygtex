@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{d} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}y\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}z\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}C\PYGZsq{}} \PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{k}\PYG{p}{,} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n}{d}\PYG{o}{.}\PYG{n}{items}\PYG{p}{():}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{k}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}=\PYGZsq{}}\PYG{p}{,} \PYG{n}{v}\PYG{p}{)}
+\PYG{o}{...}
+\PYG{n}{y} \PYG{o}{=} \PYG{n}{B}
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{A}
+\PYG{n}{z} \PYG{o}{=} \PYG{n}{C}
+\end{Verbatim}

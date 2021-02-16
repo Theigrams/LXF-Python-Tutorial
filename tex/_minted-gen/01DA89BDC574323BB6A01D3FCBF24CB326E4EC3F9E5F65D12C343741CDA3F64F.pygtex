@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{datetime}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{now} \PYG{o}{=} \PYG{n}{datetime}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{now}\PYG{p}{)}
+\PYG{l+m+mi}{2015}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{05}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{18} \PYG{l+m+mi}{16}\PYG{p}{:}\PYG{l+m+mi}{28}\PYG{p}{:}\PYG{l+m+mf}{07.198690}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{now}\PYG{p}{))}
+\PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{err}{\PYGZsq{}}\PYG{n+nc}{datetime}\PYG{o}{.}\PYG{n}{datetime}\PYG{l+s+s1}{\PYGZsq{}\PYGZgt{}}
+\end{Verbatim}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{email.parser} \PYG{k+kn}{import} \PYG{n}{Parser}
+\PYG{k+kn}{from} \PYG{n+nn}{email.header} \PYG{k+kn}{import} \PYG{n}{decode\PYGZus{}header}
+\PYG{k+kn}{from} \PYG{n+nn}{email.utils} \PYG{k+kn}{import} \PYG{n}{parseaddr}
+
+\PYG{k+kn}{import} \PYG{n+nn}{poplib}
+\end{Verbatim}

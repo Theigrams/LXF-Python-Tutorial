@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{PIL} \PYG{k+kn}{import} \PYG{n}{Image}
+\PYG{n}{im} \PYG{o}{=} \PYG{n}{Image}\PYG{o}{.}\PYG{n}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}test.jpg\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{w}\PYG{p}{,} \PYG{n}{h} \PYG{o}{=} \PYG{n}{im}\PYG{o}{.}\PYG{n}{size}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Original image size: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{x}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{w}\PYG{p}{,} \PYG{n}{h}\PYG{p}{))}
+
+\PYG{n}{im}\PYG{o}{.}\PYG{n}{thumbnail}\PYG{p}{((}\PYG{n}{w}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Resize image to: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{x}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{w}
+
+\PYG{n}{im}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}thumbnail.jpg\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}jpeg\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

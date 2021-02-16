@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{\PYGZus{}private\PYGZus{}1}\PYG{p}{(}\PYG{n}{name}\PYG{p}{):}
+    \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}Hello, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{name}
+
+\PYG{k}{def} \PYG{n+nf}{\PYGZus{}private\PYGZus{}2}\PYG{p}{(}\PYG{n}{name}\PYG{p}{):}
+    \PYG{k}{return} \PYG{l+s+s1}{\PYGZsq{}Hi, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{name}
+
+\PYG{k}{def} \PYG{n+nf}{greeting}\PYG{p}{(}\PYG{n}{name}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{name}\PYG{p}{)} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{3}\PYG{p}{:}
+        \PYG{k}{return} \PYG{n}{\PYGZus{}private\PYGZus{}1}\PYG{p}{(}\PYG{n}{name}\PYG{p}{)}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{k}{return} \PYG{n}{\PYGZus{}private\PYGZus{}2}\PYG{p}{(}\PYG{n}{name}\PYG{p}{)}
+\end{Verbatim}

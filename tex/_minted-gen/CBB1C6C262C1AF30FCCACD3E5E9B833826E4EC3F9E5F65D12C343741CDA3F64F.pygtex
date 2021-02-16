@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@contextmanager}
+\PYG{k}{def} \PYG{n+nf}{tag}\PYG{p}{(}\PYG{n}{name}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZlt{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{\PYGZgt{}\PYGZdq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{name}\PYG{p}{)}
+    \PYG{k}{yield}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}\PYGZlt{}/}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{\PYGZgt{}\PYGZdq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{name}\PYG{p}{)}
+
+\PYG{k}{with} \PYG{n}{tag}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}h1\PYGZdq{}}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}hello\PYGZdq{}}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}world\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

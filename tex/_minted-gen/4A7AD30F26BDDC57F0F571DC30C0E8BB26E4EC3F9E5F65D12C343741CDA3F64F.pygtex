@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{collections} \PYG{k+kn}{import} \PYG{n}{OrderedDict}
+
+\PYG{k}{class} \PYG{n+nc}{LastUpdatedOrderedDict}\PYG{p}{(}\PYG{n}{OrderedDict}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{capacity}\PYG{p}{):}
+        \PYG{n+nb}{super}\PYG{p}{(}\PYG{n}{LastUpdatedOrderedDict}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{()}
+        \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}capacity} \PYG{o}{=} \PYG{n}{capacity}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}setitem\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{,} \PYG{n}{value}\PYG{p}{):}
+        \PYG{n}{containsKey} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{k}{if} \PYG{n}{key} \PYG{o+ow}{in} \PYG{n+nb+bp}{self} \PYG{k}{else} \PYG{l+m+mi}{0}
+        \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n}{containsKey} \PYG{o}{\PYGZgt{}=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}capacity}\PYG{p}{:}
+            \PYG{n}{last} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{popitem}\PYG{p}{(}\PYG{n}{last}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}remove:\PYGZsq{}}\PYG{p}{,} \PYG{n}{last}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{containsKey}\PYG{p}{:}
+            \PYG{k}{del} \PYG{n+nb+bp}{self}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}set:\PYGZsq{}}\PYG{p}{,} \PYG{p}{(}\PYG{n}{key}\PYG{p}{,} \PYG{n}{value}\PYG{p}{))}
+        \PYG{k}{else}\PYG{p}{:}
+            \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}add:\PYGZsq{}}\PYG{p}{,} \PYG{p}{(}\PYG{n}{key}\PYG{p}{,} \PYG{n}{value}\PYG{p}{))}
+        \PYG{n}{OrderedDict}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}setitem\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}
+\end{Verbatim}

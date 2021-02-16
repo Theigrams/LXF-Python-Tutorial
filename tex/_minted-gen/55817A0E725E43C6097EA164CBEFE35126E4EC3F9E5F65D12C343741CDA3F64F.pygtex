@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}str2float(}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{123.456}\PYG{l+s+se}{\PYGZbs{}\PYGZsq{}}\PYG{l+s+s1}{) =\PYGZsq{}}\PYG{p}{,} \PYG{n}{str2float}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}123.456\PYGZsq{}}\PYG{p}{))}
+\PYG{k}{if} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{str2float}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}123.456\PYGZsq{}}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mf}{123.456}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{0.00001}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试成功!\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}测试失败!\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{GET} \PYG{o}{/}\PYG{n}{users}\PYG{o}{/}\PYG{p}{:}\PYG{n}{user}\PYG{o}{/}\PYG{n}{repos}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{balance} \PYG{o}{+} \PYG{n}{n}
+\PYG{n}{balance} \PYG{o}{=} \PYG{n}{x}
+\end{Verbatim}

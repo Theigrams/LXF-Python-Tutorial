@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} -*- coding: utf-8 -*-}
+\PYG{n}{L1} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Hello\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}World\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{18}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Apple\PYGZsq{}}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{]}
+\end{Verbatim}

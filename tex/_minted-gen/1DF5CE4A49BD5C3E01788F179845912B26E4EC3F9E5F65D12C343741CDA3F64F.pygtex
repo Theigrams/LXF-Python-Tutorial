@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Model}\PYG{p}{(}\PYG{n+nb}{dict}\PYG{p}{,} \PYG{n}{metaclass}\PYG{o}{=}\PYG{n}{ModelMetaclass}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kw}\PYG{p}{):}
+        \PYG{n+nb}{super}\PYG{p}{(}\PYG{n}{Model}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{o}{**}\PYG{n}{kw}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}getattr\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{):}
+        \PYG{k}{try}\PYG{p}{:}
+            \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]}
+        \PYG{k}{except} \PYG{n+ne}{KeyError}\PYG{p}{:}
+            \PYG{k}{raise} \PYG{n+ne}{AttributeError}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}\PYGZsq{}Model\PYGZsq{} object has no attribute \PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{\PYGZsq{}\PYGZdq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{key}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}setattr\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{,} \PYG{n}{value}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]} \PYG{o}{=} \PYG{n}{value}
+
+    \PYG{k}{def} \PYG{n+nf}{getValue}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf}{getValueOrDefault}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{):}
+        \PYG{n}{value} \PYG{o}{=} \PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{value} \PYG{o+ow}{is} \PYG{k+kc}{None}\PYG{p}{:}
+            \PYG{n}{field} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}mappings\PYGZus{}\PYGZus{}}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]}
+            \PYG{k}{if} \PYG{n}{field}\PYG{o}{.}\PYG{n}{default} \PYG{o+ow}{is} \PYG{o+ow}{not} \PYG{k+kc}{None}\PYG{p}{:}
+                \PYG{n}{value} \PYG{o}{=} \PYG{n}{field}\PYG{o}{.}\PYG{n}{default}\PYG{p}{()} \PYG{k}{if} \PYG{n}{callable}\PYG{p}{(}\PYG{n}{field}\PYG{o}{.}\PYG{n}{default}\PYG{p}{)} \PYG{k}{else} \PYG{n}{field}\PYG{o}{.}\PYG{n}{default}
+                \PYG{n}{logging}\PYG{o}{.}\PYG{n}{debug}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}using default value for }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{key}\PYG{p}{,} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{value}\PYG{p}{)))}
+                \PYG{n+nb}{setattr}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{,} \PYG{n}{value}\PYG{p}{)}
+        \PYG{k}{return} \PYG{n}{value}
+\end{Verbatim}

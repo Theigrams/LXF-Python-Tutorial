@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Model}\PYG{p}{(}\PYG{n+nb}{dict}\PYG{p}{):}
+
+    \PYG{o}{...}
+
+    \PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+    \PYG{k}{def} \PYG{n+nf}{save}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{args} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{map}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{getValueOrDefault}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}fields\PYGZus{}\PYGZus{}}\PYG{p}{))}
+        \PYG{n}{args}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{getValueOrDefault}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}primary\PYGZus{}key\PYGZus{}\PYGZus{}}\PYG{p}{))}
+        \PYG{n}{rows} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{execute}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}insert\PYGZus{}\PYGZus{}}\PYG{p}{,} \PYG{n}{args}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n}{rows} \PYG{o}{!=} \PYG{l+m+mi}{1}\PYG{p}{:}
+            \PYG{n}{logging}\PYG{o}{.}\PYG{n}{warn}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}failed to insert record: affected rows: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{rows}\PYG{p}{)}
+\end{Verbatim}

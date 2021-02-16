@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{n} \PYG{o+ow}{in} \PYG{n}{Fib}\PYG{p}{():}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)}
+\PYG{o}{...}
+\PYG{l+m+mi}{1}
+\PYG{l+m+mi}{1}
+\PYG{l+m+mi}{2}
+\PYG{l+m+mi}{3}
+\PYG{l+m+mi}{5}
+\PYG{o}{...}
+\PYG{l+m+mi}{46368}
+\PYG{l+m+mi}{75025}
+\end{Verbatim}

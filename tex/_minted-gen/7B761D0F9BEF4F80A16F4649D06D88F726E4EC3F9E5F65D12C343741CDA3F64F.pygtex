@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{PIL} \PYG{k+kn}{import} \PYG{n}{Image}\PYG{p}{,} \PYG{n}{ImageFilter}
+\PYG{n}{im} \PYG{o}{=} \PYG{n}{Image}\PYG{o}{.}\PYG{n}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}test.jpg\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{im2} \PYG{o}{=} \PYG{n}{im}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n}{ImageFilter}\PYG{o}{.}\PYG{n}{BLUR}\PYG{p}{)}
+\PYG{n}{im2}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}blur.jpg\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}jpeg\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{psutil}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{cpu\PYGZus{}count}\PYG{p}{()}
+\PYG{l+m+mi}{4}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{cpu\PYGZus{}count}\PYG{p}{(}\PYG{n}{logical}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+\PYG{l+m+mi}{2}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}ABC\PYGZsq{}}\PYG{p}{)}
+\PYG{l+m+mi}{3}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xe4\PYGZbs{}xb8\PYGZbs{}xad\PYGZbs{}xe6\PYGZbs{}x96\PYGZbs{}x87}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)}
+\PYG{l+m+mi}{6}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}中文\PYGZsq{}}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{))}
+\PYG{l+m+mi}{6}
+\end{Verbatim}

@@ -1,0 +1,101 @@
+\hypertarget{ux8fedux4ee3ux5668}{%
+\subsection{迭代器}\label{ux8fedux4ee3ux5668}}
+
+我们已经知道，可以直接作用于\texttt{for}循环的数据类型有以下几种：
+
+一类是集合数据类型，如\texttt{list}、\texttt{tuple}、\texttt{dict}、\texttt{set}、\texttt{str}等；
+
+一类是\texttt{generator}，包括生成器和带\texttt{yield}的 generator
+function。
+
+这些可以直接作用于\texttt{for}循环的对象统称为可迭代对象：\texttt{Iterable}。
+
+可以使用\texttt{isinstance()}判断一个对象是否是\texttt{Iterable}对象：
+
+\begin{pythoncode}
+>>> from collections.abc import Iterable
+>>> isinstance([], Iterable)
+True
+>>> isinstance({}, Iterable)
+True
+>>> isinstance('abc', Iterable)
+True
+>>> isinstance((x for x in range(10)), Iterable)
+True
+>>> isinstance(100, Iterable)
+False
+\end{pythoncode}
+
+而生成器不但可以作用于\texttt{for}循环，还可以被\texttt{next()}函数不断调用并返回下一个值，直到最后抛出\texttt{StopIteration}错误表示无法继续返回下一个值了。
+
+可以被\texttt{next()}函数调用并不断返回下一个值的对象称为迭代器：\texttt{Iterator}。
+
+可以使用\texttt{isinstance()}判断一个对象是否是\texttt{Iterator}对象：
+
+\begin{pythoncode}
+>>> from collections.abc import Iterator
+>>> isinstance((x for x in range(10)), Iterator)
+True
+>>> isinstance([], Iterator)
+False
+>>> isinstance({}, Iterator)
+False
+>>> isinstance('abc', Iterator)
+False
+\end{pythoncode}
+
+生成器都是\texttt{Iterator}对象，但\texttt{list}、\texttt{dict}、\texttt{str}虽然是\texttt{Iterable}，却不是\texttt{Iterator}。
+
+把\texttt{list}、\texttt{dict}、\texttt{str}等\texttt{Iterable}变成\texttt{Iterator}可以使用\texttt{iter()}函数：
+
+\begin{pythoncode}
+>>> isinstance(iter([]), Iterator)
+True
+>>> isinstance(iter('abc'), Iterator)
+True
+\end{pythoncode}
+
+你可能会问，为什么\texttt{list}、\texttt{dict}、\texttt{str}等数据类型不是\texttt{Iterator}？
+
+这是因为 Python 的\texttt{Iterator}对象表示的是一个数据流，Iterator
+对象可以被\texttt{next()}函数调用并不断返回下一个数据，直到没有数据时抛出\texttt{StopIteration}错误。可以把这个数据流看做是一个有序序列，但我们却不能提前知道序列的长度，只能不断通过\texttt{next()}函数实现按需计算下一个数据，所以\texttt{Iterator}的计算是惰性的，只有在需要返回下一个数据时它才会计算。
+
+\texttt{Iterator}甚至可以表示一个无限大的数据流，例如全体自然数。而使用
+list 是永远不可能存储全体自然数的。
+
+\hypertarget{ux5c0fux7ed3}{%
+\subsubsection{小结}\label{ux5c0fux7ed3}}
+
+凡是可作用于\texttt{for}循环的对象都是\texttt{Iterable}类型；
+
+凡是可作用于\texttt{next()}函数的对象都是\texttt{Iterator}类型，它们表示一个惰性计算的序列；
+
+集合数据类型如\texttt{list}、\texttt{dict}、\texttt{str}等是\texttt{Iterable}但不是\texttt{Iterator}，不过可以通过\texttt{iter()}函数获得一个\texttt{Iterator}对象。
+
+Python
+的\texttt{for}循环本质上就是通过不断调用\texttt{next()}函数实现的，例如：
+
+\begin{pythoncode}
+for x in [1, 2, 3, 4, 5]:
+    pass
+\end{pythoncode}
+
+实际上完全等价于：
+
+\begin{pythoncode}
+it = iter([1, 2, 3, 4, 5])
+
+while True:
+    try:
+        
+        x = next(it)
+    except StopIteration:
+        
+        break
+\end{pythoncode}
+
+\hypertarget{ux53c2ux8003ux6e90ux7801}{%
+\subsubsection{参考源码}\label{ux53c2ux8003ux6e90ux7801}}
+
+\href{https://github.com/michaelliao/learn-python3/blob/master/samples/advance/do_iter.py}{do\_iter.py}
+

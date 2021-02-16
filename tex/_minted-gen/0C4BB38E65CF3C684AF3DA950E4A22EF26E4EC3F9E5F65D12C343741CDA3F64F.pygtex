@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Bind UDP on 9999...\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{while} \PYG{k+kc}{True}\PYG{p}{:}
+
+    \PYG{n}{data}\PYG{p}{,} \PYG{n}{addr} \PYG{o}{=} \PYG{n}{s}\PYG{o}{.}\PYG{n}{recvfrom}\PYG{p}{(}\PYG{l+m+mi}{1024}\PYG{p}{)}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Received from }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{:}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{addr}\PYG{p}{)}
+    \PYG{n}{s}\PYG{o}{.}\PYG{n}{sendto}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}Hello, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{!\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{data}\PYG{p}{,} \PYG{n}{addr}\PYG{p}{)}
+\end{Verbatim}

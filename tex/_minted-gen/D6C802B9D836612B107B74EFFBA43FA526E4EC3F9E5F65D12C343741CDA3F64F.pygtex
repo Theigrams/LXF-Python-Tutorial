@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{a} \PYG{o}{=} \PYG{l+m+mi}{100}
+\PYG{k}{if} \PYG{n}{a} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{a}\PYG{p}{)}
+\PYG{k}{else}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{n}{a}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n+nb}{list}\PYG{p}{)}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{b}\PYG{p}{,} \PYG{n}{Animal}\PYG{p}{)}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{isinstance}\PYG{p}{(}\PYG{n}{c}\PYG{p}{,} \PYG{n}{Dog}\PYG{p}{)}
+\PYG{k+kc}{True}
+\end{Verbatim}

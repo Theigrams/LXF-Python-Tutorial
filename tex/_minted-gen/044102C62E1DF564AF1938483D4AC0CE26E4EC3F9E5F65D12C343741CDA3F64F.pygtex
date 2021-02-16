@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{d} \PYG{o}{=} \PYG{n+nb}{dict}\PYG{p}{(}\PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{,} \PYG{n}{age}\PYG{o}{=}\PYG{l+m+mi}{20}\PYG{p}{,} \PYG{n}{score}\PYG{o}{=}\PYG{l+m+mi}{88}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{msg} \PYG{o}{=} \PYG{n}{Parser}\PYG{p}{()}\PYG{o}{.}\PYG{n}{parsestr}\PYG{p}{(}\PYG{n}{msg\PYGZus{}content}\PYG{p}{)}
+\end{Verbatim}

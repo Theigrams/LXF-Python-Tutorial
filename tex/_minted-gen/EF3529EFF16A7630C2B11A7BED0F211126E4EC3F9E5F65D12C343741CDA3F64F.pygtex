@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} 测试:}
+\PYG{n}{t1} \PYG{o}{=} \PYG{n}{to\PYGZus{}timestamp}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}2015\PYGZhy{}6\PYGZhy{}1 08:10:30\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}UTC+7:00\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{assert} \PYG{n}{t1} \PYG{o}{==} \PYG{l+m+mf}{1433121030.0}\PYG{p}{,} \PYG{n}{t1}
+
+\PYG{n}{t2} \PYG{o}{=} \PYG{n}{to\PYGZus{}timestamp}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}2015\PYGZhy{}5\PYGZhy{}31 16:10:30\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}UTC\PYGZhy{}09:00\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{assert} \PYG{n}{t2} \PYG{o}{==} \PYG{l+m+mf}{1433121030.0}\PYG{p}{,} \PYG{n}{t2}
+
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ok\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

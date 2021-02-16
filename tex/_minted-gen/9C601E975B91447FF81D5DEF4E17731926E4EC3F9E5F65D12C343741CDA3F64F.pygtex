@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{d}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{67}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{d}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Adam\PYGZsq{}}\PYG{p}{]}
+\PYG{l+m+mi}{67}
+\end{Verbatim}

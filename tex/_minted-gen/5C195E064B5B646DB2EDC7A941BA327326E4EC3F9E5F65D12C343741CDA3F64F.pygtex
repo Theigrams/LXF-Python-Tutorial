@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Model}\PYG{p}{(}\PYG{n+nb}{dict}\PYG{p}{):}
+
+    \PYG{o}{...}
+
+    \PYG{n+nd}{@classmethod}
+    \PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+    \PYG{k}{def} \PYG{n+nf}{find}\PYG{p}{(}\PYG{n+nb+bp}{cls}\PYG{p}{,} \PYG{n}{pk}\PYG{p}{):}
+        \PYG{l+s+s1}{\PYGZsq{} find object by primary key. \PYGZsq{}}
+        \PYG{n}{rs} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{select}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ where `}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{`=?\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n+nb+bp}{cls}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}select\PYGZus{}\PYGZus{}}\PYG{p}{,} \PYG{n+nb+bp}{cls}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}primary\PYGZus{}key\PYGZus{}\PYGZus{}}\PYG{p}{),} \PYG{p}{[}\PYG{n}{pk}\PYG{p}{],} \PYG{l+m+mi}{1}\PYG{p}{)}
+        \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{rs}\PYG{p}{)} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{p}{:}
+            \PYG{k}{return} \PYG{k+kc}{None}
+        \PYG{k}{return} \PYG{n+nb+bp}{cls}\PYG{p}{(}\PYG{o}{**}\PYG{n}{rs}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{])}
+\end{Verbatim}

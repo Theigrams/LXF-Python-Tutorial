@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{abspath}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}.\PYGZsq{}}\PYG{p}{)}
+\PYG{l+s+s1}{\PYGZsq{}/Users/michael\PYGZsq{}}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/Users/michael\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}testdir\PYGZsq{}}\PYG{p}{)}
+\PYG{l+s+s1}{\PYGZsq{}/Users/michael/testdir\PYGZsq{}}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{mkdir}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/Users/michael/testdir\PYGZsq{}}\PYG{p}{)}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{rmdir}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/Users/michael/testdir\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

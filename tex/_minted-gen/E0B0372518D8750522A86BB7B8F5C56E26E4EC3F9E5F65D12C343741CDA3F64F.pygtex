@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s1}{\PYGZsq{}Age: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{. Gender: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{l+m+mi}{25}\PYG{p}{,} \PYG{k+kc}{True}\PYG{p}{)}
+\PYG{l+s+s1}{\PYGZsq{}Age: 25. Gender: True\PYGZsq{}}
+\end{Verbatim}

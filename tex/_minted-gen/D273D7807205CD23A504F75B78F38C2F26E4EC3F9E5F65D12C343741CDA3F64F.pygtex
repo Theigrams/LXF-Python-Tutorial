@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{itertools}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{cs} \PYG{o}{=} \PYG{n}{itertools}\PYG{o}{.}\PYG{n}{cycle}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ABC\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{c} \PYG{o+ow}{in} \PYG{n}{cs}\PYG{p}{:}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{c}\PYG{p}{)}
+\PYG{o}{...}
+\PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZsq{}C\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZsq{}A\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZsq{}B\PYGZsq{}}
+\PYG{l+s+s1}{\PYGZsq{}C\PYGZsq{}}
+\PYG{o}{...}
+\end{Verbatim}

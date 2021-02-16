@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{if} \PYG{n}{t} \PYG{o}{==} \PYG{l+m+mi}{1} \PYG{o+ow}{and} \PYG{n}{v} \PYG{o}{==} \PYG{l+m+mi}{1}\PYG{p}{:}
+    \PYG{k}{if} \PYG{n}{c} \PYG{o}{==} \PYG{l+m+mi}{305}\PYG{p}{:}
+
+        \PYG{k}{pass}
+    \PYG{k}{if} \PYG{n}{c} \PYG{o}{==} \PYG{l+m+mi}{304}\PYG{p}{:}
+
+        \PYG{k}{pass}
+\end{Verbatim}

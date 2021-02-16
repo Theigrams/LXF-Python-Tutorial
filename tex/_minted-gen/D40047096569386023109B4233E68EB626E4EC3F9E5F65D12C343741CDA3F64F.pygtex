@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{d} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{95}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Bob\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{75}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Tracy\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{85}\PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{d}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{]}
+\PYG{l+m+mi}{95}
+\end{Verbatim}

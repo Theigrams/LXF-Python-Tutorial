@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Chain}\PYG{p}{()}\PYG{o}{.}\PYG{n}{users}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}michael\PYGZsq{}}\PYG{p}{)}\PYG{o}{.}\PYG{n}{repos}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{disk\PYGZus{}partitions}\PYG{p}{()}
+\PYG{p}{[}\PYG{n}{sdiskpart}\PYG{p}{(}\PYG{n}{device}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}/dev/disk1\PYGZsq{}}\PYG{p}{,} \PYG{n}{mountpoint}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}/\PYGZsq{}}\PYG{p}{,} \PYG{n}{fstype}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}hfs\PYGZsq{}}\PYG{p}{,} \PYG{n}{opts}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}rw,local,rootfs,dovolfs,journaled,multilabel\PYGZsq{}}\PYG{p}{)]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{disk\PYGZus{}usage}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{sdiskusage}\PYG{p}{(}\PYG{n}{total}\PYG{o}{=}\PYG{l+m+mi}{998982549504}\PYG{p}{,} \PYG{n}{used}\PYG{o}{=}\PYG{l+m+mi}{390880133120}\PYG{p}{,} \PYG{n}{free}\PYG{o}{=}\PYG{l+m+mi}{607840272384}\PYG{p}{,} \PYG{n}{percent}\PYG{o}{=}\PYG{l+m+mf}{39.1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{psutil}\PYG{o}{.}\PYG{n}{disk\PYGZus{}io\PYGZus{}counters}\PYG{p}{()}
+\PYG{n}{sdiskio}\PYG{p}{(}\PYG{n}{read\PYGZus{}count}\PYG{o}{=}\PYG{l+m+mi}{988513}\PYG{p}{,} \PYG{n}{write\PYGZus{}count}\PYG{o}{=}\PYG{l+m+mi}{274457}\PYG{p}{,} \PYG{n}{read\PYGZus{}bytes}\PYG{o}{=}\PYG{l+m+mi}{14856830464}\PYG{p}{,} \PYG{n}{write\PYGZus{}bytes}\PYG{o}{=}\PYG{l+m+mi}{17509420032}\PYG{p}{,} \PYG{n}{read\PYGZus{}time}\PYG{o}{=}\PYG{l+m+mi}{2228966}\PYG{p}{,} \PYG{n}{write\PYGZus{}time}\PYG{o}{=}\PYG{l+m+mi}{1618405}\PYG{p}{)}
+\end{Verbatim}

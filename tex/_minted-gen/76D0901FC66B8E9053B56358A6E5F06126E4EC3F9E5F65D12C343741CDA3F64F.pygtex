@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+ne}{IOError}\PYG{p}{:} \PYG{n}{cannot} \PYG{n+nb}{open} \PYG{n}{resource}
+\end{Verbatim}

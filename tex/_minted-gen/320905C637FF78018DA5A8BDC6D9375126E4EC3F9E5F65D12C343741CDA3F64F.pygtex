@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{autoStopLoop}\PYG{p}{(}\PYG{n}{robot}\PYG{p}{):}
+    \PYG{k}{while} \PYG{n}{robot}\PYG{o}{.}\PYG{n}{active}\PYG{p}{:}
+        \PYG{k}{if} \PYG{n}{robot}\PYG{o}{.}\PYG{n}{speed} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0} \PYG{o+ow}{and} \PYG{n}{robot}\PYG{o}{.}\PYG{n}{ultrasonic}\PYG{o}{.}\PYG{n}{distance}\PYG{p}{()} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{200}\PYG{p}{:}
+            \PYG{n}{robot}\PYG{o}{.}\PYG{n}{setSpeed}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+        \PYG{n}{wait}\PYG{p}{(}\PYG{l+m+mi}{100}\PYG{p}{)}
+
+\PYG{n}{joystickEvent} \PYG{o}{=} \PYG{n}{detectJoystick}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}Controller\PYGZsq{}}\PYG{p}{])}
+\PYG{n}{robot} \PYG{o}{=} \PYG{n}{Robot}\PYG{p}{()}
+\PYG{n}{t} \PYG{o}{=} \PYG{n}{threading}\PYG{o}{.}\PYG{n}{Thread}\PYG{p}{(}\PYG{n}{target}\PYG{o}{=}\PYG{n}{autoStopLoop}\PYG{p}{,} \PYG{n}{args}\PYG{o}{=}\PYG{p}{(}\PYG{n}{robot}\PYG{p}{,))}
+\PYG{n}{t}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+\PYG{n}{joystickLoop}\PYG{p}{(}\PYG{n}{robot}\PYG{p}{,} \PYG{n}{joystickEvent}\PYG{p}{)}
+\end{Verbatim}

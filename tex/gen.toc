@@ -1,0 +1,580 @@
+\contentsline {subsection}{\numberline {0.1}Python 教程}{2}{subsection.0.1}%
+\contentsline {subsubsection}{\numberline {0.1.1}关于作者}{3}{subsubsection.0.1.1}%
+\contentsline {section}{\numberline {1}Python简介}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Python 简介}{4}{subsection.1.1}%
+\contentsline {section}{\numberline {2}安装Python}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}安装 Python}{7}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}安装 Python 3.8}{7}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}在 Mac 上安装 Python}{7}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}在 Linux 上安装 Python}{7}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}在 Windows 上安装 Python}{7}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.5}运行 Python}{7}{subsubsection.2.1.5}%
+\contentsline {subsubsection}{\numberline {2.1.6}小结}{9}{subsubsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.2}Python 解释器}{10}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}CPython}{10}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}IPython}{10}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}PyPy}{10}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Jython}{10}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}IronPython}{10}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}小结}{11}{subsubsection.2.2.6}%
+\contentsline {section}{\numberline {3}第一个Python程序}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}第一个 Python 程序}{12}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}命令行模式}{12}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Python 交互模式}{12}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}命令行模式和 Python 交互模式}{14}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}小结}{16}{subsubsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.2}使用文本编辑器}{17}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}直接运行 py 文件}{17}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}小结}{18}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}参考源码}{18}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}Python 代码运行助手}{19}{subsection.3.3}%
+\contentsline {paragraph}{Python 代码运行助手}{19}{paragraph*.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}试试效果}{19}{subsubsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.4}输入和输出}{20}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}输出}{20}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}输入}{20}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}小结}{22}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}练习}{22}{subsubsection.3.4.4}%
+\contentsline {subsubsection}{\numberline {3.4.5}参考源码}{22}{subsubsection.3.4.5}%
+\contentsline {section}{\numberline {4}Python基础}{23}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Python 基础}{23}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}小结}{23}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.2}数据类型和变量}{24}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}数据类型}{24}{subsubsection.4.2.1}%
+\contentsline {paragraph}{整数}{24}{paragraph*.4}%
+\contentsline {paragraph}{浮点数}{24}{paragraph*.5}%
+\contentsline {paragraph}{字符串}{24}{paragraph*.6}%
+\contentsline {paragraph}{布尔值}{26}{paragraph*.7}%
+\contentsline {paragraph}{空值}{27}{paragraph*.8}%
+\contentsline {subsubsection}{\numberline {4.2.2}变量}{27}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}常量}{29}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}练习}{30}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}小结}{30}{subsubsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.3}字符串和编码}{31}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}字符编码}{31}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Python 的字符串}{32}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}格式化}{36}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}format()}{37}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}f-string}{37}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.6}练习}{38}{subsubsection.4.3.6}%
+\contentsline {subsubsection}{\numberline {4.3.7}小结}{38}{subsubsection.4.3.7}%
+\contentsline {subsubsection}{\numberline {4.3.8}参考源码}{38}{subsubsection.4.3.8}%
+\contentsline {subsection}{\numberline {4.4}使用 list 和 tuple}{39}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}list}{39}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}tuple}{41}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}练习}{42}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4}小结}{43}{subsubsection.4.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.5}参考源码}{43}{subsubsection.4.4.5}%
+\contentsline {subsection}{\numberline {4.5}条件判断}{44}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}条件判断}{44}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}再议 input}{45}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}练习}{46}{subsubsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.4}小结}{46}{subsubsection.4.5.4}%
+\contentsline {subsubsection}{\numberline {4.5.5}参考源码}{46}{subsubsection.4.5.5}%
+\contentsline {subsection}{\numberline {4.6}循环}{48}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}循环}{48}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}练习}{49}{subsubsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.3}break}{49}{subsubsection.4.6.3}%
+\contentsline {subsubsection}{\numberline {4.6.4}continue}{49}{subsubsection.4.6.4}%
+\contentsline {subsubsection}{\numberline {4.6.5}小结}{50}{subsubsection.4.6.5}%
+\contentsline {subsubsection}{\numberline {4.6.6}参考源码}{50}{subsubsection.4.6.6}%
+\contentsline {subsection}{\numberline {4.7}使用 dict 和 set}{51}{subsection.4.7}%
+\contentsline {subsubsection}{\numberline {4.7.1}dict}{51}{subsubsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.2}set}{53}{subsubsection.4.7.2}%
+\contentsline {subsubsection}{\numberline {4.7.3}再议不可变对象}{54}{subsubsection.4.7.3}%
+\contentsline {subsubsection}{\numberline {4.7.4}小结}{55}{subsubsection.4.7.4}%
+\contentsline {subsubsection}{\numberline {4.7.5}参考源码}{55}{subsubsection.4.7.5}%
+\contentsline {section}{\numberline {5}函数}{56}{section.5}%
+\contentsline {subsection}{\numberline {5.1}函数}{56}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}抽象}{56}{subsubsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.2}调用函数}{58}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}数据类型转换}{58}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}练习}{59}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}小结}{59}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}参考源码}{59}{subsubsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.3}定义函数}{60}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}空函数}{61}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}参数检查}{61}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}返回多个值}{62}{subsubsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.4}小结}{63}{subsubsection.5.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.5}练习}{63}{subsubsection.5.3.5}%
+\contentsline {subsubsection}{\numberline {5.3.6}参考源码}{64}{subsubsection.5.3.6}%
+\contentsline {subsection}{\numberline {5.4}函数的参数}{65}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}位置参数}{65}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}默认参数}{66}{subsubsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.3}可变参数}{69}{subsubsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.4}关键字参数}{70}{subsubsection.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.5}命名关键字参数}{71}{subsubsection.5.4.5}%
+\contentsline {subsubsection}{\numberline {5.4.6}参数组合}{72}{subsubsection.5.4.6}%
+\contentsline {subsubsection}{\numberline {5.4.7}练习}{73}{subsubsection.5.4.7}%
+\contentsline {subsubsection}{\numberline {5.4.8}小结}{74}{subsubsection.5.4.8}%
+\contentsline {subsubsection}{\numberline {5.4.9}参考源码}{74}{subsubsection.5.4.9}%
+\contentsline {subsection}{\numberline {5.5}递归函数}{75}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}小结}{76}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}练习}{77}{subsubsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.3}参考源码}{77}{subsubsection.5.5.3}%
+\contentsline {section}{\numberline {6}高级特性}{78}{section.6}%
+\contentsline {subsection}{\numberline {6.1}高级特性}{78}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}切片}{79}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}练习}{81}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}小结}{81}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}参考源码}{82}{subsubsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.3}迭代}{83}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}练习}{84}{subsubsection.6.3.1}%
+\contentsline {subsubsection}{\numberline {6.3.2}小结}{84}{subsubsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.3}参考源码}{85}{subsubsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.4}列表生成式}{86}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}if \ldots {} else}{87}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}练习}{88}{subsubsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.3}小结}{88}{subsubsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.4}参考源码}{89}{subsubsection.6.4.4}%
+\contentsline {subsection}{\numberline {6.5}生成器}{90}{subsection.6.5}%
+\contentsline {subsubsection}{\numberline {6.5.1}练习}{94}{subsubsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.2}小结}{95}{subsubsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.3}参考源码}{95}{subsubsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.6}迭代器}{96}{subsection.6.6}%
+\contentsline {subsubsection}{\numberline {6.6.1}小结}{97}{subsubsection.6.6.1}%
+\contentsline {subsubsection}{\numberline {6.6.2}参考源码}{97}{subsubsection.6.6.2}%
+\contentsline {section}{\numberline {7}函数式编程}{98}{section.7}%
+\contentsline {subsection}{\numberline {7.1}函数式编程}{98}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}高阶函数}{99}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}变量可以指向函数}{99}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}函数名也是变量}{99}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}传入函数}{100}{subsubsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.4}小结}{100}{subsubsection.7.2.4}%
+\contentsline {subsection}{\numberline {7.3}map reduce}{101}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}练习}{103}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}参考代码}{104}{subsubsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.4}filter}{105}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}用 filter 求素数}{105}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}练习}{106}{subsubsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.3}小结}{107}{subsubsection.7.4.3}%
+\contentsline {subsubsection}{\numberline {7.4.4}参考源码}{107}{subsubsection.7.4.4}%
+\contentsline {subsection}{\numberline {7.5}sorted}{108}{subsection.7.5}%
+\contentsline {subsubsection}{\numberline {7.5.1}排序算法}{108}{subsubsection.7.5.1}%
+\contentsline {subsubsection}{\numberline {7.5.2}小结}{109}{subsubsection.7.5.2}%
+\contentsline {subsubsection}{\numberline {7.5.3}练习}{109}{subsubsection.7.5.3}%
+\contentsline {subsubsection}{\numberline {7.5.4}参考源码}{109}{subsubsection.7.5.4}%
+\contentsline {subsection}{\numberline {7.6}返回函数}{110}{subsection.7.6}%
+\contentsline {subsubsection}{\numberline {7.6.1}函数作为返回值}{110}{subsubsection.7.6.1}%
+\contentsline {subsubsection}{\numberline {7.6.2}闭包}{111}{subsubsection.7.6.2}%
+\contentsline {subsubsection}{\numberline {7.6.3}练习}{112}{subsubsection.7.6.3}%
+\contentsline {subsubsection}{\numberline {7.6.4}小结}{112}{subsubsection.7.6.4}%
+\contentsline {subsubsection}{\numberline {7.6.5}参考源码}{112}{subsubsection.7.6.5}%
+\contentsline {subsection}{\numberline {7.7}匿名函数}{113}{subsection.7.7}%
+\contentsline {subsubsection}{\numberline {7.7.1}练习}{113}{subsubsection.7.7.1}%
+\contentsline {subsubsection}{\numberline {7.7.2}小结}{113}{subsubsection.7.7.2}%
+\contentsline {subsection}{\numberline {7.8}装饰器}{114}{subsection.7.8}%
+\contentsline {subsubsection}{\numberline {7.8.1}练习}{116}{subsubsection.7.8.1}%
+\contentsline {subsubsection}{\numberline {7.8.2}小结}{117}{subsubsection.7.8.2}%
+\contentsline {subsubsection}{\numberline {7.8.3}参考源码}{117}{subsubsection.7.8.3}%
+\contentsline {subsection}{\numberline {7.9}偏函数}{118}{subsection.7.9}%
+\contentsline {subsubsection}{\numberline {7.9.1}小结}{119}{subsubsection.7.9.1}%
+\contentsline {subsubsection}{\numberline {7.9.2}参考源码}{119}{subsubsection.7.9.2}%
+\contentsline {section}{\numberline {8}模块}{120}{section.8}%
+\contentsline {subsection}{\numberline {8.1}模块}{120}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}总结}{121}{subsubsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.2}使用模块}{122}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}作用域}{123}{subsubsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.3}安装第三方模块}{125}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}安装常用模块}{125}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}模块搜索路径}{126}{subsubsection.8.3.2}%
+\contentsline {section}{\numberline {9}面向对象编程}{128}{section.9}%
+\contentsline {subsection}{\numberline {9.1}面向对象编程}{128}{subsection.9.1}%
+\contentsline {subsubsection}{\numberline {9.1.1}小结}{129}{subsubsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.2}类和实例}{130}{subsection.9.2}%
+\contentsline {subsubsection}{\numberline {9.2.1}数据封装}{131}{subsubsection.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.2.2}小结}{132}{subsubsection.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.2.3}参考源码}{132}{subsubsection.9.2.3}%
+\contentsline {subsection}{\numberline {9.3}访问限制}{133}{subsection.9.3}%
+\contentsline {subsubsection}{\numberline {9.3.1}练习}{135}{subsubsection.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.2}参考源码}{135}{subsubsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.4}继承和多态}{136}{subsection.9.4}%
+\contentsline {subsubsection}{\numberline {9.4.1}静态语言 vs 动态语言}{140}{subsubsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.4.2}小结}{140}{subsubsection.9.4.2}%
+\contentsline {subsubsection}{\numberline {9.4.3}参考源码}{140}{subsubsection.9.4.3}%
+\contentsline {subsection}{\numberline {9.5}获取对象信息}{141}{subsection.9.5}%
+\contentsline {subsubsection}{\numberline {9.5.1}使用 type()}{141}{subsubsection.9.5.1}%
+\contentsline {subsubsection}{\numberline {9.5.2}使用 isinstance()}{142}{subsubsection.9.5.2}%
+\contentsline {subsubsection}{\numberline {9.5.3}使用 dir()}{143}{subsubsection.9.5.3}%
+\contentsline {subsubsection}{\numberline {9.5.4}小结}{145}{subsubsection.9.5.4}%
+\contentsline {subsubsection}{\numberline {9.5.5}参考源码}{145}{subsubsection.9.5.5}%
+\contentsline {subsection}{\numberline {9.6}实例属性和类属性}{146}{subsection.9.6}%
+\contentsline {subsubsection}{\numberline {9.6.1}练习}{146}{subsubsection.9.6.1}%
+\contentsline {subsubsection}{\numberline {9.6.2}小结}{147}{subsubsection.9.6.2}%
+\contentsline {section}{\numberline {10}面向对象高级编程}{148}{section.10}%
+\contentsline {subsection}{\numberline {10.1}面向对象高级编程}{148}{subsection.10.1}%
+\contentsline {paragraph}{面向对象高级编程}{148}{paragraph*.9}%
+\contentsline {subsection}{\numberline {10.2}使用\_\_slots\_\_}{149}{subsection.10.2}%
+\contentsline {subsubsection}{\numberline {10.2.1}使用\_\_slots\_\_}{150}{subsubsection.10.2.1}%
+\contentsline {subsubsection}{\numberline {10.2.2}参考源码}{150}{subsubsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.3}使用 @property}{151}{subsection.10.3}%
+\contentsline {subsubsection}{\numberline {10.3.1}小结}{152}{subsubsection.10.3.1}%
+\contentsline {subsubsection}{\numberline {10.3.2}练习}{153}{subsubsection.10.3.2}%
+\contentsline {subsubsection}{\numberline {10.3.3}参考源码}{153}{subsubsection.10.3.3}%
+\contentsline {subsection}{\numberline {10.4}多重继承}{154}{subsection.10.4}%
+\contentsline {subsubsection}{\numberline {10.4.1}MixIn}{156}{subsubsection.10.4.1}%
+\contentsline {subsubsection}{\numberline {10.4.2}小结}{157}{subsubsection.10.4.2}%
+\contentsline {subsection}{\numberline {10.5}定制类}{158}{subsection.10.5}%
+\contentsline {subsubsection}{\numberline {10.5.1}\textbf {str}}{158}{subsubsection.10.5.1}%
+\contentsline {subsubsection}{\numberline {10.5.2}\textbf {iter}}{159}{subsubsection.10.5.2}%
+\contentsline {subsubsection}{\numberline {10.5.3}\textbf {getitem}}{159}{subsubsection.10.5.3}%
+\contentsline {subsubsection}{\numberline {10.5.4}\textbf {getattr}}{161}{subsubsection.10.5.4}%
+\contentsline {subsubsection}{\numberline {10.5.5}\textbf {call}}{164}{subsubsection.10.5.5}%
+\contentsline {subsubsection}{\numberline {10.5.6}小结}{165}{subsubsection.10.5.6}%
+\contentsline {subsubsection}{\numberline {10.5.7}参考源码}{165}{subsubsection.10.5.7}%
+\contentsline {subsection}{\numberline {10.6}使用枚举类}{166}{subsection.10.6}%
+\contentsline {subsubsection}{\numberline {10.6.1}练习}{167}{subsubsection.10.6.1}%
+\contentsline {subsubsection}{\numberline {10.6.2}小结}{168}{subsubsection.10.6.2}%
+\contentsline {subsubsection}{\numberline {10.6.3}参考源码}{168}{subsubsection.10.6.3}%
+\contentsline {subsection}{\numberline {10.7}使用元类}{169}{subsection.10.7}%
+\contentsline {subsubsection}{\numberline {10.7.1}type()}{169}{subsubsection.10.7.1}%
+\contentsline {subsubsection}{\numberline {10.7.2}metaclass}{170}{subsubsection.10.7.2}%
+\contentsline {subsubsection}{\numberline {10.7.3}小结}{175}{subsubsection.10.7.3}%
+\contentsline {subsubsection}{\numberline {10.7.4}参考源码}{175}{subsubsection.10.7.4}%
+\contentsline {section}{\numberline {11}错误、调试和测试}{176}{section.11}%
+\contentsline {subsection}{\numberline {11.1}错误、调试和测试}{176}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}错误处理}{177}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}try}{177}{subsubsection.11.2.1}%
+\contentsline {subsubsection}{\numberline {11.2.2}调用栈}{180}{subsubsection.11.2.2}%
+\contentsline {subsubsection}{\numberline {11.2.3}记录错误}{181}{subsubsection.11.2.3}%
+\contentsline {subsubsection}{\numberline {11.2.4}抛出错误}{182}{subsubsection.11.2.4}%
+\contentsline {subsubsection}{\numberline {11.2.5}练习}{184}{subsubsection.11.2.5}%
+\contentsline {subsubsection}{\numberline {11.2.6}小结}{184}{subsubsection.11.2.6}%
+\contentsline {subsubsection}{\numberline {11.2.7}参考源码}{184}{subsubsection.11.2.7}%
+\contentsline {subsection}{\numberline {11.3}调试}{185}{subsection.11.3}%
+\contentsline {subsubsection}{\numberline {11.3.1}断言}{185}{subsubsection.11.3.1}%
+\contentsline {subsubsection}{\numberline {11.3.2}logging}{186}{subsubsection.11.3.2}%
+\contentsline {subsubsection}{\numberline {11.3.3}pdb}{187}{subsubsection.11.3.3}%
+\contentsline {subsubsection}{\numberline {11.3.4}pdb.set\_trace()}{188}{subsubsection.11.3.4}%
+\contentsline {subsubsection}{\numberline {11.3.5}IDE}{188}{subsubsection.11.3.5}%
+\contentsline {subsubsection}{\numberline {11.3.6}小结}{189}{subsubsection.11.3.6}%
+\contentsline {subsubsection}{\numberline {11.3.7}参考源码}{189}{subsubsection.11.3.7}%
+\contentsline {subsection}{\numberline {11.4}单元测试}{190}{subsection.11.4}%
+\contentsline {subsubsection}{\numberline {11.4.1}运行单元测试}{192}{subsubsection.11.4.1}%
+\contentsline {subsubsection}{\numberline {11.4.2}setUp 与 tearDown}{192}{subsubsection.11.4.2}%
+\contentsline {subsubsection}{\numberline {11.4.3}练习}{193}{subsubsection.11.4.3}%
+\contentsline {subsubsection}{\numberline {11.4.4}小结}{193}{subsubsection.11.4.4}%
+\contentsline {subsubsection}{\numberline {11.4.5}参考源码}{194}{subsubsection.11.4.5}%
+\contentsline {subsection}{\numberline {11.5}文档测试}{195}{subsection.11.5}%
+\contentsline {subsubsection}{\numberline {11.5.1}练习}{197}{subsubsection.11.5.1}%
+\contentsline {subsubsection}{\numberline {11.5.2}小结}{197}{subsubsection.11.5.2}%
+\contentsline {subsubsection}{\numberline {11.5.3}参考源码}{197}{subsubsection.11.5.3}%
+\contentsline {section}{\numberline {12}IO编程}{198}{section.12}%
+\contentsline {subsection}{\numberline {12.1}IO 编程}{198}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}文件读写}{199}{subsection.12.2}%
+\contentsline {subsubsection}{\numberline {12.2.1}读文件}{199}{subsubsection.12.2.1}%
+\contentsline {subsubsection}{\numberline {12.2.2}file-like Object}{200}{subsubsection.12.2.2}%
+\contentsline {subsubsection}{\numberline {12.2.3}二进制文件}{200}{subsubsection.12.2.3}%
+\contentsline {subsubsection}{\numberline {12.2.4}字符编码}{200}{subsubsection.12.2.4}%
+\contentsline {subsubsection}{\numberline {12.2.5}写文件}{201}{subsubsection.12.2.5}%
+\contentsline {subsubsection}{\numberline {12.2.6}练习}{201}{subsubsection.12.2.6}%
+\contentsline {subsubsection}{\numberline {12.2.7}小结}{201}{subsubsection.12.2.7}%
+\contentsline {subsubsection}{\numberline {12.2.8}参考源码}{202}{subsubsection.12.2.8}%
+\contentsline {subsection}{\numberline {12.3}StringIO 和 BytesIO}{203}{subsection.12.3}%
+\contentsline {subsubsection}{\numberline {12.3.1}StringIO}{203}{subsubsection.12.3.1}%
+\contentsline {subsubsection}{\numberline {12.3.2}BytesIO}{203}{subsubsection.12.3.2}%
+\contentsline {subsubsection}{\numberline {12.3.3}小结}{204}{subsubsection.12.3.3}%
+\contentsline {subsubsection}{\numberline {12.3.4}参考源码}{204}{subsubsection.12.3.4}%
+\contentsline {subsection}{\numberline {12.4}操作文件和目录}{205}{subsection.12.4}%
+\contentsline {subsubsection}{\numberline {12.4.1}环境变量}{205}{subsubsection.12.4.1}%
+\contentsline {subsubsection}{\numberline {12.4.2}操作文件和目录}{206}{subsubsection.12.4.2}%
+\contentsline {subsubsection}{\numberline {12.4.3}小结}{207}{subsubsection.12.4.3}%
+\contentsline {subsubsection}{\numberline {12.4.4}练习}{207}{subsubsection.12.4.4}%
+\contentsline {subsubsection}{\numberline {12.4.5}参考源码}{207}{subsubsection.12.4.5}%
+\contentsline {subsection}{\numberline {12.5}序列化}{208}{subsection.12.5}%
+\contentsline {subsubsection}{\numberline {12.5.1}JSON}{209}{subsubsection.12.5.1}%
+\contentsline {subsubsection}{\numberline {12.5.2}JSON 进阶}{210}{subsubsection.12.5.2}%
+\contentsline {subsubsection}{\numberline {12.5.3}练习}{211}{subsubsection.12.5.3}%
+\contentsline {subsubsection}{\numberline {12.5.4}小结}{211}{subsubsection.12.5.4}%
+\contentsline {subsubsection}{\numberline {12.5.5}参考源码}{211}{subsubsection.12.5.5}%
+\contentsline {section}{\numberline {13}进程和线程}{212}{section.13}%
+\contentsline {subsection}{\numberline {13.1}进程和线程}{212}{subsection.13.1}%
+\contentsline {subsubsection}{\numberline {13.1.1}小结}{213}{subsubsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.2}多进程}{214}{subsection.13.2}%
+\contentsline {subsubsection}{\numberline {13.2.1}multiprocessing}{214}{subsubsection.13.2.1}%
+\contentsline {subsubsection}{\numberline {13.2.2}Pool}{215}{subsubsection.13.2.2}%
+\contentsline {subsubsection}{\numberline {13.2.3}子进程}{216}{subsubsection.13.2.3}%
+\contentsline {subsubsection}{\numberline {13.2.4}进程间通信}{217}{subsubsection.13.2.4}%
+\contentsline {subsubsection}{\numberline {13.2.5}小结}{219}{subsubsection.13.2.5}%
+\contentsline {subsubsection}{\numberline {13.2.6}参考源码}{219}{subsubsection.13.2.6}%
+\contentsline {subsection}{\numberline {13.3}多线程}{220}{subsection.13.3}%
+\contentsline {subsubsection}{\numberline {13.3.1}Lock}{221}{subsubsection.13.3.1}%
+\contentsline {subsubsection}{\numberline {13.3.2}多核 CPU}{223}{subsubsection.13.3.2}%
+\contentsline {subsubsection}{\numberline {13.3.3}小结}{224}{subsubsection.13.3.3}%
+\contentsline {subsubsection}{\numberline {13.3.4}参考源码}{224}{subsubsection.13.3.4}%
+\contentsline {subsection}{\numberline {13.4}ThreadLocal}{225}{subsection.13.4}%
+\contentsline {subsubsection}{\numberline {13.4.1}小结}{226}{subsubsection.13.4.1}%
+\contentsline {subsubsection}{\numberline {13.4.2}参考源码}{227}{subsubsection.13.4.2}%
+\contentsline {subsection}{\numberline {13.5}进程 vs.\nobreakspace {}线程}{228}{subsection.13.5}%
+\contentsline {subsubsection}{\numberline {13.5.1}线程切换}{228}{subsubsection.13.5.1}%
+\contentsline {subsubsection}{\numberline {13.5.2}计算密集型 vs.\nobreakspace {}IO 密集型}{229}{subsubsection.13.5.2}%
+\contentsline {subsubsection}{\numberline {13.5.3}异步 IO}{229}{subsubsection.13.5.3}%
+\contentsline {subsection}{\numberline {13.6}分布式进程}{230}{subsection.13.6}%
+\contentsline {subsubsection}{\numberline {13.6.1}小结}{233}{subsubsection.13.6.1}%
+\contentsline {subsubsection}{\numberline {13.6.2}参考源码}{233}{subsubsection.13.6.2}%
+\contentsline {section}{\numberline {14}正则表达式}{234}{section.14}%
+\contentsline {subsection}{\numberline {14.1}正则表达式}{234}{subsection.14.1}%
+\contentsline {subsubsection}{\numberline {14.1.1}进阶}{235}{subsubsection.14.1.1}%
+\contentsline {subsubsection}{\numberline {14.1.2}re 模块}{235}{subsubsection.14.1.2}%
+\contentsline {subsubsection}{\numberline {14.1.3}切分字符串}{236}{subsubsection.14.1.3}%
+\contentsline {subsubsection}{\numberline {14.1.4}分组}{236}{subsubsection.14.1.4}%
+\contentsline {subsubsection}{\numberline {14.1.5}贪婪匹配}{237}{subsubsection.14.1.5}%
+\contentsline {subsubsection}{\numberline {14.1.6}编译}{237}{subsubsection.14.1.6}%
+\contentsline {subsubsection}{\numberline {14.1.7}小结}{238}{subsubsection.14.1.7}%
+\contentsline {subsubsection}{\numberline {14.1.8}练习}{238}{subsubsection.14.1.8}%
+\contentsline {subsubsection}{\numberline {14.1.9}参考源码}{239}{subsubsection.14.1.9}%
+\contentsline {section}{\numberline {15}常用内建模块}{240}{section.15}%
+\contentsline {subsection}{\numberline {15.1}常用内建模块}{240}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}datetime}{241}{subsection.15.2}%
+\contentsline {subsubsection}{\numberline {15.2.1}获取当前日期和时间}{241}{subsubsection.15.2.1}%
+\contentsline {subsubsection}{\numberline {15.2.2}获取指定日期和时间}{241}{subsubsection.15.2.2}%
+\contentsline {subsubsection}{\numberline {15.2.3}datetime 转换为 timestamp}{241}{subsubsection.15.2.3}%
+\contentsline {subsubsection}{\numberline {15.2.4}timestamp 转换为 datetime}{242}{subsubsection.15.2.4}%
+\contentsline {subsubsection}{\numberline {15.2.5}str 转换为 datetime}{243}{subsubsection.15.2.5}%
+\contentsline {subsubsection}{\numberline {15.2.6}datetime 转换为 str}{243}{subsubsection.15.2.6}%
+\contentsline {subsubsection}{\numberline {15.2.7}datetime 加减}{243}{subsubsection.15.2.7}%
+\contentsline {subsubsection}{\numberline {15.2.8}本地时间转换为 UTC 时间}{244}{subsubsection.15.2.8}%
+\contentsline {subsubsection}{\numberline {15.2.9}时区转换}{244}{subsubsection.15.2.9}%
+\contentsline {subsubsection}{\numberline {15.2.10}小结}{245}{subsubsection.15.2.10}%
+\contentsline {subsubsection}{\numberline {15.2.11}练习}{245}{subsubsection.15.2.11}%
+\contentsline {subsubsection}{\numberline {15.2.12}参考源码}{245}{subsubsection.15.2.12}%
+\contentsline {subsection}{\numberline {15.3}XML}{246}{subsection.15.3}%
+\contentsline {subsubsection}{\numberline {15.3.1}DOM vs SAX}{246}{subsubsection.15.3.1}%
+\contentsline {subsubsection}{\numberline {15.3.2}小结}{247}{subsubsection.15.3.2}%
+\contentsline {subsubsection}{\numberline {15.3.3}练习}{247}{subsubsection.15.3.3}%
+\contentsline {subsubsection}{\numberline {15.3.4}参考源码}{248}{subsubsection.15.3.4}%
+\contentsline {subsection}{\numberline {15.4}HTMLParser}{249}{subsection.15.4}%
+\contentsline {subsubsection}{\numberline {15.4.1}小结}{250}{subsubsection.15.4.1}%
+\contentsline {subsubsection}{\numberline {15.4.2}练习}{250}{subsubsection.15.4.2}%
+\contentsline {subsubsection}{\numberline {15.4.3}参考源码}{250}{subsubsection.15.4.3}%
+\contentsline {subsection}{\numberline {15.5}collections}{251}{subsection.15.5}%
+\contentsline {subsubsection}{\numberline {15.5.1}namedtuple}{251}{subsubsection.15.5.1}%
+\contentsline {subsubsection}{\numberline {15.5.2}deque}{251}{subsubsection.15.5.2}%
+\contentsline {subsubsection}{\numberline {15.5.3}defaultdict}{252}{subsubsection.15.5.3}%
+\contentsline {subsubsection}{\numberline {15.5.4}OrderedDict}{252}{subsubsection.15.5.4}%
+\contentsline {subsubsection}{\numberline {15.5.5}ChainMap}{253}{subsubsection.15.5.5}%
+\contentsline {subsubsection}{\numberline {15.5.6}Counter}{254}{subsubsection.15.5.6}%
+\contentsline {subsubsection}{\numberline {15.5.7}小结}{254}{subsubsection.15.5.7}%
+\contentsline {subsubsection}{\numberline {15.5.8}参考源码}{254}{subsubsection.15.5.8}%
+\contentsline {subsection}{\numberline {15.6}base64}{255}{subsection.15.6}%
+\contentsline {subsubsection}{\numberline {15.6.1}小结}{256}{subsubsection.15.6.1}%
+\contentsline {subsubsection}{\numberline {15.6.2}练习}{256}{subsubsection.15.6.2}%
+\contentsline {subsubsection}{\numberline {15.6.3}参考源码}{256}{subsubsection.15.6.3}%
+\contentsline {subsection}{\numberline {15.7}struct}{257}{subsection.15.7}%
+\contentsline {subsubsection}{\numberline {15.7.1}参考源码}{259}{subsubsection.15.7.1}%
+\contentsline {subsection}{\numberline {15.8}hashlib}{260}{subsection.15.8}%
+\contentsline {subsubsection}{\numberline {15.8.1}摘要算法简介}{260}{subsubsection.15.8.1}%
+\contentsline {subsubsection}{\numberline {15.8.2}摘要算法应用}{261}{subsubsection.15.8.2}%
+\contentsline {subsubsection}{\numberline {15.8.3}练习}{262}{subsubsection.15.8.3}%
+\contentsline {subsubsection}{\numberline {15.8.4}练习}{263}{subsubsection.15.8.4}%
+\contentsline {subsubsection}{\numberline {15.8.5}小结}{263}{subsubsection.15.8.5}%
+\contentsline {subsubsection}{\numberline {15.8.6}参考源码}{264}{subsubsection.15.8.6}%
+\contentsline {subsection}{\numberline {15.9}hmac}{265}{subsection.15.9}%
+\contentsline {subsubsection}{\numberline {15.9.1}练习}{265}{subsubsection.15.9.1}%
+\contentsline {subsubsection}{\numberline {15.9.2}小结}{266}{subsubsection.15.9.2}%
+\contentsline {subsection}{\numberline {15.10}itertools}{267}{subsection.15.10}%
+\contentsline {subsubsection}{\numberline {15.10.1}chain()}{268}{subsubsection.15.10.1}%
+\contentsline {subsubsection}{\numberline {15.10.2}groupby()}{268}{subsubsection.15.10.2}%
+\contentsline {subsubsection}{\numberline {15.10.3}练习}{268}{subsubsection.15.10.3}%
+\contentsline {subsubsection}{\numberline {15.10.4}小结}{269}{subsubsection.15.10.4}%
+\contentsline {subsubsection}{\numberline {15.10.5}参考源码}{269}{subsubsection.15.10.5}%
+\contentsline {subsection}{\numberline {15.11}contextlib}{270}{subsection.15.11}%
+\contentsline {subsubsection}{\numberline {15.11.1}@contextmanager}{271}{subsubsection.15.11.1}%
+\contentsline {subsubsection}{\numberline {15.11.2}@closing}{272}{subsubsection.15.11.2}%
+\contentsline {subsection}{\numberline {15.12}urllib}{273}{subsection.15.12}%
+\contentsline {subsubsection}{\numberline {15.12.1}Get}{273}{subsubsection.15.12.1}%
+\contentsline {subsubsection}{\numberline {15.12.2}Post}{274}{subsubsection.15.12.2}%
+\contentsline {subsubsection}{\numberline {15.12.3}Handler}{275}{subsubsection.15.12.3}%
+\contentsline {subsubsection}{\numberline {15.12.4}小结}{275}{subsubsection.15.12.4}%
+\contentsline {subsubsection}{\numberline {15.12.5}练习}{275}{subsubsection.15.12.5}%
+\contentsline {subsubsection}{\numberline {15.12.6}参考源码}{276}{subsubsection.15.12.6}%
+\contentsline {section}{\numberline {16}常用第三方模块}{277}{section.16}%
+\contentsline {subsection}{\numberline {16.1}常用第三方模块}{277}{subsection.16.1}%
+\contentsline {paragraph}{常用第三方模块}{277}{paragraph*.10}%
+\contentsline {subsection}{\numberline {16.2}Pillow}{278}{subsection.16.2}%
+\contentsline {subsubsection}{\numberline {16.2.1}安装 Pillow}{278}{subsubsection.16.2.1}%
+\contentsline {subsubsection}{\numberline {16.2.2}操作图像}{278}{subsubsection.16.2.2}%
+\contentsline {subsubsection}{\numberline {16.2.3}小结}{280}{subsubsection.16.2.3}%
+\contentsline {subsubsection}{\numberline {16.2.4}参考源码}{280}{subsubsection.16.2.4}%
+\contentsline {subsection}{\numberline {16.3}requests}{281}{subsection.16.3}%
+\contentsline {subsubsection}{\numberline {16.3.1}安装 requests}{281}{subsubsection.16.3.1}%
+\contentsline {subsubsection}{\numberline {16.3.2}使用 requests}{281}{subsubsection.16.3.2}%
+\contentsline {subsubsection}{\numberline {16.3.3}小结}{283}{subsubsection.16.3.3}%
+\contentsline {subsection}{\numberline {16.4}chardet}{284}{subsection.16.4}%
+\contentsline {subsubsection}{\numberline {16.4.1}安装 chardet}{284}{subsubsection.16.4.1}%
+\contentsline {subsubsection}{\numberline {16.4.2}使用 chardet}{284}{subsubsection.16.4.2}%
+\contentsline {subsubsection}{\numberline {16.4.3}小结}{285}{subsubsection.16.4.3}%
+\contentsline {subsection}{\numberline {16.5}psutil}{286}{subsection.16.5}%
+\contentsline {subsubsection}{\numberline {16.5.1}安装 psutil}{286}{subsubsection.16.5.1}%
+\contentsline {subsubsection}{\numberline {16.5.2}获取 CPU 信息}{286}{subsubsection.16.5.2}%
+\contentsline {subsubsection}{\numberline {16.5.3}获取内存信息}{287}{subsubsection.16.5.3}%
+\contentsline {subsubsection}{\numberline {16.5.4}获取磁盘信息}{287}{subsubsection.16.5.4}%
+\contentsline {subsubsection}{\numberline {16.5.5}获取网络信息}{287}{subsubsection.16.5.5}%
+\contentsline {subsubsection}{\numberline {16.5.6}获取进程信息}{289}{subsubsection.16.5.6}%
+\contentsline {subsubsection}{\numberline {16.5.7}小结}{291}{subsubsection.16.5.7}%
+\contentsline {section}{\numberline {17}virtualenv}{292}{section.17}%
+\contentsline {subsection}{\numberline {17.1}virtualenv}{292}{subsection.17.1}%
+\contentsline {subsubsection}{\numberline {17.1.1}小结}{293}{subsubsection.17.1.1}%
+\contentsline {section}{\numberline {18}图形界面}{294}{section.18}%
+\contentsline {subsection}{\numberline {18.1}图形界面}{294}{subsection.18.1}%
+\contentsline {subsubsection}{\numberline {18.1.1}Tkinter}{294}{subsubsection.18.1.1}%
+\contentsline {subsubsection}{\numberline {18.1.2}第一个 GUI 程序}{294}{subsubsection.18.1.2}%
+\contentsline {subsubsection}{\numberline {18.1.3}输入文本}{295}{subsubsection.18.1.3}%
+\contentsline {subsubsection}{\numberline {18.1.4}小结}{296}{subsubsection.18.1.4}%
+\contentsline {subsubsection}{\numberline {18.1.5}参考源码}{296}{subsubsection.18.1.5}%
+\contentsline {subsection}{\numberline {18.2}海龟绘图}{297}{subsection.18.2}%
+\contentsline {subsubsection}{\numberline {18.2.1}参考源码}{299}{subsubsection.18.2.1}%
+\contentsline {section}{\numberline {19}网络编程}{300}{section.19}%
+\contentsline {subsection}{\numberline {19.1}网络编程}{300}{subsection.19.1}%
+\contentsline {subsection}{\numberline {19.2}TCP IP 简介}{301}{subsection.19.2}%
+\contentsline {subsection}{\numberline {19.3}TCP 编程}{303}{subsection.19.3}%
+\contentsline {subsubsection}{\numberline {19.3.1}客户端}{303}{subsubsection.19.3.1}%
+\contentsline {subsubsection}{\numberline {19.3.2}服务器}{304}{subsubsection.19.3.2}%
+\contentsline {subsubsection}{\numberline {19.3.3}小结}{306}{subsubsection.19.3.3}%
+\contentsline {subsubsection}{\numberline {19.3.4}参考源码}{307}{subsubsection.19.3.4}%
+\contentsline {subsection}{\numberline {19.4}UDP 编程}{308}{subsection.19.4}%
+\contentsline {subsubsection}{\numberline {19.4.1}小结}{309}{subsubsection.19.4.1}%
+\contentsline {subsubsection}{\numberline {19.4.2}参考源码}{309}{subsubsection.19.4.2}%
+\contentsline {section}{\numberline {20}电子邮件}{310}{section.20}%
+\contentsline {subsection}{\numberline {20.1}电子邮件}{310}{subsection.20.1}%
+\contentsline {subsection}{\numberline {20.2}SMTP 发送邮件}{312}{subsection.20.2}%
+\contentsline {subsubsection}{\numberline {20.2.1}发送 HTML 邮件}{314}{subsubsection.20.2.1}%
+\contentsline {subsubsection}{\numberline {20.2.2}发送附件}{315}{subsubsection.20.2.2}%
+\contentsline {subsubsection}{\numberline {20.2.3}发送图片}{315}{subsubsection.20.2.3}%
+\contentsline {subsubsection}{\numberline {20.2.4}同时支持 HTML 和 Plain 格式}{318}{subsubsection.20.2.4}%
+\contentsline {subsubsection}{\numberline {20.2.5}加密 SMTP}{318}{subsubsection.20.2.5}%
+\contentsline {subsubsection}{\numberline {20.2.6}小结}{318}{subsubsection.20.2.6}%
+\contentsline {subsubsection}{\numberline {20.2.7}参考源码}{319}{subsubsection.20.2.7}%
+\contentsline {subsection}{\numberline {20.3}POP3 收取邮件}{320}{subsection.20.3}%
+\contentsline {subsubsection}{\numberline {20.3.1}通过 POP3 下载邮件}{320}{subsubsection.20.3.1}%
+\contentsline {subsubsection}{\numberline {20.3.2}解析邮件}{321}{subsubsection.20.3.2}%
+\contentsline {subsubsection}{\numberline {20.3.3}小结}{323}{subsubsection.20.3.3}%
+\contentsline {subsubsection}{\numberline {20.3.4}参考源码}{323}{subsubsection.20.3.4}%
+\contentsline {section}{\numberline {21}访问数据库}{324}{section.21}%
+\contentsline {subsection}{\numberline {21.1}访问数据库}{324}{subsection.21.1}%
+\contentsline {subsubsection}{\numberline {21.1.1}NoSQL}{327}{subsubsection.21.1.1}%
+\contentsline {subsubsection}{\numberline {21.1.2}数据库类别}{327}{subsubsection.21.1.2}%
+\contentsline {subsection}{\numberline {21.2}使用 SQLite}{328}{subsection.21.2}%
+\contentsline {subsubsection}{\numberline {21.2.1}小结}{329}{subsubsection.21.2.1}%
+\contentsline {subsubsection}{\numberline {21.2.2}练习}{329}{subsubsection.21.2.2}%
+\contentsline {subsubsection}{\numberline {21.2.3}参考源码}{330}{subsubsection.21.2.3}%
+\contentsline {subsection}{\numberline {21.3}使用 MySQL}{331}{subsection.21.3}%
+\contentsline {subsubsection}{\numberline {21.3.1}安装 MySQL}{331}{subsubsection.21.3.1}%
+\contentsline {subsubsection}{\numberline {21.3.2}安装 MySQL 驱动}{332}{subsubsection.21.3.2}%
+\contentsline {subsubsection}{\numberline {21.3.3}小结}{333}{subsubsection.21.3.3}%
+\contentsline {subsubsection}{\numberline {21.3.4}参考源码}{333}{subsubsection.21.3.4}%
+\contentsline {subsection}{\numberline {21.4}使用 SQLAlchemy}{334}{subsection.21.4}%
+\contentsline {subsubsection}{\numberline {21.4.1}小结}{336}{subsubsection.21.4.1}%
+\contentsline {subsubsection}{\numberline {21.4.2}参考源码}{336}{subsubsection.21.4.2}%
+\contentsline {section}{\numberline {22}Web开发}{337}{section.22}%
+\contentsline {subsection}{\numberline {22.1}Web 开发}{337}{subsection.22.1}%
+\contentsline {subsection}{\numberline {22.2}HTTP 协议简介}{338}{subsection.22.2}%
+\contentsline {subsubsection}{\numberline {22.2.1}HTTP 请求}{340}{subsubsection.22.2.1}%
+\contentsline {subsubsection}{\numberline {22.2.2}HTTP 格式}{342}{subsubsection.22.2.2}%
+\contentsline {subsection}{\numberline {22.3}HTML 简介}{343}{subsection.22.3}%
+\contentsline {subsubsection}{\numberline {22.3.1}CSS 简介}{343}{subsubsection.22.3.1}%
+\contentsline {subsubsection}{\numberline {22.3.2}JavaScript 简介}{344}{subsubsection.22.3.2}%
+\contentsline {subsubsection}{\numberline {22.3.3}小结}{345}{subsubsection.22.3.3}%
+\contentsline {subsection}{\numberline {22.4}WSGI 接口}{346}{subsection.22.4}%
+\contentsline {subsubsection}{\numberline {22.4.1}运行 WSGI 服务}{347}{subsubsection.22.4.1}%
+\contentsline {subsubsection}{\numberline {22.4.2}小结}{349}{subsubsection.22.4.2}%
+\contentsline {subsubsection}{\numberline {22.4.3}参考源码}{349}{subsubsection.22.4.3}%
+\contentsline {subsection}{\numberline {22.5}使用 Web 框架}{350}{subsection.22.5}%
+\contentsline {subsubsection}{\numberline {22.5.1}小结}{353}{subsubsection.22.5.1}%
+\contentsline {subsubsection}{\numberline {22.5.2}参考源码}{353}{subsubsection.22.5.2}%
+\contentsline {subsection}{\numberline {22.6}使用模板}{354}{subsection.22.6}%
+\contentsline {subsubsection}{\numberline {22.6.1}home.html}{355}{subsubsection.22.6.1}%
+\contentsline {subsubsection}{\numberline {22.6.2}form.html}{356}{subsubsection.22.6.2}%
+\contentsline {subsubsection}{\numberline {22.6.3}signin-ok.html}{356}{subsubsection.22.6.3}%
+\contentsline {subsubsection}{\numberline {22.6.4}小结}{357}{subsubsection.22.6.4}%
+\contentsline {subsubsection}{\numberline {22.6.5}源码参考}{357}{subsubsection.22.6.5}%
+\contentsline {section}{\numberline {23}异步IO}{358}{section.23}%
+\contentsline {subsection}{\numberline {23.1}异步 IO}{358}{subsection.23.1}%
+\contentsline {subsection}{\numberline {23.2}协程}{360}{subsection.23.2}%
+\contentsline {subsubsection}{\numberline {23.2.1}参考源码}{362}{subsubsection.23.2.1}%
+\contentsline {subsection}{\numberline {23.3}asyncio}{363}{subsection.23.3}%
+\contentsline {subsubsection}{\numberline {23.3.1}小结}{365}{subsubsection.23.3.1}%
+\contentsline {subsubsection}{\numberline {23.3.2}参考源码}{365}{subsubsection.23.3.2}%
+\contentsline {subsection}{\numberline {23.4}async await}{366}{subsection.23.4}%
+\contentsline {subsubsection}{\numberline {23.4.1}小结}{366}{subsubsection.23.4.1}%
+\contentsline {subsubsection}{\numberline {23.4.2}练习}{366}{subsubsection.23.4.2}%
+\contentsline {subsubsection}{\numberline {23.4.3}参考源码}{366}{subsubsection.23.4.3}%
+\contentsline {subsection}{\numberline {23.5}aiohttp}{367}{subsection.23.5}%
+\contentsline {subsubsection}{\numberline {23.5.1}参考源码}{368}{subsubsection.23.5.1}%
+\contentsline {section}{\numberline {24}使用MicroPython}{369}{section.24}%
+\contentsline {subsection}{\numberline {24.1}使用 MicroPython}{369}{subsection.24.1}%
+\contentsline {subsection}{\numberline {24.2}搭建开发环境}{370}{subsection.24.2}%
+\contentsline {subsubsection}{\numberline {24.2.1}参考源码}{373}{subsubsection.24.2.1}%
+\contentsline {subsection}{\numberline {24.3}控制小车}{374}{subsection.24.3}%
+\contentsline {subsubsection}{\numberline {24.3.1}参考源码}{376}{subsubsection.24.3.1}%
+\contentsline {subsection}{\numberline {24.4}遥控小车}{377}{subsection.24.4}%
+\contentsline {subsubsection}{\numberline {24.4.1}参考源码}{382}{subsubsection.24.4.1}%
+\contentsline {subsection}{\numberline {24.5}遥控转向}{383}{subsection.24.5}%
+\contentsline {subsubsection}{\numberline {24.5.1}参考源码}{384}{subsubsection.24.5.1}%
+\contentsline {section}{\numberline {25}实战}{385}{section.25}%
+\contentsline {subsection}{\numberline {25.1}实战}{385}{subsection.25.1}%
+\contentsline {subsubsection}{\numberline {25.1.1}目标}{385}{subsubsection.25.1.1}%
+\contentsline {subsubsection}{\numberline {25.1.2}项目名称}{385}{subsubsection.25.1.2}%
+\contentsline {subsubsection}{\numberline {25.1.3}项目计划}{387}{subsubsection.25.1.3}%
+\contentsline {subsubsection}{\numberline {25.1.4}\href {http://awesome.liaoxuefeng.com/}{awesome.liaoxuefeng.com}}{387}{subsubsection.25.1.4}%
+\contentsline {subsection}{\numberline {25.2}Day 1 - 搭建开发环境}{388}{subsection.25.2}%
+\contentsline {subsubsection}{\numberline {25.2.1}搭建开发环境}{388}{subsubsection.25.2.1}%
+\contentsline {subsubsection}{\numberline {25.2.2}项目结构}{388}{subsubsection.25.2.2}%
+\contentsline {subsubsection}{\numberline {25.2.3}开发工具}{389}{subsubsection.25.2.3}%
+\contentsline {subsubsection}{\numberline {25.2.4}参考源码}{389}{subsubsection.25.2.4}%
+\contentsline {subsection}{\numberline {25.3}Day 2 - 编写 Web App 骨架}{390}{subsection.25.3}%
+\contentsline {subsubsection}{\numberline {25.3.1}参考源码}{390}{subsubsection.25.3.1}%
+\contentsline {subsection}{\numberline {25.4}Day 3 - 编写 ORM}{391}{subsection.25.4}%
+\contentsline {subsubsection}{\numberline {25.4.1}创建连接池}{391}{subsubsection.25.4.1}%
+\contentsline {subsubsection}{\numberline {25.4.2}Select}{392}{subsubsection.25.4.2}%
+\contentsline {subsubsection}{\numberline {25.4.3}Insert, Update, Delete}{392}{subsubsection.25.4.3}%
+\contentsline {subsubsection}{\numberline {25.4.4}ORM}{393}{subsubsection.25.4.4}%
+\contentsline {subsubsection}{\numberline {25.4.5}定义 Model}{393}{subsubsection.25.4.5}%
+\contentsline {subsubsection}{\numberline {25.4.6}参考源码}{397}{subsubsection.25.4.6}%
+\contentsline {subsection}{\numberline {25.5}Day 4 - 编写 Model}{398}{subsection.25.5}%
+\contentsline {subsubsection}{\numberline {25.5.1}初始化数据库表}{399}{subsubsection.25.5.1}%
+\contentsline {subsubsection}{\numberline {25.5.2}编写数据访问代码}{400}{subsubsection.25.5.2}%
+\contentsline {subsubsection}{\numberline {25.5.3}参考源码}{400}{subsubsection.25.5.3}%
+\contentsline {subsection}{\numberline {25.6}Day 5 - 编写 Web 框架}{401}{subsection.25.6}%
+\contentsline {subsubsection}{\numberline {25.6.1}@get 和 @post}{402}{subsubsection.25.6.1}%
+\contentsline {subsubsection}{\numberline {25.6.2}定义 RequestHandler}{402}{subsubsection.25.6.2}%
+\contentsline {subsubsection}{\numberline {25.6.3}middleware}{404}{subsubsection.25.6.3}%
+\contentsline {subsubsection}{\numberline {25.6.4}参考源码}{405}{subsubsection.25.6.4}%
+\contentsline {subsection}{\numberline {25.7}Day 6 - 编写配置文件}{406}{subsection.25.7}%
+\contentsline {subsubsection}{\numberline {25.7.1}参考源码}{407}{subsubsection.25.7.1}%
+\contentsline {subsection}{\numberline {25.8}Day 7 - 编写 MVC}{408}{subsection.25.8}%
+\contentsline {subsubsection}{\numberline {25.8.1}参考源码}{408}{subsubsection.25.8.1}%
+\contentsline {subsection}{\numberline {25.9}Day 8 - 构建前端}{409}{subsection.25.9}%
+\contentsline {subsubsection}{\numberline {25.9.1}参考源码}{415}{subsubsection.25.9.1}%
+\contentsline {subsection}{\numberline {25.10}Day 9 - 编写 API}{416}{subsection.25.10}%
+\contentsline {subsubsection}{\numberline {25.10.1}参考源码}{417}{subsubsection.25.10.1}%
+\contentsline {subsection}{\numberline {25.11}Day 10 - 用户注册和登录}{418}{subsection.25.11}%
+\contentsline {subsubsection}{\numberline {25.11.1}参考源码}{424}{subsubsection.25.11.1}%
+\contentsline {subsection}{\numberline {25.12}Day 11 - 编写日志创建页}{425}{subsection.25.12}%
+\contentsline {subsubsection}{\numberline {25.12.1}参考源码}{430}{subsubsection.25.12.1}%
+\contentsline {subsection}{\numberline {25.13}Day 12 - 编写日志列表页}{431}{subsection.25.13}%
+\contentsline {subsubsection}{\numberline {25.13.1}参考源码}{434}{subsubsection.25.13.1}%
+\contentsline {subsection}{\numberline {25.14}Day 13 - 提升开发效率}{435}{subsection.25.14}%
+\contentsline {subsection}{\numberline {25.15}Day 14 - 完成 Web App}{438}{subsection.25.15}%
+\contentsline {subsubsection}{\numberline {25.15.1}参考源码}{439}{subsubsection.25.15.1}%
+\contentsline {subsection}{\numberline {25.16}Day 15 - 部署 Web App}{440}{subsection.25.16}%
+\contentsline {subsubsection}{\numberline {25.16.1}搭建 Linux 服务器}{440}{subsubsection.25.16.1}%
+\contentsline {subsubsection}{\numberline {25.16.2}部署方式}{440}{subsubsection.25.16.2}%
+\contentsline {subsubsection}{\numberline {25.16.3}部署}{442}{subsubsection.25.16.3}%
+\contentsline {subsubsection}{\numberline {25.16.4}配置 Supervisor}{444}{subsubsection.25.16.4}%
+\contentsline {subsubsection}{\numberline {25.16.5}配置 Nginx}{445}{subsubsection.25.16.5}%
+\contentsline {subsubsection}{\numberline {25.16.6}友情链接}{446}{subsubsection.25.16.6}%
+\contentsline {subsubsection}{\numberline {25.16.7}参考源码}{446}{subsubsection.25.16.7}%
+\contentsline {subsection}{\numberline {25.17}Day 16 - 编写移动 App}{447}{subsection.25.17}%
+\contentsline {subsubsection}{\numberline {25.17.1}开发 iPhone 版本}{447}{subsubsection.25.17.1}%
+\contentsline {subsubsection}{\numberline {25.17.2}参考源码}{448}{subsubsection.25.17.2}%
+\contentsline {section}{\numberline {26}FAQ}{449}{section.26}%
+\contentsline {subsection}{\numberline {26.1}FAQ}{449}{subsection.26.1}%
+\contentsline {subsubsection}{\numberline {26.1.1}常见问题}{449}{subsubsection.26.1.1}%
+\contentsline {subsubsection}{\numberline {26.1.2}如何获取当前路径}{449}{subsubsection.26.1.2}%
+\contentsline {subsubsection}{\numberline {26.1.3}如何获取当前模块的文件名}{449}{subsubsection.26.1.3}%
+\contentsline {subsubsection}{\numberline {26.1.4}如何获取命令行参数}{449}{subsubsection.26.1.4}%
+\contentsline {subsubsection}{\numberline {26.1.5}如何获取当前 Python 命令的可执行文件路径}{450}{subsubsection.26.1.5}%
+\contentsline {section}{\numberline {27}期末总结}{451}{section.27}%
+\contentsline {subsection}{\numberline {27.1}期末总结}{451}{subsection.27.1}%

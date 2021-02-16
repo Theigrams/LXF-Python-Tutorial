@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}The quick brown fox\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}jumps over\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}the lazy dog\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{The} \PYG{n}{quick} \PYG{n}{brown} \PYG{n}{fox} \PYG{n}{jumps} \PYG{n}{over} \PYG{n}{the} \PYG{n}{lazy} \PYG{n}{dog}
+\end{Verbatim}

@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{os}\PYG{o}{,} \PYG{n+nn}{re}
+\PYG{k+kn}{from} \PYG{n+nn}{datetime} \PYG{k+kn}{import} \PYG{n}{datetime}
+\PYG{k+kn}{from} \PYG{n+nn}{fabric.api} \PYG{k+kn}{import} \PYG{o}{*}
+\PYG{n}{env}\PYG{o}{.}\PYG{n}{user} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}michael\PYGZsq{}}
+
+\PYG{n}{env}\PYG{o}{.}\PYG{n}{sudo\PYGZus{}user} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}root\PYGZsq{}}
+
+\PYG{n}{env}\PYG{o}{.}\PYG{n}{hosts} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}192.168.0.3\PYGZsq{}}\PYG{p}{]}
+\PYG{n}{db\PYGZus{}user} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}www\PYGZhy{}data\PYGZsq{}}
+\PYG{n}{db\PYGZus{}password} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}www\PYGZhy{}data\PYGZsq{}}
+\end{Verbatim}

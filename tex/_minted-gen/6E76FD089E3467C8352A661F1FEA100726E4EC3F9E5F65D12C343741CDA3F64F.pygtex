@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{g}\PYG{p}{)}
+\PYG{l+m+mi}{0}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{g}\PYG{p}{)}
+\PYG{l+m+mi}{1}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{g}\PYG{p}{)}
+\PYG{l+m+mi}{4}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{g}\PYG{p}{)}
+\PYG{l+m+mi}{9}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{g}\PYG{p}{)}
+\PYG{l+m+mi}{16}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{g}\PYG{p}{)}
+\PYG{l+m+mi}{25}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{g}\PYG{p}{)}
+\PYG{l+m+mi}{36}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{g}\PYG{p}{)}
+\PYG{l+m+mi}{49}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{g}\PYG{p}{)}
+\PYG{l+m+mi}{64}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{g}\PYG{p}{)}
+\PYG{l+m+mi}{81}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{next}\PYG{p}{(}\PYG{n}{g}\PYG{p}{)}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}\PYGZlt{}stdin\PYGZgt{}\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{o+ow}{in} \PYG{o}{\PYGZlt{}}\PYG{n}{module}\PYG{o}{\PYGZgt{}}
+\PYG{n+ne}{StopIteration}
+\end{Verbatim}

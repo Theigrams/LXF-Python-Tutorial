@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r} \PYG{o}{=} \PYG{n}{requests}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}https://www.douban.com/search\PYGZsq{}}\PYG{p}{,} \PYG{n}{params}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}q\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}python\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}cat\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}1001\PYGZsq{}}\PYG{p}{\PYGZcb{})}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{r}\PYG{o}{.}\PYG{n}{url} \PYG{c+c1}{\PYGZsh{} 实际请求的URL}
+\PYG{l+s+s1}{\PYGZsq{}https://www.douban.com/search?q=python\PYGZam{}cat=1001\PYGZsq{}}
+\end{Verbatim}

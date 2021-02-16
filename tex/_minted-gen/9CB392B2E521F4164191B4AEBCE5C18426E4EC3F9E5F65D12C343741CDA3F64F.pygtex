@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{PIL} \PYG{k+kn}{import} \PYG{n}{Image}\PYG{p}{,} \PYG{n}{ImageDraw}\PYG{p}{,} \PYG{n}{ImageFont}\PYG{p}{,} \PYG{n}{ImageFilter}
+
+\PYG{k+kn}{import} \PYG{n+nn}{random}
+\PYG{k}{def} \PYG{n+nf}{rndChar}\PYG{p}{():}
+    \PYG{k}{return} \PYG{n+nb}{chr}\PYG{p}{(}\PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{65}\PYG{p}{,} \PYG{l+m+mi}{90}\PYG{p}{))}
+\PYG{k}{def} \PYG{n+nf}{rndColor}\PYG{p}{():}
+    \PYG{k}{return} \PYG{p}{(}\PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{64}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{),} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{64}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{),} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{64}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{))}
+\PYG{k}{def} \PYG{n+nf}{rndColor2}\PYG{p}{():}
+    \PYG{k}{return} \PYG{p}{(}\PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{32}\PYG{p}{,} \PYG{l+m+mi}{127}\PYG{p}{),} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{32}\PYG{p}{,} \PYG{l+m+mi}{127}\PYG{p}{),} \PYG{n}{random}\PYG{o}{.}\PYG{n}{randint}\PYG{p}{(}\PYG{l+m+mi}{32}\PYG{p}{,} \PYG{l+m+mi}{127}\PYG{p}{))}
+\PYG{n}{width} \PYG{o}{=} \PYG{l+m+mi}{60} \PYG{o}{*} \PYG{l+m+mi}{4}
+\PYG{n}{height} \PYG{o}{=} \PYG{l+m+mi}{60}
+\PYG{n}{image} \PYG{o}{=} \PYG{n}{Image}\PYG{o}{.}\PYG{n}{new}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}RGB\PYGZsq{}}\PYG{p}{,} \PYG{p}{(}\PYG{n}{width}\PYG{p}{,} \PYG{n}{height}\PYG{p}{),} \PYG{p}{(}\PYG{l+m+mi}{255}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{,} \PYG{l+m+mi}{255}\PYG{p}{))}
+
+\PYG{n}{font} \PYG{o}{=} \PYG{n}{ImageFont}\PYG{o}{.}\PYG{n}{truetype}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Arial.ttf\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{36}\PYG{p}{)}
+
+\PYG{n}{draw} \PYG{o}{=} \PYG{n}{ImageDraw}\PYG{o}{.}\PYG{n}{Draw}\PYG{p}{(}\PYG{n}{image}\PYG{p}{)}
+
+\PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{width}\PYG{p}{):}
+    \PYG{k}{for} \PYG{n}{y} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{height}\PYG{p}{):}
+        \PYG{n}{draw}\PYG{o}{.}\PYG{n}{point}\PYG{p}{((}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{),} \PYG{n}{fill}\PYG{o}{=}\PYG{n}{rndColor}\PYG{p}{())}
+
+\PYG{k}{for} \PYG{n}{t} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{):}
+    \PYG{n}{draw}\PYG{o}{.}\PYG{n}{text}\PYG{p}{((}\PYG{l+m+mi}{60} \PYG{o}{*} \PYG{n}{t} \PYG{o}{+} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{),} \PYG{n}{rndChar}\PYG{p}{(),} \PYG{n}{font}\PYG{o}{=}\PYG{n}{font}\PYG{p}{,} \PYG{n}{fill}\PYG{o}{=}\PYG{n}{rndColor2}\PYG{p}{())}
+
+\PYG{n}{image} \PYG{o}{=} \PYG{n}{image}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n}{ImageFilter}\PYG{o}{.}\PYG{n}{BLUR}\PYG{p}{)}
+\PYG{n}{image}\PYG{o}{.}\PYG{n}{save}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}code.jpg\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}jpeg\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

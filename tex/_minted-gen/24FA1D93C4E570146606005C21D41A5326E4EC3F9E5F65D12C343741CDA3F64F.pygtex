@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{types}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{def} \PYG{n+nf}{fn}\PYG{p}{():}
+\PYG{o}{...}     \PYG{k}{pass}
+\PYG{o}{...}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n}{fn}\PYG{p}{)}\PYG{o}{==}\PYG{n}{types}\PYG{o}{.}\PYG{n}{FunctionType}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{type}\PYG{p}{(}\PYG{n+nb}{abs}\PYG{p}{)}\PYG{o}{==}\PYG{n}{types}\PYG{o}{.}\PYG{n}{BuiltinFunctionType}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{type}\PYG{p}{(}\PYG{k}{lambda} \PYG{n}{x}\PYG{p}{:} \PYG{n}{x}\PYG{p}{)}\PYG{o}{==}\PYG{n}{types}\PYG{o}{.}\PYG{n}{LambdaType}
+\PYG{k+kc}{True}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{type}\PYG{p}{((}\PYG{n}{x} \PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)))}\PYG{o}{==}\PYG{n}{types}\PYG{o}{.}\PYG{n}{GeneratorType}
+\PYG{k+kc}{True}
+\end{Verbatim}

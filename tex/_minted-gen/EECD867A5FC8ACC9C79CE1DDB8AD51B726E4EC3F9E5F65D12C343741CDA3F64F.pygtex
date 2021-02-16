@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{import} \PYG{n+nn}{orm}
+\PYG{k+kn}{from} \PYG{n+nn}{models} \PYG{k+kn}{import} \PYG{n}{User}\PYG{p}{,} \PYG{n}{Blog}\PYG{p}{,} \PYG{n}{Comment}
+
+\PYG{k}{def} \PYG{n+nf}{test}\PYG{p}{():}
+    \PYG{k}{yield from} \PYG{n}{orm}\PYG{o}{.}\PYG{n}{create\PYGZus{}pool}\PYG{p}{(}\PYG{n}{user}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}www\PYGZhy{}data\PYGZsq{}}\PYG{p}{,} \PYG{n}{password}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}www\PYGZhy{}data\PYGZsq{}}\PYG{p}{,} \PYG{n}{database}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}awesome\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{n}{u} \PYG{o}{=} \PYG{n}{User}\PYG{p}{(}\PYG{n}{name}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}Test\PYGZsq{}}\PYG{p}{,} \PYG{n}{email}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}test@example.com\PYGZsq{}}\PYG{p}{,} \PYG{n}{passwd}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}1234567890\PYGZsq{}}\PYG{p}{,} \PYG{n}{image}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}about:blank\PYGZsq{}}\PYG{p}{)}
+
+    \PYG{k}{yield from} \PYG{n}{u}\PYG{o}{.}\PYG{n}{save}\PYG{p}{()}
+
+\PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n}{test}\PYG{p}{():}
+    \PYG{k}{pass}
+\end{Verbatim}

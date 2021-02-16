@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{dog} \PYG{o}{=} \PYG{n}{Dog}\PYG{p}{()}
+\PYG{n}{dog}\PYG{o}{.}\PYG{n}{run}\PYG{p}{()}
+
+\PYG{n}{cat} \PYG{o}{=} \PYG{n}{Cat}\PYG{p}{()}
+\PYG{n}{cat}\PYG{o}{.}\PYG{n}{run}\PYG{p}{()}
+\end{Verbatim}

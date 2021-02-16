@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{python} \PYG{n}{mydict2}\PYG{o}{.}\PYG{n}{py}
+\PYG{o}{**********************************************************************}
+\PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}/Users/michael/Github/learn\PYGZhy{}python3/samples/debug/mydict2.py\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{o+ow}{in} \PYG{n}{\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{Dict}
+\PYG{n}{Failed} \PYG{n}{example}\PYG{p}{:}
+    \PYG{n}{d1}\PYG{o}{.}\PYG{n}{x}
+\PYG{n+ne}{Exception} \PYG{n}{raised}\PYG{p}{:}
+    \PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+      \PYG{o}{...}
+    \PYG{n+ne}{AttributeError}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Dict\PYGZsq{}} \PYG{n+nb}{object} \PYG{n}{has} \PYG{n}{no} \PYG{n}{attribute} \PYG{l+s+s1}{\PYGZsq{}x\PYGZsq{}}
+\PYG{o}{**********************************************************************}
+\PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}/Users/michael/Github/learn\PYGZhy{}python3/samples/debug/mydict2.py\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{16}\PYG{p}{,} \PYG{o+ow}{in} \PYG{n}{\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{Dict}
+\PYG{n}{Failed} \PYG{n}{example}\PYG{p}{:}
+    \PYG{n}{d2}\PYG{o}{.}\PYG{n}{c}
+\PYG{n+ne}{Exception} \PYG{n}{raised}\PYG{p}{:}
+    \PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+      \PYG{o}{...}
+    \PYG{n+ne}{AttributeError}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}Dict\PYGZsq{}} \PYG{n+nb}{object} \PYG{n}{has} \PYG{n}{no} \PYG{n}{attribute} \PYG{l+s+s1}{\PYGZsq{}c\PYGZsq{}}
+\PYG{o}{**********************************************************************}
+\PYG{l+m+mi}{1} \PYG{n}{items} \PYG{n}{had} \PYG{n}{failures}\PYG{p}{:}
+   \PYG{l+m+mi}{2} \PYG{n}{of}   \PYG{l+m+mi}{9} \PYG{o+ow}{in} \PYG{n}{\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{Dict}
+\PYG{o}{***}\PYG{n}{Test} \PYG{n}{Failed}\PYG{o}{***} \PYG{l+m+mi}{2} \PYG{n}{failures}\PYG{o}{.}
+\end{Verbatim}

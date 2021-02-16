@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{user}\PYG{o}{=}\PYG{n}{admin} \PYG{n}{color}\PYG{o}{=}\PYG{n}{green} \PYG{n}{python3} \PYG{n}{use\PYGZus{}chainmap}\PYG{o}{.}\PYG{n}{py} \PYG{o}{\PYGZhy{}}\PYG{n}{u} \PYG{n}{bob}
+\PYG{n}{color}\PYG{o}{=}\PYG{n}{green}
+\PYG{n}{user}\PYG{o}{=}\PYG{n}{bob}
+\end{Verbatim}

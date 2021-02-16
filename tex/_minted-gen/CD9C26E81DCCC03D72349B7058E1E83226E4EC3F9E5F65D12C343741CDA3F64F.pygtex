@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f} \PYG{o}{=} \PYG{n}{Fib}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{l+m+mi}{1}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{l+m+mi}{1}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]}
+\PYG{l+m+mi}{2}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}
+\PYG{l+m+mi}{3}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f}\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{]}
+\PYG{l+m+mi}{89}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{f}\PYG{p}{[}\PYG{l+m+mi}{100}\PYG{p}{]}
+\PYG{l+m+mi}{573147844013817084101}
+\end{Verbatim}

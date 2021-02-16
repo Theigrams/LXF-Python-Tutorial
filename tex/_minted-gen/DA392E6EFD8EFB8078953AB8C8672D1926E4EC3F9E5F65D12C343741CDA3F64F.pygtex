@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{Found} \PYG{n}{model}\PYG{p}{:} \PYG{n}{User}
+\PYG{n}{Found} \PYG{n}{mapping}\PYG{p}{:} \PYG{n}{email} \PYG{o}{==\PYGZgt{}} \PYG{o}{\PYGZlt{}}\PYG{n}{StringField}\PYG{p}{:}\PYG{n}{email}\PYG{o}{\PYGZgt{}}
+\PYG{n}{Found} \PYG{n}{mapping}\PYG{p}{:} \PYG{n}{password} \PYG{o}{==\PYGZgt{}} \PYG{o}{\PYGZlt{}}\PYG{n}{StringField}\PYG{p}{:}\PYG{n}{password}\PYG{o}{\PYGZgt{}}
+\PYG{n}{Found} \PYG{n}{mapping}\PYG{p}{:} \PYG{n+nb}{id} \PYG{o}{==\PYGZgt{}} \PYG{o}{\PYGZlt{}}\PYG{n}{IntegerField}\PYG{p}{:}\PYG{n}{uid}\PYG{o}{\PYGZgt{}}
+\PYG{n}{Found} \PYG{n}{mapping}\PYG{p}{:} \PYG{n}{name} \PYG{o}{==\PYGZgt{}} \PYG{o}{\PYGZlt{}}\PYG{n}{StringField}\PYG{p}{:}\PYG{n}{username}\PYG{o}{\PYGZgt{}}
+\PYG{n}{SQL}\PYG{p}{:} \PYG{n}{insert} \PYG{n}{into} \PYG{n}{User} \PYG{p}{(}\PYG{n}{password}\PYG{p}{,}\PYG{n}{email}\PYG{p}{,}\PYG{n}{username}\PYG{p}{,}\PYG{n+nb}{id}\PYG{p}{)} \PYG{n}{values} \PYG{p}{(}\PYG{err}{?}\PYG{p}{,}\PYG{err}{?}\PYG{p}{,}\PYG{err}{?}\PYG{p}{,}\PYG{err}{?}\PYG{p}{)}
+\PYG{n}{ARGS}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}my\PYGZhy{}pwd\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}test@orm.org\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Michael\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{12345}\PYG{p}{]}
+\end{Verbatim}

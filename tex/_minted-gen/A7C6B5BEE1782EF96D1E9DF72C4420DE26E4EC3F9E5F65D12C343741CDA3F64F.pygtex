@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{multiprocessing} \PYG{k+kn}{import} \PYG{n}{Process}
+\PYG{k+kn}{import} \PYG{n+nn}{os}
+\PYG{k}{def} \PYG{n+nf}{run\PYGZus{}proc}\PYG{p}{(}\PYG{n}{name}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Run child process }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{)...\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n}{name}\PYG{p}{,} \PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{()))}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Parent process }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{.\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{getpid}\PYG{p}{())}
+    \PYG{n}{p} \PYG{o}{=} \PYG{n}{Process}\PYG{p}{(}\PYG{n}{target}\PYG{o}{=}\PYG{n}{run\PYGZus{}proc}\PYG{p}{,} \PYG{n}{args}\PYG{o}{=}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}test\PYGZsq{}}\PYG{p}{,))}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Child process will start.\PYGZsq{}}\PYG{p}{)}
+    \PYG{n}{p}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+    \PYG{n}{p}\PYG{o}{.}\PYG{n}{join}\PYG{p}{()}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Child process end.\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

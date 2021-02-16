@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{hmac}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{message} \PYG{o}{=} \PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}Hello, world!\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{key} \PYG{o}{=} \PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}secret\PYGZsq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{h} \PYG{o}{=} \PYG{n}{hmac}\PYG{o}{.}\PYG{n}{new}\PYG{p}{(}\PYG{n}{key}\PYG{p}{,} \PYG{n}{message}\PYG{p}{,} \PYG{n}{digestmod}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}MD5\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{h}\PYG{o}{.}\PYG{n}{hexdigest}\PYG{p}{()}
+\PYG{l+s+s1}{\PYGZsq{}fa4ee7d173f2d97ee79022d1a7355bcf\PYGZsq{}}
+\end{Verbatim}

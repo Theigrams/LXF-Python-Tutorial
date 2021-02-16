@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{L} \PYG{o}{=} \PYG{p}{[]}
+\PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{1}
+\PYG{k}{while} \PYG{n}{n} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{99}\PYG{p}{:}
+    \PYG{n}{L}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{n}\PYG{p}{)}
+    \PYG{n}{n} \PYG{o}{=} \PYG{n}{n} \PYG{o}{+} \PYG{l+m+mi}{2}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{sorted}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}bob\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}about\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Zoo\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Credit\PYGZsq{}}\PYG{p}{],} \PYG{n}{key}\PYG{o}{=}\PYG{n+nb}{str}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}about\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}bob\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Credit\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}Zoo\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}

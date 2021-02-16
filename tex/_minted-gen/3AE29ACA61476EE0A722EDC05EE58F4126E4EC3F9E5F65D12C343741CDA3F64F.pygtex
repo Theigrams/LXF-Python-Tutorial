@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+            \PYG{n}{f}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)} \PYG{o}{=} \PYG{n}{x} \PYG{o}{*} \PYG{n}{x}
+
+                  \PYG{err}{│}
+                  \PYG{err}{│}
+  \PYG{err}{┌───┬───┬───┬───┼───┬───┬───┬───┐}
+  \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}
+  \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}
+
+\PYG{p}{[} \PYG{l+m+mi}{1}   \PYG{l+m+mi}{2}   \PYG{l+m+mi}{3}   \PYG{l+m+mi}{4}   \PYG{l+m+mi}{5}   \PYG{l+m+mi}{6}   \PYG{l+m+mi}{7}   \PYG{l+m+mi}{8}   \PYG{l+m+mi}{9} \PYG{p}{]}
+
+  \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}
+  \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}   \PYG{err}{│}
+  \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}   \PYG{err}{▼}
+
+\PYG{p}{[} \PYG{l+m+mi}{1}   \PYG{l+m+mi}{4}   \PYG{l+m+mi}{9}  \PYG{l+m+mi}{16}  \PYG{l+m+mi}{25}  \PYG{l+m+mi}{36}  \PYG{l+m+mi}{49}  \PYG{l+m+mi}{64}  \PYG{l+m+mi}{81} \PYG{p}{]}
+\end{Verbatim}

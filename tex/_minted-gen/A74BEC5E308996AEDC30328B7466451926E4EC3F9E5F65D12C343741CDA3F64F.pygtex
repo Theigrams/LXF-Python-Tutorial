@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{functools} \PYG{k+kn}{import} \PYG{n}{reduce}
+
+\PYG{n}{DIGITS} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}0\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}1\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}2\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}3\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}4\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}5\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}6\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}7\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}8\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}9\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mi}{9}\PYG{p}{\PYGZcb{}}
+
+\PYG{k}{def} \PYG{n+nf}{str2int}\PYG{p}{(}\PYG{n}{s}\PYG{p}{):}
+    \PYG{k}{def} \PYG{n+nf}{fn}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n}{x} \PYG{o}{*} \PYG{l+m+mi}{10} \PYG{o}{+} \PYG{n}{y}
+    \PYG{k}{def} \PYG{n+nf}{char2num}\PYG{p}{(}\PYG{n}{s}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n}{DIGITS}\PYG{p}{[}\PYG{n}{s}\PYG{p}{]}
+    \PYG{k}{return} \PYG{n}{reduce}\PYG{p}{(}\PYG{n}{fn}\PYG{p}{,} \PYG{n+nb}{map}\PYG{p}{(}\PYG{n}{char2num}\PYG{p}{,} \PYG{n}{s}\PYG{p}{))}
+\end{Verbatim}

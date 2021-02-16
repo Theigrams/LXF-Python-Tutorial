@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{r1} \PYG{o}{=} \PYG{l+m+mf}{12.34}
+\PYG{n}{r2} \PYG{o}{=} \PYG{l+m+mf}{9.08}
+\PYG{n}{r3} \PYG{o}{=} \PYG{l+m+mf}{73.1}
+\PYG{n}{s1} \PYG{o}{=} \PYG{l+m+mf}{3.14} \PYG{o}{*} \PYG{n}{r1} \PYG{o}{*} \PYG{n}{r1}
+\PYG{n}{s2} \PYG{o}{=} \PYG{l+m+mf}{3.14} \PYG{o}{*} \PYG{n}{r2} \PYG{o}{*} \PYG{n}{r2}
+\PYG{n}{s3} \PYG{o}{=} \PYG{l+m+mf}{3.14} \PYG{o}{*} \PYG{n}{r3} \PYG{o}{*} \PYG{n}{r3}
+\end{Verbatim}

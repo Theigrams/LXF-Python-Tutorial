@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{count}\PYG{p}{():}
+    \PYG{k}{def} \PYG{n+nf}{f}\PYG{p}{(}\PYG{n}{j}\PYG{p}{):}
+        \PYG{k}{def} \PYG{n+nf}{g}\PYG{p}{():}
+            \PYG{k}{return} \PYG{n}{j}\PYG{o}{*}\PYG{n}{j}
+        \PYG{k}{return} \PYG{n}{g}
+    \PYG{n}{fs} \PYG{o}{=} \PYG{p}{[]}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{):}
+        \PYG{n}{fs}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{f}\PYG{p}{(}\PYG{n}{i}\PYG{p}{))}
+    \PYG{k}{return} \PYG{n}{fs}
+\end{Verbatim}

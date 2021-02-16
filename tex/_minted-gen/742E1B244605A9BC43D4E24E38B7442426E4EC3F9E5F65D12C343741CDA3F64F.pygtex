@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{l+s+s1}{\PYGZsq{} a test module \PYGZsq{}}
+
+\PYG{n}{\PYGZus{}\PYGZus{}author\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}Michael Liao\PYGZsq{}}
+
+\PYG{k+kn}{import} \PYG{n+nn}{sys}
+
+\PYG{k}{def} \PYG{n+nf}{test}\PYG{p}{():}
+    \PYG{n}{args} \PYG{o}{=} \PYG{n}{sys}\PYG{o}{.}\PYG{n}{argv}
+    \PYG{k}{if} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{args}\PYG{p}{)}\PYG{o}{==}\PYG{l+m+mi}{1}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Hello, world!\PYGZsq{}}\PYG{p}{)}
+    \PYG{k}{elif} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{args}\PYG{p}{)}\PYG{o}{==}\PYG{l+m+mi}{2}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Hello, }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{!\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{args}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{])}
+    \PYG{k}{else}\PYG{p}{:}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Too many arguments!\PYGZsq{}}\PYG{p}{)}
+
+\PYG{k}{if} \PYG{n+nv+vm}{\PYGZus{}\PYGZus{}name\PYGZus{}\PYGZus{}}\PYG{o}{==}\PYG{l+s+s1}{\PYGZsq{}\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}\PYGZsq{}}\PYG{p}{:}
+    \PYG{n}{test}\PYG{p}{()}
+\end{Verbatim}

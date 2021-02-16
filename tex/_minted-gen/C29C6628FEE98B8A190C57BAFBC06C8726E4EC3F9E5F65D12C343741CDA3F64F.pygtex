@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{data} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}离离原上草，一岁一枯荣\PYGZsq{}}\PYG{o}{.}\PYG{n}{encode}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{chardet}\PYG{o}{.}\PYG{n}{detect}\PYG{p}{(}\PYG{n}{data}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}encoding\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}utf\PYGZhy{}8\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}confidence\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mf}{0.99}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}language\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{C}\PYG{p}{:}\PYGZbs{}\PYG{n}{Workspace}\PYG{o}{\PYGZgt{}} \PYG{n}{python} \PYG{n}{hello}\PYG{o}{.}\PYG{n}{py}
+\PYG{n}{Michael}
+\PYG{n}{hello}\PYG{p}{,} \PYG{n}{Michael}
+\end{Verbatim}

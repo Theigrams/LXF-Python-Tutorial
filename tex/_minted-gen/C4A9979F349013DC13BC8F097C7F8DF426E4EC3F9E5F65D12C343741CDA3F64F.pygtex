@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{s} \PYG{o}{=} \PYG{n}{socket}\PYG{o}{.}\PYG{n}{socket}\PYG{p}{(}\PYG{n}{socket}\PYG{o}{.}\PYG{n}{AF\PYGZus{}INET}\PYG{p}{,} \PYG{n}{socket}\PYG{o}{.}\PYG{n}{SOCK\PYGZus{}DGRAM}\PYG{p}{)}
+
+\PYG{n}{s}\PYG{o}{.}\PYG{n}{bind}\PYG{p}{((}\PYG{l+s+s1}{\PYGZsq{}127.0.0.1\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{9999}\PYG{p}{))}
+\end{Verbatim}

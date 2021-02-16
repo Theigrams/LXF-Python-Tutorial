@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k+kn}{from} \PYG{n+nn}{turtle} \PYG{k+kn}{import} \PYG{o}{*}
+
+\PYG{k}{def} \PYG{n+nf}{drawStar}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{):}
+    \PYG{n}{pu}\PYG{p}{()}
+    \PYG{n}{goto}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{)}
+    \PYG{n}{pd}\PYG{p}{()}
+
+    \PYG{n}{seth}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{):}
+        \PYG{n}{fd}\PYG{p}{(}\PYG{l+m+mi}{40}\PYG{p}{)}
+        \PYG{n}{rt}\PYG{p}{(}\PYG{l+m+mi}{144}\PYG{p}{)}
+
+\PYG{k}{for} \PYG{n}{x} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{250}\PYG{p}{,} \PYG{l+m+mi}{50}\PYG{p}{):}
+    \PYG{n}{drawStar}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{)}
+
+\PYG{n}{done}\PYG{p}{()}
+\end{Verbatim}

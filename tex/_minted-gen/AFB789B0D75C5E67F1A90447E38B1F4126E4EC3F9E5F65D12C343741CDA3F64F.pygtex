@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{\PYGZdl{}} \PYG{n}{python3} \PYG{n}{err\PYGZus{}raise}\PYG{o}{.}\PYG{n}{py}
+\PYG{n}{Traceback} \PYG{p}{(}\PYG{n}{most} \PYG{n}{recent} \PYG{n}{call} \PYG{n}{last}\PYG{p}{):}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}err\PYGZus{}throw.py\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{11}\PYG{p}{,} \PYG{o+ow}{in} \PYG{o}{\PYGZlt{}}\PYG{n}{module}\PYG{o}{\PYGZgt{}}
+    \PYG{n}{foo}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}0\PYGZsq{}}\PYG{p}{)}
+  \PYG{n}{File} \PYG{l+s+s2}{\PYGZdq{}err\PYGZus{}throw.py\PYGZdq{}}\PYG{p}{,} \PYG{n}{line} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{o+ow}{in} \PYG{n}{foo}
+    \PYG{k}{raise} \PYG{n}{FooError}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}invalid value: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{s}\PYG{p}{)}
+\PYG{n}{\PYGZus{}\PYGZus{}main\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{FooError}\PYG{p}{:} \PYG{n}{invalid} \PYG{n}{value}\PYG{p}{:} \PYG{l+m+mi}{0}
+\end{Verbatim}

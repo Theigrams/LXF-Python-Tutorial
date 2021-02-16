@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{get}\PYG{p}{(}\PYG{n}{path}\PYG{p}{):}
+    \PYG{l+s+sd}{\PYGZsq{}\PYGZsq{}\PYGZsq{}}
+\PYG{l+s+sd}{    Define decorator @get(\PYGZsq{}/path\PYGZsq{})}
+\PYG{l+s+sd}{    \PYGZsq{}\PYGZsq{}\PYGZsq{}}
+    \PYG{k}{def} \PYG{n+nf}{decorator}\PYG{p}{(}\PYG{n}{func}\PYG{p}{):}
+        \PYG{n+nd}{@functools}\PYG{o}{.}\PYG{n}{wraps}\PYG{p}{(}\PYG{n}{func}\PYG{p}{)}
+        \PYG{k}{def} \PYG{n+nf}{wrapper}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kw}\PYG{p}{):}
+            \PYG{k}{return} \PYG{n}{func}\PYG{p}{(}\PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kw}\PYG{p}{)}
+        \PYG{n}{wrapper}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}method\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}GET\PYGZsq{}}
+        \PYG{n}{wrapper}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}route\PYGZus{}\PYGZus{}} \PYG{o}{=} \PYG{n}{path}
+        \PYG{k}{return} \PYG{n}{wrapper}
+    \PYG{k}{return} \PYG{n}{decorator}
+\end{Verbatim}

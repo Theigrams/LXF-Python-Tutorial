@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{readImage}\PYG{p}{(}\PYG{n}{fp}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n+nb}{hasattr}\PYG{p}{(}\PYG{n}{fp}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}read\PYGZsq{}}\PYG{p}{):}
+        \PYG{k}{return} \PYG{n}{readData}\PYG{p}{(}\PYG{n}{fp}\PYG{p}{)}
+    \PYG{k}{return} \PYG{k+kc}{None}
+\end{Verbatim}

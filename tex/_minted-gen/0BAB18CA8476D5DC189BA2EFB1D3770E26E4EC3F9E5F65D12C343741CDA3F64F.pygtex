@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{MyList}\PYG{p}{(}\PYG{n+nb}{list}\PYG{p}{,} \PYG{n}{metaclass}\PYG{o}{=}\PYG{n}{ListMetaclass}\PYG{p}{):}
+    \PYG{k}{pass}
+\end{Verbatim}

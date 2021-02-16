@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{foo}\PYG{p}{(}\PYG{n}{s}\PYG{p}{):}
+    \PYG{k}{return} \PYG{l+m+mi}{10} \PYG{o}{/} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{bar}\PYG{p}{(}\PYG{n}{s}\PYG{p}{):}
+    \PYG{k}{return} \PYG{n}{foo}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)} \PYG{o}{*} \PYG{l+m+mi}{2}
+
+\PYG{k}{def} \PYG{n+nf}{main}\PYG{p}{():}
+    \PYG{n}{bar}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}0\PYGZsq{}}\PYG{p}{)}
+
+\PYG{n}{main}\PYG{p}{()}
+\end{Verbatim}

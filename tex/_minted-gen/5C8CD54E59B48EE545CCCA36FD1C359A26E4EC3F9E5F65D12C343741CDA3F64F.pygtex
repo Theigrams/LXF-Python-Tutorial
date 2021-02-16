@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZlt{}}\PYG{n}{html}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}}\PYG{n}{head}\PYG{o}{\PYGZgt{}}
+  \PYG{o}{\PYGZlt{}}\PYG{n}{title}\PYG{o}{\PYGZgt{}}\PYG{n}{Hello}\PYG{o}{\PYGZlt{}/}\PYG{n}{title}\PYG{o}{\PYGZgt{}}
+  \PYG{o}{\PYGZlt{}}\PYG{n}{style}\PYG{o}{\PYGZgt{}}
+    \PYG{n}{h1} \PYG{p}{\PYGZob{}}
+      \PYG{n}{color}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{}333333;}
+      \PYG{n}{font}\PYG{o}{\PYGZhy{}}\PYG{n}{size}\PYG{p}{:} \PYG{l+m+mi}{48}\PYG{n}{px}\PYG{p}{;}
+      \PYG{n}{text}\PYG{o}{\PYGZhy{}}\PYG{n}{shadow}\PYG{p}{:} \PYG{l+m+mi}{3}\PYG{n}{px} \PYG{l+m+mi}{3}\PYG{n}{px} \PYG{l+m+mi}{3}\PYG{n}{px} \PYG{c+c1}{\PYGZsh{}666666;}
+    \PYG{p}{\PYGZcb{}}
+  \PYG{o}{\PYGZlt{}/}\PYG{n}{style}\PYG{o}{\PYGZgt{}}
+  \PYG{o}{\PYGZlt{}}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+    \PYG{n}{function} \PYG{n}{change}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+      \PYG{n}{document}\PYG{o}{.}\PYG{n}{getElementsByTagName}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}h1\PYGZsq{}}\PYG{p}{)[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{.}\PYG{n}{style}\PYG{o}{.}\PYG{n}{color} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}\PYGZsh{}ff0000\PYGZsq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+  \PYG{o}{\PYGZlt{}/}\PYG{n}{script}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{head}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}}\PYG{n}{body}\PYG{o}{\PYGZgt{}}
+  \PYG{o}{\PYGZlt{}}\PYG{n}{h1} \PYG{n}{onclick}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}change()\PYGZdq{}}\PYG{o}{\PYGZgt{}}\PYG{n}{Hello}\PYG{p}{,} \PYG{n}{world}\PYG{err}{!}\PYG{o}{\PYGZlt{}/}\PYG{n}{h1}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{body}\PYG{o}{\PYGZgt{}}
+\PYG{o}{\PYGZlt{}/}\PYG{n}{html}\PYG{o}{\PYGZgt{}}
+\end{Verbatim}

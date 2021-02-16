@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{c+c1}{\PYGZsh{} -*- coding: utf-8 -*-}
+\PYG{n}{db} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+    \PYG{l+s+s1}{\PYGZsq{}michael\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}e10adc3949ba59abbe56e057f20f883e\PYGZsq{}}\PYG{p}{,}
+    \PYG{l+s+s1}{\PYGZsq{}bob\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}878ef96e86145580c38c87f0410ad153\PYGZsq{}}\PYG{p}{,}
+    \PYG{l+s+s1}{\PYGZsq{}alice\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}99b1c2188db85afee403b1536010c2c9\PYGZsq{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

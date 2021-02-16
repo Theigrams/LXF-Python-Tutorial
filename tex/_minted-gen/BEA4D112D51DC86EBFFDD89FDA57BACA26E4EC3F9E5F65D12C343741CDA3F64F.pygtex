@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{class} \PYG{n+nc}{Model}\PYG{p}{(}\PYG{n+nb}{dict}\PYG{p}{,} \PYG{n}{metaclass}\PYG{o}{=}\PYG{n}{ModelMetaclass}\PYG{p}{):}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kw}\PYG{p}{):}
+        \PYG{n+nb}{super}\PYG{p}{(}\PYG{n}{Model}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{p}{)}\PYG{o}{.}\PYG{n+nf+fm}{\PYGZus{}\PYGZus{}init\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{o}{**}\PYG{n}{kw}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}getattr\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{):}
+        \PYG{k}{try}\PYG{p}{:}
+            \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]}
+        \PYG{k}{except} \PYG{n+ne}{KeyError}\PYG{p}{:}
+            \PYG{k}{raise} \PYG{n+ne}{AttributeError}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}\PYGZsq{}Model\PYGZsq{} object has no attribute \PYGZsq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{\PYGZsq{}\PYGZdq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{key}\PYG{p}{)}
+
+    \PYG{k}{def} \PYG{n+nf+fm}{\PYGZus{}\PYGZus{}setattr\PYGZus{}\PYGZus{}}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{key}\PYG{p}{,} \PYG{n}{value}\PYG{p}{):}
+        \PYG{n+nb+bp}{self}\PYG{p}{[}\PYG{n}{key}\PYG{p}{]} \PYG{o}{=} \PYG{n}{value}
+
+    \PYG{k}{def} \PYG{n+nf}{save}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):}
+        \PYG{n}{fields} \PYG{o}{=} \PYG{p}{[]}
+        \PYG{n}{params} \PYG{o}{=} \PYG{p}{[]}
+        \PYG{n}{args} \PYG{o}{=} \PYG{p}{[]}
+        \PYG{k}{for} \PYG{n}{k}\PYG{p}{,} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}mappings\PYGZus{}\PYGZus{}}\PYG{o}{.}\PYG{n}{items}\PYG{p}{():}
+            \PYG{n}{fields}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{v}\PYG{o}{.}\PYG{n}{name}\PYG{p}{)}
+            \PYG{n}{params}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}?\PYGZsq{}}\PYG{p}{)}
+            \PYG{n}{args}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n+nb}{getattr}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{k}\PYG{p}{,} \PYG{k+kc}{None}\PYG{p}{))}
+        \PYG{n}{sql} \PYG{o}{=} \PYG{l+s+s1}{\PYGZsq{}insert into }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{ (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{) values (}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{)\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{\PYGZus{}\PYGZus{}table\PYGZus{}\PYGZus{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{},\PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{fields}\PYG{p}{),} \PYG{l+s+s1}{\PYGZsq{},\PYGZsq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{params}\PYG{p}{))}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}SQL: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n}{sql}\PYG{p}{)}
+        \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}ARGS: }\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s1}{\PYGZsq{}} \PYG{o}{\PYGZpc{}} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{args}\PYG{p}{))}
+\end{Verbatim}

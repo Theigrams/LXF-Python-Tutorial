@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{for} \PYG{p}{(}\PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n+nb}{list}\PYG{o}{.}\PYG{n}{length}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{n} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

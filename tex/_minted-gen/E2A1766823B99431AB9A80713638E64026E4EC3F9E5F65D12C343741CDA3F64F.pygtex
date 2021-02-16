@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{s} \PYG{o}{=} \PYG{n}{Student}\PYG{p}{()}
+\PYG{n}{s}\PYG{o}{.}\PYG{n}{score} \PYG{o}{=} \PYG{l+m+mi}{9999}
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{cursor}\PYG{o}{.}\PYG{n}{execute}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}select * from user where name=? and pwd=?\PYGZsq{}}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}abc\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}password\PYGZsq{}}\PYG{p}{))}
+\end{Verbatim}

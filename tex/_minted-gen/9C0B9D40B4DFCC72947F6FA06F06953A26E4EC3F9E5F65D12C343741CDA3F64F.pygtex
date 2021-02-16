@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{f1}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{c}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{o}{*}\PYG{n}{args}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kw}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}a =\PYGZsq{}}\PYG{p}{,} \PYG{n}{a}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b =\PYGZsq{}}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}c =\PYGZsq{}}\PYG{p}{,} \PYG{n}{c}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}args =\PYGZsq{}}\PYG{p}{,} \PYG{n}{args}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}kw =\PYGZsq{}}\PYG{p}{,} \PYG{n}{kw}\PYG{p}{)}
+
+\PYG{k}{def} \PYG{n+nf}{f2}\PYG{p}{(}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{n}{c}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{o}{*}\PYG{p}{,} \PYG{n}{d}\PYG{p}{,} \PYG{o}{**}\PYG{n}{kw}\PYG{p}{):}
+    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}a =\PYGZsq{}}\PYG{p}{,} \PYG{n}{a}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b =\PYGZsq{}}\PYG{p}{,} \PYG{n}{b}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}c =\PYGZsq{}}\PYG{p}{,} \PYG{n}{c}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}d =\PYGZsq{}}\PYG{p}{,} \PYG{n}{d}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}kw =\PYGZsq{}}\PYG{p}{,} \PYG{n}{kw}\PYG{p}{)}
+\end{Verbatim}

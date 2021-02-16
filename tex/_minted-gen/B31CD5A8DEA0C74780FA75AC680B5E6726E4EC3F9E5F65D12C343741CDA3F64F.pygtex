@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{def} \PYG{n+nf}{set\PYGZus{}score}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{,} \PYG{n}{score}\PYG{p}{):}
+\PYG{o}{...}     \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{score} \PYG{o}{=} \PYG{n}{score}
+\PYG{o}{...}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Student}\PYG{o}{.}\PYG{n}{set\PYGZus{}score} \PYG{o}{=} \PYG{n}{set\PYGZus{}score}
+\end{Verbatim}

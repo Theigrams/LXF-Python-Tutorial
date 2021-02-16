@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{chardet}\PYG{o}{.}\PYG{n}{detect}\PYG{p}{(}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}Hello, world!\PYGZsq{}}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}encoding\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}ascii\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}confidence\PYGZsq{}}\PYG{p}{:} \PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}language\PYGZsq{}}\PYG{p}{:} \PYG{l+s+s1}{\PYGZsq{}\PYGZsq{}}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n+nd}{@asyncio}\PYG{o}{.}\PYG{n}{coroutine}
+\PYG{k}{def} \PYG{n+nf}{handle\PYGZus{}url\PYGZus{}xxx}\PYG{p}{(}\PYG{n}{request}\PYG{p}{):}
+    \PYG{k}{pass}
+\end{Verbatim}

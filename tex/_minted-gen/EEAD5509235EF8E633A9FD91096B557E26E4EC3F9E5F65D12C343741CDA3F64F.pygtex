@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{n}{user} \PYG{o}{=} \PYG{k}{yield from} \PYG{n}{User}\PYG{o}{.}\PYG{n}{find}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}123\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

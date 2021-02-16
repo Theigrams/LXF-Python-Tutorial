@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{err}{┌───┐}                  \PYG{err}{┌───────┐}
+\PYG{err}{│} \PYG{n}{a} \PYG{err}{│─────────────────}\PYG{o}{\PYGZgt{}}\PYG{err}{│} \PYG{l+s+s1}{\PYGZsq{}abc\PYGZsq{}} \PYG{err}{│}
+\PYG{err}{└───┘}                  \PYG{err}{└───────┘}
+\end{Verbatim}

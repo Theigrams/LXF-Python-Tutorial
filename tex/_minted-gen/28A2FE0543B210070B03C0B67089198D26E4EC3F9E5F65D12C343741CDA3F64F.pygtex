@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{p}{(}\PYG{n}{venv}\PYG{p}{)}\PYG{n}{Mac}\PYG{p}{:}\PYG{n}{myproject} \PYG{n}{michael}\PYG{err}{\PYGZdl{}} \PYG{n}{pip} \PYG{n}{install} \PYG{n}{jinja2}
+\PYG{o}{...}
+\PYG{n}{Successfully} \PYG{n}{installed} \PYG{n}{jinja2}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.7}\PYG{o}{.}\PYG{l+m+mi}{3} \PYG{n}{markupsafe}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.23}
+\PYG{p}{(}\PYG{n}{venv}\PYG{p}{)}\PYG{n}{Mac}\PYG{p}{:}\PYG{n}{myproject} \PYG{n}{michael}\PYG{err}{\PYGZdl{}} \PYG{n}{python} \PYG{n}{myapp}\PYG{o}{.}\PYG{n}{py}
+\PYG{o}{...}
+\end{Verbatim}

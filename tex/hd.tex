@@ -1,0 +1,52 @@
+\documentclass[a4paper]{ctexart}
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathrsfs,bm}
+\usepackage{unicode-math}
+\usepackage{fontspec}
+\setmonofont{CMU Typewriter Text}
+% \setmonofont[Scale = 0.8]{Source Code Pro}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{setspace}		%行间距
+\usepackage{geometry}		%页边距
+%\geometry{left=3.18cm,right=3.18cm,top=2.54cm,bottom=2.54cm}
+\geometry{left=2cm,right=2cm,top=2.54cm,bottom=2.54cm}
+\usepackage{graphicx}		%插图 \includegraphics
+\PassOptionsToPackage{unicode}{hyperref}
+\usepackage[colorlinks=true,
+pdfborder=001,     
+citecolor=blue,
+linkcolor=red,
+anchorcolor=green,
+urlcolor=blue,
+bookmarksopen=true,bookmarksnumbered=true]{hyperref}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+\usepackage{minted}
+% 取消minted环境中特殊字符的红框
+\AtBeginEnvironment{minted}{%
+  \renewcommand{\fcolorbox}[4][]{#4}}
+
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{soul}
+\definecolor{Light}{RGB}{251,234,236}
+\sethlcolor{Light}
+
+% 设置 \texttt 红色样式
+\let\oldtexttt\texttt 
+% 备选色为 [green!30!red]
+\renewcommand{\texttt}[1]{\colorbox{Light}{\ttfamily \textcolor{red}{#1}}}
+
+
+
+% 设置行号颜色
+\renewcommand{\theFancyVerbLine}{\sffamily
+	\textcolor[rgb]{0.5,0.5,1.0}{\scriptsize
+		\oldstylenums{\arabic{FancyVerbLine}}}}
+
+
+
+\newminted{python}{texcl=true,mathescape,linenos,breaklines,breakanywhere,frame=single,baselinestretch=1}
+
+\newminted{pycon}{texcl=true,mathescape,linenos,breaklines,breakanywhere,style=colorful,frame=single,fontsize=\small}

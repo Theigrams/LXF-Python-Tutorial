@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{k}{def} \PYG{n+nf}{build}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{):}
+    \PYG{k}{return} \PYG{k}{lambda}\PYG{p}{:} \PYG{n}{x} \PYG{o}{*} \PYG{n}{x} \PYG{o}{+} \PYG{n}{y} \PYG{o}{*} \PYG{n}{y}
+\end{Verbatim}

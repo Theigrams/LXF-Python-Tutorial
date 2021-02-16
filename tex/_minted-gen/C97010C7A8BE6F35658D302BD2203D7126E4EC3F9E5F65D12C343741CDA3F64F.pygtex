@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{os}\PYG{o}{.}\PYG{n}{path}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/Users/michael/testdir/file.txt\PYGZsq{}}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/Users/michael/testdir\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}file.txt\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}
