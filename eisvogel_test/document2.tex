@@ -1,0 +1,26 @@
+\hypertarget{ux7b2cux4e00ux4e2a-python-ux7a0bux5e8f}{%
+\subsection{第一个 Python
+程序}\label{ux7b2cux4e00ux4e2a-python-ux7a0bux5e8f}}
+
+在正式编写第一个 Python 程序前，我们先复习一下什么是命令行模式和 Python
+交互模式。
+
+JSON 表示的对象就是标准的 JavaScript 语言的对象，JSON 和 Python
+内置的数据类型对应如下：
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+JSON类型 & Python类型\tabularnewline
+\midrule
+\endhead
+\{\} & dict\tabularnewline
+{[}{]} & list\tabularnewline
+``string'' & str\tabularnewline
+1234.56 & int或float\tabularnewline
+true/false & True/False\tabularnewline
+null & None\tabularnewline
+\bottomrule
+\end{longtable}
+
+Python 内置的\texttt{json}模块提供了非常完善的 Python 对象到 JSON
+格式的转换。我们先看看如何把 Python 对象变成一个 JSON：

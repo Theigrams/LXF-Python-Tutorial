@@ -1,0 +1,1 @@
+pandoc "document.md" -o "document.tex" --from markdown --template "eisvogel.tex" --highlight-style kate --pdf-engine "xelatex" -V CJKmainfont="SimSun"

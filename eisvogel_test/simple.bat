@@ -1,0 +1,1 @@
+pandoc "document.md" -o "document2.tex" --from markdown -t latex
