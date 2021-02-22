@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+                                             │
+┌─────────────────────────────────────────┐     ┌──────────────────────────────────────┐
+│task\PYGZus{}master.py                           │  │  │task\PYGZus{}worker.py                        │
+│                                         │     │                                      │
+│  task = manager.get\PYGZus{}task\PYGZus{}queue()        │  │  │  task = manager.get\PYGZus{}task\PYGZus{}queue()     │
+│  result = manager.get\PYGZus{}result\PYGZus{}queue()    │     │  result = manager.get\PYGZus{}result\PYGZus{}queue() │
+│              │                          │  │  │              │                       │
+│              │                          │     │              │                       │
+│              ▼                          │  │  │              │                       │
+│  ┌─────────────────────────────────┐    │     │              │                       │
+│  │QueueManager                     │    │  │  │              │                       │
+│  │ ┌────────────┐ ┌──────────────┐ │    │     │              │                       │
+│  │ │ task\PYGZus{}queue │ │ result\PYGZus{}queue │ │\PYGZlt{}───┼──┼──┼──────────────┘                       │
+│  │ └────────────┘ └──────────────┘ │    │     │                                      │
+│  └─────────────────────────────────┘    │  │  │                                      │
+└─────────────────────────────────────────┘     └──────────────────────────────────────┘
+                                             │
+
+                                          Network
+\end{Verbatim}
